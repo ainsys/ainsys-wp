@@ -15,6 +15,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 	require_once __DIR__ . '/acf-fields/footer__group_5b06edea001d0.php';
 	require_once __DIR__ . '/acf-fields/header__group_5b06ed1382d30.php';
 	require_once __DIR__ . '/acf-fields/hero_block___group_5ff47580d0500.php';
+	require_once __DIR__ . '/acf-fields/hero_video_theme_block___group_626187c6c734c.php';
 	require_once __DIR__ . '/acf-fields/image_text_block___group_609a9a07eae5e.php';
 	require_once __DIR__ . '/acf-fields/image_text_full-width_block___group_6099537c6cf99.php';
 	require_once __DIR__ . '/acf-fields/image_with_link_block___group_5feb514c6ac44.php';
