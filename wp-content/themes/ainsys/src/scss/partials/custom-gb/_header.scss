@@ -59,7 +59,18 @@ header {
     }
   }
   .submenu {
-
+	display: none;
+	background: #3D0043;
+	border-radius: 0px 0px 12px 12px;
+	padding: 20px !important;
+	position: absolute;
+	top: 70px;
+	margin-left: -20px;
+	-webkit-transition: 5s;
+	transition: 5s;
+	list-style: none;
+	text-align: left;
+  
     li {
 
         ul {
