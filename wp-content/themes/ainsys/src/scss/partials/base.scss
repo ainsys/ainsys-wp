@@ -108,7 +108,7 @@ img {
 //outline: 0 !important;
 //}
 .site-content-contain {
-	padding-top: rem( 6.4 ); //.header__main height
+//	padding-top: rem( 6.4 ); //.header__main height
 	@include media-breakpoint-up( $bp-menu ) {
 		padding: 0;
 	}
