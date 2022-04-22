@@ -1,30 +1,33 @@
 .suggestions {
-    .card {
-        background: transparent;
-        border: none;
-        .card-body {
-            padding: 0px;
-        }
 
-    }
     .suggestions__item {
         padding: 30px;
         background: #F5F6F8;
         border-radius: 12px;
         margin: 0 20px 20px 0;
 
-        .suggestions__title {
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 145%;
+        h6 {
             margin-bottom: 15px;
             color: $page_color;
         }
-        .suggestions__text {
-            font-size: 14px;
-            line-height: 145%;
-            color: $grey_text_opport;
-            margin-bottom: 8px;
+        .card {
+            background: transparent;
+            border: none;
+            .card-body {
+                padding: 0px;
+    
+                ul {
+                    padding-left: 1rem;
+                    li {
+                        list-style-image: url(../img/circle_purple.svg);
+                        font-size: 14px;
+                        line-height: 145%;
+                        color: $grey_text_opport;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+    
         }
     }
     .first_line {
@@ -53,5 +56,7 @@
     }
     
 }
+
+
 
 

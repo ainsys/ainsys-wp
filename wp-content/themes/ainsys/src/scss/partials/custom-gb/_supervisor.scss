@@ -1,11 +1,14 @@
 .supervisor {
     padding-bottom: 70px;
-    .supervisor__title {
-        font-weight: 500;
-        font-size: 38px;
-        line-height: 145%;
+
+    .supervisor__select {
+        @include flex_center;
+    }
+    h3 {
         color: $page_color;
         text-align: center;
+        margin-bottom: 20px;
+        
 
         span {
             font-weight: 700;
@@ -60,3 +63,7 @@
         }
     }
 }
+
+
+// Rates
+

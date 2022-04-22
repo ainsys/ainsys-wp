@@ -2,6 +2,10 @@
     color: $grey_text_color;
     text-align: center;
 
+    h2 {
+        color: $black_title_color;
+    }
+
     .page__bigtext {
         color: $grey_text_color;
     }
@@ -20,14 +24,21 @@
             padding-left: 65px;
             text-align: left;
 
+            h5 {
+                margin-bottom: 30px;
+                color: $page_color;
+            }
+
             .content__text {
                 list-style-image: url(../img/circle_grey.svg);
                 margin-bottom: 15px;
+                list-style: none;
             }
         }
     }
     .page__content__active {
         display: flex !important;
+        @include flex_center;
     }
     .content__text {
         color: $grey_text_color;
@@ -59,8 +70,8 @@
     .page__content__before {
         padding-top: 0px;
     }
-    .content__title {
-        color: $white_color;
+    h5 {
+        color: $white_color !important;
     }
     .content__text {
         color: $purple_color;
@@ -95,8 +106,8 @@
     background-size: cover;
     background-color: $page_color;
 
-    .content__title {
-        color: $white_color;
+    h5 {
+        color: $white_color !important;
     }
     .content__text {
         color: $purple_color;
@@ -105,14 +116,4 @@
     .page__content__before {
         padding-top: 0px;
     }
-}
-
-
-@media (max-width: 1024px) {
-    .offer_first {
-        .page__content__before {
-            padding-top: 47px;
-        }
-    }
-    
 }

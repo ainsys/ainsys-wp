@@ -25,11 +25,13 @@
         margin-bottom: 24px;
     }
     .page__content {
+        @include flex_center;
         ul {
             padding: 0;
         }
         .content__text {
             margin-bottom: 12px;
+            list-style: none;
             img {
               margin-right: 10px;
             }
@@ -38,27 +40,33 @@
             }
         }
         .opportunities__title {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 145%;
-    color: $page_color;
-}
-.opportunities__title::after {
-    display: block;
-    content: '';
-    width: 171px;
-    height: 1px;
-    border: 1px solid $color_active;
-    background: $color_active;
-    margin: 22px 0;
-}
-.opportunities__text {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    color: $grey_text_opport;
-    margin-bottom: 24px;
-}
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 145%;
+            color: $page_color;
+        }
+        .opportunities__title::after {
+            display: block;
+            content: '';
+            width: 171px;
+            height: 1px;
+            border: 1px solid $color_active;
+            background: $color_active;
+            margin: 22px 0;
+        }
+        .opportunities__text {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            color: $grey_text_opport;
+            margin-bottom: 24px;
+        }
+    }
+    .page__img {
+        @include flex_center;
+        img {
+            width: 100%;
+        }
     }
     .page__content:nth-child(3) {
         margin-top: -5%;

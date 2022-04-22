@@ -4,13 +4,14 @@ footer {
   font-weight: 500;
 
   .footer_logo {
-    background: no-repeat url(../img/logo__footer.svg) center/ 100%;
+    background: no-repeat url(../img/logo__footer__active.svg) center/100%;
     width: 283px;
     height: 140px;
+    filter: brightness(10);
   }
   .footer_logo:hover,
   .footer_logo:focus {
-    background: no-repeat url(../img/logo__footer__active.svg) center/ 100%;
+    filter: none;
   }
   h6 {
     font-weight: 600;
@@ -31,30 +32,50 @@ footer {
   .footer__docs:hover {
     color: $color_active !important;
   }
-  .dropdown-menu {
+  .submenu {
+    display: none;
     background: $bg_color;
     border-radius: 0px 0px 12px 12px;
-    margin-top: -30xp;
-    border: none;
-    margin-left: -0.5rem !important;
+    padding: 20px !important;
+    position: absolute;
+    margin-top: -160px;
+    margin-left: -20px;
+    transition: 5s;
+    list-style: none;
+    text-align: left;
 
-    .dropdown-item {
+    li {
+
+        ul {
+          padding: 0;
+          list-style: none;
+        }
+        a {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: $white_color;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+        }
+      }
+    li {
+      padding: 5px 0;
       color: $white_color;
-      padding: 5px 1rem;
     }
-    .dropdown-item:hover {
-      background-color: transparent;
-      color: $color_active;
+    li:hover {
+      .submenu__item {
+        color: $color_active;
+      }
     }
-
-    .dropdown-item-disable {
+    .submenu_dis {
       opacity: 0.5;
+      color: $white_color !important;
     }
-    .dropdown-item-disable:hover {
+    .submenu_dis:hover {
       background-color: transparent;
-      color: $white_color;
     }
-    .dropdown-item-disable::after {
+    .submenu_dis::after {
       display: block;
       content: "";
       position: relative;
@@ -65,23 +86,48 @@ footer {
     }
   }
   .dropdown__lang {
-    .dropdown-toggle:active,
-    .dropdown-toggle:hover,
-    .dropdown-toggle:focus {
-      color: $color_active;
+    .dropdown__lang__item {
+      @include flex_center;
+    }
+    .dropdown__lang__item::after {
+      display: block;
+      content: '';
+      background: no-repeat url(../img/arrow__down.svg) center/ 100%;
+      width: 12px;
+      height: 8px;
       border: none;
-    }
-    .dropdown-item:hover {
-      background-color: $bg_active_header;
-      color: $white_color;
-      border-bottom: 1px solid $color_active;
-    }
-    .dropdown-item {
-      border-bottom: 1px solid $color_active;
-    }
-    li:last-child .dropdown-item {
-      border-bottom: 0px solid $color_active;
+      margin-left: 10px;
     }
   }
+  .dropdown__lang:active,
+  .dropdown__lang:hover,
+  .dropdown__lang:focus {
+    .dropdown__lang__item {
+      color: $color_active;
+    }
+    .dropdown__lang__item::after {
+      background: no-repeat url(../img/arrow__down__active.svg) center/ 100%;
+    }
+    .submenu {
+      display: block;
+    }
+  }
+  .footer__item {
+    display: flex;
+    align-items: center;
+  }
+  .list-docs {
+    @include flex_center;
+    margin: 50px 0;
 
+    li {
+      text-align: center;
+    }
+  }
+  .footer__bottom {
+    @include flex_center;
+
+  }
 }
+
+

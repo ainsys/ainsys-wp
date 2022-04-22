@@ -41,11 +41,11 @@ if ( get_field( 'bg' ) ) {
 			<?php } ?> 
 
 			<div class="page__switch d-flex flex-wrap align-items-center justify-content-center">
-				<div class="page__switch__after label_active">Без AINSYS</div>
+				<div class="page__switch__text page__switch__after label_active">Без AINSYS</div>
 				<div class="form-check form-switch">
 					<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
 				</div>
-				<div class="page__switch__before">C AINSYS</div>
+				<div class="page__switch__text page__switch__before">C AINSYS</div>
 			</div>
 		</div>
 

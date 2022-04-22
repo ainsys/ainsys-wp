@@ -58,17 +58,18 @@
 	}
 
 	&-tertiary {
-		display: inline-block;
-		position: relative;
-		height: 24px;
-		padding: 0 32px 0 0;
+		padding: 0;
 		background: transparent;
 		border: none;
-		line-height: 24px;
+		border-radius: 0;
+		border-bottom: 2px solid $accent;
+		font-size: rem( 3 );
+		font-weight: 500;
+		line-height: 1.45;
 		text-decoration: none;
-		text-align: left;
 		color: $accent;
 
+		/*
 		&:after {
 			content: '';
 			position: absolute;
@@ -80,6 +81,7 @@
 			background: url( ../images/pf-common/btn-tertiary.svg ) no-repeat center;
 			transition: all 0.3s ease-out;
 		}
+		*/
 
 		&:visited {
 			color: $accent;
@@ -87,7 +89,6 @@
 		&:hover,
 		&:active,
 		&:focus {
-			@include a-hover;
 			color: $accent;
 			background: transparent;
 		}

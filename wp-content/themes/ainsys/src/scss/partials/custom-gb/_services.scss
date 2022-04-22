@@ -22,12 +22,17 @@
         .accordion {
             margin-bottom: 25px;
 
+            display: flex;
+            justify-content: space-between;
+
             .accordion-item {
                 background: $accardion_color;
                 margin-right: 16px;
                 border-radius: 12px;
                 padding: $accarion_padding;
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
 
                 .accordion-header {
 
@@ -35,6 +40,8 @@
                         background: $accardion_color;
                         color: $white_color;
                         padding: 0;
+                        display: flex;
+                        flex-direction: column;
                         
                         img {
                             margin-right: auto;
@@ -116,36 +123,26 @@
     }
 
     .services__banner {
-        background: url(../img/banner__bg.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        min-height: 610px;
-        padding: 160px 240px;
         width: 100%;
         max-width: 1140px;
-        margin: 0 auto;
-        padding-bottom: 40px;
-    }
+        margin: 100px auto 0;
+        padding-bottom: 70px;
 
-}
+        .services__banner__wrapper {
+            width: auto;
+            margin: 0 auto;
+            padding: 50px 75px;   
+            border: 2px solid $wrapper_border;
+            // border-image-source: $wrapper_border;
+            // border-image-slice: 1;
+            background: $wrapper_bg;
+            box-shadow: -10px -10px 20px #4A0B52, -20px -20px 50px 20px #430A49, 10px 10px 20px #1E0022, 20px 20px 50px 20px #1E0022;
+            border-radius: 41px;
+        }
 
-@media (max-width: 1024px) {
-    .services {
-        .services__banner {
-            padding: 100px 200px;
+        .btn {
+            margin-top: 40px;
         }
     }
-}
 
-
-@media (max-width: 768px) {
-    .services {
-        .accordion {
-            flex-direction: column;
-
-            .accordion-item {
-                margin-bottom: 20px;
-            }
-        }
-    }
 }
