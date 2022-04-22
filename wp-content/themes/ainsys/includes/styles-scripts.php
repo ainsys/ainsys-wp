@@ -132,7 +132,11 @@ function ainsys_preload_styles() {
 
 		$src  = $obj->src;
 		$href = $styles->_css_href( $src, $ver, $handle );
-		echo '<link rel="preload" href="' . esc_attr( $href ) . '" as="style" type="text/css" crossorigin>';
+		if( false !== strpos( $href, 'http' ) ) {
+			?>
+			<link rel="preload" href="<?php echo esc_attr( $href ); ?>" as="style" type="text/css" crossorigin>
+			<?php
+		}
 	}
 }
 

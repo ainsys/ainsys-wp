@@ -110,7 +110,6 @@
 
 	window.addEventListener( 'scroll', () => {
 		animBlock.forEach( ( anim ) => {
-			console.log( pageYOffset, anim.offsetTop );
 			if ( pageYOffset > anim.offsetTop - 500 ) {
 				anim.classList.add( 'animateBlock' );
 			}
