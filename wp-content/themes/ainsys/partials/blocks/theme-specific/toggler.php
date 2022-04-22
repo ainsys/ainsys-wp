@@ -46,18 +46,18 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 		<?php } ?>
 
 		<div class="toggler__switch">
-			<div class="toggler__switch__label active" data-screen="toggler__screen--without"><?php the_field( 'without' ); ?></div>
+			<div class="toggler__switch__label active"><?php the_field( 'label_without' ); ?></div>
 			<div class="form-check form-switch">
 				<input class="form-check-input form-check-input-content" type="checkbox">
 			</div>
-			<div class="toggler__switch__label" data-screen="toggler__screen--with"><?php the_field( 'with' ); ?></div>
+			<div class="toggler__switch__label"><?php the_field( 'label_with' ); ?></div>
 		</div>
 
 		<?php
 		$reverse_order = get_field( 'order' ) === true ? ' reverse' : '';
 		?>
 		<div class="toggler__screens<?php echo $reverse_order; //phpcs:ignore ?>">
-			<div class="toggler__screen toggler__screen--without">
+			<div class="toggler__screen active">
 				<div class="toggler__screen__img">
 					<?php echo wp_get_attachment_image( get_field( 'image__without' ), 'large', false, array( 'class' => '' ) ); ?>
 				</div>
@@ -65,7 +65,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					<?php the_field( 'txt_without' ); ?>
 				</div>
 			</div>
-			<div class="toggler__screen toggler__screen--with">
+			<div class="toggler__screen">
 				<div class="toggler__screen__img">
 					<?php echo wp_get_attachment_image( get_field( 'image__with' ), 'large', false, array( 'class' => '' ) ); ?>
 				</div>

@@ -1,11 +1,11 @@
 .cta {
 	//@include section-margin;
 	padding: rem( 6.4 ) 0;
-	text-align: center;
 	background-color: $dark;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	text-align: center;
 	color: $white;
 	@include media-breakpoint-up( $bp ) {
 		padding: rem( 10 ) 0;
