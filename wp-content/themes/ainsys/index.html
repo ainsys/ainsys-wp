@@ -17,13 +17,13 @@
    <!-- код от Наны -->
     
 
-    <header class="p-3 mb-3 border-bottom">
+    <header class="p-3 mb-3">
         <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="header_logo d-flex align-items-center mb-2 me-sm-5 mb-lg-0 text-dark text-decoration-none"></a>
+          <div class="header__content">
+            <a href="/" class="header_logo mb-2 me-sm-5 mb-lg-0 text-dark text-decoration-none"></a>
 
-            <ul class="main-menu d-flex mx-auto">
-                <li class="me-sm-4 menu_li d-flex align-items-center menu-item-has-children"><a class="menu__item" href="#">Клиентам</a>
+            <ul class="main-menu desk">
+                <li class="me-sm-4 menu_li menu-item-has-children"><a class="menu__item" href="#">Клиентам</a>
                 <ul class="submenu">
                     <li><a href="#" class="submenu__item">Как это работает?</a></li>
                     <li><a href="#" class="submenu__item submenu_dis">Все Решения</a></li>
@@ -31,7 +31,7 @@
                     <li><a href="#" class="submenu__item">Найти разработчика</a></li>
                   </ul>
                 </li>
-                <li class="me-sm-4 menu_li d-flex align-items-center menu-item-has-children"><a class="menu__item" href="#">Партнерам</a>
+                <li class="me-sm-4 menu_li menu-item-has-children"><a class="menu__item" href="#">Партнерам</a>
                   <ul class="submenu">
                     <li><a href="#" class="submenu__item">Как это работает?</a></li>
                     <li><a href="#" class="submenu__item submenu_dis">Все Решения</a></li>
@@ -39,7 +39,7 @@
                     <li><a href="#" class="submenu__item">Найти разработчика</a></li>
                   </ul>
                 </li>
-                <li class="me-sm-4 menu_li d-flex align-items-center menu-item-has-children"><a class="menu__item" href="#">Разработчикам</a>
+                <li class="me-sm-4 menu_li menu-item-has-children"><a class="menu__item" href="#">Разработчикам</a>
                   <ul class="submenu">
                     <li><a href="#" class="submenu__item">Как это работает?</a></li>
                     <li><a href="#" class="submenu__item submenu_dis">Все Решения</a></li>
@@ -47,7 +47,7 @@
                     <li><a href="#" class="submenu__item">Найти разработчика</a></li>
                   </ul>
                 </li>
-                <li class="menu_li d-flex align-items-center menu-item-has-children"><a class="menu__item" href="#">О компании</a>
+                <li class="menu_li menu-item-has-children"><a class="menu__item" href="#">О компании</a>
                   <ul class="submenu">
                     <li><a href="#" class="submenu__item">Как это работает?</a></li>
                     <li><a href="#" class="submenu__item submenu_dis">Все Решения</a></li>
@@ -58,16 +58,16 @@
             
             </ul>
 
-              <!-- <div class="dropdown dropdown__entrance text-end me-sm-4">
-                <a href="#" class="d-block d-flex align-items-center link-light text-decoration-none">
+              <!-- <div class="dropdown__entrance text-end me-sm-4">
+                <a href="#" class="dropdown__entrance__item link-light text-decoration-none">
                     <img src="./assets/img/account.svg" class="header__user__img me-sm-2" alt="">
                     <p class="header__user__text">Войти</p>
                 </a>
               </div> -->
 
               <div class="header__user text-end me-sm-5">
-                <a href="#" class="user__img d-flex align-items-center justify-content-center link-light text-decoration-none">
-                    <div class="account d-flex align-items-center justify-content-center">
+                <a href="#" class="user__img link-light text-decoration-none">
+                    <div class="account">
                         <img src="./assets/img/persona.png" alt="mdo" width="54" height="54" class="rounded-circle">
                     </div>
                 </a>
@@ -82,7 +82,7 @@
               </div>
 
               <div class="dropdown__lang text-end">
-                <a href="#" class="dropdown__lang__item d-block d-flex align-items-center link-light text-decoration-none">
+                <a href="#" class="dropdown__lang__item link-light text-decoration-none">
                     <p class="header__user__text">RU</p>
                 </a>
                 <ul class="submenu">
@@ -102,12 +102,12 @@
               </div>
 
 
-                <div class="dropdown_burger ms-sm-4 text-end tablet">
+                <div class="dropdown_burger ms-sm-4 text-end tablet mob">
                   <div class="burger">
                     <span></span>
                   </div>
 
-                  <div class="menu__mob">
+                  <!-- <div class="menu__mob">
                     <div class="menu__header">
                       <a href="/" class="header_logo d-flex align-items-center mb-2 me-sm-5 mb-lg-0 text-dark text-decoration-none"></a>
                     </div>
@@ -206,7 +206,7 @@
                       </div>
                     </div>
                    
-                </div>
+                </div> -->
 
           </div>
         </div>
@@ -220,23 +220,23 @@
               <div class="main__info">
                   <div class="main__title">
                       <h1>
-                        &gt<span>Интегрируйте</span>&lt;
+                        &gt<span>Интегрируйте</span>&lt
                           <br>Ваши данные    
                       </h1>
                   </div>
                   <p class="main__text">
                     Получите полный контроль над данными, IT-процессами и внедрениями с AINSYS. 
                   </p>
-                  <div class="page__switch d-flex flex-wrap align-items-center justify-content-center">
-                      <p class="page__switch__after label_active">
+                  <div class="page__switch">
+                      <div class="page__switch__text page__switch__after label_active">
                         Без AINSYS
-                      </p>
+                      </div>
                       <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
-                      <p class="page__switch__before">
+                      <div class="page__switch__text page__switch__before">
                         C AINSYS
-                      </p>
+                      </div>
                   </div>
               </div>
               <div class="main__video">
@@ -251,9 +251,9 @@
       <section class="services">
         <div class="services__top">
             <div class="container">
-              <p class="page__title animBlock">
+              <h4 class="animBlock">
                 Узнайте как Вы можете воспользоваться новыми возможностями!
-              </p>
+              </h4>
               <p class="page__text animBlock">
                 AINSYS синхронизирует информацию между приложениями в режиме реального времени и запускает автоматизацию, позволяя вам сосредоточиться на более важной работе
               </p>
@@ -262,17 +262,17 @@
         <div class="services__main">
             <div class="container">
                 <div class="services__info">
-                    <p class="page__title animBlock">
+                    <h4 class="animBlock">
                         Узнайте как AINSYS поможет вам
-                    </p>
+                    </h4>
                     <p class="page__text animBlock">
                         Мы объединили последние ИТ технологии, разработчиков и профессионалов интеграций, чтобы создать платформу, способную решить любые задачи бизнеса
                     </p>
                 </div>
-                <div class="accordion accordion-flush d-flex animBlock" id="accordionFlushExample">
-                    <div id="accordion-item-first" class="accordion-item col-md-4 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button d-flex flex-column" type="button">
+                <div class="accordion accordion-flush animBlock" id="accordionFlushExample">
+                    <div id="accordion-item-first" class="accordion-item col-lg-4 col-md-12 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <h4 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button" type="button">
                             <img src="./assets/img/serv__idea.svg" class="" alt="idea">
                             <p class="accordion__title">
                                 Почему мы интересны разработчикам?
@@ -281,7 +281,7 @@
                                 Мы приглашаем к сотрудничеству разработчиков, которые хотят быстро создавать цельные проприетарные решения вместо того, чтобы работать над кусками кода чужого ПО
                             </p>
                         </button>
-                      </h2>
+                      </h4>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul>
@@ -307,9 +307,9 @@
                         </div>
                       </div>
                     </div>
-                    <div id="accordion-item-second" class="accordion-item col-md-4 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button d-flex flex-column" type="button">
+                    <div id="accordion-item-second" class="accordion-item col-lg-4 col-md-6 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <h4 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button" type="button">
                             <img src="./assets/img/serv__door.svg" class="" alt="idea">
                             <p class="accordion__title">
                                 Зачем AINSYS бизнесу?
@@ -319,7 +319,7 @@
                                 <br><span>Добавить</span>
                             </p>
                         </button>
-                      </h2>
+                      </h4>
                       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul>
@@ -343,9 +343,9 @@
                         </div>
                       </div>
                     </div>
-                    <div id="accordion-item-third" class="accordion-item col-md-4 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button d-flex flex-column" type="button">
+                    <div id="accordion-item-third" class="accordion-item col-lg-4 col-md-6 col-sm-12 collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <h4 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button" type="button">
                             <img src="./assets/img/serv__programmer.svg" class="" alt="idea">
                             <p class="accordion__title">
                                 Чем мы можем помочь профессионалам-интеграторам?
@@ -354,7 +354,7 @@
                                 Чем мы можем помочь профессионалам-интеграторам?
                             </p>
                         </button>
-                      </h2>
+                      </h4>
                       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul>
@@ -389,13 +389,15 @@
             </div>
         </div>
         <div class="services__banner animBlock">
-            <p class="page__title">
+          <div class="services__banner__wrapper">
+            <h4>
                 Испытать все возможности AINSYS поможет наш консультант на персональной демонстрации!
-            </p>
+            </h4>
             <p class="page__doptext">
                 Быстрая и исчерпывающая демонстрация возможностей продукта
             </p>
-            <button class="btn">Записаться на демонстрацию</button>
+            <button class="btn">Записаться на демонстрацию</button> 
+          </div>
         </div>
       </section>  
 
@@ -405,33 +407,33 @@
       <section class="offer offer_first">
           <div class="container">
               <div class="page__top animBlock">
-                <p class="page__bigtitle">
+                <h2>
                     AINSYS знает о ваших проблемах
-                  </p>
-                  <p class="page__bigtext">
-                    Сравнение с конкурентами в реальном времени
-                  </p>
-                  <div class="page__switch d-flex align-items-center justify-content-center">
-                    <p id="pageSwitchAfter-1" class="page__switch__after label_active">
-                      Без AINSYS
-                    </p>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input form-check-input-content" type="checkbox" id="1">
-                    </div>
-                    <p id="pageSwitchBefore-1" class="page__switch__before">
-                      C AINSYS
-                    </p>
+               </h2>
+                <p class="page__bigtext">
+                  Сравнение с конкурентами в реальном времени
+                </p>
+                <div class="page__switch">
+                  <div id="pageSwitchAfter-1" class="page__switch__text page__switch__after label_active">
+                    Без AINSYS
                   </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input form-check-input-content" type="checkbox" id="1">
+                  </div>
+                  <div id="pageSwitchBefore-1" class="page__switch__text page__switch__before">
+                    C AINSYS
+                  </div>
+                </div>
               </div>
 
-              <div id="pageContentAfter-1" class=" animBlock page__content page__content__after page__content__active d-flex align-items-center justify-content-between">
-                  <div class="page__img col-md-6">
+              <div id="pageContentAfter-1" class="animBlock page__content page__content__after page__content__active">
+                  <div class="page__img col-lg-6 col-sm-12">
                       <img src="./assets/img/offer__after.svg" alt="offer__after">
                   </div>
-                  <div class="page__info col-md-6">
-                      <p class="content__title">
+                  <div class="page__info col-lg-6 col-sm-12">
+                      <h5>
                         Интеграция двух<br /> сервисов
-                      </p>
+                      </h5>
                       <ul>
                           <li class="content__text">
                             Недели, месяцы или годы!
@@ -443,14 +445,14 @@
                   </div>
               </div>
 
-              <div id="pageContentBefore-1" class="page__content page__content__before d-flex align-items-center justify-content-between">
-                <div class="page__img col-md-6">
+              <div id="pageContentBefore-1" class="page__content page__content__before">
+                <div class="page__img col-lg-6 col-sm-12">
                     <img src="./assets/img/offer__before.svg" alt="offer__after">
                 </div>
-                <div class="page__info col-md-6">
-                    <p class="content__title">
-                        Интеграция<br /> множества сервисов
-                    </p>
+                <div class="page__info col-lg-6 col-sm-12">
+                    <h5>
+                        Интеграция множества сервисов
+                    </h5>
                     <ul>
                         <li class="content__text">
                             Не более 10 минут
@@ -481,22 +483,22 @@
 
         <section class="offer offer__purple">
             <div class="container">
-                <div class="page__switch d-flex flex-wrap align-items-center justify-content-center">
-                    <p id="pageSwitchAfter-2" class="page__switch__after label_active">
+                <div class="page__switch">
+                    <div id="pageSwitchAfter-2" class="page__switch__text page__switch__after label_active">
                       Без AINSYS
-                    </p>
+                    </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input form-check-input-content" type="checkbox" id="2">
                     </div>
-                    <p id="pageSwitchBefore-2" class="page__switch__before">
+                    <div id="pageSwitchBefore-2" class="page__switch__text page__switch__before">
                       C AINSYS
-                    </p>
+                    </div>
                   </div>
-                <div id="pageContentAfter-2" class="animBlock page__content page__content__after page__content__active d-flex align-items-center justify-content-between">
-                    <div class="page__info col-md-6">
-                        <p class="content__title">
+                <div id="pageContentAfter-2" class="animBlock page__content page__content__after page__content__active">
+                    <div class="page__info col-lg-6 col-sm-12">
+                        <h5>
                             Вечный поиск идеальных<br /> решений
-                        </p>
+                        </h5>
                         <ul>
                             <li class="content__text">
                                 Тонны документации и недели на её оформление
@@ -509,16 +511,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page__img col-md-6">
+                    <div class="page__img col-lg-6 col-sm-12">
                         <img src="./assets/img/offer__purple__after.png" alt="offer__after">
                     </div>
                 </div>
   
-                <div id="pageContentBefore-2" class="page__content page__content__before d-flex align-items-center justify-content-between">
-                  <div class="page__info col-md-6">
-                      <p class="content__title">
+                <div id="pageContentBefore-2" class="page__content page__content__before">
+                  <div class="page__info col-lg-6 col-sm-12">
+                      <h5>
                         Готовая технология внедрений
-                      </p>
+                      </h5>
                       <ul>
                           <li class="content__text">
                             Документирование автоматизировано и встроено в процесс работы
@@ -531,7 +533,7 @@
                           </li>
                       </ul>
                   </div>
-                  <div class="page__img col-md-6">
+                  <div class="page__img col-lg-6 col-sm-12">
                     <img src="./assets/img/offer__purple__before.svg" alt="offer__after">
                 </div>
               </div>
@@ -546,27 +548,27 @@
       <section class="offer offer__two">
         <div class="container">
             <div class="page__top">
-                <div class="page__switch d-flex flex-wrap align-items-center justify-content-center">
-                  <p id="pageSwitchAfter-3" class="page__switch__after label_active">
+                <div class="page__switch">
+                  <div id="pageSwitchAfter-3" class="page__switch__text page__switch__after label_active">
                     Без AINSYS
-                  </p>
+                  </div>
                   <div class="form-check form-switch">
                     <input class="form-check-input form-check-input-content" type="checkbox" id="3">
                   </div>
-                  <p id="pageSwitchBefore-3" class="page__switch__before">
+                  <div id="pageSwitchBefore-3" class="page__switch__text page__switch__before">
                     C AINSYS
-                  </p>
+                  </div>
                 </div>
             </div>
 
-            <div id="pageContentAfter-3 animBlock" class="page__content page__content__after page__content__active d-flex align-items-center justify-content-between">
-                <div class="page__img col-md-6 d-flex align-items-center justify-content-center">
+            <div id="pageContentAfter-3" class="animBlock page__content page__content__after page__content__active">
+                <div class="page__img col-lg-6 col-sm-12 d-flex align-items-center justify-content-center">
                     <img src="./assets/img/offertwo__after.svg" alt="offer__after">
                 </div>
-                <div class="page__info col-md-6">
-                    <p class="content__title">
+                <div class="page__info col-lg-6 col-sm-12">
+                    <h5>
                       Исчезающий горизонт
-                    </p>
+                    </h5>
                     <ul>
                         <li class="content__text">
                           Бесконечные совещания, трата времени ключевых специалистов. Печеньки, тусовки в переговорных за счёт бюджета на внедрение!
@@ -584,14 +586,14 @@
                 </div>
             </div>
 
-            <div id="pageContentBefore-3" class=" animBlock page__content page__content__before d-flex align-items-center justify-content-between">
-              <div class="page__img col-md-6 d-flex align-items-center justify-content-cente">
+            <div id="pageContentBefore-3" class="animBlock page__content page__content__before">
+              <div class="page__img col-lg-6 col-sm-12 d-flex align-items-center justify-content-cente">
                   <img src="./assets/img/offertwo__before.svg" alt="offer__after">
               </div>
-              <div class="page__info col-md-6">
-                  <p class="content__title">
+              <div class="page__info col-lg-6 col-sm-12">
+                  <h5>
                     Минимум участников
-                  </p>
+                  </h5>
                   <ul>
                       <li class="content__text">
                         Рабочие группы 2-3 человека. Только люди принимающие решения! Снимаем требования и настраиваем одновременно!
@@ -617,22 +619,22 @@
 
         <section class="offer offer-two__purple">
             <div class="container">
-                <div class="page__switch d-flex flex-wrap align-items-center justify-content-center">
-                    <p id="pageSwitchAfter-4" class="page__switch__after label_active">
+                <div class="page__switch">
+                    <div id="pageSwitchAfter-4" class="page__switch__text page__switch__after label_active">
                       Без AINSYS
-                    </p>
+                    </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input form-check-input-content" type="checkbox" id="4">
                     </div>
-                    <p id="pageSwitchBefore-4" class="page__switch__before">
+                    <div id="pageSwitchBefore-4" class="page__switch__text page__switch__before">
                       C AINSYS
-                    </p>
+                    </div>
                   </div>
-                <div id="pageContentAfter-4" class="animBlock page__content page__content__after page__content__active d-flex align-items-center justify-content-between">
-                    <div class="page__info col-xl-6">
-                        <p class="content__title">
+                <div id="pageContentAfter-4" class="animBlock page__content page__content__after page__content__active">
+                    <div class="page__info col-lg-6 col-sm-12">
+                        <h5>
                           Неожиданные потери
-                        </p>
+                        </h5>
                         <ul>
                             <li class="content__text">
                               Риск утечки данных через недобросовестных сотрудников, промышленного шпионажа и хакерских атак
@@ -645,16 +647,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page__img col-xl-6">
+                    <div class="page__img col-lg-6 col-sm-12">
                         <img src="./assets/img/offertwo__purple__after.svg" alt="offer__after">
                     </div>
                 </div>
   
-                <div id="pageContentBefore-4" class="page__content page__content__before d-flex align-items-center justify-content-between">
-                  <div class="page__info col-xl-6">
-                      <p class="content__title">
+                <div id="pageContentBefore-4" class="page__content page__content__before">
+                  <div class="page__info col-lg-6 col-sm-12">
+                      <h5>
                         Безопасность данных
-                      </p>
+                      </h5>
                       <ul>
                           <li class="content__text">
                             Полная безопасность данных
@@ -667,7 +669,7 @@
                           </li>
                       </ul>
                   </div>
-                  <div class="page__img col-xl-6">
+                  <div class="page__img col-lg-6 col-sm-12">
                     <img src="./assets/img/offertwo__purple__before.svg" alt="offer__after">
                 </div>
               </div>
@@ -680,17 +682,17 @@
 
         <section class="opportunities">
           <div class="container">
-            <p class="page__bigtitle animBlock">
+            <h2 class="animBlock">
               Возможности AINSYS
-            </p>
-            <div class="page__content d-flex align-items-center justify-content-between animBlock">
-              <div class="page__info col-xl-6">
-                <p class="opportunities__title">
+            </h2>
+            <div class="animBlock  page__content">
+              <div class="page__info col-lg-6 col-sm-12">
+                <div class="opportunities__title">
                   No-Code решение
-                </p>
-                <p class="opportunities__text">
+                </div>
+                <div class="opportunities__text">
                   Налаживайте бизнес-процессы быстрее и выполняйте больше задач силами своей команды бизнес пользователей
-                </p>
+                </div>
                 <ul>
                     <li class="content__text">
                       <img src="./assets/img/code.svg" alt="code">
@@ -702,16 +704,16 @@
                     </li>
                 </ul>
               </div>
-              <div class="page__img col-xl-6 d-flex align-items-center justify-content-center">
+              <div class="page__img col-lg-6 col-sm-12">
                 <img src="./assets/img/opportunities__1.svg" alt="offer__after">
               </div>
             </div>
 
-            <div class="page__content d-flex align-items-center justify-content-between animBlock">
-              <div class="page__img col-xl-6 d-flex align-items-center justify-content-center">
+            <div class="page__content animBlock">
+              <div class="page__img col-lg-6 col-sm-12">
                 <img src="./assets/img/opportunities__2.svg" alt="offer__after">
               </div>
-              <div class="page__info col-xl-6">
+              <div class="page__info col-lg-6 col-sm-12">
                 <p class="opportunities__title">
                   Low-code расширения
                 </p>
@@ -727,8 +729,8 @@
               </div>
             </div>
 
-            <div class="page__content d-flex align-items-center justify-content-between animBlock">
-              <div class="page__info col-xl-6">
+            <div class="page__content animBlock">
+              <div class="page__info col-lg-6 col-sm-12">
                 <p class="opportunities__title">
                   Интеграции любой сложности
                 </p>
@@ -747,7 +749,7 @@
                     </li>
                 </ul>
               </div>
-              <div class="page__img col-xl-6 d-flex align-items-center justify-content-center">
+              <div class="page__img col-lg-6 col-sm-12">
                 <img src="./assets/img/opportunities__3.svg" alt="offer__after">
               </div>
             </div>
@@ -762,15 +764,15 @@
 
         <section class="suggestions">
           <div class="container">
-            <div class="row animBlock">
-              <div class="col-sm-4 suggestions__item first_line">
+            <div class="row flex-wrap animBlock">
+              <div class="col-lg-4 col-md-6 col-sm-12 suggestions__item first_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/management.svg" alt="management">
-                    <p class="suggestions__title">
+                    <h6>
                       Руководители с AINSYS смогут
-                    </p>
-                    <ul>
+                    </h6>
+                    <ul class="suggestions__ul">
                       <li>
                         Быстро увидеть и отследить отдельные процессы в организации
                       </li>
@@ -787,13 +789,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 suggestions__item first_line">
+              <div class="col-lg-4 col-md-6 col-sm-12 suggestions__item first_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/security.svg" alt="security">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       Информационная Безопасность
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         Все данные упорядочены, ведется строгий учет доступа
@@ -811,13 +813,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 suggestions__item first_line">
+              <div class="col-lg-4 col-md-12 col-sm-12 suggestions__item first_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/speed.svg" alt="speed">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       Скоростное подключение новых инструментов бизнеса
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         Старт работы с новым приложением от 2 минут
@@ -835,13 +837,13 @@
             </div>
 
             <div class="row animBlock">
-              <div class="col-sm-5 suggestions__item second_line">
+              <div class="col-lg-5 col-md-6 col-sm-12 suggestions__item second_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/support.svg" alt="support">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       Оперативная поддержка
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         СВозникли вопросы, сложности в работе с системой? Смело пишите в нашу техническую поддержку. Наши специалисты и партнеры ответят вам в течение нескольких минут
@@ -856,13 +858,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-7 suggestions__item second_line">
+              <div class="col-lg-7 col-md-6 col-sm-12 suggestions__item second_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/protection.svg" alt="protection">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       Система устойчива к сбоям и хакерским атакам
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         Данные не потеряются даже если произойдут какие-либо сбои в работе внешних систем
@@ -883,13 +885,13 @@
             </div>
 
             <div class="row animBlock">
-              <div class="col-sm-7 suggestions__item thrid_line">
+              <div class="col-lg-7 col-md-6 col-sm-12 suggestions__item thrid_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/deployment.svg" alt="deployment">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       AWS cloud deployment
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         Работоспособность системы также надёжна как облако AWS. Мы запустили программы bug bounty и постоянно работаем над тем, чтобы сделать AINSYS устойчивой к любым сбоям или хакерским атакам
@@ -898,13 +900,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-5 suggestions__item thrid_line">
+              <div class="col-lg-5 col-md-6 col-sm-12 suggestions__item thrid_line">
                 <div class="card">
                   <div class="card-body">
                     <img src="./assets/img/promise.svg" alt="promise">
-                    <p class="suggestions__title">
+                    <h6 class="suggestions__title">
                       On premise deployment
-                    </p>
+                    </h6>
                     <ul>
                       <li>
                         AWS по какой-то причине не устраивает Вас? Вы хотите хранить и обрабатывать данные на своей инфраструктуре? Узнайте о возможностях размещения решения на своих серверах
@@ -924,14 +926,14 @@
 
         <section class="rates">
           <div class="container">
-            <p class="page__bigtitle animBlock">
+            <h2 class="animBlock">
               Выберите тариф на любой вкус!
-            </p>
+            </h2>
             <div class="row row-cols-1 row-cols-md-4 g-4 animBlock">
-              <div class="col">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100">
                   <div class="card-body">
-                    <div class="rates__name d-flex align-items-center justify-content-center">
+                    <div class="rates__name">
                       <p>
                         Бесплатный
                       </p>
@@ -949,15 +951,15 @@
                     <h5 class="card-title">Бесплатно, оно того стоит</h5>
                     <p class="card-text">Ознакомьтесь со всем набором возможностей продукта бесплатно и неограниченно долго!</p>
                   </div>
-                  <div class="card-footer d-flex align-items-center justify-content-center">
+                  <div class="card-footer">
                     <a href="#">Попробовать бесплатно</a>
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100">
                   <div class="card-body">
-                    <div class="rates__name d-flex align-items-center justify-content-center">
+                    <div class="rates__name">
                       <p>
                         Минимальный
                       </p>
@@ -975,15 +977,15 @@
                     <h5 class="card-title">Минимальный пакет</h5>
                     <p class="card-text">Свяжите свои приложения, организуйте данные, автоматизируйте рутинные операции бизнеса.</p>
                   </div>
-                  <div class="card-footer d-flex align-items-center justify-content-center">
+                  <div class="card-footer">
                     <a href="#">Попробовать</a>
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100">
                   <div class="card-body">
-                    <div class="rates__name d-flex align-items-center justify-content-center">
+                    <div class="rates__name">
                       <p>
                         Самый популярный
                       </p>
@@ -1001,15 +1003,15 @@
                     <h5 class="card-title">Стандарт</h5>
                     <p class="card-text">Раскойте потенциал своей команды. Рекомендуется для малого бизнеса, отдельный отделов, крупных организаций.</p>
                   </div>
-                  <div class="card-footer d-flex align-items-center justify-content-center">
+                  <div class="card-footer">
                     <a href="#">Попробовать</a>
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100">
                   <div class="card-body">
-                    <div class="rates__name d-flex align-items-center justify-content-center">
+                    <div class="rates__name">
                       <p>
                         Премиум
                       </p>
@@ -1027,7 +1029,7 @@
                     <h5 class="card-title">Премиум</h5>
                     <p class="card-text">Революционная методология UX AINSYS и интегрированная система коммуникационная и таск треккинга.</p>
                   </div>
-                  <div class="card-footer d-flex align-items-center justify-content-center">
+                  <div class="card-footer">
                     <a href="#">Попробовать</a>
                   </div>
                 </div>
@@ -1046,12 +1048,14 @@
 
         <section class="supervisor">
           <div class="container">
-            <p class="supervisor__title animBlock">
+            <h3 class="animBlock">
               Выбери кто ты <br />
-              <span>владелец бизнеса или руководитель</span>
-              <img src="./assets/img/arrow__down__purple.svg" alt="arrow"> <br />
+              <div class="supervisor__select">
+                <span>владелец бизнеса или руководитель</span>
+                <img src="./assets/img/arrow__down__purple.svg" alt="arrow"> <br />
+              </div>
               и получи ответы на свои вопросы 
-            </p>
+            </h3>
 
 
 
@@ -1127,9 +1131,9 @@
 
         <section class="application">
           <div class="container">
-            <p class="page__title">
+            <h4>
               Хотите поучаствовать в вебинаре и получить доступ к демо?
-            </p>
+            </h4>
             <a href="#" class="href__feedback">
               Оставить заявку
             </a>
@@ -1178,13 +1182,13 @@
       <footer class="py-5">
         <div class="container">
         <div class="row">
-          <div class="col-4">
-            <a href="/" class="footer_logo d-flex align-items-center mb-2 me-sm-5 mb-lg-0 text-dark text-decoration-none">
+          <div class="col-lg-4 col-sm-12">
+            <a href="/" class="footer_logo mb-2 me-sm-5 mb-lg-0 text-dark text-decoration-none">
               <!-- <img src="./assets/img/logo__footer.svg" alt="logo">  -->
             </a>
           </div>
 
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-6 col-6">
             <h6>Клиентам</h6>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Как это работает?</a></li>
@@ -1195,7 +1199,7 @@
             </ul>
           </div>
     
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-6 col-6">
             <h6>Партнерам</h6>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Как с нами работать?</a></li>
@@ -1206,7 +1210,7 @@
             </ul>
           </div>
     
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-6 col-6">
             <h6>Разработчикам</h6>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Как у нас работать?</a></li>
@@ -1218,7 +1222,7 @@
           </div>
 
               
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-6 col-6">
             <h6>О компании</h6>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Вакансии</a></li>
@@ -1229,17 +1233,20 @@
           </div>
     
         </div>
+
+        <ul class="list-unstyled list-docs list-links me-auto col-sm-12 col-md-12">
+          <li class="ms-3 col-6 col-md-3 col-lg-2"><a class="footer__docs text-white" href="mailto:ainsys@gmail.com">ainsys@gmail.com</a></li>
+          <li class="ms-3 col-6 col-md-3 col-lg-2"><a class="footer__docs text-white" href="#">Cookies</a></li>
+          <li class="ms-3 col-6 col-md-3 col-lg-2"><a class="footer__docs text-white" href="#">Terms & Conditions</a></li>
+          <li class="ms-3 col-6 col-md-3 col-lg-2"><a class="footer__docs text-white" href="#">Privacy</a></li>
+        </ul>
     
-        <div class="d-flex justify-content-between py-4 my-4 border-top">
-          <ul class="list-unstyled d-flex me-auto">
-            <li class="ms-3"><a class="footer__docs text-white" href="mailto:ainsys@gmail.com">ainsys@gmail.com</a></li>
-            <li class="ms-3"><a class="footer__docs text-white" href="#">Cookies</a></li>
-            <li class="ms-3"><a class="footer__docs text-white" href="#">Terms & Conditions</a></li>
-            <li class="ms-3"><a class="footer__docs text-white" href="#">Privacy</a></li>
-          </ul>
-          <p class="me-sm-4">&copy; Stanform Europe Ltd., 2022</p>
+        <div class="py-4 my-4 border-top footer__bottom">
+          <p class="me-sm-4 footer__ltd">&copy; Stanform Europe Ltd., 2022</p>
+
+          <div class="footer__item">
           <ul class="list-unstyled d-flex me-sm-4">
-            <li class="me-3"><a class="" href="#">
+            <li class="me-3 c-sm-6"><a class="" href="#">
               <img src="./assets/img/soc__fb.svg" alt="fb" class="footer__soc__img">
             </a></li>
             <li class="me-3"><a class="" href="#">
@@ -1256,30 +1263,27 @@
             </a></li>
           </ul>
 
-          <div class="dropdown dropdown__lang text-end">
-            <a href="#" class="d-block d-xl-flex align-items-xl-center link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="dropdown__lang text-end">
+            <a href="#" class="dropdown__lang__item link-light text-decoration-none">
                 <p class="header__user__text">RU</p>
             </a>
-            <ul class="dropdown-menu js-example-basic-single dropdown-menu-lang text-small" aria-labelledby="dropdownUser1">
-              <li>
-                <a class="dropdown-item" href="#">
-                  <img src="./assets/img/lang__urk.svg" class="lang__img me-sm-2">
-                  Українська</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <img src="./assets/img/lang__ru.svg" class="lang__img me-sm-2">
-                  Русский
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <img src="./assets/img/lang__usa.svg" class="lang__img me-sm-2">
-                  English</a>
-              </li>
+            <ul class="submenu">
+              <li><a href="#" class="submenu__item">
+                <img src="./assets/img/lang__urk.svg" class="lang__img me-sm-2">
+                Українська</a>
+              </a></li>
+              <li><a href="#" class="submenu__item">
+                <img src="./assets/img/lang__ru.svg" class="lang__img me-sm-2">
+                Русский
+              </a></li>
+              <li><a href="#" class="submenu__item">
+                <img src="./assets/img/lang__usa.svg" class="lang__img me-sm-2">
+                English</a>
+              </a></li>
             </ul>
           </div>
-          
+        </div>
+
         </div>
       </div>
       </footer>
