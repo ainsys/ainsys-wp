@@ -15,6 +15,8 @@ cgi-bin/
 /wp-content/themes/twentytwenty/
 /wp-content/themes/twentytwentyone/
 /wp-content/themes/index.php
+/wp-content/themes/twentytwentytwo/
+/wp-content/languages/
 
 
 ### WordPress ###
@@ -269,6 +271,7 @@ composer.phar
 *.swp
 Thumbs.db
 .sass-cache/
+robots.txt
 
 
 ### IDEs ###
