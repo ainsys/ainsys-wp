@@ -1,0 +1,62 @@
+.cta {
+	//@include section-margin;
+	padding: rem( 6.4 ) 0;
+	text-align: center;
+	background-color: $dark;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	@include media-breakpoint-up( $bp ) {
+		padding: rem( 10 ) 0;
+	}
+
+	&.bg-color-white {
+		background-color: $white;
+		color: $dark;
+	}
+	&.bg-color-light {
+		background-color: $light;
+		color: $dark;
+	}
+	&.bg-color-accent {
+		background-color: $accent;
+		color: $white;
+	}
+	&.bg-color-accent-variant {
+		background-color: $accent-variant;
+		color: $white;
+	}
+	&.bg-color-dark {
+		background-color: $dark;
+		color: $white;
+	}
+
+	.wp-block-buttons {
+		margin: rem( 2 ) 0 0;
+		@include media-breakpoint-up( $bp ) {
+			margin: rem( 4 ) 0 0;
+		}
+		.wp-block-button {
+			display: block;
+			margin: 0 0 rem( 1.6 );
+			&:last-child {
+				margin: 0;
+			}
+			@include media-breakpoint-up( sm ) {
+				display: inline-block;
+				margin: 0 rem( 0.8 ) rem( 0.8 );
+				&:last-child {
+					margin: 0 rem( 0.8 ) rem( 0.8 );
+				}
+			}
+
+			&__link {
+				display: block;
+				@include media-breakpoint-up( sm ) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
