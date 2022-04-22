@@ -33,7 +33,7 @@ if ( get_field( 'bg' ) ) {
 					<?php } ?>
 					<?php if ( get_field( 'title_bottom' ) ) { ?>
 						<br><?php the_field( 'title_bottom' ); ?>
-					<?php } ?>   
+					<?php } ?>
 				</h1>
 			</div>
 			<?php if ( get_field( 'text' ) ) { ?>

@@ -23,7 +23,6 @@
             margin-bottom: 25px;
 
             display: flex;
-            justify-content: space-between;
 
             .accordion-item {
                 background: $accardion_color;
@@ -33,6 +32,7 @@
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
+                height: auto;
 
                 .accordion-header {
 
@@ -74,6 +74,9 @@
             .collapsed .accordion__text {
                 display: block !important;
             }
+            .collapsed.accordion-item {
+              height: 100%;
+            }
             .accordion-item:last-child {
                 margin-right: 0;
             }
@@ -88,13 +91,13 @@
                 }
             }
             
-            #accordion-item-first.accardion_active {
+            #accordion-item-1.accardion_active {
                 margin-right: -16%;
             }
-            #accordion-item-second.accardion_active {
+            #accordion-item-2.accardion_active {
                 margin: 0 -8%;
             }
-            #accordion-item-third.accardion_active {
+            #accordion-item-3.accardion_active {
                 margin-left: -16%;
             }
 

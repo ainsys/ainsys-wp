@@ -65,7 +65,8 @@
     .page__img {
         @include flex_center;
         img {
-            width: 100%;
+            width: auto;
+            max-width: 100%;
         }
     }
     .page__content:nth-child(3) {

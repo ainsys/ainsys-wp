@@ -82,9 +82,12 @@
               }
         }
     }
-    .col:nth-child(n+3) .rates__name {
-        background: $btn_grad;
-        color: $white_color;
+    .rates__item:nth-child(n+3)  {
+
+        .rates__name {
+            background: $btn_grad;
+            color: $white_color;
+        }
     }
     .rates__footer {
         .suggestions__title {

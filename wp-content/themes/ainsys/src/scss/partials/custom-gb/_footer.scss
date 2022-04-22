@@ -1,5 +1,5 @@
 footer {
-  background-color: $bg_color;
+  background-color: $page_color;
   color: $white_color;
   font-weight: 500;
 
@@ -8,10 +8,12 @@ footer {
     width: 283px;
     height: 140px;
     filter: brightness(10);
+    display: block;
   }
   .footer_logo:hover,
   .footer_logo:focus {
     filter: none;
+    transition: 0.45s;
   }
   h6 {
     font-weight: 600;
@@ -117,16 +119,17 @@ footer {
     align-items: center;
   }
   .list-docs {
-    @include flex_center;
+    @include flex_between;
     margin: 50px 0;
 
-    li {
-      text-align: center;
-    }
+
   }
   .footer__bottom {
     @include flex_center;
-
+    
+    .footer__fl {
+      @include flex_center;
+    }
   }
 }
 

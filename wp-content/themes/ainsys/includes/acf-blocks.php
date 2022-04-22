@@ -396,6 +396,24 @@ function ainsys_register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'servises',
+			'title'           => __( 'servises' ),
+			'description'     => __( 'servises' ),
+			'render_template' => 'partials/blocks/theme-specific/servises.php',
+			'category'        => 'customgb',
+			'keywords'        => array( 'servises' ),
+			'icon'            => 'cover-image',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.
