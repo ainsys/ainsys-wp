@@ -24,9 +24,6 @@
 			@include disabled-button;
 		}
 
-		&:visited {
-			color: $accent;
-		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -41,9 +38,6 @@
 		border-color: $accent;
 		color: $accent;
 
-		&:visited {
-			color: $accent;
-		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -83,9 +77,6 @@
 		}
 		*/
 
-		&:visited {
-			color: $accent;
-		}
 		&:hover,
 		&:active,
 		&:focus {

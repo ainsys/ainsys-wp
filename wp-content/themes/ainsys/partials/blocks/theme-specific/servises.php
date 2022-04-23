@@ -117,11 +117,15 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					<?php the_field( 'bottom_title' ); ?>
 				<?php } ?>
 			</p>
-			<button class="btn btn-primary">
-				<?php if ( get_field( 'button_text' ) ) { ?>
-					<?php the_field( 'button_text' ); ?>
-				<?php } ?>
-			</button> 
+			<?php if ( get_field( 'button' ) ) { ?>
+				<?php
+				$button        = get_field( 'button' );
+				$button_url    = $button['url'] ? $button['url'] : '#';
+				$button_title  = $button['title'] ? $button['title'] : '';
+				$button_target = $button['target'] ? $button['target'] : '_self';
+				?>
+				<a class="btn btn-primary" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+			<?php } ?>
 		</div>
 	</div>
 </section>  

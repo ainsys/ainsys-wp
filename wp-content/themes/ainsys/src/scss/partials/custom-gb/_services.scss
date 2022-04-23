@@ -74,10 +74,7 @@
             .collapsed .accordion__text {
                 display: block !important;
             }
-            .collapsed.accordion-item {
-              height: 100%;
-            }
-            .accordion-item:last-child {
+             .accordion-item:last-child {
                 margin-right: 0;
             }
             .accardion_active {
