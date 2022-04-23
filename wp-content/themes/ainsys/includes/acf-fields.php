@@ -8,6 +8,7 @@
 if ( function_exists( 'acf_add_local_field_group' ) ) :
 
 	require_once __DIR__ . '/acf-fields/accordion_block___group_5fe9ed929580b.php';
+	require_once __DIR__ . '/acf-fields/advantages_theme_block___group_6263d1b385e0c.php';
 	require_once __DIR__ . '/acf-fields/audio_button_block___group_5ff76c3b8c391.php';
 	require_once __DIR__ . '/acf-fields/blog_post__group_5fe4e704ba8e1.php';
 	require_once __DIR__ . '/acf-fields/cta_block___group_5ff5c87df3717.php';
