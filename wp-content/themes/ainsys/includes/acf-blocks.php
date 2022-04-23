@@ -436,6 +436,44 @@ function ainsys_register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'rates',
+			'title'           => __( 'Rates' ),
+			'description'     => __( 'Rates' ),
+			'render_template' => 'partials/blocks/theme-specific/rates.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'rates' ),
+			'icon'            => 'cover-image',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'img-txt-ul',
+			'title'           => __( 'Image & Text with ul' ),
+			'description'     => __( 'Image & Text with ul' ),
+			'render_template' => 'partials/blocks/theme-specific/img-txt-ul.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'image', 'text' ),
+			'icon'            => 'cover-image',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.

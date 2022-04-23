@@ -16,16 +16,16 @@
 		display: none;
 	}
 	&--zoom {
-		background-image: url( ../images/pf-common/fancy-zoom.svg );
+		background-image: url( ../images/common/fancy-zoom.svg );
 	}
 	&--play {
-		background-image: url( ../images/pf-common/fancy-play.svg );
+		background-image: url( ../images/common/fancy-play.svg );
 	}
 	&--pause {
-		background-image: url( ../images/pf-common/fancy-pause.svg );
+		background-image: url( ../images/common/fancy-pause.svg );
 	}
 	&--close {
-		background-image: url( ../images/pf-common/fancy-close.svg );
+		background-image: url( ../images/common/fancy-close.svg );
 	}
 
 	svg {
@@ -38,7 +38,7 @@
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
-		background: $white url( ../images/pf-common/fancy-arrow.svg ) no-repeat center;
+		background: $white url( ../images/common/fancy-arrow.svg ) no-repeat center;
 		//border: 1px solid $red;
 
 		&--arrow_left {

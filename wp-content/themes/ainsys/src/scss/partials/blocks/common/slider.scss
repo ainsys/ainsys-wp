@@ -42,21 +42,21 @@
 	}
 	.slick-prev {
 		left: 0;
-		background: $white url( ../images/pf-common/arrow-left.svg ) no-repeat center;
+		background: $white url( ../images/common/arrow-left.svg ) no-repeat center;
 		&:hover,
 		&:focus,
 		&:active {
-			background: $white url( ../images/pf-common/arrow-left.svg ) no-repeat center;
+			background: $white url( ../images/common/arrow-left.svg ) no-repeat center;
 		}
 	}
 	.slick-next {
 		right: 0;
-		background: $white url( ../images/pf-common/arrow-right.svg ) no-repeat center;
+		background: $white url( ../images/common/arrow-right.svg ) no-repeat center;
 
 		&:hover,
 		&:focus,
 		&:active {
-			background: $white url( ../images/pf-common/arrow-right.svg ) no-repeat center;
+			background: $white url( ../images/common/arrow-right.svg ) no-repeat center;
 		}
 	}
 	.slick-prev,
