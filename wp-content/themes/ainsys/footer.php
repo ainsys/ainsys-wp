@@ -67,51 +67,51 @@
 						</ul>
 
 						<div class="footer__fl">
+							<p class="me-sm-4 footer__ltd">&copy; Stanform Europe Ltd., 2022</p>
 
-						<p class="me-sm-4 footer__ltd">&copy; Stanform Europe Ltd., 2022</p>
+							<div class="footer__item">
+								<ul class="list-unstyled d-flex me-sm-4">
+									<li class="me-3 c-sm-6"><a class="" href="#">
+										<img src="./assets/img/soc__fb.svg" alt="fb" class="footer__soc__img">
+									</a></li>
+									<li class="me-3"><a class="" href="#">
+										<img src="./assets/img/soc__inst.svg" alt="fb" class="footer__soc__img">
+									</a></li>
+									<li class="me-3"><a class="" href="#">
+										<img src="./assets/img/soc__youtube.svg" alt="fb" class="footer__soc__img">
+									</a></li>
+									<li class="me-3"><a class="" href="#">
+										<img src="./assets/img/soc__tg.svg" alt="fb" class="footer__soc__img">
+									</a></li>
+									<li class="me-0"><a class="" href="#">
+										<img src="./assets/img/soc__vk.svg" alt="fb" class="footer__soc__img">
+									</a></li>
+								</ul>
 
-						<div class="footer__item">
-							<ul class="list-unstyled d-flex me-sm-4">
-								<li class="me-3 c-sm-6"><a class="" href="#">
-									<img src="./assets/img/soc__fb.svg" alt="fb" class="footer__soc__img">
-								</a></li>
-								<li class="me-3"><a class="" href="#">
-									<img src="./assets/img/soc__inst.svg" alt="fb" class="footer__soc__img">
-								</a></li>
-								<li class="me-3"><a class="" href="#">
-									<img src="./assets/img/soc__youtube.svg" alt="fb" class="footer__soc__img">
-								</a></li>
-								<li class="me-3"><a class="" href="#">
-									<img src="./assets/img/soc__tg.svg" alt="fb" class="footer__soc__img">
-								</a></li>
-								<li class="me-0"><a class="" href="#">
-									<img src="./assets/img/soc__vk.svg" alt="fb" class="footer__soc__img">
-								</a></li>
-							</ul>
-
-						<div class="dropdown__lang text-end">
-							<a href="#" class="dropdown__lang__item link-light text-decoration-none">
-								<p class="header__user__text">RU</p>
-							</a>
-							<ul class="submenu">
-								<li><a href="#" class="submenu__item">
-								<img src="./assets/img/lang__urk.svg" class="lang__img me-sm-2">
-								Українська</a>
-								</a></li>
-								<li><a href="#" class="submenu__item">
-								<img src="./assets/img/lang__ru.svg" class="lang__img me-sm-2">
-								Русский
-								</a></li>
-								<li><a href="#" class="submenu__item">
-								<img src="./assets/img/lang__usa.svg" class="lang__img me-sm-2">
-								English</a>
-								</a></li>
-							</ul>
+								<div class="dropdown__lang text-end">
+									<a href="#" class="dropdown__lang__item link-light text-decoration-none">
+										<p class="header__user__text">RU</p>
+									</a>
+									<ul class="submenu">
+										<li><a href="#" class="submenu__item">
+										<img src="./assets/img/lang__urk.svg" class="lang__img me-sm-2" alt="">
+										Українська</a>
+										</li>
+										<li><a href="#" class="submenu__item">
+										<img src="./assets/img/lang__ru.svg" class="lang__img me-sm-2" alt="">
+										Русский
+										</a></li>
+										<li><a href="#" class="submenu__item">
+										<img src="./assets/img/lang__usa.svg" class="lang__img me-sm-2" alt="">
+										English</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
-
 
 		</div>
 	</div>

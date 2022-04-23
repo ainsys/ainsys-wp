@@ -23,7 +23,7 @@ if ( get_field( 'bg' ) ) {
 }
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>>
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
 		<div class="main__info">
 			<div class="main__title">
