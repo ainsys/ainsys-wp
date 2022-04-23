@@ -1,4 +1,4 @@
-*, p, a, ul, li {
+ul, li {
     @include reset-list;
     @include main__font;
 }
@@ -16,11 +16,6 @@ section {
     padding-top: 70px; 
 }
 
-h3 {
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 145%;
-}
 h4 {
     font-weight: 500;
     font-size: 35px;

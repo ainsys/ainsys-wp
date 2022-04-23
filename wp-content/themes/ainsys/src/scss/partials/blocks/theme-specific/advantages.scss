@@ -1,5 +1,35 @@
 .advantages {
-	padding: rem( 10 ) 0 rem( 3 );
-	background: $dark;
-	color: $white;
+	padding: rem( 2.5 ) 0;
+	background: $white;
+
+	&__list {
+		margin-left: rem( -1 );
+		margin-right: rem( -1 );
+
+		> div {
+			padding: rem( 1 );
+		}
+	}
+	&__item {
+		height: 100%;
+		padding: rem( 3 );
+		background: $light-gray;
+		border-radius: rem( 1.2 );
+
+		&__img {
+			margin: 0 0 rem( 0.8 );
+		}
+
+		ul {
+			padding: 0 0 0 rem( 1 );
+		}
+
+		li {
+			margin-bottom: rem( 0.8 );
+			list-style-image: url( ../images/components/circle_purple.svg );
+			font-size: rem( 1.4 );
+			line-height: 1.45;
+			color: $grey_text_opport;
+		}
+	}
 }

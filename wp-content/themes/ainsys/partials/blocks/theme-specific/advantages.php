@@ -18,28 +18,36 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
 	$class_name .= ' align' . $block['align'];
 }
-if ( get_field( 'bg' ) ) {
-	$class_name .= ' bg-color-' . get_field( 'bg' );
-}
-$style       = '';
-$style_bg    = '';
-$style_align = '';
-if ( get_field( 'bg_img' ) ) {
-	$style_bg = 'background-image: url(' . wp_get_attachment_image_url( get_field( 'bg_img' ), 'full' ) . '); ';
-}
-if ( get_field( 'bg_alignment' ) ) {
-	$style_align = 'background-position: ' . get_field( 'bg_alignment' ) . ';';
-}
-if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
-	$style = ' style="' . $style_bg . $style_align . '"';
-}
-
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>"<?php echo $style; //phpcs:ignore ?>>
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
-		<div class="cta--inner">
-			<InnerBlocks />
-		</div>
+		<?php if ( have_rows( 'advantages' ) ) : ?>
+			<div class="row advantages__list">
+				<?php
+				while ( have_rows( 'advantages' ) ) :
+					the_row();
+					$class = get_sub_field( 'class' ) ? get_sub_field( 'class' ) : 'col-lg-4';
+					?>
+					<div class="<?php echo ' ' . esc_attr( $class ); ?>">
+						<div class="advantages__item">
+							<?php if ( get_sub_field( 'image' ) ) { ?>
+								<div class="advantages__item__img">
+									<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'large', false, array( 'class' => '' ) ); ?>
+								</div>
+							<?php } ?>
+							<?php if ( get_sub_field( 'title' ) ) { ?>
+								<h3 class="advantages__item__title"><?php the_sub_field( 'title' ); ?></h3>
+							<?php } ?>
+							<?php if ( get_sub_field( 'text' ) ) { ?>
+								<div class="advantages__item__text">
+									<?php the_sub_field( 'text' ); ?>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </section>
