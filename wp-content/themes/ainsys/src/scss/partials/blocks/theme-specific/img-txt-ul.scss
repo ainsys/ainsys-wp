@@ -1,0 +1,153 @@
+.img-txt-ul {
+	padding: 0;
+
+	&__block-title {
+		padding-top: rem( 5 );
+		font-size: rem( 3.6 );
+		font-weight: 600;
+		line-height: 1.45;
+		text-align: center;
+		@include media-breakpoint-up( $bp ) {
+			padding-top: rem( 5 );
+			font-size: rem( 4.8 );
+		}
+	}
+
+	&.bg-color-white {
+		background: $white;
+	}
+	&.bg-color-light {
+		background: $light;
+	}
+	&.bg-color-accent {
+		background: $accent;
+	}
+	&.bg-color-accent-variant {
+		background: $accent-variant;
+	}
+	&.bg-color-accent-variant,
+	&.bg-color-accent {
+		color: $white;
+	}
+
+	&.img-align-right {
+		.row {
+			@include media-breakpoint-up( $bp ) {
+				flex-flow: row-reverse;
+			}
+		}
+		.img-txt-ul__img {
+			@include media-breakpoint-up( $bp ) {
+				padding-left: rem( 7 );
+				padding-right: 0;
+			}
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		margin: 0 0 rem( 2.4 );
+		@include media-breakpoint-up( $bp ) {
+			margin: 0;
+			padding-left: 0;
+			padding-right: rem( 7 );
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			@include media-breakpoint-up( $bp ) {
+				height: 100%;
+				object-fit: cover;
+				font-family: 'object-fit: cover;';
+			}
+		}
+	}
+
+	&__txt {
+		margin: 0 0 rem( 4 );
+		@include media-breakpoint-up( $bp ) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+			margin: 0;
+		}
+
+		.content & {
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			.wp-block-buttons {
+				max-width: none;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		margin: 0 0 rem( 2.2 );
+		padding-bottom: rem( 2.2 );
+		font-size: rem( 3 );
+		font-weight: 500;
+		line-height: 1.45;
+		@include media-breakpoint-up( $bp ) {
+			font-size: rem( 3.6 );
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: rem( 17.1 );
+			max-width: 30%;
+			height: 2px;
+			background: $accent;
+		}
+	}
+
+	&__description {
+		margin: 0 0 rem( 2.4 );
+		font-size: rem( 1.8 );
+		color: $grey_text_opport;
+		@include media-breakpoint-up( $bp ) {
+			font-size: rem( 2.4 );
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 0 0 rem( 1.8 );
+
+		&__icon {
+			width: rem( 3.2 );
+
+			img {
+				display: block;
+				max-width: rem( 2.2 );
+				height: auto;
+			}
+		}
+		&__text {
+			font-size: rem( 1.4 );
+			color: $grey_text_opport;
+			@include media-breakpoint-up( $bp ) {
+				font-size: rem( 1.8 );
+			}
+
+			span {
+				color: $accent;
+			}
+		}
+	}
+}

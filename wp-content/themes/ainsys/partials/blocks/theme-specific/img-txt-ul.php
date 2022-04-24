@@ -27,6 +27,9 @@ if ( get_field( 'align' ) ) {
 
 <section  id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
+		<?php if ( get_field( 'block_title' ) ) { ?>
+			<h2 class="img-txt-ul__block-title"><?php the_field( 'block_title' ); ?></h2>
+		<?php } ?>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="img-txt-ul__img">
@@ -36,21 +39,21 @@ if ( get_field( 'align' ) ) {
 			<div class="col-lg-6">
 				<div class="img-txt-ul__txt">
 					<?php if ( get_field( 'title' ) ) { ?>
-						<h2><?php the_field( 'title' ); ?></h2>
+						<h3 class="img-txt-ul__title"><?php the_field( 'title' ); ?></h3>
 					<?php } ?>
 					<?php if ( get_field( 'description' ) ) { ?>
-						<div class="toggler__desc"><?php the_field( 'description' ); ?></div>
+						<div class="img-txt-ul__description"><?php the_field( 'description' ); ?></div>
 					<?php } ?>
-					<?php if ( have_rows( 'ul' ) ) : ?>
+					<?php if ( have_rows( 'list' ) ) : ?>
 						<div class="img-txt-ul__list">
 							<?php
-							while ( have_rows( 'ul' ) ) :
+							while ( have_rows( 'list' ) ) :
 								the_row();
 								?>
 								<div class="img-txt-ul__item">
-									<?php if ( get_sub_field( 'image' ) ) { ?>
-										<div class="img-txt-ul__item__img">
-											<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'large', false, array( 'class' => '' ) ); ?>
+									<?php if ( get_sub_field( 'icon' ) ) { ?>
+										<div class="img-txt-ul__item__icon">
+											<?php echo wp_get_attachment_image( get_sub_field( 'icon' ), 'large', false, array( 'class' => '' ) ); ?>
 										</div>
 									<?php } ?>
 									<?php if ( get_sub_field( 'text' ) ) { ?>
