@@ -19,6 +19,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 	require_once __DIR__ . '/acf-fields/hero_video_theme_block___group_626187c6c734c.php';
 	require_once __DIR__ . '/acf-fields/image_text_block___group_609a9a07eae5e.php';
 	require_once __DIR__ . '/acf-fields/image_text_full-width_block___group_6099537c6cf99.php';
+	require_once __DIR__ . '/acf-fields/image_text_with_ul_theme_block___group_6265352506eb2.php';
 	require_once __DIR__ . '/acf-fields/image_with_link_block___group_5feb514c6ac44.php';
 	require_once __DIR__ . '/acf-fields/in-page_navigation_block___group_609c27488e3e5.php';
 	require_once __DIR__ . '/acf-fields/page_header_block___group_5feb2b575c9d0.php';
