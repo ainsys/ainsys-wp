@@ -87,4 +87,33 @@ h6 {
 }
 
 
+@media (max-width: 992px) {
+    h2 {
+        font-size: 36px;
+        line-height: 120%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    h4 {
+        font-size: 29px;
+        line-height: 120%;
+    }
+    .page__text {
+        font-size: 20px;
+    }
+    .page__doptext {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 120%;
+    }
+}
+
 

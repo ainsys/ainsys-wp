@@ -33,3 +33,24 @@
         }
     }
 }
+@media (max-width: 576px) {
+
+  //   Main 
+    .main {
+        .main__info {
+            .main__title {
+                h1 {
+                    font-size: 40px;
+                    line-height: 120%;
+                }
+                span {
+                    font-size: 40px;
+                    line-height: 120%; 
+                }
+            }
+            .main__text {
+                font-size: 18px;
+            }
+        }
+    }
+}

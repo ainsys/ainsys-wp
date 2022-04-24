@@ -83,3 +83,25 @@
         } 
     }
 }
+
+@media (max-width: 992px) {
+
+  // Vozmojnosti
+    .opportunities {
+        .page__content {
+            flex-direction: column;
+            padding-top: 70px;
+
+            .page__info {
+                order: -1;
+                margin: 0 !important;
+            }
+            .page__img {
+              img {
+                  width: 80%;
+              }
+          }
+        }
+    }
+}
+
