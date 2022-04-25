@@ -1,0 +1,42 @@
+.hero-video {
+	&__info {
+		color: $page_color;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 12px;
+
+		h1 {
+			font-size: rem( 4 );
+			font-weight: 500;
+			line-height: 1.2;
+			text-align: center;
+			@include media-breakpoint-up( $bp ) {
+				font-size: rem( 5.6 );
+			}
+
+			span {
+				color: $color_active;
+			}
+		}
+	}
+
+	&__text {
+		font-size: rem( 1.8 );
+		line-height: 1.6;
+		margin-bottom: rem( 1.2 );
+		@include media-breakpoint-up( $bp ) {
+			font-size: rem( 2 );
+		}
+	}
+
+	&__video {
+		.toggler__screens {
+			margin: rem( 3 ) 0 0;
+		}
+		video {
+			width: 100%;
+		}
+	}
+}

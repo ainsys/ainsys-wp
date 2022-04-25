@@ -5,8 +5,7 @@
 			.siblings( '.toggler__switch__label' )
 			.toggleClass( 'active' );
 		$( this )
-			.closest( '.toggler__switch' )
-			.siblings( '.toggler__screens' )
+			.closest( 'section' )
 			.find( '.toggler__screen' )
 			.toggleClass( 'active' );
 	} );
