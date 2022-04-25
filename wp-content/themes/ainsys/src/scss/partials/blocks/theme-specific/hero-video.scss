@@ -1,7 +1,17 @@
 .hero-video {
+	position: relative;
+
 	&__info {
 		color: $page_color;
 		text-align: center;
+		@include media-breakpoint-up( $bp ) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			padding: rem( 7 ) 0 0;
+		}
 	}
 
 	&__title {
@@ -30,12 +40,16 @@
 			font-size: rem( 2 );
 		}
 	}
+	.toggler__switch {
+		margin: rem( 2 ) 0 0;
+		padding: 0;
+	}
+	.toggler__screens {
+		margin: 0;
+		padding: 0;
+	}
 
 	&__video {
-		.toggler__screens {
-			margin: rem( 3 ) 0 0;
-			padding: 0;
-		}
 		video {
 			width: 100%;
 		}
