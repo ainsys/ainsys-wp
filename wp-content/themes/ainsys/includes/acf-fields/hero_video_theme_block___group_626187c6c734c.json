@@ -42,6 +42,46 @@
                 "maxlength": ""
             },
             {
+                "key": "field_6266c5f07af8c",
+                "label": "Animated Text",
+                "name": "animated_text",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add",
+                "sub_fields": [
+                    {
+                        "key": "field_6266c6127af8d",
+                        "label": "Text",
+                        "name": "text",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
                 "key": "field_626188045de86",
                 "label": "Text",
                 "name": "text",

@@ -29,7 +29,7 @@ if ( get_field( 'bg' ) ) {
 			<div class="hero-video__title">
 				<h1>
 					<?php if ( get_field( 'title_top' ) ) { ?>
-						&gt;<span><?php the_field( 'title_top' ); ?></span>&lt;
+						&gt;<span id="Ticker"><?php the_field( 'title_top' ); ?></span>&lt;
 					<?php } ?>
 					<?php if ( get_field( 'title_bottom' ) ) { ?>
 						<br><?php the_field( 'title_bottom' ); ?>
@@ -86,3 +86,59 @@ if ( get_field( 'bg' ) ) {
 	</div>
 
 </section>
+
+<?php if ( have_rows( 'animated_text' ) ) : ?>
+	<script type="text/javascript">
+		const CharTimeout = 50;
+		const StoryTimeout = 2000;
+
+		const Summaries = new Array();
+		const SiteLinks = new Array();
+
+		<?php
+		$i = 0;
+		while ( have_rows( 'animated_text' ) ) :
+			the_row();
+			?>
+			Summaries[<?php echo $i; ?>] = '<?php the_sub_field( 'text' ); ?>';
+		<?php
+		$i++;
+		endwhile;
+		?>
+
+		function runTheTicker(){
+			var myTimeout;  
+
+			if(CurrentLength == 0){
+				CurrentStory++;
+				CurrentStory      = CurrentStory % massiveItemCount;
+				StorySummary      = Summaries[CurrentStory].replace(/"/g,'-');      
+			}
+			AnchorObject.innerHTML = StorySummary.substring(0,CurrentLength) + znak();
+			if(CurrentLength != StorySummary.length){
+				CurrentLength++;
+				myTimeout = CharTimeout;
+			} else {
+				CurrentLength = 0;
+				myTimeout = StoryTimeout;
+			}
+			setTimeout("runTheTicker()", myTimeout);
+		}
+
+		function znak(){
+			if(CurrentLength == StorySummary.length) return "";
+			else return "|";
+		}
+		function startTicker(){
+			massiveItemCount =  Number(Summaries.length); 
+
+			CurrentStory     = -1;
+			CurrentLength    = 0;
+
+			AnchorObject     = document.getElementById("Ticker");
+			runTheTicker();     
+		}
+
+		startTicker();
+	</script>
+<?php endif; ?>
