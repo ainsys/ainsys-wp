@@ -39,7 +39,7 @@
 					<a href="/" class="header__logo"></a>
 
 					<div class="header__btn">
-						<a class="btn btn-primary" href="#">Оставить заявку</a>
+						<a class="btn btn-primary" href="/order-ainsys/">Оставить заявку</a>
 					</div>
 				</div>
 			</div>

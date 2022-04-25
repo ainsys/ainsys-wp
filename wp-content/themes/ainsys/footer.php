@@ -13,9 +13,7 @@
 					<div class="footer__content">
 						<ul class="footer__links">
 							<li><a href="mailto:ainsys@gmail.com">ainsys@gmail.com</a></li>
-							<li><a href="#">Cookies</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-							<li><a href="#">Privacy</a></li>
+							<li><a href="/privacy-policy/">Privacy</a></li>
 						</ul>
 
 						<div class="footer__copyright-social">
