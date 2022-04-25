@@ -1,0 +1,43 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	height: rem( 10 );
+	background-color: $bg_color;
+	color: $white_color;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem( 1.6 );
+	}
+
+	&__logo {
+		display: block;
+		width: 140px;
+		height: 70px;
+		margin-right: rem( 1 );
+		background: no-repeat url( ../images/components/logo_active.svg ) center/ 100%;
+		filter: brightness( 10 );
+
+		@include media-breakpoint-up( sm ) {
+			width: 250px;
+		}
+		@include media-breakpoint-up( $bp ) {
+			width: 307px;
+		}
+
+		&:hover,
+		&:focus {
+			filter: none;
+			transition: 0.45s;
+		}
+	}
+
+	.btn {
+		line-height: 1;
+	}
+}
