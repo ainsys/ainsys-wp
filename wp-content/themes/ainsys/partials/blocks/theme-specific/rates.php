@@ -42,11 +42,13 @@ if ( ! empty( $block['align'] ) ) {
 							<?php } ?>
 							<?php if ( get_sub_field( 'price' ) ) { ?>
 								<?php
-								$sale  = get_sub_field( 'sale' ) ? ' rates__item__price--sale' : '';
-								$month = get_sub_field( 'period' ) ? get_sub_field( 'period' ) : 'month';
+								$sale = get_sub_field( 'sale' ) ? ' rates__item__price--sale' : '';
 								?>
 								<div class="rates__item__price<?php echo esc_attr( $sale ); ?>">
-									<span><?php the_sub_field( 'price' ); ?></span> / <?php echo esc_html( $month ); ?>
+									<span><?php the_sub_field( 'price' ); ?></span>
+									<?php if ( get_sub_field( 'period' ) ) { ?>
+										/ <?php the_sub_field( 'period' ); ?>
+									<?php } ?>
 								</div>
 							<?php } ?>
 							<?php if ( get_sub_field( 'users' ) ) { ?>
@@ -72,7 +74,7 @@ if ( ! empty( $block['align'] ) ) {
 								$button_target = $button['target'] ? $button['target'] : '_self';
 								?>
 								<div class="rates__item__link">
-									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="gtag( 'event', 't_1', {   'event_category' : 'ain',   'event_label' : 'p' });ym(86987238,'reachGoal','t_1'); return true;"><?php echo esc_html( $button_title ); ?></a>
 								</div>
 							<?php } ?>
 						</div>
