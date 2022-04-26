@@ -48,6 +48,9 @@
 		margin: 0;
 		padding: 0;
 	}
+	.toggler__screen.active {
+		display: block;
+	}
 
 	&__video {
 		video {

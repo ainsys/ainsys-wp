@@ -11,39 +11,6 @@
 	} );
 
 	$( document ).ready( function() {
-		$( '.form-check-input-content' ).click( function() {
-			$( '.form-check-input' ).each( function( i, value ) {
-				const { id } = value;
-
-				if ( this.checked ) {
-					// content
-					$( `#pageContentAfter-${ id }` ).removeClass(
-						'page__content__active'
-					);
-					$( `#pageContentBefore-${ id }` ).addClass(
-						'page__content__active'
-					);
-					// label
-					$( `#pageSwitchAfter-${ id }` ).removeClass(
-						'label_active'
-					);
-					$( `#pageSwitchBefore-${ id }` ).addClass( 'label_active' );
-				} else {
-					// content
-					$( `#pageContentAfter-${ id }` ).addClass(
-						'page__content__active'
-					);
-					$( `#pageContentBefore-${ id }` ).removeClass(
-						'page__content__active'
-					);
-					// label
-					$( `#pageSwitchAfter-${ id }` ).addClass( 'label_active' );
-					$( `#pageSwitchBefore-${ id }` ).removeClass(
-						'label_active'
-					);
-				}
-			} );
-		} );
 
 		$( '.burger' ).click( function() {
 			$( '.burger span' ).toggleClass( 'active' );

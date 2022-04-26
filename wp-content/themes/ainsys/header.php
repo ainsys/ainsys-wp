@@ -38,8 +38,24 @@
 				<div class="header__content">
 					<a href="/" class="header__logo"></a>
 
-					<div class="header__btn">
-						<a class="btn btn-primary" href="/order-ainsys/">Оставить заявку</a>
+					<div class="header__btns">
+						<div class="header__btn">
+							<a class="btn btn-primary" href="/order-ainsys/">Оставить заявку</a>
+						</div>
+						<div class="header__lang text-end">
+							<a href="#" class="header__lang__current text-decoration-none">RU</a>
+							<ul class="header__lang__submenu">
+								<li>
+									<a href="#" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+								</li>
+								<li>
+									<a href="#" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+								</li>
+								<li>
+									<a href="#" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
