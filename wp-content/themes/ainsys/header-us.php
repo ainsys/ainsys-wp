@@ -78,7 +78,7 @@
 						</div>
 
 						<div class="header__lang text-end">
-							<a href="#" class="header__lang__current text-decoration-none">RU</a>
+							<a href="#" class="header__lang__current text-decoration-none">EN</a>
 							<ul class="header__lang__submenu">
 								<li>
 									<a href="/ainsys-ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
