@@ -17,7 +17,15 @@ cgi-bin/
 /wp-content/themes/index.php
 /wp-content/themes/twentytwentytwo/
 /wp-content/languages/
-
+read.me
+/wp-content/backups-dup-pro/imports/
+/wp-content/backups-dup-pro/installer/dup-installer-bootlog__f7f6cfe-28094032.txt
+/wp-content/backups-dup-pro/installer/dup-installer-log__f7f6cfe-28094032.txt
+/wp-content/backups-dup-pro/installer/original_files_3f5f38a-28094032/
+/wp-content/ewww/
+/wp-content/maintenance.php
+/wp-content/maintenance/
+/wp-content/themes/hello-elementor-child/price.php
 
 ### WordPress ###
 /wp-content/4800dd5ecf-backups/
