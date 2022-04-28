@@ -11,7 +11,6 @@
 require_once __DIR__ . '/includes/acf-load.php';
 require_once __DIR__ . '/includes/acf-enhancements.php';
 require_once __DIR__ . '/includes/wp-cli-acf-tools.php';
-require_once __DIR__ . '/includes/class-clean-walker.php';
 require_once __DIR__ . '/includes/security/hide-wp-version.php';
 require_once __DIR__ . '/includes/head-top-footer-scripts.php';
 require_once __DIR__ . '/includes/wp-cleanup.php';

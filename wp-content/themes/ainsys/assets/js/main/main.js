@@ -1227,7 +1227,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 "use strict";
 
 (function ($) {
-  if ($('.wp-block-gallery').length > 0 && $('body').hasClass('gallery-fancybox')) {
+  if ($('.wp-block-gallery').length > 0) {
     var i = 0;
     $('.wp-block-gallery').each(function () {
       i++;
