@@ -66,12 +66,11 @@ function ainsys_enqueue_scripts() {
 
 	//phpcs:ignore
 	wp_enqueue_style( 'googlefonts', _get_fonts_loading_url(), null, $asset_version );
-	// wp_enqueue_style( 'ainsys-bs-style', get_template_directory_uri() . '/assets/css/bootstrap.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-bs-style', get_template_directory_uri() . '/assets/style/bootstrap.min.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-style', get_template_directory_uri() . '/assets/css/main.css', array( 'ainsys-bs-style' ), $asset_version );
 
 	wp_enqueue_script(
-		'ainsys-scripts',
+		'ainsys-main-scripts',
 		get_template_directory_uri() . '/assets/js/main/main.js',
 		array( 'jquery' ),
 		$asset_version,
@@ -79,8 +78,8 @@ function ainsys_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'ainsys-block-scripts',
-		get_template_directory_uri() . '/assets/js/blocks/main.js',
+		'ainsys-scripts',
+		get_template_directory_uri() . '/assets/js/scripts/main.js',
 		array( 'jquery' ),
 		$asset_version,
 		true
@@ -132,7 +131,7 @@ function ainsys_preload_styles() {
 
 		$src  = $obj->src;
 		$href = $styles->_css_href( $src, $ver, $handle );
-		if( false !== strpos( $href, 'http' ) ) {
+		if ( false !== strpos( $href, 'http' ) ) {
 			?>
 			<link rel="preload" href="<?php echo esc_attr( $href ); ?>" as="style" type="text/css" crossorigin>
 			<?php
@@ -177,7 +176,7 @@ function ainsys_block_editor_styles() {
 	$asset_version = _get_asset_version();
 
 	wp_enqueue_style( 'googlefonts', _get_fonts_loading_url(), null, $asset_version );
-	wp_enqueue_style( 'sues-blocks-editor-style', get_theme_file_uri( '/assets/css/blocks-editor-style.css' ), false, $asset_version, 'all' );
+	wp_enqueue_style( 'ainsys-blocks-editor-style', get_theme_file_uri( '/assets/css/blocks-editor-style.css' ), false, $asset_version, 'all' );
 
 }
 
