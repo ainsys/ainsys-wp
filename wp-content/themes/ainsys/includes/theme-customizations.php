@@ -12,14 +12,10 @@
  * @return array
  */
 function ainsys_body_class( $class ) {
-	if ( 'fancybox' === get_field( 'gallery_lightbox_script', 'option' ) ) {
-		$class[] = 'gallery-fancybox';
-	} elseif ( 'custom' === get_field( 'gallery_lightbox_script', 'option' ) ) {
-		$class[] = 'gallery-pf';
-	}
+	// ...
 	return $class;
 }
-add_filter( 'body_class', 'ainsys_body_class', 10, 1 );
+//add_filter( 'body_class', 'ainsys_body_class', 10, 1 );
 
 /**
  * Search among blog posts only

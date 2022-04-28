@@ -10,8 +10,6 @@
  */
 require_once __DIR__ . '/includes/acf-load.php';
 require_once __DIR__ . '/includes/acf-enhancements.php';
-require_once __DIR__ . '/includes/wp-cli-acf-tools.php';
-require_once __DIR__ . '/includes/class-clean-walker.php';
 require_once __DIR__ . '/includes/security/hide-wp-version.php';
 require_once __DIR__ . '/includes/head-top-footer-scripts.php';
 require_once __DIR__ . '/includes/wp-cleanup.php';
@@ -24,15 +22,6 @@ require_once __DIR__ . '/includes/theme-installer.php';
  * Theme setup hooks
  */
 
-define('AINSYS_DIR_CSS', get_template_directory_uri() . '/assets/css/');
-define('AINSYS_DIR_JS', get_template_directory_uri() . '/assets/js/');
-add_action('wp_enqueue_scripts', function(){
-	wp_enqueue_style('forum_css', AINSYS_DIR_CSS . 'forum.css');
-	wp_enqueue_style('forum_css', AINSYS_DIR_JS . 'main/main.js');
-	if (is_single()){
-		wp_enqueue_script('forum_js', AINSYS_DIR_JS . 'forum.js');
-	}
-});
 function ainsys_after_setup_theme() {
 
 	if ( ! defined( 'WP_DEBUG' ) || ( defined( 'WP_DEBUG' ) && ! WP_DEBUG ) ) {
