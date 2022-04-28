@@ -1,5 +1,5 @@
 ( function( $ ) {
-	if ( $( '.wp-block-gallery' ).length > 0 && $( 'body').hasClass( 'gallery-fancybox') ) {
+	if ( $( '.wp-block-gallery' ).length > 0 ) {
 		let i = 0;
 		$( '.wp-block-gallery' ).each( function() {
 			i++;

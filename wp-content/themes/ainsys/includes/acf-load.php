@@ -30,10 +30,6 @@ if ( ! function_exists( 'acf_add_options_page' ) ) {
 
 }
 
-if ( ! defined( 'ACF_FROM_DB' ) || ACF_FROM_DB !== true ) {
-	include_once __DIR__ . '/acf-fields.php';
-}
-
 require_once __DIR__ . '/acf-options.php';
 
 require_once __DIR__ . '/acf-blocks.php';
