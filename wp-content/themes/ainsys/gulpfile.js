@@ -3,8 +3,9 @@ const config = {
 	scripts: {
 		main: {
 			src: [
+				'node_modules/object-fit-images/dist/ofi.js', // object-fit polyfill
 				'node_modules/slick-carousel/slick/slick.min.js',
-				'src/js/*.js',
+				'src/js/**/*.js',
 			],
 			file: 'main.js',
 			dest: 'assets/js/main',
@@ -153,7 +154,6 @@ gulp.task( 'scripts', () => {
 			} )
 		)
 		.pipe( concat( config.scripts.main.file ) )
-		.pipe( uglify() )
 		.pipe( sourcemaps.write( '.' ) )
 		.pipe( gulp.dest( config.scripts.main.dest ) );
 } );

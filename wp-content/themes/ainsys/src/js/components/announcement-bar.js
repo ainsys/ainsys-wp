@@ -1,4 +1,4 @@
-export default function( $ ) {
+( function( $ ) {
 	const $siteHeader = $( '.header__main' );
 	const $anouncementBar = $( '.announcement-bar' );
 	const $menu = $( '.header__menu__wrapper', $siteHeader );
@@ -101,7 +101,7 @@ export default function( $ ) {
 	}
 	adjustCss();
 
-	$( window ).resize( function() {
+	$( window ).on( 'resize', function() {
 		adjustCss();
 	} );
-}
+} )( jQuery );

@@ -1,4 +1,4 @@
-export default function( $ ) {
+( function( $ ) {
 	if ( $( '.slickjs' ).length > 0 ) {
 		$( '.slickjs' ).each( function() {
 			const prev = $( this ).siblings( '.slick-controls' ).find( '.slick-prev ');
@@ -36,4 +36,4 @@ export default function( $ ) {
 			} );
 		} );
 	}
-}
+} )( jQuery );

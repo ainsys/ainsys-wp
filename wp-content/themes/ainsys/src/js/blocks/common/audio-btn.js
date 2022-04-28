@@ -1,9 +1,8 @@
-export default function( $ ) {
+( function( $ ) {
 	if ( $( '.btn-audio' ).length > 0 ) {
 		const player = new Audio();
 
 		$( '.btn-audio' ).each( function() {
-
 			$( this ).on( 'click', function( e ) {
 				e.preventDefault();
 				const file = $( this ).data( 'audio' );
@@ -21,8 +20,6 @@ export default function( $ ) {
 			player.addEventListener( 'ended', function() {
 				$( '.btn-audio' ).removeClass( 'playing' );
 			} );
-
 		} );
-
 	}
-}
+} )( jQuery );

@@ -1,4 +1,4 @@
-export default function( $ ) {
+( function( $ ) {
 	if ( $( '.accordion__list' ).length > 0 ) {
 		$( '.accordion__item__title' ).on( 'click', function() {
 			$( this )
@@ -6,4 +6,4 @@ export default function( $ ) {
 				.toggleClass( 'accordion-open' );
 		} );
 	}
-}
+} )( jQuery );

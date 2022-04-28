@@ -1,4 +1,4 @@
-export default function( $ ) {
+( function( $ ) {
 	if ( $( '.wp-block-gallery' ).length > 0 && $( 'body').hasClass( 'gallery-fancybox') ) {
 		let i = 0;
 		$( '.wp-block-gallery' ).each( function() {
@@ -22,4 +22,4 @@ export default function( $ ) {
 			// Options will go here
 		} );
 	}
-}
+} )( jQuery );

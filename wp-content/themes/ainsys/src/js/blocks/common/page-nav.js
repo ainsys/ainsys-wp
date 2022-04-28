@@ -1,4 +1,4 @@
-export default function( $ ) {
+( function( $ ) {
 	if ( $( '.page-nav' ).length > 0 ) {
 		$( '.page-nav .has-submenu > a' ).on( 'click', function( e ) {
 			e.preventDefault();
@@ -38,4 +38,4 @@ export default function( $ ) {
 			pagenavScroll();
 		} );
 	}
-}
+} )( jQuery );
