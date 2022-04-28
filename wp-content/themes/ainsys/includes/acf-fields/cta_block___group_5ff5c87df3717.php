@@ -1,0 +1,108 @@
+<?php
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5ff5c87df3717',
+	'title' => 'CTA (block)',
+	'fields' => array(
+		array(
+			'key' => 'field_6099b1ea92a84',
+			'label' => 'Background Color',
+			'name' => 'bg',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'white' => 'white',
+				'light' => 'light',
+				'accent' => 'accent',
+				'accent-variant' => 'accent-variant',
+				'dark' => 'dark',
+			),
+			'default_value' => 'accent',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_6262a208a5601',
+			'label' => 'Background Image',
+			'name' => 'bg_img',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'id',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_6262a72aee19b',
+			'label' => 'Background: vertical alignment',
+			'name' => 'bg_alignment',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'center' => 'Center',
+				'center top' => 'Top',
+				'center bottom' => 'Bottom',
+			),
+			'default_value' => 'center',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/cta',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+));
+
+endif;

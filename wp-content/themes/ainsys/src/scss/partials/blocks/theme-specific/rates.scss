@@ -50,12 +50,13 @@
 			span {
 				position: relative;
 				font-weight: 600;
-				font-size: rem( 2.6 );
+				font-size: 38px;
+				line-height: 56px;
 				color: $black_title_color;
 			}
 
 			&--sale {
-				span:after {
+				:after {
 					content: '';
 					display: block;
 					position: absolute;

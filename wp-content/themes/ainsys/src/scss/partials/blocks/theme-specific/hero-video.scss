@@ -1,6 +1,5 @@
 .hero-video {
 	position: relative;
-	padding: 0;
 
 	&__info {
 		color: $page_color;
@@ -11,7 +10,7 @@
 			left: 0;
 			z-index: 10;
 			width: 100%;
-			padding: rem( 4 ) 0 0;
+			padding: rem( 7 ) 0 0;
 		}
 	}
 
@@ -24,12 +23,10 @@
 			line-height: 1.2;
 			text-align: center;
 			@include media-breakpoint-up( $bp ) {
-				margin-bottom: rem( 1 );
-				font-size: rem( 3.2 );
+				font-size: rem( 5.6 );
 			}
 
 			span {
-				font-size: rem( 4 );
 				color: $color_active;
 			}
 		}
@@ -40,7 +37,7 @@
 		line-height: 1.6;
 		margin-bottom: rem( 1.2 );
 		@include media-breakpoint-up( $bp ) {
-			font-size: rem( 1.6 );
+			font-size: rem( 2 );
 		}
 	}
 	.toggler__switch {
@@ -51,20 +48,10 @@
 		margin: 0;
 		padding: 0;
 	}
-	.toggler__screen.active {
-		display: block;
-	}
 
 	&__video {
 		video {
 			width: 100%;
-
-			@include media-breakpoint-up( xl ) {
-				display: block;
-				width: auto;
-				height: calc( 100vh - #{rem( 10.2 )} );
-				margin: 0 auto;
-			}
 		}
 	}
 }

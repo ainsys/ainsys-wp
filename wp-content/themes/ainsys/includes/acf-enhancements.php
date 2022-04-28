@@ -6,28 +6,6 @@
  */
 
 /**
- * Custom ACF JSON save point.
- *
- * @param string $path - path to json acf files.
- */
-function ainsys_acf_json_save_point( $path ) {
-	return get_template_directory() . '/includes/acf-fields';
-}
-add_filter( 'acf/settings/save_json', 'ainsys_acf_json_save_point' );
-
-/**
- * Custom ACF JSON load point.
- *
- * @param string $paths - path to json acf files.
- */
-function ainsys_acf_json_load_point( $paths ) {
-	unset( $paths[0] );
-	$paths[] = get_template_directory() . '/includes/acf-fields';
-	return $paths;
-}
-add_filter( 'acf/settings/load_json', 'ainsys_acf_json_load_point' );
-
-/**
  * Adds current Flexible Content's Row field as descriptor to the layout
  * label. An analogue to "Collapsed" field for Repeaters. Useful to
  * identify an item in a large list of rows.

@@ -39,16 +39,16 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>"<?php echo $style; //phpcs:ignore ?>>
 	<div class="container">
 		<?php if ( get_field( 'title' ) ) { ?>
-			<h2><?php the_field( 'title' ); ?></h2>
+			<h2 class="animBlock"><?php the_field( 'title' ); ?></h2>
 		<?php } ?>
 		<?php if ( get_field( 'description' ) ) { ?>
-			<div class="toggler__desc"><?php the_field( 'description' ); ?></div>
+			<div class="toggler__desc animBlock"><?php the_field( 'description' ); ?></div>
 		<?php } ?>
 
-		<div class="toggler__switch">
+		<div class="toggler__switch animBlock">
 			<div class="toggler__switch__label active"><?php the_field( 'label_without' ); ?></div>
 			<div class="form-check form-switch">
-				<input class="form-check-input form-check-input-content" type="checkbox">
+				<input class="form-check-input form-check-input-content" type="checkbox" onclick="gtag( 'event', 'tumb_1', {   'event_category' : 'ain',   'event_label' : 't' });ym(86987238,'reachGoal','tumb_1'); return true;">
 			</div>
 			<div class="toggler__switch__label"><?php the_field( 'label_with' ); ?></div>
 		</div>
@@ -56,7 +56,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 		<?php
 		$reverse_order = get_field( 'order' ) === true ? ' reverse' : '';
 		?>
-		<div class="toggler__screens<?php echo $reverse_order; //phpcs:ignore ?>">
+		<div class="toggler__screens<?php echo $reverse_order; //phpcs:ignore ?> animBlock">
 			<div class="toggler__screen active">
 				<div class="toggler__screen__img">
 					<?php echo wp_get_attachment_image( get_field( 'image__without' ), 'large', false, array( 'class' => '' ) ); ?>

@@ -28,15 +28,15 @@ if ( get_field( 'align' ) ) {
 <section  id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
 		<?php if ( get_field( 'block_title' ) ) { ?>
-			<h2 class="img-txt-ul__block-title"><?php the_field( 'block_title' ); ?></h2>
+			<h2 class="img-txt-ul__block-title animBlock"><?php the_field( 'block_title' ); ?></h2>
 		<?php } ?>
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 animBlock">
 				<div class="img-txt-ul__img">
 					<?php echo wp_get_attachment_image( get_field( 'image' ), 'large', false, array( 'class' => '' ) ); ?>
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 animBlock">
 				<div class="img-txt-ul__txt">
 					<?php if ( get_field( 'title' ) ) { ?>
 						<h3 class="img-txt-ul__title"><?php the_field( 'title' ); ?></h3>

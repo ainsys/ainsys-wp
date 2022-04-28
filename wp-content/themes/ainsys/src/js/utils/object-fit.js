@@ -1,14 +1,7 @@
-(($)=>{
-    "use strict";
+import ObjectFitImages from 'object-fit-images';
 
-    if(window['objectFitImages']){
-
-        $(document).ready(function(){
-
-            window.objectFitImages(null, {watchMQ: true});
-
-        });
-
-    }
-
-})(jQuery)
+export default ( $ ) => {
+	$( document ).ready( function() {
+		ObjectFitImages( null, { watchMQ: true } );
+	} );
+};

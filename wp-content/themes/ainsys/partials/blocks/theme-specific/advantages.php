@@ -23,7 +23,7 @@ if ( ! empty( $block['align'] ) ) {
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
 		<?php if ( have_rows( 'advantages' ) ) : ?>
-			<div class="row advantages__list">
+			<div class="row advantages__list animBlock">
 				<?php
 				while ( have_rows( 'advantages' ) ) :
 					the_row();

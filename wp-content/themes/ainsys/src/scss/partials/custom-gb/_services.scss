@@ -6,7 +6,7 @@
 
     .services__top {
         padding: 100px 0;
-        background: no-repeat url(../images/services__bg.png);
+        background: no-repeat url(../img/services__bg.png);
         background-color: $page_color;
         background-size: cover;
         background-position: top center;
@@ -67,7 +67,7 @@
                         display: none;
                     }
                     span {
-                        color: $accent;
+                        color: red;
                     }
                 }
             }
@@ -106,7 +106,7 @@
                     padding: 0 1rem 0;
 
                     li {
-                        list-style-image: url(../images/components/circle.svg);
+                        list-style-image: url(../img/circle.svg);
                         font-size: 16px;
                         line-height: 145%;
                     }

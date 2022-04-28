@@ -1,0 +1,57 @@
+.suggestions {
+    .card {
+        background: transparent;
+        border: none;
+        .card-body {
+            padding: 0px;
+        }
+
+    }
+    .suggestions__item {
+        padding: 30px;
+        background: #F5F6F8;
+        border-radius: 12px;
+        margin: 0 20px 20px 0;
+
+        .suggestions__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 145%;
+            margin-bottom: 15px;
+            color: $page_color;
+        }
+        .suggestions__text {
+            font-size: 14px;
+            line-height: 145%;
+            color: $grey_text_opport;
+            margin-bottom: 8px;
+        }
+    }
+    .first_line {
+        height: 452px;
+        width: calc(33.3% - 20px);
+    }
+    .first_line:last-child {
+        margin: 0 0 20px 0;
+    }
+    .second_line {
+        height: 365px;
+        width: calc(41.66666667% - 20px);
+    }
+    .second_line:last-child {
+        width: calc(58.33333333% - 20px);
+        margin: 0 0 20px 0;
+    }
+    .thrid_line {
+        height: 246px;
+        width: calc(58.33333333% - 20px);
+        margin-bottom: 0;
+    }
+    .thrid_line:last-child {
+        height: 246px;
+        width: calc(41.66666667% - 20px);
+    }
+    
+}
+
+

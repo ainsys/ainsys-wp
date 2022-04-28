@@ -1,0 +1,97 @@
+body {
+  overflow-x: hidden;
+  font-style: normal;
+}
+
+header .header__content .socails__links .socails__addres {
+  color: #ACB2C1;
+  text-decoration: none;
+}
+
+header .header__content .socails__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .header__content .socails__links .numers__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+header .header__content .socails__links .socails__addres {
+  color: #ACB2C1;
+  text-decoration: none;
+}
+
+header .header__content .socails__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0 0;
+}
+
+header .header__content .socails__links .numbers__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+header .header__content .socails__links .numbers__phone .disabled__block {
+  display: none;
+}
+
+header .header__content .socails__links .numbers__phone img {
+  width: 100%;
+  max-width: 16px;
+  margin-right: 4px;
+}
+
+header .header__content .socails__links .numbers__phone a {
+  color: #ACB2C1;
+  text-decoration: none;
+}
+
+header .header__content .socails__links .numbers__phone-disabled .disabled__block {
+/*   background: rgba(84, 19, 75, 0.56); */
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 4px;
+  margin-left: 37px;
+  position: absolute;
+  display: block;
+  padding: 0.5px 26px;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 145%;
+  cursor: pointer;
+}

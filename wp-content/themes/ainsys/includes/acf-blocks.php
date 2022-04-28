@@ -238,6 +238,24 @@ function ainsys_register_acf_block_types() {
 
 	acf_register_block_type(
 		array(
+			'name'            => 'image-link',
+			'title'           => __( 'Image with Link' ),
+			'description'     => __( 'Image with Link' ),
+			'render_template' => 'partials/blocks/common/image-link.php',
+			'category'        => 'customgb',
+			'keywords'        => array( 'image', 'link' ),
+			'icon'            => 'cover-image',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => true,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
 			'name'            => 'video-text',
 			'title'           => __( 'Video & Text' ),
 			'description'     => __( 'Video & Text' ),
