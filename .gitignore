@@ -26,6 +26,9 @@ read.me
 /wp-content/maintenance.php
 /wp-content/maintenance/
 /wp-content/themes/hello-elementor-child/price.php
+.cpanel.yml
+.ftpquota
+.tmb/
 
 ### WordPress ###
 /wp-content/4800dd5ecf-backups/
