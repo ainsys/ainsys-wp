@@ -320,13 +320,14 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
           transform-origin: top;
   -webkit-transition: .2s all linear;
   transition: .2s all linear;
+  width: calc(33% - 10px);
 }
 
 .services .services__main .accordion .accordion-item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   z-index: 10;
-  width: 37.5%;
+  width: calc(33% - 10px);
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
