@@ -456,6 +456,43 @@ function ainsys_register_acf_block_types() {
 			),
 		)
 	);
+	acf_register_block_type(
+		array(
+			'name'            => 'possibility',
+			'title'           => __( 'Possibility Block' ),
+			'description'     => __( 'Possibility Block' ),
+			'render_template' => 'partials/blocks/theme-specific/possibility.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'subscribe', 'text' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+	
+	acf_register_block_type(
+		array(
+			'name'            => 'contact',
+			'title'           => __( 'Contact Block' ),
+			'description'     => __( 'Contact Block' ),
+			'render_template' => 'partials/blocks/theme-specific/contact.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'subscribe', 'text' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.

@@ -10,7 +10,7 @@ a, textarea, button, input {
 }
 .header__btn .btn-primary:hover,
 .header__btn .btn-primary:focus,
-.header__btn .btn-primary:active,{
+.header__btn .btn-primary:active {
 	box-shadow: none !important;
 }
 
@@ -37,7 +37,7 @@ textarea#comment {
 }
 
 .comment-form input[type="submit"]:hover,
-.comment-form input[type="submit"]:focus{
+.comment-form input[type="submit"]:focus {
 	background-color: #AB47BC !important;
 	color: #fff !important;
 }
@@ -424,7 +424,7 @@ body.single-ufaq .ewd-ufaq-post-margin-symbol {
 div#load-more, div#load-less {
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
 div#load-more a, div#load-less a {
 	background-color: transparent;
@@ -499,7 +499,7 @@ body.tag .page-content .post p {
 	transition: .1s all linear;
 }
 .fixed-menu {
-	height: 4.25rem;
+	height: auto;
 	box-shadow: 0 0 12px 6px rgb(0 0 0 / 30%);
 	background-color: rgb(46 0 51 / 77%);
     backdrop-filter: blur(10px);
@@ -511,8 +511,5 @@ body.tag .page-content .post p {
 }
 .fixed-menu .header__logo {
 	width: 200px !important;
-}
-.fixed-menu .header__content {
-	padding: 0;
 }
 

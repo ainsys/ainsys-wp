@@ -55,7 +55,6 @@
 
 		img {
 			display: block;
-			width: 100%;
 			height: auto;
 			@include media-breakpoint-up( $bp ) {
 				height: 100%;
@@ -136,6 +135,7 @@
 				display: block;
 				max-width: rem( 2.2 );
 				height: auto;
+				margin-right: 10px;
 			}
 		}
 		&__text {

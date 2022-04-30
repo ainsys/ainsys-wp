@@ -26,6 +26,9 @@ if ( ! empty( $block['align'] ) ) {
 		<?php if ( get_field( 'title' ) ) { ?>
 			<h2 class="rates__title"><?php the_field( 'title' ); ?></h2>
 		<?php } ?>
+		<?php if ( get_field( 'bottom_text' ) ) { ?>
+			<div class="rates__bottom"><?php the_field( 'bottom_text' ); ?></div>
+		<?php } ?>
 		<?php if ( have_rows( 'rates' ) ) : ?>
 			<div class="row rates__list">
 				<?php
@@ -82,8 +85,5 @@ if ( ! empty( $block['align'] ) ) {
 				<?php endwhile; ?>
 			</div>
 		<?php endif; ?>
-		<?php if ( get_field( 'bottom_text' ) ) { ?>
-			<div class="rates__bottom"><?php the_field( 'bottom_text' ); ?></div>
-		<?php } ?>
 	</div>
 </section>
