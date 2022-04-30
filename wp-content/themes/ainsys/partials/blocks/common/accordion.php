@@ -42,7 +42,7 @@ if ( ! empty( $block['align'] ) ) {
 		<?php endif; ?> -->
 		<?php echo do_shortcode("[ultimate-faqs]") ?>
 					<div class="wp-container-1 wp-block-buttons">
-						<div class="load-less" id="load-more"><a class="wp-block-button__link">Ещё</a></div>
+						<div class="load-less" id="load-more"><a class="wp-block-button__link">Показать ещё</a></div>
 					</div>
 	</div>
 </section>

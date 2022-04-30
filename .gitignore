@@ -29,6 +29,9 @@ read.me
 .cpanel.yml
 .ftpquota
 .tmb/
+app.js
+tmp/
+/wp-content/wp-rocket-config/
 
 ### WordPress ###
 /wp-content/4800dd5ecf-backups/
