@@ -483,7 +483,7 @@ body.tag .page-content .post p {
 
 /* animation styles */
 
-.animBlock {
+/* .animBlock {
 	opacity: 0;
 	transform: translate(0, 50px);
 	transition: .3s all linear;
@@ -492,24 +492,16 @@ body.tag .page-content .post p {
 .animateBlock {
 	opacity: 1 !important;
 	transform: translate(0, 0);
-}
+} */
 
 /* temprorary header style */
 .header {
 	transition: .1s all linear;
 }
 .fixed-menu {
-	height: auto;
-	box-shadow: 0 0 12px 6px rgb(0 0 0 / 30%);
-	background-color: rgb(46 0 51 / 77%);
-    backdrop-filter: blur(10px);
 }
 .fixed-menu .btn-primary {
-	font-size: 14px;
-	box-shadow: none !important;
-	border: 0 !important;
 }
 .fixed-menu .header__logo {
-	width: 200px !important;
 }
 

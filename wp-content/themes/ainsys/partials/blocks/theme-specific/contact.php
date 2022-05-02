@@ -78,7 +78,8 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 							<p class="contacts__title">
 								Офис
 							</p>
-							<button class="contacts__button btn-primary"> Записаться на консультацию </button>
+							<a class="contacts__button btn-primary" href='https://ainsys.com/order-ainsys/' onclick="ym(86987238,'reachGoal','button_4'); return true;"
+> Записаться на консультацию </a>
 							<div class="numbers__map">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
 								<a href="" class="socails__addres">Palladium House, 1-4 Argyll Street, London, W1F 7LD</a>

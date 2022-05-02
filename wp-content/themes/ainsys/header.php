@@ -42,6 +42,16 @@
                 var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
 </script>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '7989' == event.detail.contactFormId ) {
+        ym(86987238,'reachGoal','form_1'); return true;
+    }
+    if ( '7988' == event.detail.contactFormId ) {
+        ym(86987238,'reachGoal','form_2'); return true;
+    }
+});
+</script>
 
 		<?php wp_head(); ?>
 	</head>
@@ -67,15 +77,16 @@
 						<div class="container">
 							<div class="header__content">
 								<a href="/" class="header__logo"></a>
-<!-- 								<div class="main-menu">
+								
+								<!-- <div class="main-menu">
 									<?php
 								$args = array(
 									'menu_class' => 'nav nav-tabs main-menu',
 									'menu' => 'main-menu'
 								);
 								wp_nav_menu( $args ); ?>
-								</div> -->
-
+								</div> 
+								 -->
 
 								<div class="socials col-lg-6">
 									<div class="burger">
@@ -91,7 +102,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="usa">
 
 												<a href="tel: +78126027880">+78126027880
-												<div class="disabled__block">
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;">
 													Показать
 												</div>
 												</a>
@@ -100,7 +111,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="usa">
 
 												<a href="tel: +78126027880">+447441426027
-												<div class="disabled__block">
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;">
 													Показать
 												</div>
 												</a>
@@ -113,7 +124,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 
 												<a href="email: info@ainsys.com">info@ainsys.com
-												<div class="disabled__block">
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;">
 													Показать
 												</div>
 												</a>

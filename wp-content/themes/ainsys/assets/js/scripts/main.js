@@ -31,7 +31,7 @@
 			}
 		} );
 	} );
-	var faqParent = document.querySelectorAll(".ewd-ufaq-faqs .ewd-ufaq-faq-div");
+var faqParent = document.querySelectorAll(".ewd-ufaq-faqs .ewd-ufaq-faq-div");
 var mainFaq = document.querySelector(".ewd-ufaq-faqs");
 var loadBlock = document.getElementById("load-more");
 var loadLess = document.querySelector(".load-less a");
