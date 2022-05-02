@@ -61,48 +61,67 @@
 			<div class="container">
 				<div class="header__content">
 					<a href="/" class="header__logo"></a>
-					<div class="header__btn">
-							<a class="btn btn-primary" href="/order-ainsys-us/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Leave a request</a>
+
+
+					<div class="socials col-lg-6">
+						<div class="burger">
+							<span></span>
 						</div>
-					<ul class="socails__links">
+						<div class="socials__wrapper">
+						<div class="header__btn">
+						<a class="btn btn-main" href="/order-ainsys-us/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Leave a request</a>
+						</div>
+						<ul class="socails__links">
 							<li  class="numbers__phone numbers__phone-disabled">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" alt="ru">
-
-									<a href="tel: +78126027880">+78126027880</a>
-									<div class="disabled__block">
-										Показать
-									</div>
+								<a href="tel: +447441426027">+447441426027
+								<div class="disabled__block">
+									Show
+								</div>
+								</a>
 							</li>
-					  </ul>
-					<div class="header__btns">
+							<li class="numbers__map">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
+							<a href="" class="socails__addres">Palladium House, 1-4 Argyll Street, London, W1F 7LD</a>
+							</li>
+							<li  class="numbers__phone numbers__email numbers__phone-disabled">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 
-
-						<div class="header__lang text-end">
-							<a href="#" class="header__lang__current text-decoration-none">EN</a>
-							<ul class="header__lang__submenu">
-								<li>
-												<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
-											</li>
-											<li>
-												<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
-											</li>
-											<li>
-												<a href="/ainsys/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
-											</li>
-											<li>
-												<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
-											</li>
-											<li>
-												<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
-											</li>
-											<li>
-												<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
-											</li>
-											<li>
-												<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
-											</li>
-							</ul>
-						</div>
+									<a href="email: info@ainsys.com">info@ainsys.com
+									<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;">
+										Show
+									</div>
+									</a>
+							</li>
+							<li class="header__lang text-end">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
+								<a href="#" class="header__lang__current text-decoration-none">EN</a>
+								<ul class="header__lang__submenu">
+									<li>
+										<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+									</li>
+									<li>
+										<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
+									</li>
+									<li>
+										<a href="/ainsys/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+									</li>
+									<li>
+										<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
