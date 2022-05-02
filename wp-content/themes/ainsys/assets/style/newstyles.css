@@ -561,8 +561,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 #img-txt-block_626d14096941c,
 #img-txt-block_626d2ca76941d {
   padding-top: 0;
-}
-.newsletter {
+  padding-bottom: 3rem;
 }
 
 .img-txt .row .col-lg-6 .newsletter .newsletter__content {
