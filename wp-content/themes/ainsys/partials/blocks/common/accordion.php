@@ -25,7 +25,7 @@ if ( ! empty( $block['align'] ) ) {
 		<?php if ( get_field( 'title' ) ) { ?>
 			<h2 class="accordion__title"><?php the_field( 'title' ); ?></h2>
 		<?php } ?>
-<!-- 		<?php if ( have_rows( 'accordion' ) ) : ?>
+		<?php if ( have_rows( 'accordion' ) ) : ?>
 			<div class="accordion__list">
 				<?php
 				while ( have_rows( 'accordion' ) ) :
@@ -39,10 +39,11 @@ if ( ! empty( $block['align'] ) ) {
 					</div>
 				<?php endwhile; ?>
 			</div>
-		<?php endif; ?> -->
-		<?php echo do_shortcode("[ultimate-faqs]") ?>
-					<div class="wp-container-1 wp-block-buttons">
+		<?php endif; ?>
+		<!-- <div class="wp-container-1 wp-block-buttons">
 						<div class="load-less" id="load-more"><a class="wp-block-button__link">Показать ещё</a></div>
-					</div>
+					</div> -->
+		<!-- <?php echo do_shortcode("[ultimate-faqs]") ?> -->
+					
 	</div>
 </section>

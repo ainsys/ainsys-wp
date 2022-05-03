@@ -5,12 +5,12 @@
 		color: $page_color;
 		text-align: center;
 		@include media-breakpoint-up( $bp ) {
-			position: absolute;
+			position: relative;
 			top: 0;
 			left: 0;
 			z-index: 10;
 			width: 100%;
-			padding: rem( 7 ) 0 0;
+			padding: rem( 3.5 ) 0 0;
 		}
 	}
 
@@ -36,8 +36,10 @@
 		font-size: rem( 1.8 );
 		line-height: 1.6;
 		margin-bottom: rem( 1.2 );
+		position: relative;
 		@include media-breakpoint-up( $bp ) {
 			font-size: rem( 2 );
+			padding: 0 30%;
 		}
 	}
 	.toggler__switch {
