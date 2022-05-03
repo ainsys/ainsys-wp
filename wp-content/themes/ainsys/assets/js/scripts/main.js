@@ -10,52 +10,16 @@
 			.toggleClass( 'active' );
 	} );
 
-	$( document ).ready( function() {
-		$( '.form-check-input-content' ).click( function() {
-			$( '.form-check-input' ).each( function( i, value ) {
-				const { id } = value;
-
-				if ( this.checked ) {
-					// content
-					$( `#pageContentAfter-${ id }` ).removeClass(
-						'page__content__active'
-					);
-					$( `#pageContentBefore-${ id }` ).addClass(
-						'page__content__active'
-					);
-					// label
-					$( `#pageSwitchAfter-${ id }` ).removeClass(
-						'label_active'
-					);
-					$( `#pageSwitchBefore-${ id }` ).addClass( 'label_active' );
-				} else {
-					// content
-					$( `#pageContentAfter-${ id }` ).addClass(
-						'page__content__active'
-					);
-					$( `#pageContentBefore-${ id }` ).removeClass(
-						'page__content__active'
-					);
-					// label
-					$( `#pageSwitchAfter-${ id }` ).addClass( 'label_active' );
-					$( `#pageSwitchBefore-${ id }` ).removeClass(
-						'label_active'
-					);
-				}
-			});
-		});
-
-		$( '.burger' ).click( function() {
-			$( '.burger span' ).toggleClass( 'active' );
-			$( '.menu__mob' ).toggleClass( 'animate' );
-		});
 
 		$('.numbers__phone-disabled').click(function() {
 			$( this ).removeClass('numbers__phone-disabled');
 		});
+		$('.burger').click(function() {
+			$('.socials').toggleClass('socials-active');
+			$('.burger span').toggleClass('active');
+		});
 
 
-	});
 
 
 	let animBlock = document.querySelectorAll( '.animBlock' );
@@ -67,7 +31,7 @@
 			}
 		} );
 	} );
-	var faqParent = document.querySelectorAll(".ewd-ufaq-faqs .ewd-ufaq-faq-div");
+var faqParent = document.querySelectorAll(".ewd-ufaq-faqs .ewd-ufaq-faq-div");
 var mainFaq = document.querySelector(".ewd-ufaq-faqs");
 var loadBlock = document.getElementById("load-more");
 var loadLess = document.querySelector(".load-less a");
@@ -84,7 +48,7 @@ let currentItems = 6;
 loadBlock.addEventListener("click", () => {
 	loadLink.classList.add("load-more");
 	loadBlock.className = "load-less";
-	if(loadLink.textContent == "Ещё") {
+	if(loadLink.textContent == "Показать ещё") {
 		setTimeout(() => {
 			const elementList = [...faqParent];
 
@@ -112,7 +76,7 @@ loadBlock.addEventListener("click", () => {
 				loadLink.classList.remove("load-more");
 			}
 		}
-		loadLink.textContent = "Ещё"
+		loadLink.textContent = "Показать ещё"
 		loadBlock.className = "load-less";
 		window.scrollTo({
 			top: mainFaq.offsetTop - 100,

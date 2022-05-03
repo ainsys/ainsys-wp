@@ -1,20 +1,21 @@
 
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 10000;
 	width: 100%;
-	height: rem( 10 );
+	height: auto;
 	background-color: $bg_color;
 	color: $white_color;
 	transition: .2s all linear;
+	padding: 12px;
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: rem( 1.6 );
+		padding: rem( 1 );
 	}
 
 	&__logo {
@@ -24,6 +25,8 @@
 		margin-right: rem( 1 );
 		background: no-repeat url( ../images/components/logo_active.svg ) center/ 100%;
 		filter: brightness( 10 );
+		position: relative;
+		z-index: 2;
 
 		@include media-breakpoint-up( sm ) {
 			width: 250px;
@@ -42,6 +45,20 @@
 	.btn {
 		line-height: 1;
 	}
+	.btn-main {
+		background: $btn_color;
+		font-weight: 500;
+	    color: $white_color;
+	}
+	.btn-main:hover,
+	.btn-main:focus,
+	.btn-main:active {
+		background: $btn_color-active;
+	}
+
+	&__lang {
+		list-style: none;
+		display: flex;
+		padding: 0;
+	}
 }
-
-
