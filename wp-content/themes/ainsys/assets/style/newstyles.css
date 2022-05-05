@@ -3,12 +3,20 @@ body {
   font-style: normal;
 }
 
-header .header__content .socails__links .socails__addres {
+@media (min-width: 1024px) {
+  header .header__content .socials {
+    margin-left: auto;
+    max-width: 45%;
+    min-width: 575px;
+  }
+}
+
+header .header__content .socials__links .socials__addres {
   color: #fff;
   text-decoration: none;
 }
 
-header .header__content .socails__links {
+header .header__content .socials__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +24,7 @@ header .header__content .socails__links {
       flex-wrap: wrap;
 }
 
-header .header__content .socails__links .numers__phone {
+header .header__content .socials__links .numers__phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +42,7 @@ header .header__content .socails__links .numers__phone {
   list-style: none;
 }
 
-header .header__content .socails__links {
+header .header__content .socials__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +50,7 @@ header .header__content .socails__links {
       flex-wrap: wrap;
 }
 
-header .header__content .socails__links .numbers__phone {
+header .header__content .socials__links .numbers__phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,27 +63,29 @@ header .header__content .socails__links .numbers__phone {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 50%;
+          width: auto;
   margin-bottom: 8px;
   list-style: none;
 }
-
-header .header__content .socails__links .numbers__phone .disabled__block {
+header .header__content .socials__links .numbers__phone:first-child {
+  margin-right: auto;
+}
+header .header__content .socials__links .numbers__phone .disabled__block {
   display: none;
 }
 
-header .header__content .socails__links .numbers__phone img {
+header .header__content .socials__links .numbers__phone img {
   width: 100%;
   max-width: 16px;
   margin-right: 10px;
 }
 
-header .header__content .socails__links .numbers__phone a {
+header .header__content .socials__links .numbers__phone a {
   color: #fff;
   text-decoration: none;
 }
 
-header .header__content .socails__links .numbers__phone-disabled .disabled__block {
+header .header__content .socials__links .numbers__phone-disabled .disabled__block {
   background: rgba(84, 19, 75, 0.75);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -83,7 +93,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   margin: -16px 0 0;
   position: relative;
   display: block;
-  padding: 0.5px 0px;
+  padding: 2px 0px;
   font-weight: 300;
   font-size: 10px;
   line-height: 145%;
@@ -114,6 +124,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   list-style: none;
   display: flex;
   padding: 0;
+  margin-left: auto;
 }
 .header__lang img {
   margin-right: 10px;
@@ -129,7 +140,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 }
 
 .numbers__map {
-  width: 100%;
+  width: auto;
   list-style: none;
   margin-bottom: 8px;
   display: flex;
@@ -149,7 +160,11 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 
 
 
-
+.hero-video__video video {
+  margin-top: -18%;
+  max-width: 1200px;
+  height: auto;
+}
 
 
 
@@ -158,6 +173,9 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 
 
 @media (max-width: 1024px) {
+  header {
+    position: fixed !important;
+  }
   header .burger {
     position: relative;
     width: 35px;
@@ -165,6 +183,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
     cursor: pointer;
     display: block;
     z-index: 10;
+    margin-left: auto;
   }
   header .burger span,
   header .burger span:before, 
@@ -248,7 +267,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
     -ms-flex-pack: start;
         justify-content: flex-start;
   }
-  header .header__content .socials-active .socials__wrapper .socails__addres {
+  header .header__content .socials-active .socials__wrapper .socials__addres {
     display: block;
   }
   header .header__content .socials-active .socials__wrapper .numbers {
@@ -270,8 +289,17 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   header .burger span.active {
     background: rgba(255, 255, 255, 0);
   }
-  header .header__content .socails__links .numbers__email  {
+  header .header__content .socials__links .numbers__email  {
     margin-bottom: 0;
+  }
+  .socials__links {
+    margin-right: auto;
+  }
+  .numbers__map {
+    width: 100%;
+  }
+  header .header__content .socials__links {
+    max-width: 50%;
   }
 }
 
@@ -280,6 +308,12 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   header .header__content .socials .social__img {
     width: 56px;
     height: 56px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .header__content  .socials__links {
+    max-width: 100%;
   }
 }
 
@@ -297,7 +331,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
     height: 725px;
   }
   #toggler-block_6266a69166316 {
-    height: 640px;
+    height: 650px;
   }
   #toggler-block_6266a7b966317 {
     height: 615px;
@@ -561,11 +595,16 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 #img-txt-block_626d14096941c,
 #img-txt-block_626d2ca76941d {
   padding-top: 0;
-  padding-bottom: 3rem;
+}
+
+.newsletter {
+  padding-top: 0;
 }
 
 .img-txt .row .col-lg-6 .newsletter .newsletter__content {
   background: url(../images/components/services__bg.png), #2E0033;
+  background-size: 100%;
+  background-repeat: no-repeat;
   box-shadow: 0px 24px 34px 10px rgba(103, 45, 113, 0.24);
   border-radius: 12px;
   padding: 48px;
@@ -585,7 +624,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   background-size: 100%;
   width: 416px;
   height: 416px;
-  margin: -15% -15% 0 0;
+  margin: -15% -15% -10% 0;
 }
 #img-txt-block_626d2ca76941d .row .col-lg-6 .newsletter .newsletter__content::before {
   background: url(../images/components/play.png);
@@ -605,7 +644,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 
 .newsletter .newsletter__content .newsletter__important p {
   font-weight: 500;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 145%;
   color: #AB6FB5;
   margin-bottom: 30px;
@@ -613,7 +652,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 
 .newsletter .newsletter__content .newsletter__title {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 125%;
   margin-bottom: 30px;
 }
@@ -622,7 +661,6 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
 }
 .newsletter .newsletter__content form p {
   margin: 0;
@@ -899,7 +937,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   margin: -20px 0 0;
   position: relative;
   display: block;
-  padding: 0.5px 26px;
+  padding: 2px 0;
   font-weight: 300;
   font-size: 10px;
   line-height: 145%;
@@ -908,6 +946,7 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
   width: 100%;
   color: #101828;
   text-align: center;
+  background-color: rgba(255,255,255,0.5);
 }
 
 
@@ -1018,4 +1057,16 @@ header .header__content .socails__links .numbers__phone-disabled .disabled__bloc
 .tooltips__item:hover .tooltips {
   visibility: visible;
   z-index: 2;
+}
+
+
+
+@media (min-width: 1024px) {
+  .toggler__screens.reverse .toggler__screen__txt {
+    padding: 10% 20px 0 0;
+  }
+}
+
+.accordion {
+  padding-top: 0;
 }

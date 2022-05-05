@@ -70,7 +70,7 @@
 						<div class="header__btn">
 							<a class="btn btn-main" href="/order-ainsys-ua/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Залишити заявку</a>
 						</div>
-						<ul class="socails__links">
+						<ul class="socials__links">
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ua.svg" alt="ua">
@@ -82,7 +82,7 @@
 							</li>
 							<li class="numbers__map">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-							<a href="" class="socails__addres">Palladium House, 1-4 Argyll Street, London, W1F 7LD</a>
+							<a href="" class="socials__addres">Palladium House, 1-4 Argyll Street, London, UK</a>
 							</li>
 							<li  class="numbers__phone numbers__email numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
