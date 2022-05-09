@@ -17,11 +17,11 @@ require_once __DIR__ . '/includes/gutenberg-customizations.php';
 require_once __DIR__ . '/includes/theme-customizations.php';
 require_once __DIR__ . '/includes/styles-scripts.php';
 require_once __DIR__ . '/includes/theme-installer.php';
+require_once __DIR__ . '/includes/connector.php';
 
 /**
  * Theme setup hooks
  */
-
 function ainsys_after_setup_theme() {
 
 	if ( ! defined( 'WP_DEBUG' ) || ( defined( 'WP_DEBUG' ) && ! WP_DEBUG ) ) {
@@ -49,19 +49,14 @@ function ainsys_after_setup_theme() {
 	);
 
 }
-	
-// function admin_bar(){
 
-//   if(is_user_logged_in()){
-//     add_filter( 'show_admin_bar', '__return_true' , 1000 );
-//   }
-// }
-// add_action('init', 'admin_bar' );
 add_action( 'after_setup_theme', 'ainsys_after_setup_theme' );
 
-// скрытие пункта меню "редактор кода"
 
-add_action('admin_menu', 'remove_admin_menu', 999);
+/**
+ * Hides theme editor item in the menu.
+ */
 function remove_admin_menu() {
-  	remove_submenu_page( 'themes.php', 'theme-editor.php'); // Редактирование шаблона
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
 }
+add_action( 'admin_menu', 'remove_admin_menu', 999 );
