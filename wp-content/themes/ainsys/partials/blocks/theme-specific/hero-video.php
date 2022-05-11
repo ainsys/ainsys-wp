@@ -56,7 +56,7 @@ if ( get_field( 'bg' ) ) {
 			<div class="toggler__screen active">
 				<div class="hero-video__video__wrapper">
 					<?php if ( have_rows( 'video_with' ) ) : ?>
-						<video loop playsinline muted autoplay preload="metadata"
+						<video loop playsinline muted autoplay  preload="metadata" 
 							<?php
 							while ( have_rows( 'video_with' ) ) {
 								the_row();
@@ -70,7 +70,7 @@ if ( get_field( 'bg' ) ) {
 			<div class="toggler__screen">
 				<div class="hero-video__video__wrapper">
 					<?php if ( have_rows( 'video_without' ) ) : ?>
-						<video loop muted autoplay preload="metadata"
+						<video loop muted autoplay preload="metadata" 
 							<?php
 							while ( have_rows( 'video_without' ) ) {
 								the_row();

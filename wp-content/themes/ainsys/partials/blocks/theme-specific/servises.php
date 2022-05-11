@@ -82,12 +82,6 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					<?php endwhile; ?>
 				</div>
 			<?php endif; ?>
-
-			<p class="page__doptext">
-				<?php if ( get_field( 'bottom_text' ) ) { ?>
-					<?php the_field( 'bottom_text' ); ?>
-				<?php } ?>
-			</p>
 		</div>
 	</div>
 
@@ -99,8 +93,8 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 				<?php } ?>
 			</h4>
 			<p class="page__doptext">
-				<?php if ( get_field( 'bottom_title' ) ) { ?>
-					<?php the_field( 'bottom_title' ); ?>
+				<?php if ( get_field( 'bottom_subtitle' ) ) { ?>
+					<?php the_field( 'bottom_subtitle' ); ?>
 				<?php } ?>
 			</p>
 			<?php if ( get_field( 'button' ) ) { ?>
