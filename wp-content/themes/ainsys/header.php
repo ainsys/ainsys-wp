@@ -97,23 +97,19 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 										<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
 									</div>
 								    <ul class="socials__links">
-										<li  class="numbers__phone numbers__phone-disabled">
+										<li class="numbers__phone numbers__phone-disabled">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="usa">
 
-												<a href="tel: +78126027880">+78126027880
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;">
-													Показать
-												</div>
+												<a  href="tel: +78126027880" class="soc_href disabled">+78126027880
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;"></div>
 												</a>
 										</li>
-										<li  class="numbers__phone numbers__phone-disabled">
+										<li class="numbers__phone numbers__phone-disabled">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="usa">
 
-												<a href="tel: +78126027880">+447441426027
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;">
-													Показать
-												</div>
+												<a href="tel: +78126027880" class="soc_href disabled">+447441426027
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;"></div>
 												</a>
 										</li>
 										<li class="numbers__map">
@@ -123,10 +119,8 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 										<li  class="numbers__phone numbers__email numbers__phone-disabled">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 
-												<a href="email: info@ainsys.com">info@ainsys.com
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;">
-													Показать
-												</div>
+												<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+												<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
 												</a>
 										</li>
 										<li class="header__lang text-end">
@@ -160,6 +154,12 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 							    </div>
 						    </div>
 						</div>	
+
+
+
+						<!-- <div id="preloader">
+						  <div id="loader"></div>
+						</div> -->
 						<script>
 							(function(w, d, s, h, id) {
 								w.roistatProjectId = id; w.roistatHost = h;

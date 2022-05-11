@@ -10,15 +10,20 @@
 			<footer class="footer">
 				<div class="container">
 
+				<div class="footer__head">
+				      <div class="footer__logo"></div>
+					  <div class="footer__address">ООО "КАТАЛОГ СЕРВИС" <br>11033, г. Москва,<br> ул. Золоторожский Вал, д. 34, стр. 6 <br>ОГРН: 1097746354474</div>
+					</div>
 					<div class="footer__content">
-						<ul class="footer__links">
-							<li><a href="mailto:info@ainsys.com">info@ainsys.com</a></li>
+					    <ul class="footer__links">
+							<li class="footer__link-active"><a href="mailto:info@ainsys.com">info@ainsys.com</a></li>
 							<li><a href="/cookies/">Cookies</a></li>
-							<li><a href="/privacy-policy-en/">Privacy policy</a></li>
+							<li><a href="/offer-license-agreement/">Terms & Conditions</a></li>
+							<li><a href="/privacy-policy/">Privacy Policy</a></li>
 						</ul>
 
 						<div class="footer__copyright-social">
-							<div class="footer__copyright">&copy; Stanform Europe Ltd., 2022</div>
+							<div class="footer__copyright">&copy; Stanford Europe Ltd., 2022</div>
 
 							<div class="footer__social">
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__fb.svg" alt="fb" class="footer__soc__img"></a>

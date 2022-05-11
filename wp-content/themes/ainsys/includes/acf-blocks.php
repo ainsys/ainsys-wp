@@ -440,6 +440,26 @@ function ainsys_register_acf_block_types() {
 
 	acf_register_block_type(
 		array(
+			'name'            => 'rate_page',
+			'title'           => __( 'Rate_page' ),
+			'description'     => __( 'Rate_page' ),
+			'render_template' => 'partials/blocks/theme-specific/rate_page.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'rate_page' ),
+			'icon'            => 'cover-image',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+	
+
+	acf_register_block_type(
+		array(
 			'name'            => 'img-txt-ul',
 			'title'           => __( 'Image & Text with ul' ),
 			'description'     => __( 'Image & Text with ul' ),
@@ -483,7 +503,26 @@ function ainsys_register_acf_block_types() {
 			'render_template' => 'partials/blocks/theme-specific/contact.php',
 			'mode'            => 'edit',
 			'category'        => 'customgb',
-			'keywords'        => array( 'subscribe', 'text' ),
+			'keywords'        => array( 'contact' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'coockie',
+			'title'           => __( 'Coockie Block' ),
+			'description'     => __( 'Coockie Block' ),
+			'render_template' => 'partials/blocks/theme-specific/coockie.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'coockie' ),
 			'icon'            => 'bell',
 			'supports'        => array(
 				'align'           => false,

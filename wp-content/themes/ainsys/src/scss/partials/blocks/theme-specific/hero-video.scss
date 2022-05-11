@@ -4,6 +4,7 @@
 	&__info {
 		color: $page_color;
 		text-align: center;
+		position: absolute;
 		@include media-breakpoint-up( $bp ) {
 			position: relative;
 			top: 0;

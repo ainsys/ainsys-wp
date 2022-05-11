@@ -39,10 +39,10 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 <section class="contacts">
 	<div class="container">
 		<p class="page__podtitle">
-			Напишите нам 
+		    <?= get_field('podtitle');?>
 		</p>
 		<h2 class="contacts__title">
-			Наша команда по всему миру!
+			<?= get_field('title');?>
 		</h2>
 
 		<div class='page__content'>
@@ -50,83 +50,73 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 				<ul class="contacts__list">
 					<li class="contacts__item">
 						<div class="contacts__img">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/contact__email.svg" alt="email">
+						<img src="<?= get_field('image__email');?>" alt="email">
 						</div>
 						<div class="contacts__item__info">
 							<p class="contacts__title">
-								Email
+								<?= get_field('email__title');?>
 							</p>
 							<p class="contacts__text">
-								Наша дружная команда всегда готова помочь
+								<?= get_field('email__text');?>
 							</p>
 							<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
+						<img src="<?= get_field('email__icon');?>" alt="usa">
 
-						<a href="email: info@ainsys.com">info@ainsys.com
-							<div class="disabled__block">
-								Показать
-							</div>
+						<a href="email: info@ainsys.com" class="numbers__email"><?= get_field('email_contact');?>
+							<div class="disabled__block"></div>
 						</a>
 					</div>
 						</div>
 					</li>
 					<li class="contacts__item">
 						<div class="contacts__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/contact__office.svg" alt="office">
+							<img src="<?= get_field('image__office');?>" alt="office">
 						</div>
 						<div class="contacts__item__info">
 							<p class="contacts__title">
-								Офис
+							    <?= get_field('office__title');?>
 							</p>
 							<a class="contacts__button btn-primary" href='https://ainsys.com/order-ainsys/' onclick="ym(86987238,'reachGoal','button_4'); return true;"
-> Записаться на консультацию </a>
+> <?= get_field('button');?> </a>
 							<div class="numbers__map">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-								<a href="" class="socails__addres">Palladium House, 1-4 Argyll Street, London, W1F 7LD</a>
+								<img src="<?= get_field('office__icon');?>" alt="usa">
+								<a href="" class="socails__addres"><?= get_field('office_contact');?></a>
 							</div>
 						</div>
 					</li>
 					<li class="contacts__item">
 						<div class="contacts__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/contact__phone.svg" alt="phone">
+							<img src="<?= get_field('image__phone');?>" alt="phone">
 						</div>
 						<div class="contacts__item__info">
 							<p class="contacts__title">
-								Phone
+								<?= get_field('phone__title');?>
 							</p>
 							<p class="contacts__text">
-								Пн-Пт с 8.00 до 17.00.
+								<?= get_field('phone__text');?>
 							</p>
-							<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="usa">
-						<a href="tel: +78126027880">+78126027880
-						<div class="disabled__block">
-							Показать
-						</div>
+					<div class="numbers__phone numbers__phone-disabled">
+						<img src="<?= get_field('img_ru');?>" alt="ru">
+						<a href="tel: +78126027880" class="soc_href disabled"><?= get_field('phone_ru');?>
+						<div class="disabled__block"></div>
 						</a>
 					</div> 
 					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="usa">
-						<a href="tel: +447441426027">+447441426027
-						<div class="disabled__block">
-							Показать
-						</div>
+						<img src="<?= get_field('img_uk');?>" alt="usa">
+						<a href="tel: +447441426027" class="soc_href disabled"><?= get_field('phone_uk');?>
+						<div class="disabled__block"></div>
 						</a>
 					</div> 
 					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" alt="usa">
-						<a href="tel: +16469804846">+16469804846
-						<div class="disabled__block">
-							Показать
-						</div>
+						<img src="<?= get_field('img_usa');?>" alt="usa">
+						<a href="tel: +16469804846" class="soc_href disabled"><?= get_field('phone_usa');?>
+						<div class="disabled__block"></div>
 						</a>
 					</div> 
 					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__spain.svg" alt="usa">
-						<a href="tel: +34961163197">+34961163197
-						<div class="disabled__block">
-							Показать
-						</div>
+						<img src="<?= get_field('img_sp');?>" alt="usa">
+						<a href="tel: +34961163197" class="soc_href disabled"><?= get_field('phone_sp');?>
+						<div class="disabled__block"></div>
 						</a>
 					</div> 
 						</div>

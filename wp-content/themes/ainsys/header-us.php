@@ -75,10 +75,8 @@
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" alt="ru">
-								<a href="tel: +447441426027">+447441426027
-								<div class="disabled__block">
-									Show
-								</div>
+								<a href="tel: +447441426027" class="soc_href disabled">+447441426027
+								<div class="disabled__block"></div>
 								</a>
 							</li>
 							<li class="numbers__map">
@@ -88,10 +86,8 @@
 							<li  class="numbers__phone numbers__email numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 
-									<a href="email: info@ainsys.com">info@ainsys.com
-									<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;">
-										Show
-									</div>
+									<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+									<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
 									</a>
 							</li>
 							<li class="header__lang text-end">

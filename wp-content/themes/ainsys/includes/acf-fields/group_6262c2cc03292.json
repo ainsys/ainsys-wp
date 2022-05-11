@@ -159,25 +159,6 @@
             ]
         },
         {
-            "key": "field_6262c918894f0",
-            "label": "Bottom Text",
-            "name": "bottom_text",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": ""
-        },
-        {
             "key": "field_6262c395894e8",
             "label": "Bottom",
             "name": "",
@@ -265,5 +246,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651580952
+    "modified": 1652176747
 }

@@ -33,7 +33,7 @@ if ( ! empty( $block['align'] ) ) {
 						<div class="advantages__item">
 							<?php if ( get_sub_field( 'image' ) ) { ?>
 								<div class="advantages__item__img">
-									<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'large', false, array( 'class' => '' ) ); ?>
+								<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'large', false, array( 'class' => '' ) ); ?>
 								</div>
 							<?php } ?>
 							<?php if ( get_sub_field( 'title' ) ) { ?>
