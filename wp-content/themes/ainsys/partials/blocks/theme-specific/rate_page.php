@@ -140,32 +140,267 @@ if ( ! empty( $block['align'] ) ) {
 		<table class="table">
 			<thead>
 				<tr>
-				<th scope="col"></th>
-				<th scope="col">
-					
-				</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
+					<th class="col_horizontal" scope="col">
+					<th class="col_horizontal rate_first" scope="col">
+					<div class="col_content">
+						<div class="rate_page__item__name rate_page__item__name--light">Минимальный</div>
+						<div class="rate_page__item__price">
+								<span>0₽</span>
+							</div>
+							<div class="rate_page__statistics">
+								<div class="rate_page__item__users">
+									<span>2</span>                                    
+								</div>
+								<div class="rate_page__item__operations">
+									<span>500</span>                                  
+								</div>
+							</div>
+						</div>
+					</th>
+					<th class="col_horizontal" scope="col">
+						<div class="col_content">
+							<div class="rate_page__item__name rate_page__item__name--light">Минимальный</div>
+								<div class="rate_page__item__price">
+									<span>0₽</span>
+								</div>
+							<div class="rate_page__statistics">
+								<div class="rate_page__item__users">
+									<span>2</span>                                    
+								</div>
+								<div class="rate_page__item__operations">
+									<span>500</span>                                  
+								</div>
+							</div>
+						</div>
+					</th>
+					<th class="col_horizontal" scope="col">
+						<div class="col_content">
+							<div class="rate_page__item__name rate_page__item__name--light">Минимальный</div>
+						<div class="rate_page__item__price">
+								<span>0₽</span>
+							</div>
+							<div class="rate_page__statistics">
+								<div class="rate_page__item__users">
+									<span>2</span>                                    
+								</div>
+								<div class="rate_page__item__operations">
+									<span>500</span>                                  
+								</div>
+							</div>
+						</div>	
+					</th>
+					<th class="col_horizontal" scope="col">
+						<div class="col_content">
+						<div class="rate_page__item__name rate_page__item__name--light">Минимальный</div>
+						<div class="rate_page__item__price">
+								<span>0₽</span>
+							</div>
+							<div class="rate_page__statistics">
+								<div class="rate_page__item__users">
+									<span>2</span>                                    
+								</div>
+								<div class="rate_page__item__operations">
+									<span>500</span>                                  
+								</div>
+							</div>
+						</div>	
+					</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				</tr>
-				<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-				</tr>
-				<tr>
-				<th scope="row">3</th>
-				<td colspan="2">Larry the Bird</td>
-				<td>@twitter</td>
-				</tr>
+			<tbody class="tbody_list">
+					<tr class="tr_main">
+						<th class="row_main" scope="row">Цены и ограничения</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">
+							Цена за месяц
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first">$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>
+					<tr class="tr_dop">
+					    <th class="row_dop" scope="row">
+					        Запросов/tasks/operations в мес
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first">500</td>
+						<td>1000</td>
+						<td>20000</td>
+						<td>100000</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">
+						DataFlows Сценарии автоматизации, бизнес логика
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first"><div class="table_inf"></div></td>
+						<td><div class="table_inf"></div></td>
+						<td><div class="table_inf"></div></td>
+						<td><div class="table_inf"></div></td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">
+						WorkFlows - автоматизация рабочих процессов
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first">$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">
+						Гарантированное время обмена (min)
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first"><div class="table_plus"></div></td>
+						<td><div class="table_minus"></div></td>
+						<td><div class="table_plus"></div></td>
+						<td><div class="table_minus"></div></td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">
+						Доп запросы USD/1000 запросов - базово за запрос
+							<span class="tooltips__item"><span> 
+                            <div class="tooltips">
+							Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+							</div> 
+						</th>
+						<td class="rate_first"><div class="table_minus"></div></td>
+						<td><div class="table_plus"></div></td>
+						<td><div class="table_plus"></div></td>
+						<td><div class="table_arrow"></div></td>
+					</tr>			
+				</div>
+			</tbody>
+			
+			<tbody class="tbody_list tbody_list-disabled">
+					<tr class="tr_main">
+						<th class="row_main" scope="row">Командная работа и обучение</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr  class="tr_dop">
+						<th class="row_dop" scope="row">Цена за месяц</th>
+						<td>$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>
+					<tr  class="tr_dop">
+						<th class="row_dop" scope="row">Запросов/tasks/operations в мес</th>
+						<td>500</td>
+						<td>1000</td>
+						<td>20000</td>
+						<td>100000</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">DataFlows Сценарии автоматизации, бизнес логика</th>
+						<td><div class="table_inf"></div></td>
+						<td>~</td>
+						<td>~</td>
+						<td>~</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">WorkFlows - автоматизация рабочих процессов</th>
+						<td>$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Гарантированное время обмена (min)</th>
+						<td>+</td>
+						<td>-</td>
+						<td>+</td>
+						<td>-</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Доп запросы USD/1000 запросов - базово за запрос</th>
+						<td>-</td>
+						<td>+</td>
+						<td>+</td>
+						<td>+</td>
+					</tr>			
+				</tbody>
+
+
+
+				<tbody class="tbody_list tbody_list-disabled">
+					<tr class="tr_main">
+						<th class="row_main" scope="row">Командная работа и обучение</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Цена за месяц</th>
+						<td>$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Запросов/tasks/operations в мес</th>
+						<td>500</td>
+						<td>1000</td>
+						<td>20000</td>
+						<td>100000</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">DataFlows Сценарии автоматизации, бизнес логика</th>
+						<td>~</td>
+						<td>~</td>
+						<td>~</td>
+						<td>~</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">WorkFlows - автоматизация рабочих процессов</th>
+						<td>$</td>
+						<td>$$</td>
+						<td>$$$</td>
+						<td>$$$$</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Гарантированное время обмена (min)</th>
+						<td>+</td>
+						<td>-</td>
+						<td>+</td>
+						<td>-</td>
+					</tr>	
+					<tr class="tr_dop">
+						<th class="row_dop" scope="row">Доп запросы USD/1000 запросов - базово за запрос</th>
+						<td>-</td>
+						<td>+</td>
+						<td>+</td>
+						<td>+</td>
+					</tr>			
+				</div>
 			</tbody>
 		</table>
 

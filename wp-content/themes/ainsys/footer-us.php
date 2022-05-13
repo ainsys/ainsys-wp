@@ -12,7 +12,7 @@
 
 				<div class="footer__head">
 				      <div class="footer__logo"></div>
-					  <div class="footer__address">ООО "КАТАЛОГ СЕРВИС" <br>11033, г. Москва,<br> ул. Золоторожский Вал, д. 34, стр. 6 <br>ОГРН: 1097746354474</div>
+					  <div class="footer__address">Palladium House,<br>1-4 Argyll Street, London, UK</div>
 					</div>
 					<div class="footer__content">
 					    <ul class="footer__links">

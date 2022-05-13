@@ -28,6 +28,9 @@
 		$('.close_coockie').click(function() {
 			$('#coockie').addClass('coockie-disabled');
 		});
+		$('.tbody_list').click(function() {
+			$( this ).toggleClass('tbody_list-disabled');
+		});
 
 
 		// Range script
