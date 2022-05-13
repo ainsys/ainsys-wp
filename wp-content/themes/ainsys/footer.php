@@ -22,7 +22,7 @@
 						</ul>
 
 						<div class="footer__copyright-social">
-							<!-- <div class="footer__copyright">&copy; Stanford Europe Ltd., 2022</div> -->
+							
 
 							<div class="footer__social">
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__fb.svg" alt="fb" class="footer__soc__img"></a>
