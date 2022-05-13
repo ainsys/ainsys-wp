@@ -105,17 +105,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;"></div>
 												</a>
 										</li>
-										<li class="numbers__phone numbers__phone-disabled">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="usa">
-
-												<a href="tel: +78126027880" class="soc_href disabled">+447441426027
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;"></div>
-												</a>
-										</li>
-										<li class="numbers__map">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-										<a href="" class="socials__addres">Palladium House, 1-4 Argyll Street, London, UK</a>
-										</li>
+									
 										<li  class="numbers__phone numbers__email numbers__phone-disabled">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 

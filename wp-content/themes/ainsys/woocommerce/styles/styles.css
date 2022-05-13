@@ -1,0 +1,90 @@
+.category-row {
+    display: flex;
+    width: 100%;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.right-block ul{
+     display: flex;
+    width: 100%;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.right-block ul:before, .right-block ul:after{
+    display: none !important;
+}
+.right-block h2.woocommerce-loop-product__title {
+    color: white;
+}
+.right-block ul>li a:hover, .right-block ul>li a:active, .right-block ul>li a:focus {
+    background: transparent !important;
+}
+.right-block ul a.button.product_type_simple{
+    display: none !important;
+}
+.category-row + nav.woocommerce-pagination {
+    display: none;
+}
+.right-block span.price {
+    display: none !important;
+}
+.right-block ul>li img {
+    max-width: 80px;
+    border-radius: 50%;
+}
+.right-block ul>li img {
+    max-width: 72px;
+    border-radius: 50%;
+    display: block !important;
+    background: white;
+}
+.category-row {
+    padding: 60px 15px;
+}
+.right-block h2.woocommerce-loop-product__title {
+    margin-left: 15px !important;
+}
+.right-block ul>li a{
+    display: flex;
+}
+.right-block ul>li{
+    border-radius: 16px;
+    min-height: 216px;
+    margin-bottom: 30px !important;
+    background: linear-gradient(105.3deg, #00A2E3 0%, #4DCDFF 97.63%);
+    padding: 20px !important;
+}
+
+
+@media all and (min-width: 992px){
+    .category-row>div.left-block {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .category-row>div.right-block {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .right-block ul>li {
+        flex: 0 0 46%;
+        max-width: 46%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+@media all and (max-width: 991px){
+    .category-row>div{
+         flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .right-block ul>li {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 !important;
+    }
+}
