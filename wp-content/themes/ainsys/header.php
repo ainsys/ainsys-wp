@@ -97,25 +97,28 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 										<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
 									</div>
 								    <ul class="socials__links">
-										<li class="numbers__phone numbers__phone-disabled">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="usa">
+										<li  class="numbers__phone numbers__phone-disabled">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="ru">
+								<a href="tel: +447441426027" class="soc_href disabled">+78126027880
+								<div class="disabled__block"></div>
+								</a>
+							</li>
+							<li class="numbers__map">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
+							<a href="" class="socials__addres">г. Москва,
+ул. Золоторожский Вал, д. 34</a>
+							</li>
+							<li  class="numbers__phone numbers__email numbers__phone-disabled">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
 
-												<a  href="tel: +78126027880" class="soc_href disabled">+78126027880
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','number'); return true;"></div>
-												</a>
-										</li>
-									
-										<li  class="numbers__phone numbers__email numbers__phone-disabled">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
-
-												<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
-												<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
-												</a>
-										</li>
-										<li class="header__lang text-end">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
-											<a href="#" class="header__lang__current text-decoration-none">RU</a>
+									<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+									<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
+									</a>
+							</li>
+							<li class="header__lang text-end">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
+								<a href="#" class="header__lang__current text-decoration-none">RU</a>
 											<ul class="header__lang__submenu">
 												<li>
 													<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
