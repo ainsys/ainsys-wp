@@ -532,6 +532,7 @@ function ainsys_register_acf_block_types() {
 			),
 		)
 	);
+
 }
 
 // Check if function exists and hook into setup.
