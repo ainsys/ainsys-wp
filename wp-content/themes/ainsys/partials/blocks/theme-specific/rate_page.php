@@ -123,23 +123,11 @@ if ( ! empty( $block['align'] ) ) {
 		<?php endif; ?>
 
 		<div class="rate_page_variables block-hide">
-			<div class="var_ru_first">
-			  <?= get_field('var_ru_first');?>
+			<div class="var_first">
+			  <?= get_field('var_first');?>
 			</div>
-			<div class="var_ru_second">
-			  <?= get_field('var_ru_second');?>
-			</div>
-			<div class="var_en_first">
-			  <?= get_field('var_en_first');?>
-			</div>
-			<div class="var_en_second">
-			  <?= get_field('var_en_second');?>
-			</div>
-			<div class="var_ua_first">
-			  <?= get_field('var_ua_first');?>
-			</div>
-			<div class="var_ua_second">
-			  <?= get_field('var_ua_second');?>
+			<div class="var_second">
+			  <?= get_field('var_second');?>
 			</div>
 		</div>
 

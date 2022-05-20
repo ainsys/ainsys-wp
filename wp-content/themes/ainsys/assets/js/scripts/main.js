@@ -63,7 +63,11 @@
 
 	const final_val_initial2 = parseInt($('#final_val_two').text()); 
 	const users_val_number2 = parseInt($('#users_val2').text()); 
-	const operations_val_number2 = parseInt($('#operations_val2').text()); 
+	const operations_val_number2 = parseInt($('#operations_val2').text());
+	
+	const var_first = parseInt($('.var_first').text()); 
+	const var_second = parseInt($('.var_second').text()); 
+
 
 
 	$('#range1').on('change', function() {
@@ -75,7 +79,7 @@
 		
 		const operations_val_number_din = parseInt($('#operations_val').text());
 		const operations_val_range_din = +$('#range2').val();  
-		let final_val_new = final_val_initial + (range_users_val * 350) + ( (operations_val_range_din / 1000) * 350);
+		let final_val_new = final_val_initial + (range_users_val * var_first) + ( (operations_val_range_din / 1000) * var_first);
 		$('#final_val').text(final_val_new);
 		$('#rate_val').text(final_val_new);
 
@@ -85,7 +89,7 @@
 		$('#user_val2').text(users_val_number_new2);
 		
 		const operations_val_number_din2 = parseInt($('#operations_val2').text()); 
-		let final_val_new2 = final_val_initial2 + (range_users_val * 210) + ((operations_val_range_din / 1000) * 210);
+		let final_val_new2 = final_val_initial2 + (range_users_val * var_second) + ((operations_val_range_din / 1000) * var_second);
 		$('#final_val_two').text(final_val_new2);
 		$('#rate_val2').text(final_val_new2);
 	});

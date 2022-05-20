@@ -758,8 +758,8 @@
         },
         {
             "key": "field_62878c7567366",
-            "label": "var_ru_first",
-            "name": "var_ru_first",
+            "label": "var_first",
+            "name": "var_first",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -777,46 +777,8 @@
         },
         {
             "key": "field_62878c9b67367",
-            "label": "var_ru_second",
-            "name": "var_ru_second",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62878ca767368",
-            "label": "var_en_first",
-            "name": "var_en_first",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62878cad67369",
-            "label": "var_en_second",
-            "name": "var_en_second",
+            "label": "var_second",
+            "name": "var_second",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -851,5 +813,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653050549
+    "modified": 1653051585
 }
