@@ -25,7 +25,7 @@ body {
   header .header__content .socials {
     margin-left: auto;
     max-width: 45%;
-    min-width: 575px;
+    min-width: 550px;
   }
 }
 
@@ -83,7 +83,7 @@ header .header__content .socials__links .numbers__phone {
       -ms-flex-pack: start;
           justify-content: flex-start;
           width: auto;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   list-style: none;
 }
 header .header__content .socials__links .numbers__phone:first-child {
@@ -143,6 +143,7 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
 
 .header__lang__submenu {
   border-radius: 0.75rem !important;
+  z-index: 100;
 }
 
 .header .header__btn .btn-main {
@@ -161,12 +162,13 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   list-style: none;
   display: flex;
   padding: 0;
-  margin-left: auto;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  width: 100%;
 }
 .header__lang img {
   margin-right: 10px;
   max-width: 18px;
+  margin-left: auto;
 }
 .header__lang__current {
   font-weight: 500;
@@ -180,7 +182,6 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
 .numbers__map {
   width: auto;
   list-style: none;
-  margin-bottom: 8px;
   display: flex;
 }
 .numbers__map img {
@@ -188,6 +189,9 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
 }
 .burger {
   display: none;
+}
+.numbers__email  {
+  margin-left: auto;
 }
 
 .header .socials .socials__wrapper {
