@@ -21,4 +21,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-    <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/woocommerce/styles/styles.css">
+ <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/woocommerce/styles/styles.css">

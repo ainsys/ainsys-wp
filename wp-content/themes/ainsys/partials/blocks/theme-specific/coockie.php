@@ -37,8 +37,14 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 ?>
 
 <div id="coockie">
-    <p>
-    <?= get_field('coockie_text');?> <a href="/cookies/"><?= get_field('coockie_href');?></a> <?= get_field('coockie_text_two');?> <a href="/privacy-policy/"><?= get_field('coockie_href_two');?></a>
+	<div class="coockie_content">
+    <p class="coockie_text">
+      <?= get_field('coockie_text');?> <a href="/cookies/"><?= get_field('coockie_href');?></a> <?= get_field('coockie_text_two');?> <a href="/privacy-policy/"><?= get_field('coockie_href_two');?></a><?= get_field('coockie_text_three');?>
     </p>
-    <div class="close_coockie"></div>
+	<div class="coockie_buttons">
+      <button class="btn coockie_button coockie_close"><?= get_field('coockie_btn_accept');?></button>
+	  <button class="btn coockie_button-grey coockie_button-disagree coockie_close"><?= get_field('coockie_btn_disagree');?></button>
+	  <a href="/privacy-policy/" class="btn coockie_button-grey"><?= get_field('coockie_btn_policy');?></a>
+	</div>
+	</div>
 </div>
