@@ -44,8 +44,8 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
         $order_payment_method    = $order_data['payment_method_title'];
         $order_billing_phone     = $order_data['billing']['phone'];
 
-        $poluchatelFam           = get_post_meta( $order->id, 'recipient_last_name', true );
-        $poluchatelName          = get_post_meta( $order->id, 'recipient_name', true );
+        $poluchatelFam           = get_post_meta( $order->get_id(), 'recipient_last_name', true );
+        $poluchatelName          = get_post_meta( $order->get_id(), 'recipient_name', true );
         if(esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'На удержании' || esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'В ожидании оплаты'  || esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'Ожидание' || esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'На удержании'  || esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'Обработка') {
 
 				?>
@@ -158,8 +158,8 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
         $order_payment_method    = $order_data['payment_method_title'];
         $order_billing_phone     = $order_data['billing']['phone'];
 
-        $poluchatelFam           = get_post_meta( $order->id, 'recipient_last_name', true );
-        $poluchatelName          = get_post_meta( $order->id, 'recipient_name', true );
+        $poluchatelFam           = get_post_meta( $order->get_id(), 'recipient_last_name', true );
+        $poluchatelName          = get_post_meta( $order->get_id(), 'recipient_name', true );
         if(esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'Выполнен'){
 
 				?>
@@ -272,8 +272,8 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
         $order_payment_method    = $order_data['payment_method_title'];
         $order_billing_phone     = $order_data['billing']['phone'];
 
-        $poluchatelFam           = get_post_meta( $order->id, 'recipient_last_name', true );
-        $poluchatelName          = get_post_meta( $order->id, 'recipient_name', true );
+        $poluchatelFam           = get_post_meta( $order->get_id(), 'recipient_last_name', true );
+        $poluchatelName          = get_post_meta( $order->get_id(), 'recipient_name', true );
         if(esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'Отменен'){
 
 				?>
@@ -386,8 +386,8 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
         $order_payment_method    = $order_data['payment_method_title'];
         $order_billing_phone     = $order_data['billing']['phone'];
 
-        $poluchatelFam           = get_post_meta( $order->id, 'recipient_last_name', true );
-        $poluchatelName          = get_post_meta( $order->id, 'recipient_name', true );
+        $poluchatelFam           = get_post_meta( $order->get_id(), 'recipient_last_name', true );
+        $poluchatelName          = get_post_meta( $order->get_id(), 'recipient_name', true );
         if(esc_html( wc_get_order_status_name( $order->get_status() ) ) == 'Возвращен'){
 
 				?>

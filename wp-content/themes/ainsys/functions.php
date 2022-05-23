@@ -18,6 +18,16 @@ require_once __DIR__ . '/includes/theme-customizations.php';
 require_once __DIR__ . '/includes/styles-scripts.php';
 require_once __DIR__ . '/includes/theme-installer.php';
 require_once __DIR__ . '/includes/connector.php';
+require_once __DIR__ . '/includes/woo-customizations.php';
+// require_once __DIR__ . '/includes/search-customization.php';
+
+// Вход и безопасность.
+require 'template-parts/login-and-security.php';
+require 'template-parts/reg-dev.php';
+require 'template-parts/reg-part.php';
+
+// Компетенции разработчиков и поиск по ним.
+require 'template-parts/comp-settings.php';
 
 /**
  * Theme setup hooks
@@ -61,9 +71,3 @@ function remove_admin_menu() {
 }
 add_action( 'admin_menu', 'remove_admin_menu', 999 );
 
-
-
-// function loop_columns() {
-// return 3; // 3 products per row
-// }
-// add_filter(‘loop_shop_columns’, ‘loop_columns’, 999);

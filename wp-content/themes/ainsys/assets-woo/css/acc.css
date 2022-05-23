@@ -319,7 +319,7 @@
 }
 
 .my-acc-reset-pass__btn::after {
-    content: url("img/edit.svg");
+    content: url("./img/edit.svg");
     height: 20px;
     width: 20px;
     margin-left: 10px;
@@ -360,15 +360,15 @@
 }
 
 .my-acc-block__title-chel::before {
-    content: url("img/user-check.svg");
+    content: url("./img/user-check.svg");
 }
 
 .my-acc-block__title-tel::before {
-    content: url("img/phone.svg");
+    content: url("./img/phone.svg");
 }
 
 .my-acc-block__title-sec::before {
-    content: url("img/lock.svg");
+    content: url("./img/lock.svg");
 }
 
 .my-acc-block__text {
@@ -512,7 +512,7 @@
 
 
 .acc-add-btn__add::after {
-    content: url("img/plus.svg");
+    content: url("./img/plus.svg");
     margin-left: 8px;
     transition: .3s all;
     max-height: 20px;
@@ -540,20 +540,24 @@
     padding: 70px 0;
 }
 
-.acc-nav {
+.content ul.acc-nav {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
     align-items: stretch;
+	max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.acc-nav__item {
-    width: 31%;
-    padding: 0;
+.content ul .acc-nav__item {
     list-style: none;
-    margin: 0 0 30px;
     display: flex;
+    width: 31%;
+    margin: 0;
+    padding: 10px;
+}
+.content ul .acc-nav__item:before {
+	display: none;
 }
 
 .acc-nav__title {
@@ -568,7 +572,7 @@
     margin: 0 3.5% 30px;
 }
 
-.acc-nav__link {
+.content .woocommerce .acc-nav__link {
     display: block;
     background: #FFFFFF;
     border: 1px solid #EDEDED;
@@ -584,12 +588,15 @@
     transition: .3s all;
 }
 
-.acc-nav__link:hover {
+.content .woocommerce .acc-nav__link:hover {
+	background: #fff !important;
     box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+	color: #0C1A30 !important;
 }
 
-.woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link {
-    background: radial-gradient(97.14% 217.33% at 1.29% 1.71%, rgba(33, 150, 243, 0.2) 0%, rgba(100, 182, 247, 0.2) 51.92%, rgba(0, 106, 255, 0.2) 100%), #FFFFFF;
+.content .woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link {
+	background: #fff !important;
+    //background: radial-gradient(97.14% 217.33% at 1.29% 1.71%, rgba(33, 150, 243, 0.2) 0%, rgba(100, 182, 247, 0.2) 51.92%, rgba(0, 106, 255, 0.2) 100%), #FFFFFF;
 }
 
 .acc-nav__item .acc-nav__link::before {
@@ -622,19 +629,19 @@
 }
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link::before {
-    content: url("img/zap.svg");
+    content: url("./img/zap.svg");
 }
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-dev.acc-nav__item .acc-nav__link::before {
-    content: url("img/command.svg");
+    content: url("./img/command.svg");
 }
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-part.acc-nav__item .acc-nav__link::before {
-    content: url("img/users.svg");
+    content: url("./img/users.svg");
 }
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address.acc-nav__item .acc-nav__link::before {
-    content: url("img/globe.svg");
+    content: url("./img/globe.svg");
 }
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address.acc-nav__item .acc-nav__link::after {
@@ -652,7 +659,7 @@
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link:after {
     content: 'Отслеживайте статус ваших заказов или отредактируйте действующий';
 }
-
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-account.acc-nav__item .acc-nav__link:after,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--login-security.acc-nav__item .acc-nav__link:after {
     content: 'Смотрите и редактируйте свою личную информацию';
 }
@@ -661,9 +668,10 @@
     content: 'Выйти из аккаунта';
 }
 
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-account.acc-nav__item .acc-nav__link::before,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--login-security.acc-nav__item .acc-nav__link::before,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--customer-logout .acc-nav__link::before {
-    content: url("img/user.svg");
+    content: url("./img/user.svg");
 }
 
 .acc-order-item {
@@ -691,7 +699,7 @@ a.acc-order--btn__buy-all {
 }
 
 a.acc-order--btn__buy-all::before {
-    content: url("img/shopping-cart.svg");
+    content: url("./img/shopping-cart.svg");
     width: 21px;
     height: 21px;
     margin-right: 8px;
@@ -1276,7 +1284,7 @@ a.acc-order--btn__buy-all::before {
 }
 
 .my-acc-reg-form form .tool-info {
-    content: url("img/i.svg");
+    content: url("./img/i.svg");
     border: 1px solid #C4C4C4;
     border-radius: 50%;
     padding: 2px;
@@ -1658,7 +1666,7 @@ html {
 }
 
 .acc-reg-form-plus__plus::after {
-    content: url("img/plus.svg");
+    content: url("./img/plus.svg");
     position: absolute;
     top: 11px;
     left: 8.5px;
@@ -1919,4 +1927,49 @@ html {
         display: block;
         text-align: center;
     }
+}
+form.edit-account {
+	max-width: 600px;
+	margin: 0 auto;
+}
+form.edit-account input[type='text'],
+form.edit-account input[type='email'],
+form.edit-account input[type='password'] {
+	padding: 7px 10px;
+	border: 1px solid #ccc;
+}
+form.edit-account input[type='text'] + span,
+form.edit-account input[type='email']+ span,
+form.edit-account input[type='password'] + span {
+	display: block;
+	margin: 5px 0 0;
+	font-size: 12px;
+}
+form.edit-account fieldset {
+	display: block;
+	float: none;
+	margin: 30px 0 10px;
+}
+form.edit-account .button {
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 12px;
+	border: 2px solid #ab47bc;
+	background: #ab47bc;
+	transition: all 0.3s ease-out;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0;
+	text-transform: none;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+form.edit-account .button:hover,
+form.edit-account .button:active,
+form.edit-account .button:focus {
+	background: #530e5c;
+	border-color: #530e5c;
+	color: #fff;
 }
