@@ -1,0 +1,37 @@
+.tab {
+    display: none !important;
+    transform: scale(0) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: .3s all !important;
+    width: 100% !important;
+
+
+}
+
+
+.tab.active {
+    animation: showTabs .5s !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+@keyframes showTabs {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideTabs {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
