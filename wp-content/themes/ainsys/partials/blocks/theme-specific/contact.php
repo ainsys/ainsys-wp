@@ -96,29 +96,12 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 								<?= get_field('phone__text');?>
 							</p>
 					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('img_ru');?>" alt="ru">
-						<a href="tel: +78126027880" class="soc_href disabled"><?= get_field('phone_ru');?>
+						<img src="<?= get_field('img');?>" alt="ru">
+						<a href="tel: +78126027880" class="soc_href disabled"><?= get_field('phone');?>
 						<div class="disabled__block"></div>
 						</a>
 					</div> 
-					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('img_uk');?>" alt="usa">
-						<a href="tel: +447441426027" class="soc_href disabled"><?= get_field('phone_uk');?>
-						<div class="disabled__block"></div>
-						</a>
-					</div> 
-					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('img_usa');?>" alt="usa">
-						<a href="tel: +16469804846" class="soc_href disabled"><?= get_field('phone_usa');?>
-						<div class="disabled__block"></div>
-						</a>
-					</div> 
-					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('img_sp');?>" alt="usa">
-						<a href="tel: +34961163197" class="soc_href disabled"><?= get_field('phone_sp');?>
-						<div class="disabled__block"></div>
-						</a>
-					</div> 
+					
 						</div>
 					</li>
 				</ul>
@@ -126,7 +109,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 			
 			<div class="map">
 			<div class="contacts__map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.944877276962!2d-0.14245638436390096!3d51.51422727963633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d54ff10fff%3A0x87d6e9d9b6b0f840!2zUGFsbGFkaXVtIEhvdXNlLCAxLTQgQXJneWxsIFN0LCBMb25kb24gVzFGIDdMRCwg0JLQtdC70LjQutC-0LHRgNC40YLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1651340852313!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5373182321127!2d37.6805551160886!3d55.74916769973951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54abe4351e149%3A0xbbd53e7baa61975!2z0YPQuy4g0JfQvtC70L7RgtC-0YDQvtC20YHQutC40Lkg0JLQsNC7LCAzNCDRgdGC0YDQvtC10L3QuNC1IDYsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTEwMzM!5e0!3m2!1sru!2ses!4v1652391776313!5m2!1sru!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 			</div>
 

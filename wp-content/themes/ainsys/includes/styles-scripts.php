@@ -71,6 +71,7 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_style( 'ainsys-woo-style', get_template_directory_uri() . '/assets-woo/css/acc.css', array( 'ainsys-bs-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-custom-style', get_template_directory_uri() . '/assets/style/newstyles.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-forum', get_template_directory_uri() . '/assets/style/forum.css', array( 'ainsys-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-custom2-style', get_template_directory_uri() . '/assets/style/acc.css', array( 'ainsys-style' ), $asset_version );
 
 	wp_enqueue_script(
 		'ainsys-main-scripts',

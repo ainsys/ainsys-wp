@@ -56,7 +56,7 @@ function ainsys_spacer_block( $block_content, $block ) {
 	$return .= '</div>';
 	return $return;
 }
-add_filter( 'render_block', 'ainsys_spacer_block', 10, 2 );
+add_filter( 'render_block', 'ainsys_spacer_block', 10, 2 ); 
 
 /**
  * Change excerpt length

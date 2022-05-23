@@ -60,3 +60,10 @@ function remove_admin_menu() {
 	remove_submenu_page( 'themes.php', 'theme-editor.php' );
 }
 add_action( 'admin_menu', 'remove_admin_menu', 999 );
+
+
+
+// function loop_columns() {
+// return 3; // 3 products per row
+// }
+// add_filter(‘loop_shop_columns’, ‘loop_columns’, 999);
