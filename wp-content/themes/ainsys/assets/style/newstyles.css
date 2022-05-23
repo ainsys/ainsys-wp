@@ -1152,6 +1152,9 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   line-height: 24px;
   color: #AB47BC;
 }
+.contacts .page__content .contacts__list .contacts__item .contacts__item__info .numbers__email {
+  margin: 0;
+}
 .contacts .page__content .contacts__list .contacts__item .contacts__item__info .contacts__button {
   background-color: #AB47BC;
   color: #fff;
@@ -2175,7 +2178,7 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   height: 24px;
 }
 .tbody_list-disabled .row_main::after {
-  transform: rotate(180deg);
+  transform: rotate(00deg);
 }
 
 
@@ -2212,32 +2215,34 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
 }
 
 .tbody_list .tr_dop {
-  display: table-row ;
+  display: table-row;
 }
 
-.tbody_list:nth-child(n+3) .tr_dop {
-  display: none;
-}
 .tbody_list-disabled .tr_dop {
   display: none;
 }
 .tbody_list .row_main::after {
-  transform: rotate(180deg);
-}
-.tbody_list-disabled .row_main::after {
   transform: rotate(0deg);
 }
-.tbody_list:nth-child(n+3).tbody_list-disabled .tr_dop {
+.tbody_list-disabled .row_main::after {
+  transform: rotate(180deg);
+}
+/* .tbody_list:nth-child(n+3).tbody_list-disabled .tr_dop {
   display: table-row !important;
 }
 .tbody_list:nth-child(n+3) .row_main::after {
-  transform: rotate(0deg);
-}
-.tbody_list:nth-child(n+3).tbody_list-disabled .row_main::after {
   transform: rotate(180deg);
 }
+.tbody_list:nth-child(n+3).tbody_list-disabled .row_main::after {
+  transform: rotate(0deg);
+} */
 
-
+.tbody_list-1 .tr_dop {
+  display: none;
+}
+.tbody_list-disabled.tbody_list-1 .tr_dop {
+  display: table-row;
+}
 
 
 
@@ -2476,4 +2481,24 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
 
 .block-hide {
   display: none;
+}
+
+
+@media(max-width: 1024px) {
+  .rate_page__title {
+    font-size: 28px;
+    line-height: 125%;
+  }
+  .rate_page__header {
+    flex-direction: column;
+  }
+  .rate_page__toggler {
+    margin: 20px auto 0;
+  }
+  .rate_page__ranges {
+    flex-direction: column;
+  }
+  .range-slider {
+    width: 100%;
+  }
 }

@@ -124,8 +124,6 @@
 										<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
 									</li>
 									<li>
-									</li>
-									<li>
 										<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
 									</li>
 									<li>
@@ -138,20 +136,20 @@
 							</li>
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" alt="ru">
-								<a href="tel: +447441426027" class="soc_href disabled">+447441426027
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/<?= get_field('logo');?>" alt="ru">
+								<a href="tel: <?= get_field('tel');?>" class="soc_href disabled"><?= get_field('tel');?>
 								<div class="disabled__block"></div>
 								</a>
 							</li>
 							<li  class="numbers__phone numbers__email numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
-								<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+								<a href="email: info@ainsys.com" class="soc_href disabled"><?= get_field('mail');?>
 								<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
 								</a>
 							</li>
 							<li class="numbers__map">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-							<a href="" class="socials__addres">Palladium House, 1-4 Argyll Street, London, UK</a>
+							<a href="" class="socials__addres"><?= get_field('adress');?></a>
 							</li>
 						</ul>
 					</div>

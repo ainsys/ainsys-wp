@@ -1,8 +1,8 @@
 <?php
 /**
- * Full width page.
+ * Тарифы - укр.
  *
- * Template Name: Home: English
+ * Template Name: Тарифы - укр
  *
  * @package ainsys
  */
@@ -10,10 +10,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 
-get_header( 'us' );
+get_header( 'ua' );
 
 the_post();
 
 the_content();
 
-get_footer( 'us' );
+get_footer( 'ua' );
