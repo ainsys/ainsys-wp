@@ -228,12 +228,6 @@ if(0 == WC()->cart->get_cart_contents_count()){
 		</tbody>
 	</table>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
-	<div class="search">
-		<?php 
-			echo do_shortcode('[wbcr_css_snippet id="3516"]');
-			echo do_shortcode('[fibosearch]');
-		?>
-	</div>
 </form>
 </div><!-- //.basket__left -->
 
