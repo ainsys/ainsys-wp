@@ -123,23 +123,11 @@ if ( ! empty( $block['align'] ) ) {
 		<?php endif; ?>
 
 		<div class="rate_page_variables block-hide">
-			<div class="var_ru_first">
-			  <?= get_field('var_ru_first');?>
+			<div class="var_first">
+			  <?= get_field('var_first');?>
 			</div>
-			<div class="var_ru_second">
-			  <?= get_field('var_ru_second');?>
-			</div>
-			<div class="var_en_first">
-			  <?= get_field('var_en_first');?>
-			</div>
-			<div class="var_en_second">
-			  <?= get_field('var_en_second');?>
-			</div>
-			<div class="var_ua_first">
-			  <?= get_field('var_ua_first');?>
-			</div>
-			<div class="var_ua_second">
-			  <?= get_field('var_ua_second');?>
+			<div class="var_second">
+			  <?= get_field('var_second');?>
 			</div>
 		</div>
 
@@ -151,7 +139,7 @@ if ( ! empty( $block['align'] ) ) {
 				    	<div class="tooltips"><?= get_field('tooltips-range-first');?></div>
 					</span>
 				</div>
-				<input id="range1" type="range" name="range1" min="0" max="50" step="2" value="0" />
+				<input id="range1" type="range" name="range1" min="0" max="50" step="1" value="0" />
 			</div>
 			<div class="range-slider">
 			    <div class="label-range"><?= get_field('label-range-second');?></div>
@@ -171,11 +159,11 @@ if ( ! empty( $block['align'] ) ) {
 					<th class="col_horizontal" scope="col">
 					<?php if ( have_rows( 'rate_page_table_head' ) ) : ?>
 							<?php
-
+							$i = 1;
 							while ( have_rows( 'rate_page_table_head' ) ) :
 								the_row()
 								?>
-								<th class="col_horizontal item scope="col">
+								<th class="col_horizontal item-<?php echo $i; ?> scope="col">
 								    <div class="col_content">
 										<div class="col_head">
 										<?php if ( get_sub_field( 'rate_page_name' ) ) { ?>
@@ -205,6 +193,7 @@ if ( ! empty( $block['align'] ) ) {
 									</div>
 								</th>	
 							<?php
+							$i++;
 						 endwhile; ?>
 					<?php endif; ?>
 				</tr>
@@ -215,10 +204,11 @@ if ( ! empty( $block['align'] ) ) {
 
 			<?php if ( have_rows( 'rate_page_table' ) ) : ?>
 							<?php
+							$i = 1;
 							while ( have_rows( 'rate_page_table' ) ) :
 								the_row();
 							?>
-				<tbody class="tbody_list">
+				<tbody class="tbody_list tbody_list-disabled tbody_list-<?php echo $i; ?>">
 					<tr class="tr_main">
 
 					<?php if ( get_sub_field( 'table_main_name' ) ) { ?>
@@ -278,7 +268,9 @@ if ( ! empty( $block['align'] ) ) {
 
 				</div>
 			</tbody>
-			<?php endwhile; ?>
+			<?php
+			$i++;
+		 endwhile; ?>
 	    <?php endif; ?>
 
 		</table>
