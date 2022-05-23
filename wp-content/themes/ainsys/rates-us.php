@@ -1,8 +1,8 @@
 <?php
 /**
- * Full width page.
+ * Тарифы - англ.
  *
- * Template Name: Home: English
+ * Template Name: Тарифы - англ
  *
  * @package ainsys
  */

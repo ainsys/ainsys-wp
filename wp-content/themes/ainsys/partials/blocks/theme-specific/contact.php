@@ -76,7 +76,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 							<p class="contacts__title">
 							    <?= get_field('office__title');?>
 							</p>
-							<a class="contacts__button btn-primary" href='https://ainsys.com/order-ainsys/' onclick="ym(86987238,'reachGoal','button_4'); return true;"
+							<a class="contacts__button btn-primary" href="<?= get_field('url_button');?>" onclick="ym(86987238,'reachGoal','button_4'); return true;"
 > <?= get_field('button');?> </a>
 							<div class="numbers__map">
 								<img src="<?= get_field('office__icon');?>" alt="usa">
@@ -109,7 +109,8 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 			
 			<div class="map">
 			<div class="contacts__map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5373182321127!2d37.6805551160886!3d55.74916769973951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54abe4351e149%3A0xbbd53e7baa61975!2z0YPQuy4g0JfQvtC70L7RgtC-0YDQvtC20YHQutC40Lkg0JLQsNC7LCAzNCDRgdGC0YDQvtC10L3QuNC1IDYsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTEwMzM!5e0!3m2!1sru!2ses!4v1652391776313!5m2!1sru!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <?= get_field('map');?>
+			
 			</div>
 			</div>
 

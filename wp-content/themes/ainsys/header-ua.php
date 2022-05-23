@@ -111,6 +111,33 @@
 							<a class="btn btn-main" href="/order-ainsys-ua/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Залишити заявку</a>
 						</div>
 						<ul class="socials__links">
+						<li class="header__lang text-end">
+							<img src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" alt="usa" data-src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" decoding="async" class=" lazyloaded">
+							<a href="#" class="header__lang__current text-decoration-none">UA</a>
+								<ul class="header__lang__submenu">
+									<li>
+										<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+									</li>
+									<li>
+										<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
+									</li>
+									<li>
+										<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+									</li>
+									<li>
+										<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+									<li>
+										<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
+									</li>
+								</ul>
+							</li>
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ua.svg" alt="ua">
