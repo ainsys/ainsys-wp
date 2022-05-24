@@ -103,6 +103,14 @@ function ainsys_enqueue_scripts() {
 		true
 	);
 
+	wp_enqueue_script(
+		'ainsys-scripts',
+		get_template_directory_uri() . '/assets-woo/js/tabs.js',
+		array( 'jquery' ),
+		$asset_version,
+		true
+	);
+
 }
 
 add_action( 'wp_enqueue_scripts', 'ainsys_enqueue_scripts' );
