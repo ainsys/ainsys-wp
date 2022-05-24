@@ -69,9 +69,11 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_style( 'ainsys-bs-style', get_template_directory_uri() . '/assets/style/bootstrap.min.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-style', get_template_directory_uri() . '/assets/css/main.css', array( 'ainsys-bs-style' ), $asset_version );
 
-	wp_enqueue_style( 'ainsys-woo-style', get_template_directory_uri() . '/assets-woo/css/acc.css', array( 'ainsys-bs-style' ), $asset_version );
-	wp_enqueue_style( 'ainsys-login-style', get_template_directory_uri() . '/assets-woo/css/login.css', array( 'ainsys-bs-style' ), $asset_version );
-	wp_enqueue_style( 'ainsys-cart-style', get_template_directory_uri() . '/assets-woo/css/cart.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woo-account', get_template_directory_uri() . '/assets-woo/css/acc.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woo-login', get_template_directory_uri() . '/assets-woo/css/login.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woo-cart', get_template_directory_uri() . '/assets-woo/css/cart.css', array( 'ainsys-bs-style' ), $asset_version );
+
+	wp_enqueue_style( 'ainsys-woocommerce', get_template_directory_uri() . '/woocommerce/styles/styles.css', array( 'ainsys-bs-style' ), $asset_version );
 
 	wp_enqueue_style( 'ainsys-custom-style', get_template_directory_uri() . '/assets/style/newstyles.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-forum', get_template_directory_uri() . '/assets/style/forum.css', array( 'ainsys-style' ), $asset_version );

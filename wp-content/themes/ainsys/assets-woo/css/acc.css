@@ -1,3 +1,9 @@
+.content .woocommerce a:not(.btn):not(.btn-audio):not(.wp-block-button__link):not(.wp-block-button__link):not(.tab-link):not(.btn-play):not([data-fancybox]):not(.page-nav__a):hover,
+.content .woocommerce a:not(.btn):not(.btn-audio):not(.wp-block-button__link):not(.wp-block-button__link):not(.tab-link):not(.btn-play):not([data-fancybox]):not(.page-nav__a):active,
+.content .woocommerce a:not(.btn):not(.btn-audio):not(.wp-block-button__link):not(.wp-block-button__link):not(.tab-link):not(.btn-play):not([data-fancybox]):not(.page-nav__a):focus {
+	background: transparent;
+	color: #530e5c;
+}
 .woocommerce-MyAccount-content {
     display: block !important;
     font-weight: 500;
