@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/styles-scripts.php';
 require_once __DIR__ . '/includes/theme-installer.php';
 require_once __DIR__ . '/includes/connector.php';
 require_once __DIR__ . '/includes/woo-customizations.php';
-// require_once __DIR__ . '/includes/search-customization.php';
+require_once __DIR__ . '/includes/search-customization.php';
 
 // Вход и безопасность.
 require 'template-parts/login-and-security.php';

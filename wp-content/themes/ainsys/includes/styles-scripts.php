@@ -96,7 +96,7 @@ function ainsys_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'ainsys-scripts',
+		'ainsys-acc-scripts',
 		get_template_directory_uri() . '/assets-woo/js/main.js',
 		array( 'jquery' ),
 		$asset_version,
@@ -104,7 +104,7 @@ function ainsys_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'ainsys-scripts',
+		'ainsys-acc-order-tabs-scripts',
 		get_template_directory_uri() . '/assets-woo/js/tabs.js',
 		array( 'jquery' ),
 		$asset_version,
