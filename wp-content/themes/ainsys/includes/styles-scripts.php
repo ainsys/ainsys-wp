@@ -68,9 +68,16 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_style( 'googlefonts', _get_fonts_loading_url(), null, $asset_version );
 	wp_enqueue_style( 'ainsys-bs-style', get_template_directory_uri() . '/assets/style/bootstrap.min.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-style', get_template_directory_uri() . '/assets/css/main.css', array( 'ainsys-bs-style' ), $asset_version );
+
+	wp_enqueue_style( 'ainsys-woo-account', get_template_directory_uri() . '/assets-woo/css/acc.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woo-login', get_template_directory_uri() . '/assets-woo/css/login.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woo-cart', get_template_directory_uri() . '/assets-woo/css/cart.css', array( 'ainsys-bs-style' ), $asset_version );
+
+	wp_enqueue_style( 'ainsys-woocommerce', get_template_directory_uri() . '/woocommerce/styles/styles.css', array( 'ainsys-bs-style' ), $asset_version );
+
 	wp_enqueue_style( 'ainsys-custom-style', get_template_directory_uri() . '/assets/style/newstyles.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-forum', get_template_directory_uri() . '/assets/style/forum.css', array( 'ainsys-style' ), $asset_version );
-	wp_enqueue_style( 'ainsys-custom2-style', get_template_directory_uri() . '/assets/style/acc.css', array( 'ainsys-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-custom-style-two', get_template_directory_uri() . '/assets/style/landstyles.css', array( 'ainsys-style' ), $asset_version );
 
 	wp_enqueue_script(
 		'ainsys-main-scripts',
@@ -83,6 +90,14 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_script(
 		'ainsys-scripts',
 		get_template_directory_uri() . '/assets/js/scripts/main.js',
+		array( 'jquery' ),
+		$asset_version,
+		true
+	);
+
+	wp_enqueue_script(
+		'ainsys-scripts',
+		get_template_directory_uri() . '/assets-woo/js/main.js',
 		array( 'jquery' ),
 		$asset_version,
 		true
@@ -134,7 +149,7 @@ function ainsys_preload_styles() {
 
 		$src  = $obj->src;
 		$href = $styles->_css_href( $src, $ver, $handle );
-		if( false !== strpos( $href, 'http' ) ) {
+		if ( false !== strpos( $href, 'http' ) ) {
 			?>
 			<link rel="preload" href="<?php echo esc_attr( $href ); ?>" as="style" type="text/css" crossorigin>
 			<?php
@@ -180,7 +195,7 @@ function ainsys_block_editor_styles() {
 
 	wp_enqueue_style( 'googlefonts', _get_fonts_loading_url(), null, $asset_version );
 	wp_enqueue_style( 'sues-blocks-editor-style', get_theme_file_uri( '/assets/css/blocks-editor-style.css' ), false, $asset_version, 'all' );
-	wp_enqueue_style( 'forum-style', get_template_directory_uri( '/assets/css/forum.css' ), null, $asset_version);
+	wp_enqueue_style( 'forum-style', get_template_directory_uri( '/assets/css/forum.css' ), null, $asset_version );
 
 }
 

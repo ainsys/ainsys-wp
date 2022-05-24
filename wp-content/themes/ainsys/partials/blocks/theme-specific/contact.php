@@ -60,7 +60,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 								<?= get_field('email__text');?>
 							</p>
 							<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('email__icon');?>" alt="usa">
+						<img src="<?= get_field('email__icon');?>" alt="">
 
 						<a href="email: info@ainsys.com" class="numbers__email"><?= get_field('email_contact');?>
 							<div class="disabled__block"></div>

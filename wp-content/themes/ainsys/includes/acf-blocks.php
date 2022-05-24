@@ -533,6 +533,82 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+	acf_register_block_type(
+		array(
+			'name'            => 'Docs block',
+			'title'           => __( 'Docs block' ),
+			'description'     => __( 'Docs block' ),
+			'render_template' => 'partials/blocks/theme-specific/documentation.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'documentation' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Landing main',
+			'title'           => __( 'Landing main' ),
+			'description'     => __( 'Landing main' ),
+			'render_template' => 'partials/blocks/theme-specific/land_main.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'land_main' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Landing promo',
+			'title'           => __( 'Landing promo' ),
+			'description'     => __( 'Landing promo' ),
+			'render_template' => 'partials/blocks/theme-specific/land_promo.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'land_promo' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Landing toggler',
+			'title'           => __( 'Landing toggler' ),
+			'description'     => __( 'Landing toggler' ),
+			'render_template' => 'partials/blocks/theme-specific/land_toggler.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'land_toggler' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.

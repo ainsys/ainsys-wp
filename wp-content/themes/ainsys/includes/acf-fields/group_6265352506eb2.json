@@ -24,7 +24,7 @@
         {
             "key": "field_626535251be1b",
             "label": "Image",
-            "name": "image",
+            "name": "toggler_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -217,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651223370
+    "modified": 1653387283
 }
