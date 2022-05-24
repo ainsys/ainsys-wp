@@ -1,11 +1,11 @@
 {
-    "key": "group_6265352506eb2",
-    "title": "Image & Text with UL (theme block)",
+    "key": "group_628ca65d277ae",
+    "title": "Landing toggler",
     "fields": [
         {
-            "key": "field_6265368c7e47a",
-            "label": "Block Title",
-            "name": "block_title",
+            "key": "field_628ca87d89b95",
+            "label": "Podtitle",
+            "name": "podtitle",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,55 +22,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_626535251be1b",
-            "label": "Image",
-            "name": "toggler_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_626535251f8dd",
-            "label": "Image-block Alignment",
-            "name": "align",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "40",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left": "Image on the Left",
-                "right": "Image on the Right"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "left",
-            "layout": "horizontal",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_62653560b85d7",
+            "key": "field_628ca88a89b96",
             "label": "Title",
             "name": "title",
             "type": "text",
@@ -89,10 +41,58 @@
             "maxlength": ""
         },
         {
-            "key": "field_62653570b85d8",
-            "label": "Description",
-            "name": "description",
-            "type": "textarea",
+            "key": "field_628cade62d49c",
+            "label": "Img",
+            "name": "toggler_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_628ca88f89b97",
+            "label": "benefits align",
+            "name": "align",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Image on the Left",
+                "right": "Image on the Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "left",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_628caa7d89b99",
+            "label": "quest",
+            "name": "quest",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -103,14 +103,52 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": "br"
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_6265358eb85d9",
-            "label": "List",
-            "name": "list",
+            "key": "field_628caaa389b9a",
+            "label": "toggler__title",
+            "name": "toggler__title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_628caaa689b9b",
+            "label": "toggler__text",
+            "name": "toggler__text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_628caab689b9c",
+            "label": "toggler__item",
+            "name": "toggler__item",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -124,22 +162,41 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_626535d0b85da",
-                    "label": "Icon",
-                    "name": "icon",
+                    "key": "field_628cab2d89b9d",
+                    "label": "toggler_item_text",
+                    "name": "toggler_item_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_628cab5489b9e",
+                    "label": "toggler_item_img",
+                    "name": "toggler_item_img",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
+                    "return_format": "url",
                     "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
@@ -149,54 +206,8 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_626535fbb85db",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "70",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "new_lines": ""
                 }
             ]
-        },
-        {
-            "key": "field_6265352523325",
-            "label": "Background",
-            "name": "bg",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "white": "white",
-                "light": "light",
-                "accent": "accent",
-                "accent-variant": "accent-variant"
-            },
-            "default_value": "white",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -204,7 +215,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/img-txt-ul"
+                "value": "acf\/landing-toggler"
             }
         ]
     ],
@@ -217,5 +228,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653387283
+    "modified": 1653387787
 }

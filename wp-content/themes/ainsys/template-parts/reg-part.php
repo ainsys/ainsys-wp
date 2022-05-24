@@ -40,7 +40,7 @@ $more_tel = get_the_author_meta( '_more_tel', $userid );
 	  </h1>
 
     <div class="my-acc-reg-form my-acc-reg-form-partner">
-      <?= do_shortcode('[contact-form-7 id="1784" title="Форма регистрации партнёра"]');?>
+      <?= do_shortcode('[contact-form-7 id="3327" title="Форма регистрации партнёра"]');?>
     </div>
 
     <div class="my-acc-reg-cart">
