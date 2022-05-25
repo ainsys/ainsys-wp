@@ -355,4 +355,5 @@ window.addEventListener("scroll", () => {
 		header.classList.remove("fixed-menu");
 	}
 })
+
 } )( jQuery );

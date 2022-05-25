@@ -1159,11 +1159,6 @@ a.acc-order--btn__buy-all::before {
     display: block !important;
 }
 
-
-.site-footer .footer-inner, .site-footer:not(.dynamic-footer), .site-header .header-inner, .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
-    max-width: 1140px !important;
-}
-
 .my-acc-reg-form form {
     display: flex;
     flex-wrap: wrap;

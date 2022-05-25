@@ -116,6 +116,12 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 						<div class="container">
 							<div class="header__content">
 								<a href="/" class="header__logo"></a>
+
+								<?php if ( function_exists( 'woocommerce_mini_cart' ) ) : ?>
+									<div class="header__cart">
+										<?php echo do_shortcode('[customminicart]'); ?>
+									</div>
+								<?php endif; ?>
 								
 								<!-- <div class="main-menu">
 									<?php

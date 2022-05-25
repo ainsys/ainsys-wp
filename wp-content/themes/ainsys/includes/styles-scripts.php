@@ -35,14 +35,6 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js', array(), '3.0', true );
 
 	wp_enqueue_script(
-		'bootstrap-js',
-		'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js',
-		array( 'jquery' ),
-		'5.0.0',
-		true
-	);
-
-	wp_enqueue_script(
 		'fancybox',
 		'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js',
 		array( 'jquery' ),
@@ -61,11 +53,11 @@ function ainsys_enqueue_scripts() {
 	 *  - self host google fonts font files.
 	 */
 	// phpcs:ignore
-	// wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fonts/fontawesome/css/fontawesome-all.min.css', null, $asset_version );
 	wp_enqueue_style( 'fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', null, '3.5.7' );
 
 	//phpcs:ignore
 	wp_enqueue_style( 'googlefonts', _get_fonts_loading_url(), null, $asset_version );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fonts/fontawesome/css/fontawesome-all.min.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-bs-style', get_template_directory_uri() . '/assets/style/bootstrap.min.css', null, $asset_version );
 	wp_enqueue_style( 'ainsys-style', get_template_directory_uri() . '/assets/css/main.css', array( 'ainsys-bs-style' ), $asset_version );
 
@@ -73,11 +65,32 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_style( 'ainsys-woo-login', get_template_directory_uri() . '/assets-woo/css/login.css', array( 'ainsys-bs-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-woo-cart', get_template_directory_uri() . '/assets-woo/css/cart.css', array( 'ainsys-bs-style' ), $asset_version );
 
-	wp_enqueue_style( 'ainsys-woocommerce', get_template_directory_uri() . '/woocommerce/styles/styles.css', array( 'ainsys-bs-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-woocommerce', get_template_directory_uri() . '/assets/style/woocommerce.css', array( 'ainsys-bs-style' ), $asset_version );
 
 	wp_enqueue_style( 'ainsys-custom-style', get_template_directory_uri() . '/assets/style/newstyles.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-forum', get_template_directory_uri() . '/assets/style/forum.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-custom-style-two', get_template_directory_uri() . '/assets/style/landstyles.css', array( 'ainsys-style' ), $asset_version );
+
+	wp_enqueue_script(
+		'popper-js',
+		'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js',
+		array(
+			'jquery',
+		),
+		'2.9.2',
+		true
+	);
+
+	wp_enqueue_script(
+		'bootstrap-js',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js',
+		array(
+			'jquery',
+			'popper-js',
+		),
+		'5.0.2',
+		true
+	);
 
 	wp_enqueue_script(
 		'ainsys-main-scripts',
@@ -94,6 +107,16 @@ function ainsys_enqueue_scripts() {
 		$asset_version,
 		true
 	);
+
+	wp_enqueue_script(
+		'ainsys-woo-scripts',
+		get_template_directory_uri() . '/assets/js/scripts/woocommerce.js',
+		array( 'jquery' ),
+		$asset_version,
+		true
+	);
+
+	wp_localize_script( 'ainsys-woo-scripts', 'cart_ajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	wp_enqueue_script(
 		'ainsys-acc-scripts',
@@ -180,8 +203,8 @@ function ainsys_external_scripts_integrity( $tag, $handle, $src ) {
 
 	// add other script-handle => secured script tag here.
 	$scripts = array(
-		'bootstrap-js' => '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>', // phpcs:ignore
-		'popper-js'    => '<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>', // phpcs:ignore
+		'popper-js'    => '<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>' . "\n", // phpcs:ignore
+		'bootstrap-js' => '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>' . "\n", // phpcs:ignore
 	);
 
 	// it will replace only necessary one.
