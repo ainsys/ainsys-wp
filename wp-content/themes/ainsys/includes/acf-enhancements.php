@@ -96,3 +96,30 @@ add_filter(
 	2
 );
 
+/**
+ * Adds Custom GB block's category.
+ *
+ * @param array $field - select field.
+ */
+function ainsys_select_category_choices( $field ) {
+	$field['choices'] = array();
+
+	$args = array(
+		'taxonomy'     => 'product_cat',
+		'orderby'      => 'name',
+		'order'        => 'ASC',
+		'heirarchical' => true,
+		'hide_empty'   => true,
+	);
+
+	$product_categories = get_terms( $args );
+
+	if ( ! empty( $product_categories ) ) {
+		foreach ( $product_categories as $cat ) {
+			$field['choices'][ $cat->term_id ] = $cat->name;
+		}
+	}
+	return $field;
+}
+
+add_filter( 'acf/load_field/name=exclude_categories', 'ainsys_select_category_choices' );

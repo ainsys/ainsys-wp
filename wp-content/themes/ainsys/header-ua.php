@@ -88,6 +88,12 @@
 						<li>
 							<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
 						</li>
+            <li>
+							<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+						</li>
+            <li>
+													<a href="/es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+												</li>
 					</ul>
 				</div>
 				<button class="btn counrty_btn">
@@ -136,12 +142,15 @@
 									<li>
 										<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
 									</li>
+            <li>
+							<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+						</li>
 								</ul>
 							</li>
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ua.svg" alt="ua">
-								<a href="tel: +447441426027" class="soc_href disabled">+447441426027
+								<a href="tel: +380914818038" class="soc_href disabled">+380914818038
 								<div class="disabled__block">
 								</div>
 								</a>

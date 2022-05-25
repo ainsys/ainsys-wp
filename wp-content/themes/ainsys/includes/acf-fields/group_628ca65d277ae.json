@@ -90,8 +90,8 @@
         },
         {
             "key": "field_628caa7d89b99",
-            "label": "quest",
-            "name": "quest",
+            "label": "benefits__quest",
+            "name": "benefits__quest",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -109,8 +109,8 @@
         },
         {
             "key": "field_628caaa389b9a",
-            "label": "toggler__title",
-            "name": "toggler__title",
+            "label": "benefits__title",
+            "name": "benefits__title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -128,8 +128,8 @@
         },
         {
             "key": "field_628caaa689b9b",
-            "label": "toggler__text",
-            "name": "toggler__text",
+            "label": "benefits__text",
+            "name": "benefits__text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -147,8 +147,8 @@
         },
         {
             "key": "field_628caab689b9c",
-            "label": "toggler__item",
-            "name": "toggler__item",
+            "label": "benefits__item",
+            "name": "benefits__item",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -228,5 +228,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653387787
+    "modified": 1653407647
 }

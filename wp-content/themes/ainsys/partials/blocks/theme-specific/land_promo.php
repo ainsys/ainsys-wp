@@ -67,7 +67,6 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                         И вообще для всех, кто любит автоматизировать рутину
                       </p>
                   </div>
-
                   <div class="promo__img">
                   <img src="<?= get_field('image_bg');?>" alt="">
                   </div>

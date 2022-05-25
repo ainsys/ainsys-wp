@@ -15,6 +15,16 @@
 			.toggleClass( 'active' );
 	});
 	
+	$('.steps__slider').slick({
+		dots: true,
+		arrow: false,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		autoplay: true,
+		autoplaySpeed: 6000
+	  });
 
 
 	$('.numbers__phone-disabled').click(function() {
@@ -223,38 +233,42 @@
 	class rSlider {
 		constructor(args) {
 			this.el = document.querySelector(args.element);
-			this.min = +this.el.min || 0;
-			this.max = +this.el.max || 100;
-			this.step = +this.el.step || 1;
+			this.min = this.el ? +this.el.min : 0;
+			this.max = this.el ? +this.el.max : 100;
+			this.step = this.el ? +this.el.step : 1;
 			this.tick = args.tick || this.step;
-			this.addTicks();
-			this.dataRange = document.createElement("div");
-			this.dataRange.className = "data-range";
-			this.el.parentElement.appendChild(this.dataRange,this.el);    
-			this.dataValue = document.createElement("div");
-			this.dataValue.className = "data-value";
-			this.el.parentElement.appendChild(this.dataValue,this.el);    
-			this.updatePos();
-			this.el.addEventListener("input",() => {
+			if ( this.el ) {
+				this.addTicks();
+				this.dataRange = document.createElement("div");
+				this.dataRange.className = "data-range";
+				this.el.parentElement.appendChild(this.dataRange,this.el);    
+				this.dataValue = document.createElement("div");
+				this.dataValue.className = "data-value";
+				this.el.parentElement.appendChild(this.dataValue,this.el);    
 				this.updatePos();
-			});
+				this.el.addEventListener("input",() => {
+					this.updatePos();
+				});
+			}
 		}
 		addTicks() {
-			let wrap = document.createElement("div");
-			wrap.className = "range";
-			this.el.parentElement.insertBefore(wrap,this.el);
-			wrap.appendChild(this.el);
-			let ticks = document.createElement("div");
-			ticks.className = "range-ticks";
-			wrap.appendChild(ticks);
-			for (let t = this.min; t <= this.max; t += this.tick) {
-				let tick = document.createElement("span");
-				tick.className = "range-tick";
-				ticks.appendChild(tick);
-				let tickText = document.createElement("span");
-				tickText.className = "range-tick-text";
-				tick.appendChild(tickText);
-				tickText.textContent = t;
+			if ( this.el ) {
+				let wrap = document.createElement("div");
+				wrap.className = "range";
+				this.el.parentElement.insertBefore(wrap,this.el);
+				wrap.appendChild(this.el);
+				let ticks = document.createElement("div");
+				ticks.className = "range-ticks";
+				wrap.appendChild(ticks);
+				for (let t = this.min; t <= this.max; t += this.tick) {
+					let tick = document.createElement("span");
+					tick.className = "range-tick";
+					ticks.appendChild(tick);
+					let tickText = document.createElement("span");
+					tickText.className = "range-tick-text";
+					tick.appendChild(tickText);
+					tickText.textContent = t;
+				}
 			}
 		}    
 		getRangePercent() {
@@ -291,7 +305,6 @@ var mainFaq = document.querySelector(".ewd-ufaq-faqs");
 var loadBlock = document.getElementById("load-more");
 var loadLess = document.querySelector(".load-less a");
 var loadLink = document.querySelector("#load-more a");
-console.log(loadBlock)
 for(var i=0; i<faqParent.length; i++){
 if(i>6) {
 	faqParent[i].style.display = "none";
@@ -300,46 +313,48 @@ if(i>6) {
 }
 
 let currentItems = 6;
-loadBlock.addEventListener("click", () => {
-loadLink.classList.add("load-more");
-loadBlock.className = "load-less";
-if(loadLink.textContent == "Показать ещё") {
-	setTimeout(() => {
-		const elementList = [...faqParent];
-
-		for (let i = currentItems; i <= currentItems + 5; i++) {
-			if (elementList[i]) {
-				elementList[i].style.display = 'block';
+if ( loadBlock ) {
+	loadBlock.addEventListener("click", () => {
+	loadLink.classList.add("load-more");
+	loadBlock.className = "load-less";
+	if(loadLink.textContent == "Показать ещё") {
+		setTimeout(() => {
+			const elementList = [...faqParent];
+	
+			for (let i = currentItems; i <= currentItems + 5; i++) {
+				if (elementList[i]) {
+					elementList[i].style.display = 'block';
+					loadLink.classList.remove("load-more");
+				}
+	
+			}
+			currentItems += 5;
+			if (currentItems >= elementList.length) {
+				loadLink.textContent = "Свернуть"
+				loadLink.classList.remove("load-more");
+				currentItems = 4;
+			}
+			console.log(currentItems, elementList.length)
+	
+	
+		}, 1500)
+	}else if(loadLink.textContent == "Свернуть"){
+		for(var i=0; i<faqParent.length-1; i++){
+			if(i>6) {
+				faqParent[i].style.display = "none";
 				loadLink.classList.remove("load-more");
 			}
-
 		}
-		currentItems += 5;
-		if (currentItems >= elementList.length) {
-			loadLink.textContent = "Свернуть"
-			loadLink.classList.remove("load-more");
-			currentItems = 4;
-		}
-		console.log(currentItems, elementList.length)
-
-
-	}, 1500)
-}else if(loadLink.textContent == "Свернуть"){
-	for(var i=0; i<faqParent.length-1; i++){
-		if(i>6) {
-			faqParent[i].style.display = "none";
-			loadLink.classList.remove("load-more");
-		}
+		loadLink.textContent = "Показать ещё"
+		loadBlock.className = "load-less";
+		window.scrollTo({
+			top: mainFaq.offsetTop - 100,
+			behavior: "smooth"
+		});
+	
 	}
-	loadLink.textContent = "Показать ещё"
-	loadBlock.className = "load-less";
-	window.scrollTo({
-		top: mainFaq.offsetTop - 100,
-		behavior: "smooth"
-	});
-
+	})
 }
-})
 
 // fixed header
 let header = document.querySelector(".header");

@@ -63,23 +63,12 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                       </ul>
                   </div>
                   <div class="page__form">
-                      <form class="form">
-                          <p class="form__title">
+                            <p class="form__title">
 						    <?= get_field('form__title');?>
                           </p>
-                          <div class="form__inputs">
-                              <input class="form__input" name="name" type="text" placeholder="Ваше имя">
-                              <input class="form__input" name="last_name" type="text" placeholder="Ваша фамилия">
-                              <input class="form__input" name="email" type="email" placeholder="E-mail">
-                              <input class="form__input" name="phone" type="phone" placeholder="+7 (___) ___-__-__">
-                          </div>
-                          <button class="btn form__btn">Получить бесплатный месяц работы</button>
-                          <div class="form__accept">
-                              <input id="form_acc" type="checkbox" class="form__checkbox">
-                              <label for="form_acc"></label>
-                              <span>Я принимаю условия политики конфиденциальности</span>
-                          </div>
-                      </form>
+                            <div class="form_demonstration">
+		    	<?php echo do_shortcode(get_field('form')); ?>
+			</div>
                   </div>
               </div>
 
