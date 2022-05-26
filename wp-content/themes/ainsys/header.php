@@ -117,11 +117,13 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 							<div class="header__content">
 								<a href="/" class="header__logo"></a>
 
+
 								<?php if ( function_exists( 'woocommerce_mini_cart' ) ) : ?>
 									<div class="header__cart">
 										<?php echo do_shortcode('[customminicart]'); ?>
 									</div>
 								<?php endif; ?>
+								
 								
 								<!-- <div class="main-menu">
 									<?php
@@ -165,6 +167,9 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 												</li>
 												<li>
 													<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
+												</li>
+                                    <li>
+													<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
 												</li>
 											</ul>
 										</li>
