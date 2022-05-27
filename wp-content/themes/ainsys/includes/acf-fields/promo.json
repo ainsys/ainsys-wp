@@ -1,12 +1,12 @@
 [
     {
-        "key": "group_627ba7e644792",
-        "title": "Coockie",
+        "key": "group_628d196f3aa8a",
+        "title": "Promo",
         "fields": [
             {
-                "key": "field_627ba7eb0238d",
-                "label": "Coockie text",
-                "name": "coockie_text",
+                "key": "field_628d19780983c",
+                "label": "Title",
+                "name": "title",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -23,9 +23,9 @@
                 "maxlength": ""
             },
             {
-                "key": "field_627ba8f984310",
-                "label": "Coockie href",
-                "name": "coockie_href",
+                "key": "field_628d19820983d",
+                "label": "Important text",
+                "name": "important_text",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -42,10 +42,10 @@
                 "maxlength": ""
             },
             {
-                "key": "field_627ba92f84311",
-                "label": "Coockie text two",
-                "name": "coockie_text_two",
-                "type": "text",
+                "key": "field_628d198d0983e",
+                "label": "Newsletter img",
+                "name": "newsletter__img",
+                "type": "image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -54,16 +54,21 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
-                "key": "field_627ba93c84312",
-                "label": "Coockie href two",
-                "name": "coockie_href_two",
+                "key": "field_628dd429eba79",
+                "label": "form",
+                "name": "form",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -85,7 +90,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/coockie"
+                    "value": "acf\/promo"
                 }
             ]
         ],

@@ -37,8 +37,13 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 ?>
 
 
-<section class="main__landing">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="main__landing">
           <div class="container">
+		  <?php if ( get_field( 'podtitle' ) ) { ?>
+				<p class="podtitle">
+					<?= get_field('podtitle');?>
+				</p>
+			<?php } ?>
               <h1>
 			  <?= get_field('title');?>
               </h1>
@@ -63,38 +68,26 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                       </ul>
                   </div>
                   <div class="page__form">
-                      <form class="form">
-                          <p class="form__title">
+                            <p class="form__title">
 						    <?= get_field('form__title');?>
                           </p>
-                          <div class="form__inputs">
-                              <input class="form__input" name="name" type="text" placeholder="Ваше имя">
-                              <input class="form__input" name="last_name" type="text" placeholder="Ваша фамилия">
-                              <input class="form__input" name="email" type="email" placeholder="E-mail">
-                              <input class="form__input" name="phone" type="phone" placeholder="+7 (___) ___-__-__">
-                          </div>
-                          <button class="btn form__btn">Получить бесплатный месяц работы</button>
-                          <div class="form__accept">
-                              <input id="form_acc" type="checkbox" class="form__checkbox">
-                              <label for="form_acc"></label>
-                              <span>Я принимаю условия политики конфиденциальности</span>
-                          </div>
-                      </form>
+                            <div class="form_demonstration">
+		    	<?php echo do_shortcode(get_field('form')); ?>
+			</div>
                   </div>
               </div>
 
               <div class="main__bottom">
                 <ul class="benefits">
 				<?php if ( have_rows( 'advantages' ) ) : ?>
-					<?php
-							while ( have_rows( 'advantages' ) ) :
-								the_row();
-								?>
-					<li class="benefits__item col-lg-4 col-6">
+					<?php while ( have_rows( 'advantages' ) ) :
+						the_row();
+						?>
+					<li class="benefits__item tooltips__item">
 
 						  <?php if ( get_sub_field( 'image' ) ) { ?>
 							    <div class="adv__img">
-									<img src="<?= the_sub_field('image');?>" alt="">
+								<?= the_sub_field('image');?>
 								</div>
 							<?php } ?>
 							<?php if ( get_sub_field( 'text' ) ) { ?>
@@ -102,7 +95,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 									<?php the_sub_field( 'text' ); ?>
 							    </p>
 							<?php } ?>
-							<div class="advantages__item__dop">
+							<div class="tooltips">
 							<ul>
 							<?php if ( get_sub_field( 'tooltip' ) ) { ?>
 							    <li>

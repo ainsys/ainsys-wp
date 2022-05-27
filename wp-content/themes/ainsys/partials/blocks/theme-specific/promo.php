@@ -36,17 +36,24 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 ?>
 
-<div id="coockie">
+
+<section id="<?php echo esc_attr( $block_id ); ?>" class="newsletter">
 	<div class="container">
-		<div class="coockie_content">
-			<p class="coockie_text">
-			<?= get_field('coockie_text');?> <a href="/cookies/"><?= get_field('coockie_href');?></a> <?= get_field('coockie_text_two');?> <a href="/privacy-policy/"><?= get_field('coockie_href_two');?></a><?= get_field('coockie_text_three');?>
-			</p>
-			<div class="coockie_buttons">
-			<button class="btn coockie_button coockie_close"><?= get_field('coockie_btn_accept');?></button>
-			<button class="btn coockie_button-grey coockie_button-disagree coockie_close"><?= get_field('coockie_btn_disagree');?></button>
-			<a href="<?= get_field('url');?>" class="btn coockie_button-grey"><?= get_field('coockie_btn_policy');?></a>
+		<div class="newsletter__content">
+			<div class="newsletter__content_info">
+				<h3 class="newsletter__title">
+					<?= get_field('title');?>
+				</h3>
+				<div class="newsletter__important">
+					<?= get_field('important_text');?>
+				</div>
+				<div>
+                    <?php echo do_shortcode(get_field('form')); ?>
+                    </div>
+			</div>
+			<div class="newsletter__img">
+				<img src="<?= get_field('newsletter__img');?>" alt="">
 			</div>
 		</div>
-	</div>
-</div>
+	</div>	
+</section>

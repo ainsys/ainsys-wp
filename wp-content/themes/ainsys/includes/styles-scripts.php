@@ -70,6 +70,28 @@ function ainsys_enqueue_scripts() {
 	wp_enqueue_style( 'ainsys-custom-style', get_template_directory_uri() . '/assets/style/newstyles.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-forum', get_template_directory_uri() . '/assets/style/forum.css', array( 'ainsys-style' ), $asset_version );
 	wp_enqueue_style( 'ainsys-custom-style-two', get_template_directory_uri() . '/assets/style/landstyles.css', array( 'ainsys-style' ), $asset_version );
+	wp_enqueue_style( 'ainsys-custom-style-three', get_template_directory_uri() . '/assets/style/rate_page.css', array( 'ainsys-style' ), $asset_version );
+
+	wp_enqueue_script(
+		'popper-js',
+		'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js',
+		array(
+			'jquery',
+		),
+		'2.9.2',
+		true
+	);
+
+	wp_enqueue_script(
+		'bootstrap-js',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js',
+		array(
+			'jquery',
+			'popper-js',
+		),
+		'5.0.2',
+		true
+	);
 
 	wp_enqueue_script(
 		'popper-js',

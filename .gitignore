@@ -25,6 +25,7 @@ read.me
 /wp-content/ewww/
 /wp-content/maintenance.php
 /wp-content/maintenance/
+/wp-content/backups-dup-pro/
 /wp-content/themes/hello-elementor-child/price.php
 .cpanel.yml
 .ftpquota

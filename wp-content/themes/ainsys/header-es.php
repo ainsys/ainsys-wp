@@ -56,8 +56,6 @@
 				</div>
 			</div>
 		<?php } ?>
-
-
 		<div id="counrty" class="counrty">
 			<div class="container">
 				<div class="counrty_content">
@@ -65,10 +63,10 @@
 				Choose another country or region to see content specific to your location.
 				</p>
 				<div class="country_select">
-				<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+					<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
 					<ul class="country__lang__submenu">
 						<li>
-					    	<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+							<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
 						</li>
 						<li>
 							<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
@@ -88,12 +86,11 @@
 						<li>
 							<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
 						</li>
-            <li>
+                        <li>
 							<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
 						</li>
-            <li>
-													<a href="/es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
-												</li>
+            
+            
 					</ul>
 				</div>
 				<button class="btn counrty_btn">
@@ -114,12 +111,13 @@
 						</div>
 						<div class="socials__wrapper">
 						<div class="header__btn">
-							<a class="btn btn-main" href="/order-ainsys-ua/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Залишити заявку</a>
+						<a class="btn btn-main" href="/order-ainsys-us/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Solicitar</a>
 						</div>
 						<ul class="socials__links">
 						<li class="header__lang text-end">
+							
 							<img src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" alt="usa" data-src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" decoding="async" class=" lazyloaded">
-							<a href="#" class="header__lang__current text-decoration-none">UA</a>
+							<a href="#" class="header__lang__current text-decoration-none">EN</a>
 								<ul class="header__lang__submenu">
 									<li>
 										<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
@@ -143,29 +141,27 @@
 										<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
 									</li>
             <li>
-							<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
-						</li>
+													<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+												</li>
 								</ul>
 							</li>
 							<li  class="numbers__phone numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ua.svg" alt="ua">
-								<a href="tel: +380914818038" class="soc_href disabled">+380914818038
-								<div class="disabled__block">
-								</div>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/<?= get_field('logo');?>" alt="ru">
+								<a href="tel: <?= get_field('tel');?>" class="soc_href disabled"><?= get_field('tel');?>
+								<div class="disabled__block"></div>
 								</a>
 							</li>
 							<li  class="numbers__phone numbers__email numbers__phone-disabled">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
-								<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+								<a href="email: info@ainsys.com" class="soc_href disabled"><?= get_field('mail');?>
 								<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
 								</a>
 							</li>
 							<li class="numbers__map">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-							<a href="" class="socials__addres">Palladium House, 1-4 Argyll Street, London, UK</a>
+							<a href="" class="socials__addres"><?= get_field('adress');?></a>
 							</li>
-						
 						</ul>
 					</div>
 				</div>

@@ -1,9 +1,9 @@
 {
-    "key": "group_628b928564906",
-    "title": "Landing main",
+    "key": "group_628d0ef1e456a",
+    "title": "Land slider",
     "fields": [
         {
-            "key": "field_628f75d70664e",
+            "key": "field_628d0f0126fad",
             "label": "podtitle",
             "name": "podtitle",
             "type": "text",
@@ -22,8 +22,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_628b9299f3169",
-            "label": "Title",
+            "key": "field_628d0f0926fae",
+            "label": "title",
             "name": "title",
             "type": "text",
             "instructions": "",
@@ -41,9 +41,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_628b9301f316a",
-            "label": "Список услуг",
-            "name": "list_item",
+            "key": "field_628d0f1026faf",
+            "label": "Steps slide",
+            "name": "steps__slide",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -60,10 +60,10 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_628b9334f316b",
-                    "label": "Услуга текст",
-                    "name": "list_item_text",
-                    "type": "text",
+                    "key": "field_628d0f2626fb0",
+                    "label": "Img",
+                    "name": "steps__img",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -72,75 +72,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
-            "key": "field_628b9f84f7da8",
-            "label": "Титул формы",
-            "name": "form__title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_628b941ef316c",
-            "label": "Advantages",
-            "name": "advantages",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_628b94ccf316d",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 },
                 {
-                    "key": "field_628b95ddf316e",
-                    "label": "Text",
-                    "name": "text",
+                    "key": "field_628d0f5026fb1",
+                    "label": "steps number",
+                    "name": "steps__number",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -157,9 +103,28 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_628b95fbf316f",
-                    "label": "Tooltip",
-                    "name": "tooltip",
+                    "key": "field_628d0f6626fb2",
+                    "label": "steps title",
+                    "name": "steps__title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_628d0f6e26fb3",
+                    "label": "steps text",
+                    "name": "steps__text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -176,25 +141,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_628e05535db8c",
-            "label": "form",
-            "name": "form",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -202,7 +148,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/landing-main"
+                "value": "acf\/landing-slider"
             }
         ]
     ],
@@ -215,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653569000
+    "modified": 1653411715
 }
