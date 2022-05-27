@@ -419,4 +419,4 @@ add_action( 'wp_ajax_ainsys_update_cart', 'ainsys_update_cart' );
 add_action( 'wp_ajax_nopriv_ainsys_update_cart', 'ainsys_update_cart' );
 
 // Remove "order by" field on catalog page.
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
