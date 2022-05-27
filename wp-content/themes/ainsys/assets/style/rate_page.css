@@ -1,0 +1,624 @@
+/* Rate page */
+
+
+
+.rate_page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  .rate_page__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    margin: 0 auto 15px 0 !important;
+  }
+  .rate_page__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    color: #667085;
+  }
+  
+  .rate_page__toggler {
+    margin-left: auto;
+  }
+  .rate_page__toggler__percent {
+    margin-left: 4px;
+  }
+  .toggler__switch__label__rate {
+    display: flex;
+  }
+  
+  
+  .rate_page__list {
+    margin-bottom: 3rem;
+  }
+  .rate_page__list>div {
+    padding: 0 0.625rem 1.25rem;
+  }
+  .rate_page__item {
+    background: #FFFFFF;
+    border: 1px solid #EEF2F7;
+    border-radius: 12px;
+    padding: 1.875rem 1.5625rem 5rem;
+    position: relative;
+    height: 100%;
+  }
+  .rate_page__item__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .rate_page__item__name {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: #f9f5ff;
+    border-radius: 1rem;
+    text-align: center;
+    color: #ab47bc;
+  }
+  .rate_page__item__name--dark {
+    background: linear-gradient(92.9deg,#790e8b,#ab6fb5 99.87%);
+    color: #fff;
+  }
+  .rate_page__item__priority {
+    background: url(../images/components/fire.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 0 auto;
+    font-size: 0;
+  }
+  .rate_page__item__percent {
+    background: url(../images/components/percent.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+  }
+  
+  
+  
+  .rate_page__item__price {
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 145%;
+    color: #919CB1;
+    display: flex;
+    align-items: center;
+  }
+  .rate_page__item__price span {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 125%;
+    color: #101828;
+    margin-right: 5px;
+  }
+  .rate_page__item__payment {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 145%;
+    color: #919CB1;
+    margin-bottom: 15px;
+  }
+  .rate_page__item__price__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .rate_page__item__price__year {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 145%;
+    color: #919CB1;
+    margin-bottom: 10px;
+  }
+  .rate_page__item__price__year span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #101828;
+  }
+  
+  .rate_page__statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .rate_page__item__users {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.7;
+    color: #919CB1;
+    display: flex;
+    flex-direction: column;
+  }
+  .rate_page__item__users span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #101828;
+    display: flex;
+  }
+  .rate_page__item__users span::after {
+    display: block;
+    content: '';
+    position: relative;
+    background: url(../images/components/rate__user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 4px;
+  }
+  
+  
+  .rate_page__item__operations {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.7;
+    color: #919CB1;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .rate_page__item__operations span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #101828;
+    display: flex;
+  }
+  .rate_page__item__operations span::after {
+    display: block;
+    content: '';
+    position: relative;
+    background: url(../images/components/operations.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 4px;
+  }
+  
+  .rate_page__item__title {
+    margin-bottom: 2px;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.57;
+    color: #101828;
+  }
+  .rate_page__item__text {
+    font-size: .8125rem;
+    line-height: 1.53;
+    color: #667085;
+  }
+  .rate_page__item__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 3.125rem;
+    padding: 1rem;
+    border-top: 1px solid #e4e7ec;
+    background: linear-gradient(0deg, rgba(156, 71, 171, 0.12), rgba(156, 71, 171, 0.12)), #FFFFFF;
+    border-radius: 0 0 0.75rem 0.75rem;
+    color: #AB47BC;
+  }
+  .rate_page__item__link a {
+    color: #AB47BC !important;
+  }
+  .rate_page__item__link a:hover {
+    background: none !important;
+  }
+  .rate_page__item__link::before {
+    display: block;
+    content: '';
+    position: relative;
+    background: url(../images/components/rate__link.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 18px;
+    height: 14px;
+    margin: 0 4px 0 0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .rate_page__ranges {
+    display: flex;
+  }
+  .range-slider, 
+  .range-ticks,
+  .label-range{
+    display: flex;
+  }
+  .range-slider {
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+    width: 45%;
+  }
+  .range-slider input[type=range], 
+  .range {
+    overflow: visible;
+    position: relative;
+    height: auto;    
+  }
+  .range-slider input[type=range] {
+    background-color: transparent;
+    display: block;
+    padding: 0 0.1em;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: linear-gradient(0deg, rgba(156, 71, 171, 0.12), rgba(156, 71, 171, 0.12)), #FFFFFF;
+    border-radius: 4px;
+    max-height: 8px;
+    margin: 0.5rem auto;
+  }
+  .range-slider input[type=range]:focus {
+    outline: transparent;
+  }
+  .range-slider input[type=range]::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: transparent;
+  }
+  .range-ticks {
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0.04em;
+    left: 0.75em;
+    width: calc(100% - 1.5em);
+    height: 100%;
+    margin-top: 30px;
+  }
+  .range-tick, 
+  .range-tick-text {
+    display: inline-block;
+  }
+  .range-tick {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 145%;
+    color: #101828;
+    text-align: center;
+    width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  .range-tick-text {
+    transform: translateX(-50%);
+  }
+  .label-range {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #101828;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .data-range {
+    display: flex;
+    height: 24px;    
+    width: 24px;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.15), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    background: url(../images/components/data__range.svg), linear-gradient(92.9deg, #790E8B 0%, #AB6FB5 99.87%);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 5px;
+    cursor: pointer;
+  }
+  .data-value {
+    position: absolute;
+    margin: 1rem 0 0 0;
+    padding: 0.3rem 0.6rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 145%;
+    color: #101828;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .range:hover .data-value,
+  .range:focus .data-value {
+    opacity: 1;
+    visibility: visible;
+  }
+  .rate_page__ranges .tooltips__item {
+    background: url(../images/components/quest.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+  }
+  .rate_page__item__payment {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 145%;
+    color: #919CB1;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Table */
+  
+  .table__reset {
+    color: #AB47BC;
+  }
+  
+  
+  .col_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .col_horizontal {
+    border: none;
+   }
+   .col_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .col_head .rate_page__item__name {
+    margin-bottom: 0;
+  }
+  .rate_delete {
+    background: url(../images/components/rate_delete.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
+  .rate-disabled {
+    display: none;
+  }
+  .col_horizontal .rate_page__statistics .rate_page__item__users {
+    margin-right: 8px;
+   }
+  
+  .row_main {
+     padding: 16px 20px 16px 0 !important;
+     font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    color: #790E8B;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    width: 390px;
+  }
+  .row_main::after {
+    display: block;
+    content: '';
+    position: relative;
+    background: url(../images/components/arrow_table.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+  }
+  .tbody_list-disabled .row_main::after {
+    transform: rotate(00deg);
+  }
+  
+  
+  
+  
+  .row_dop {
+    padding: 26px 20px 26px 0 !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 145%;
+    color: #101828;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    width: 390px;
+  }
+  .row_dop .tooltips__item {
+    display: block;
+    position: relative;
+    background: url(../images/components/quest_table.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  
+  .row_dop .tooltips__item:hover,
+  .row_dop .tooltips__item:focus {
+    opacity: 1;
+  }
+  
+  .tbody_list .tr_dop {
+    display: table-row;
+  }
+  
+  .tbody_list-disabled .tr_dop {
+    display: none;
+  }
+  .tbody_list .row_main::after {
+    transform: rotate(0deg);
+  }
+  .tbody_list-disabled .row_main::after {
+    transform: rotate(180deg);
+  }
+  /* .tbody_list:nth-child(n+3).tbody_list-disabled .tr_dop {
+    display: table-row !important;
+  }
+  .tbody_list:nth-child(n+3) .row_main::after {
+    transform: rotate(180deg);
+  }
+  .tbody_list:nth-child(n+3).tbody_list-disabled .row_main::after {
+    transform: rotate(0deg);
+  } */
+  
+  .tbody_list-1 .tr_dop {
+    display: none;
+  }
+  .tbody_list-disabled.tbody_list-1 .tr_dop {
+    display: table-row;
+  }
+  
+  
+  
+  .tbody_list td {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 145%;
+    color: #101828;
+    text-align: center;
+    padding: 26px 0;
+    border: none;
+    width: 215px;
+  }
+  
+  .table_inf {
+    background: url(../images/components/infinity.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  
+  
+  .table_plus {
+    background: url(../images/components/table_plus.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  .table_minus {
+    background: url(../images/components/table_minus.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  .table_arrow {
+    background: url(../images/components/table_arrow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  
+  .rate_first, 
+  .rate_third {
+    background-color: #F6F7F8 !important;
+  }
+  
+  
+  
+  
+  .span_t_active {
+    font-weight: 700;
+    color: #AB47BC;
+  }
+  
+  .rate_mounth {
+    display: none;
+  }
+  .rate_year {
+    display: block;
+  }
+  
+  .rate_page__list.active .rate_year {
+    display: none;
+  }
+  .rate_page__list.active .rate_mounth {
+    display: block;
+  }
+  @media(max-width: 1024px) {
+    .rate_page__title {
+      font-size: 28px;
+      line-height: 125%;
+    }
+    .rate_page__header {
+      flex-direction: column;
+    }
+    .rate_page__toggler {
+      margin: 20px auto 0;
+    }
+    .rate_page__ranges {
+      flex-direction: column;
+    }
+    .range-slider {
+      width: 100%;
+    }
+  }
