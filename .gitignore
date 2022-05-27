@@ -95,9 +95,6 @@ wp-content/upgrade/
 wp-content/upgrade/*
 wp-content/uploads/
 wp-content/wp-cache-config.php
-wp-content/blogs.dir/
-wp-content/blogs.dir/*
-
 
 favicon.ico
 apple-touch-icon.png
