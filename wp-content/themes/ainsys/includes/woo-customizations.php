@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Support woocommerce templates.
-add_theme_support('woocommerce');
+add_theme_support( 'woocommerce' );
 
 /**
  * Redirects to homepage after logout.
@@ -53,7 +53,7 @@ function woo_change_account_order() {
 	if ( ! current_user_can( 'patnerdevelopers' ) && ! current_user_can( 'developer' ) && ! current_user_can( 'integrator' ) ) {
 		$myorder = array(
 			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
-			//'login-security'  => __( 'Мой профиль', 'woocommerce' ),
+			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
 			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
 			'reg-dev'         => __( 'Стать разработчиком AINSYS', 'woocommerce' ),
 			'reg-part'        => __( 'Стать партнёром AINSYS', 'woocommerce' ),
@@ -62,7 +62,7 @@ function woo_change_account_order() {
 	} elseif ( current_user_can( 'patnerdevelopers' ) || current_user_can( 'developer' ) ) {
 		$myorder = array(
 			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
-			//'login-security'  => __( 'Мой профиль', 'woocommerce' ),
+			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
 			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
 			'reg-part'        => __( 'Стать партнёром AINSYS', 'woocommerce' ),
 			'customer-logout' => __( 'Выйти', 'woocommerce' ),
@@ -70,7 +70,7 @@ function woo_change_account_order() {
 	} elseif ( current_user_can( 'integrator' ) ) {
 		$myorder = array(
 			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
-			//'login-security'  => __( 'Мой профиль', 'woocommerce' ),
+			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
 			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
 			'reg-dev'         => __( 'Стать разработчиком AINSYS', 'woocommerce' ),
 			'customer-logout' => __( 'Выйти', 'woocommerce' ),
@@ -344,7 +344,7 @@ if ( current_user_can( 'partner' ) ) {
  */
 function ainsys_minicartcount() {
 	$html_output = '<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="count">' . WC()->cart->get_cart_contents_count() . '</span>';
-	//return '<a class="wcminicart" href="' . wc_get_cart_url() . '">' . $html_output . '</a>';
+	// return '<a class="wcminicart" href="' . wc_get_cart_url() . '">' . $html_output . '</a>';
 	return '<a class="wcminicart dropdown-toggle" id="cart-dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="' . wc_get_cart_url() . '" style="color: #fff;">' . $html_output . '</a>';
 }
 /**
@@ -400,13 +400,18 @@ function ainsys_update_cart() {
 			$passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $new_product_id, $quantity );
 			$product_status    = get_post_status( $new_product_id );
 
-			if ( $passed_validation && WC()->cart->add_to_cart( $new_product_id, $quantity ) && 'publish' === $product_status ) {
+			$add_to_cart = WC()->cart->add_to_cart( $new_product_id, $quantity ); // returns true/false.
+
+			if ( $passed_validation && $add_to_cart && 'publish' === $product_status ) {
 				do_action( 'woocommerce_ajax_added_to_cart', $new_product_id );
+
 				WC()->cart->calculate_totals();
+				WC_AJAX::get_refreshed_fragments();
+				WC()->cart->maybe_set_cart_cookies();
+			} else {
+				json_encode( wc_print_notices() );
 			}
 		}
-		WC_AJAX::get_refreshed_fragments();
-		WC()->cart->maybe_set_cart_cookies();
 		wp_die();
 	}
 }
