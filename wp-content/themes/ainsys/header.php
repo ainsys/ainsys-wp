@@ -59,150 +59,173 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 	<body <?php body_class(); ?>>
 
 		<?php do_action( 'body_top' ); ?>
+		<script>
+			(function(w, d, s, h, id) {
+				w.roistatProjectId = id; w.roistatHost = h;
+				var p = d.location.protocol == "https:" ? "https://" : "http://";
+				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+				var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+			})(window, document, 'script', 'cloud.roistat.com', '687af597c04143baddf7137bcaa63754');
+		</script>
 
 
 		<div id="page" class="site">
 			<div class="site-content-contain">
 				<div id="content" class="site-content site-content-header">
+					<div class="site-content-header">
 
-					<?php if ( get_field( 'announcement_on', 'option' ) ) { ?>
-					<div class="announcement-bar" role="region">
-						<div class="container">
-							<div class="announcement-bar--inner"><?php the_field( 'announcement_text', 'option' ); ?></div>
-							<div class="announcement-bar__close" id="announcement-close"></div>
-						</div>
-					</div>
-					<?php } ?>
-					<div id="counrty" class="counrty">
-						<div class="container">
-							<div class="counrty_content">
-							<p class="counrty_text">
-							Choose another country or region to see content specific to your location.
-							</p>
-							<div class="country_select">
-							    <a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
-								<ul class="country__lang__submenu">
-									<li>
-										<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
-									</li>
-									<li>
-										<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
-									</li>
-									<li>
-								    	<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
-									</li>
-									<li>
-										<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
-									</li>
-									<li>
-										<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
-									</li>
-									<li>
-										<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
-									</li>
-									<li>
-										<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
-									</li>
-								</ul>
-							</div>
-							<button class="btn counrty_btn">
-						    	Continue
-							</button>
-							<div class="country_close"></div>
+						<?php if ( get_field( 'announcement_on', 'option' ) ) { ?>
+						<div class="announcement-bar" role="region">
+							<div class="container">
+								<div class="announcement-bar--inner"><?php the_field( 'announcement_text', 'option' ); ?></div>
+								<div class="announcement-bar__close" id="announcement-close"></div>
 							</div>
 						</div>
-					</div>
-					<header class="header">
-						<div class="container">
-							<div class="header__content">
-								<a href="/" class="header__logo"></a>
+						<?php } ?>
+						<div id="counrty" class="counrty">
+							<div class="container">
+								<div class="counrty_content">
+								<p class="counrty_text">
+								Choose another country or region to see content specific to your location.
+								</p>
+								<div class="country_select">
+									<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+									<ul class="country__lang__submenu">
+										<li>
+											<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+										</li>
+										<li>
+											<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
+										</li>
+										<li>
+											<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+										</li>
+										<li>
+											<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+										</li>
+										<li>
+											<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
+										</li>
+										<li>
+											<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
+										</li>
+										<li>
+											<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
+										</li>
+									</ul>
+								</div>
+								<button class="btn counrty_btn">
+									Continue
+								</button>
+								<div class="country_close"></div>
+								</div>
+							</div>
+						</div>
 
-								
-								
-								<!-- <div class="main-menu">
-									<?php
-								$args = array(
-									'menu_class' => 'nav nav-tabs main-menu',
-									'menu' => 'main-menu'
-								);
-								wp_nav_menu( $args ); ?>
-								</div> 
-								 -->
-								<div class="socials">
-									<div class="burger">
-										<span></span>
-									</div>
-									<div class="socials__wrapper">
-									<div class="header__btn">
-										<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
-									</div>
-								    <ul class="socials__links">
-									<li class="header__lang text-end">
-										<img src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" alt="usa" data-src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" decoding="async" class=" lazyloaded">
-										<a href="#" class="header__lang__current text-decoration-none">RU</a>
-											<ul class="header__lang__submenu">
-												<li>
-													<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+						<header class="header">
+							<div class="container">
+								<div class="header__content">
+									<a href="/" class="header__logo"></a>
+									
+									<div class="socials">
+										<div class="burger">
+											<span></span>
+										</div>
+										<div class="socials__wrapper">
+											<div class="header__btn">
+												<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
+											</div>
+											<ul class="socials__links">
+												<li class="header__lang text-end">
+													<img src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" alt="usa" data-src="https://ainsys.com/wp-content/themes/ainsys/assets/images/components/header__lang.svg" decoding="async" class=" lazyloaded">
+													<a href="#" class="header__lang__current text-decoration-none">RU</a>
+													<ul class="header__lang__submenu">
+														<li>
+															<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
+														</li>
+														<li>
+															<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
+														</li>
+														<li>
+															<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+														</li>
+														<li>
+															<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+														</li>
+														<li>
+															<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
+														</li>
+														<li>
+															<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
+														</li>
+														<li>
+															<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
+														</li>
+														<li>
+															<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+														</li>
+													</ul>
 												</li>
-												<li>
-													<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
+												<li  class="numbers__phone numbers__phone-disabled">
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="ru">
+													<a href="tel: +447441426027" class="soc_href disabled">+78126027880
+														<div class="disabled__block"></div>
+													</a>
 												</li>
-												<li>
-													<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
+												<li  class="numbers__phone numbers__email numbers__phone-disabled">
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
+													<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
+													<div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
+													</a>
 												</li>
-												<li>
-													<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
-												</li>
-												<li>
-													<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
-												</li>
-												<li>
-													<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
-												</li>
-												<li>
-													<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
-												</li>
-                                    <li>
-													<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+												<li class="numbers__map">
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
+												<a href="" class="socials__addres">г. Москва, ул. Золоторожский Вал, д. 34</a>
 												</li>
 											</ul>
-										</li>
-										<li  class="numbers__phone numbers__phone-disabled">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="ru">
-											<a href="tel: +447441426027" class="soc_href disabled">+78126027880
-												<div class="disabled__block"></div>
-											</a>
-						            	</li>
-										<li  class="numbers__phone numbers__email numbers__phone-disabled">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__mail.svg" alt="usa">
-											<a href="email: info@ainsys.com" class="soc_href disabled">info@ainsys.com
-											  <div class="disabled__block" onclick="ym(86987238,'reachGoal','email'); return true;"></div>
-											</a>
-										</li>
-										<li class="numbers__map">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-										<a href="" class="socials__addres">г. Москва, ул. Золоторожский Вал, д. 34</a>
-										</li>
-								    </ul>
-							    </div>
-						    </div>
-						</div>	
+										</div>
+									</div>
+								</div>
+							</div>
 
+							<?php
+							if ( get_field( 'show_menu', 'option' ) ) {
+								?>
+								<div class="header__bottom">
+									<div class="container">
+										<?php if ( function_exists( 'woocommerce_mini_cart' ) ) : ?>
+											<div class="header__cart">
+												<?php echo do_shortcode('[customminicart]'); ?>
+											</div>
+										<?php endif; ?>
+										<div class="header__menu">
+											<ul class="header__menu__ul menu">
+												<?php
+												wp_nav_menu(
+													array(
+														'theme_location' => 'primary',
+														'container'      => '',
+														'menu_class'     => '',
+														'menu_id'        => '',
+														'walker'         => new Clean_Walker(),
+														'tab_space'      => 8,
+														'items_wrap'     => '%3$s',
+													)
+												);
+												?>
+											</ul>
+										</div>
+										<div class="header__toggler" aria-expanded="false" aria-label="Toggle Navigation" role="button">
+											<div class="header__toggler__bars">
+												<span class="bar"></span>
+												<span class="bar"></span>
+												<span class="bar"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							<?php } ?>
 
-
-						<!-- <div id="preloader">
-						  <div id="loader"></div>
-						</div> -->
-						<script>
-							(function(w, d, s, h, id) {
-								w.roistatProjectId = id; w.roistatHost = h;
-								var p = d.location.protocol == "https:" ? "https://" : "http://";
-								var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
-								var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
-							})(window, document, 'script', 'cloud.roistat.com', '687af597c04143baddf7137bcaa63754');
-						</script>
-				</header>
-			</div>
-		</div>
-	</div>
+						</header>
+					</div>

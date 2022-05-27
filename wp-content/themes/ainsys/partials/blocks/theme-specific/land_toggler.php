@@ -26,14 +26,18 @@ if ( get_field( 'align' ) ) {
 ?>
 
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="benefits <?php echo esc_attr( $class_name ); ?>">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="benefits benefits_block <?php echo esc_attr( $class_name ); ?>">
     <div class="container">
-				<p class="page__podtitle">
-				  <?= get_field('podtitle');?>
-				</p>
-				<h2 class="landing__title">
+	            <?php if ( get_field( 'podtitle' ) ) { ?>
+	              	<p class="page__podtitle">
+				       <?= get_field('podtitle');?>
+				    </p>
+				<?php } ?>
+				<?php if ( get_field( 'title' ) ) { ?>
+					<h2 class="landing__title">
 			    	<?= get_field('title');?>
 			    </h2>
+				<?php } ?>
               <div class="page__content">
 				<div class="page__info">
 						<p class="benefits__quest">
@@ -62,8 +66,18 @@ if ( get_field( 'align' ) ) {
                             </li>
 						<?php endwhile; ?>
 					<?php endif; ?>
-				</ul>
-            </div>
+				    </ul>
+					<?php if ( get_field( 'bentfits_important' ) ) { ?>
+						<div class="bentfits_important">
+						  <?= get_field('bentfits_important');?>
+					</div>
+					<?php } ?>
+					<?php if ( get_field( 'bentfits_btn' ) ) { ?>
+						<button class=" btn wp-block-button__link bentfits_btn">
+						  <?= get_field('bentfits_btn');?>
+					    </button>
+					<?php } ?>
+                 </div>
 			<div class="page__img">
 			    	<img src="<?= get_field('toggler_image');?>" alt="">
 				</div>

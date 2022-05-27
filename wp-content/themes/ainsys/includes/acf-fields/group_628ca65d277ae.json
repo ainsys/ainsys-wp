@@ -208,6 +208,44 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_628f5f6424453",
+            "label": "bentfits_important",
+            "name": "bentfits_important",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_628f63a6fcc58",
+            "label": "bentfits_btn",
+            "name": "bentfits_btn",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -228,5 +266,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653407647
+    "modified": 1653564339
 }

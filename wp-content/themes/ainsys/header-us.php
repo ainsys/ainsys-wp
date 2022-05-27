@@ -109,7 +109,7 @@
 						</div>
 						<div class="socials__wrapper">
 						<div class="header__btn">
-						<a class="btn btn-main" href="/order-ainsys-us/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Leave a request</a>
+						<a class="btn btn-main" href="/order-ainsys-us/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Request a Demo</a>
 						</div>
 						<ul class="socials__links">
 						<li class="header__lang text-end">

@@ -28,5 +28,5 @@ $container-max-widths: (
 // then you can use `media-breakpoint-up($bp) or media-breakpoint-down($bp-down)` to make main breakpoint uniform.
 $bp: lg; // breakpoint variable used in media-breakpoint-up queries
 $bp-down: md; // breakpoint variable used in media-breakpoint-down queries
-$bp-menu: hd;
-$bp-menu-down: xl;
+$bp-menu: lg;
+$bp-menu-down: md;

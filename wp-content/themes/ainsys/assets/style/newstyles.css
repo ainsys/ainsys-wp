@@ -645,6 +645,11 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   margin: 100px auto 0;
   padding-bottom: 70px;
 }
+@media(max-width: 1024px) {
+  .services .services__banner {
+    max-width: 90%;
+  }
+}
 
 .services .services__banner .btn {
   margin-top: 40px;
@@ -1481,7 +1486,9 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   visibility: visible;
   z-index: 2;
 }
-
+.tooltips__item:hover .tooltips ul li {
+  list-style: none;
+}
 
 
 @media (min-width: 1025px) {
@@ -1823,7 +1830,7 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   padding: 16px 0;
   background: #2E0033;
   z-index: 100000;
-  position: relative;
+  position: absolute;
 }
 .counrty_content {
   display: flex;
