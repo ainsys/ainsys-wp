@@ -26,7 +26,7 @@ get_header();
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
-// do_action( 'woocommerce_before_main_content' );
+// do_action( 'woocommerce_before_main_content' ) - remove breadcrumbs.
 
 ?>
 <div class="container">
@@ -61,7 +61,7 @@ get_header();
 			<div class="products__categories">
 
 				<?php
-				$exclude = get_field( 'exclude_categories', 'option' ) ? implode(',', get_field( 'exclude_categories', 'option' ) ) : '';
+				$exclude = get_field( 'exclude_categories', 'option' ) ? implode( ',', get_field( 'exclude_categories', 'option' ) ) : '';
 
 				$args = array(
 					'taxonomy'     => 'product_cat',

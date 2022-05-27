@@ -1,6 +1,7 @@
 @import 'functions';
+
 /* Load bootstrap with custom variables */
-$spacer: rem(2);
+$spacer: rem( 2 );
 
 /* Override breakpoints as we need more for larger screens */
 $grid-breakpoints: (
@@ -10,8 +11,7 @@ $grid-breakpoints: (
 	lg: 992px,
 	xl: 1200px,
 	hd: 1400px,
-	//TODO adjust values to suit exact  Design dimensions.
-		xxl: 1800px //TODO adjust values to suit exact  Design dimensions.,
+	xxl: 1800px,
 ) !default;
 
 $container-max-widths: (
@@ -20,8 +20,7 @@ $container-max-widths: (
 	lg: 960px,
 	xl: 1140px,
 	hd: 1320px,
-	// TODO adjust values to suit exact  Design dimensions.
-		xxl: 1590px //TODO adjust values to suit exact  Design dimensions.,
+	xxl: 1590px,
 ) !default;
 
 // mobile menu breakpoint

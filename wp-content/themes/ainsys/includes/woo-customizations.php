@@ -19,7 +19,7 @@ add_theme_support( 'woocommerce' );
  * @package ainsys
  */
 function auto_redirect_after_logout() {
-	wp_redirect( home_url() );
+	wp_safe_redirect( home_url() );
 	exit();
 }
 add_action( 'wp_logout', 'auto_redirect_after_logout' );
@@ -224,37 +224,37 @@ if ( ! is_user_logged_in() ) {
 		'template_redirect',
 		function() {
 			if ( is_page( 'support-clients' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'partners-integrators' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'developers-2' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'ainsys-rest-api' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'connector-sdk' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'support-dev' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'partners-qa' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'support-partners' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( 'new-partner' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( '%d1%81ustomer-orders' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			} elseif ( is_page( '%d1%81ustomer-orders' ) ) {
-				wp_redirect( 'https://ainsys.com/auth/', 301 );
+				wp_safe_redirect( 'https://ainsys.com/auth/', 301 );
 				exit;
 			}
 		}
@@ -266,25 +266,25 @@ if ( current_user_can( 'bbp_participant' ) ) {
 		'template_redirect',
 		function() {
 			if ( is_page( '%d1%81ustomer-orders' ) ) {
-				wp_redirect( 'https://ainsys.com/only-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-partners', 301 );
 				exit;
 			} elseif ( is_page( 'support-partners' ) ) {
-				wp_redirect( 'https://ainsys.com/support-clients', 301 );
+				wp_safe_redirect( 'https://ainsys.com/support-clients', 301 );
 				exit;
 			} elseif ( is_page( 'support-dev' ) ) {
-				wp_redirect( 'https://ainsys.com/support-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/support-dev', 301 );
 				exit;
 			} elseif ( is_page( 'partners-qa' ) ) {
-				wp_redirect( 'https://ainsys.com/only-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-partners', 301 );
 				exit;
 			} elseif ( is_page( 'connector-sdk' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			} elseif ( is_page( 'ainsys-rest-api' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			} elseif ( is_page( 'sdk-qa' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			}
 		}
@@ -296,16 +296,16 @@ if ( current_user_can( 'developer' ) ) {
 		'template_redirect',
 		function() {
 			if ( is_page( 'partners-qa' ) ) {
-				wp_redirect( 'https://ainsys.com/only-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-partners', 301 );
 				exit;
 			} elseif ( is_page( 'support-partners' ) ) {
-				wp_redirect( 'https://ainsys.com/only-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-partners', 301 );
 				exit;
 			} elseif ( is_page( 'support-clients' ) ) {
-				wp_redirect( 'https://ainsys.com/support-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/support-dev', 301 );
 				exit;
 			} elseif ( is_page( '%d1%81ustomer-orders' ) ) {
-				wp_redirect( 'https://ainsys.com/only-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-partners', 301 );
 				exit;
 			}
 		}
@@ -318,19 +318,19 @@ if ( current_user_can( 'partner' ) ) {
 		'template_redirect',
 		function() {
 			if ( is_page( 'support-clients' ) ) {
-				wp_redirect( 'https://ainsys.com/support-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/support-partners', 301 );
 				exit;
 			} elseif ( is_page( 'sdk-qa' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			} elseif ( is_page( 'ainsys-rest-api' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			} elseif ( is_page( 'connector-sdk' ) ) {
-				wp_redirect( 'https://ainsys.com/only-dev', 301 );
+				wp_safe_redirect( 'https://ainsys.com/only-dev', 301 );
 				exit;
 			} elseif ( is_page( 'support-dev' ) ) {
-				wp_redirect( 'https://ainsys.com/support-partners', 301 );
+				wp_safe_redirect( 'https://ainsys.com/support-partners', 301 );
 				exit;
 			}
 		}
@@ -389,8 +389,8 @@ function ainsys_update_cart() {
 	$quantity   = isset( $_POST['qty'] ) ? wp_unslash( $_POST['qty'] ) : null;
 
 	if ( $product_id && isset( $quantity ) ) {
-		$cart = WC()->cart;
-		$cart_id = $cart->generate_cart_id( $product_id );
+		$cart         = WC()->cart;
+		$cart_id      = $cart->generate_cart_id( $product_id );
 		$cart_item_id = $cart->find_product_in_cart( $cart_id );
 
 		if ( ! empty( $cart_item_id ) ) {
@@ -406,10 +406,10 @@ function ainsys_update_cart() {
 				do_action( 'woocommerce_ajax_added_to_cart', $new_product_id );
 
 				WC()->cart->calculate_totals();
-				WC_AJAX::get_refreshed_fragments();
 				WC()->cart->maybe_set_cart_cookies();
+				WC_AJAX::get_refreshed_fragments();
 			} else {
-				json_encode( wc_print_notices() );
+				wc_print_notices();
 			}
 		}
 		wp_die();
@@ -417,3 +417,6 @@ function ainsys_update_cart() {
 }
 add_action( 'wp_ajax_ainsys_update_cart', 'ainsys_update_cart' );
 add_action( 'wp_ajax_nopriv_ainsys_update_cart', 'ainsys_update_cart' );
+
+// Remove "order by" field on catalog page.
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
