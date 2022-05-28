@@ -47,7 +47,8 @@ const concat = require( 'gulp-concat' );
 const sourcemaps = require( 'gulp-sourcemaps' );
 
 const sassGlob = require( 'gulp-sass-glob' );
-const sass = require( 'gulp-sass' );
+//const sass = require( 'gulp-sass' );
+const sass = require( 'gulp-sass' )( require( 'node-sass' ) );
 
 const postcss = require( 'gulp-postcss' );
 const cssnano = require( 'cssnano' );

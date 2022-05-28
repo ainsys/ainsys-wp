@@ -1,0 +1,11 @@
+.registration {
+  display: flex;
+  & > div {
+    width: 50%
+  }
+  &__form {
+    &.auth {
+      margin: 0;
+    }
+  }
+}

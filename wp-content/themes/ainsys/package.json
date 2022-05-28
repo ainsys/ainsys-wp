@@ -9,7 +9,7 @@
   "author": "pressfoundry.com",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/scripts": "^12.3.0",
+    "@wordpress/scripts": "^23.1.0",
     "@wordpress/eslint-plugin": "^5.0.1",
     "@wordpress/prettier-config": "^0.2.0",
     "autoprefixer": "^9.7.4",
@@ -27,7 +27,8 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-run-command": "0.0.10",
-    "gulp-sass": "^4.0.2",
+    "node-sass": "^7.0.1",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-sass-json": "^1.0.1",
     "gulp-sourcemaps": "^2.6.5",
