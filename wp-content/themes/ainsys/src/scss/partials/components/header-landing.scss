@@ -100,7 +100,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			.header__lang__current {
+			.header-landing__lang__current {
 				color: $accent;
 
 				&:after {
@@ -108,7 +108,7 @@
 				}
 			}
 
-			.header__lang__submenu {
+			.header-landing__lang__submenu {
 				display: block;
 			}
 		}

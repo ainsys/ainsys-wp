@@ -181,42 +181,4 @@
 							</div>
 						</div>
 
-						<?php
-						if ( get_field( 'show_menu', 'option' ) ) {
-							?>
-							<div class="header__bottom">
-								<div class="container">
-									<?php if ( function_exists( 'woocommerce_mini_cart' ) ) : ?>
-										<div class="header__cart">
-											<?php echo do_shortcode('[customminicart]'); ?>
-										</div>
-									<?php endif; ?>
-									<div class="header__menu">
-										<ul class="header__menu__ul menu">
-											<?php
-											wp_nav_menu(
-												array(
-													'theme_location' => 'primary',
-													'container'      => '',
-													'menu_class'     => '',
-													'menu_id'        => '',
-													'walker'         => new Clean_Walker(),
-													'tab_space'      => 8,
-													'items_wrap'     => '%3$s',
-												)
-											);
-											?>
-										</ul>
-									</div>
-									<div class="header__toggler" aria-expanded="false" aria-label="Toggle Navigation" role="button">
-										<div class="header__toggler__bars">
-											<span class="bar"></span>
-											<span class="bar"></span>
-											<span class="bar"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						<?php } ?>
-
 					</header>
