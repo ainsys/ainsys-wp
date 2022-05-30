@@ -33,11 +33,11 @@
 			background: $low_rates;
 			border-radius: rem( 1.6 );
 			text-align: center;
-			color: $color_active;
+			color: $accent;
 
 			&--dark {
 				background: $btn_grad;
-				color: $white_color;
+				color: $white;
 			}
 		}
 
@@ -128,7 +128,7 @@
 			width: rem( 33 );
 			max-width: 90%;
 			height: 2px;
-			background: $color_active;
+			background: $accent;
 			transform: translate( -50% );
 		}
 	}

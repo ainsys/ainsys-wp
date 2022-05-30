@@ -1,13 +1,13 @@
 .services {
-    background-color: $page_color;
-    color: $white_color;
+    background-color: $dark;
+    color: $white;
     text-align: center;
     padding: 0;
 
     .services__top {
         padding: 100px 0;
         background: no-repeat url(../img/services__bg.png);
-        background-color: $page_color;
+        background-color: $dark;
         background-size: cover;
         background-position: top center;
     }
@@ -38,7 +38,7 @@
 
                     .accordion-button {
                         background: $accardion_color;
-                        color: $white_color;
+                        color: $white;
                         padding: 0;
                         display: flex;
                         flex-direction: column;
@@ -112,7 +112,7 @@
                     }
                 }
                 p {
-                    color: $color_active;
+                    color: $accent;
                     text-align: left;
                     width: 100%;
                     padding-left: 1rem;
