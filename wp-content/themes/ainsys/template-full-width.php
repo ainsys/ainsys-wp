@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 
-get_header( 'landing' );
+get_header();
 
 the_post();
 
