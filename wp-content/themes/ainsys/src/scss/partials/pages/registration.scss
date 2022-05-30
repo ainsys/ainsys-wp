@@ -217,9 +217,10 @@
       }
     }
   }
-  &__backlink {
+  .backlink {
     img {
-      margin-right: 5px;
+      margin-right: 12px;
+      width: 12px;
     }
   }
 }
