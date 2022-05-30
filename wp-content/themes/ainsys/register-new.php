@@ -9,7 +9,7 @@ if ( is_user_logged_in() ) {
 	wp_redirect( '/my-account/' );
 }
 
-get_header();
+get_header('clear');
 //global $woocommerce;
 /*$countries_obj   = new WC_Countries();
 $countries   = $countries_obj->__get('countries');*/
@@ -18,12 +18,14 @@ $handle = 'wc-country-select';
 ?>
     <section class="registration">
         <div class="registration__form js-auth-tab auth">
-            <h2 class="auth__title"><?php the_title(); ?></h2>
+
             <?php wc_print_notices(); ?>
             <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
             <div class="woocommerce">
                 <form method="post" class="woocommerce-form woocommerce-form-register register ">
+                    <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/arrow-left.svg">Вернуться назад</a>
+                    <h2 class="registration__title"><?php the_title(); ?></h2>
                     <?php do_action( 'woocommerce_register_form_start' ); ?>
                     <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -60,7 +62,7 @@ $handle = 'wc-country-select';
                     <?php do_action( 'woocommerce_register_form' ); ?>
                     <p class="woocommerce-FormRow form-row">
                         <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-                        <button type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+                        <button type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register for Free', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
                     </p>
                     <?php do_action( 'woocommerce_register_form_end' ); ?>
                 </form>
@@ -69,20 +71,73 @@ $handle = 'wc-country-select';
             <?php the_content(); ?>
 
             <nav class="auth-nav">
-                <span>Уже есть аккаунт?</span><a href="/auth/">Войдите</a>
+                <span>Уже есть аккаунт?</span><a href="/auth/">Авторизироваться</a>
             </nav>
         </div>
         <div class="registration__content">
+            <div class="registration__notice">
+                <div class="registration__notice__icon">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-alert.svg">
+                </div>
+                <div class="registration__notice__content">
+                    <p class="registration__notice__title">Сервис находится в Beta-тестировании</p>
+                    <p>Обращаем ваше внимание, что система находится на этапе Бета-тестирования. Получить доступ к продукту вы сможете, подав заявку на участие в личном кабинете после регистрации. </p>
+                </div>
 
+            </div>
+            <div  class="slick-slider__wrapper slider">
+                <div class="slick-slider-register">
+                    <div class="slick-slider__item">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
+                        <p class="slick-slider__item__subtitle">
+                            Преимущества регистрации
+                        </p>
+                        <h3 class="slick-slider__item__title">Клиентам</h3>
+                        <p >После регистрации вам станут доступны:</p>
+                        <ul>
+                            <li>Доступ к публичной Бета-версии продукта</li>
+                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
+                            <li>Доступ к дополнительной документации</li>
+                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
+                        </ul>
+                    </div>
+                    <div class="slick-slider__item">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
+                        <p class="slick-slider__item__subtitle">
+                            Преимущества регистрации
+                        </p>
+                        <h3  class="slick-slider__item__title">Партнерам</h3>
+                        <p>После регистрации вам станут доступны:</p>
+                        <ul>
+                            <li>Доступ к публичной Бета-версии продукта</li>
+                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
+                            <li>Доступ к дополнительной документации</li>
+                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
+                        </ul>
+                    </div>
+                    <div class="slick-slider__item">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
+                        <p class="slick-slider__item__subtitle">
+                            Преимущества регистрации
+                        </p>
+                        <h3  class="slick-slider__item__title">Сотрудникам</h3>
+                        <p>После регистрации вам станут доступны:</p>
+                        <ul>
+                            <li>Доступ к публичной Бета-версии продукта</li>
+                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
+                            <li>Доступ к дополнительной документации</li>
+                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slick-controls">
+                    <div class="slick-prev"></div>
+                    <div class="slick-next"></div>
+                </div>
+            </div>
         </div>
     </section>
-<!--<section class="auth">
-	<div class="u-columns col2-set" id="customer_login">
-		<div class="u-column1 col-1 tab js-auth-tab active">
 
-		</div>
-	</div>
-</section>-->
  <?php
 // Save extra register fields values
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
@@ -99,23 +154,6 @@ function wooc_save_extra_register_fields( $customer_id ) {
     }
 }
 
-//--------------
-// Custom function to save Usermeta or Billing Address of registered user
-/*function zk_save_billing_address($user_id){
-    global $woocommerce;
-    $address = $_POST;
-    foreach ($address as $key => $field){
-        if(startsWith($key,'billing_')){
-            // Condition to add firstname and last name to user meta table
-            if($key == 'billing_first_name' || $key == 'billing_last_name'){
-                $new_key = explode('billing_',$key);
-                update_user_meta( $user_id, $new_key[1], $_POST[$key] );
-            }
-            update_user_meta( $user_id, $key, $_POST[$key] );
-        }
-    }
 
-}
-add_action('woocommerce_created_customer','zk_save_billing_address');*/
 
-get_footer();
+get_footer('clear');

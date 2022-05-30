@@ -413,49 +413,139 @@ function ainsys_update_cart() {
 add_action( 'wp_ajax_ainsys_update_cart', 'ainsys_update_cart' );
 add_action( 'wp_ajax_nopriv_ainsys_update_cart', 'ainsys_update_cart' );
 
+/**
+ * Update Custom Registration Fields
+ *
+ * @package ainsys
+ */
+add_action( 'user_register', 'my_account_saving_billing_phone', 10, 1 );
+function my_account_saving_billing_phone( $user_id ) {
+    $billing_phone = $_POST['billing_phone'];
+    $billing_country = $_POST['billing_country'];
+    if( ! empty( $billing_phone ) ) {
+        update_user_meta( $user_id, 'billing_phone', sanitize_text_field( $billing_phone ) );
+    }
+    if( ! empty( $billing_country ) ) {
+        update_user_meta( $user_id, 'billing_country', sanitize_text_field( $billing_country ) );
+    }
+
+}
+
+
 
 /**
- * Custom Registration Form Shortcode
+ * Redirect to registration step 2
+ *
+ * @package ainsys
+ */
+add_filter( 'woocommerce_registration_redirect', 'custom_redirection_after_registration', 10, 1 );
+function custom_redirection_after_registration( $redirection_url ){
+    // Change the redirection Url
+    $redirection_url = get_field('step_2_page','option'); // Home page
+
+    return $redirection_url; // Always return something
+}
+
+/**
+ * Custom Registration Billing Fields
  *
  * @package ainsys
  */
 
-add_shortcode( 'wc_reg_your_form', 'your_separate_registration_form' );
+add_filter( 'woocommerce_billing_fields ', 'ainsys_add_field' );
 
-function your_separate_registration_form() {
-    if ( is_admin() ) return;
-    if ( is_user_logged_in() ) return;
-    ob_start();
-    do_action( 'woocommerce_before_customer_login_form' );
-    ?>
-    <form method="post" class="woocommerce-form woocommerce-form-register register test-class" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
-        <?php do_action( 'woocommerce_register_form_start' ); ?>
-        <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?> <span class="required">*</span></label>
-                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-            </p>
-        <?php endif; ?>
-        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-            <label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-            <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-        </p>
-        <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
-            </p>
+function ainsys_add_field( $fields ) {
 
-        <?php else : ?>
-            <p><?php esc_html_e( 'A password will be sent to your email address.', 'woocommerce' ); ?></p>
-        <?php endif; ?>
-        <?php do_action( 'woocommerce_register_form' ); ?>
-        <p class="woocommerce-FormRow form-row">
-            <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-            <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
-        </p>
-        <?php do_action( 'woocommerce_register_form_end' ); ?>
-    </form>
-    <?php
-    return ob_get_clean();
+    $fields['billing_client_role']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'founder' => __( 'Founder / Executive Director','ainsys' ),
+            'freelancer' => __( 'Freelancer / Consultant' ,'ainsys'),
+            'development' => __( 'Development / Engineering','ainsys' ),
+            'sales' => __( 'Sales / Business Development' ,'ainsys'),
+            'management' => __( 'Product / project manager','ainsys' ),
+            'student' => __( 'Student/Professor','ainsys' ),
+            'other' => __( 'Other' )
+        ),
+        'label'        => __('Choose your role','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_size']   = array(
+        'type'         => 'select',
+        'options' => array(
+            '1' => __( 'Only me' ,'ainsys'),
+            '2-50' => __( '2-50' ),
+            '51-200' => __( '51-200' ),
+            '201-500' => __( '201-500'),
+            '500+' => __( '500+' ),
+
+        ),
+        'label'        => __('What is the size of your organization?','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_industry']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'ecommerce' => __( 'Electronic commerce' ,'ainsys'),
+            'saas' => __( 'Saas' ,'ainsys'),
+            'agency' => __( 'Agency / Consulting' ,'ainsys'),
+            'education' => __( 'Education' ,'ainsys'),
+            'non-profit' => __( 'Non-profit organization' ,'ainsys'),
+            'personal-performance' => __( 'Personal performance' ,'ainsys'),
+            'other' => __( 'Other' ,'ainsys'),
+        ),
+        'label'        => __('What industry do you work in?','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_experience']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'no-experience' => __( 'No experience with automation' ,'ainsys'),
+            'other-platforms' => __( 'I have used other integration platforms' ,'ainsys'),
+            'custom' => __( 'I built custom integrations myself' ,'ainsys'),
+
+        ),
+        'label'        => __('Choose your experience in automation','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+
+    return $fields;
+
+}
+add_filter( 'woocommerce_customer_meta_fields', 'ainsys_admin_address_field' );
+
+function ainsys_admin_address_field( $admin_fields ) {
+
+    $admin_fields['billing']['fields']['billing_client_role'] = array(
+        'label' => 'Роль в организации',
+        'description' => 'Роль в организации',
+    );
+    $admin_fields['billing']['fields']['billing_client_size'] = array(
+        'label' => 'Размер организации',
+        'description' => 'Размер организации',
+    );
+    $admin_fields['billing']['fields']['billing_client_industry'] = array(
+        'label' => 'Отрасль',
+        'description' => 'Отрасль',
+    );
+    $admin_fields['billing']['fields']['billing_client_experience'] = array(
+        'label' => 'Опыт в автоматизации',
+        'description' => 'Опыт в автоматизации',
+    );
+
+
+    return $admin_fields;
+
 }
