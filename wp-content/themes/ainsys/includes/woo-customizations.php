@@ -418,5 +418,141 @@ function ainsys_update_cart() {
 add_action( 'wp_ajax_ainsys_update_cart', 'ainsys_update_cart' );
 add_action( 'wp_ajax_nopriv_ainsys_update_cart', 'ainsys_update_cart' );
 
+/**
+ * Update Custom Registration Fields
+ *
+ * @package ainsys
+ */
+add_action( 'user_register', 'my_account_saving_billing_phone', 10, 1 );
+function my_account_saving_billing_phone( $user_id ) {
+    $billing_phone = $_POST['billing_phone'];
+    $billing_country = $_POST['billing_country'];
+    if( ! empty( $billing_phone ) ) {
+        update_user_meta( $user_id, 'billing_phone', sanitize_text_field( $billing_phone ) );
+    }
+    if( ! empty( $billing_country ) ) {
+        update_user_meta( $user_id, 'billing_country', sanitize_text_field( $billing_country ) );
+    }
+
+}
+
+
+
+/**
+ * Redirect to registration step 2
+ *
+ * @package ainsys
+ */
+add_filter( 'woocommerce_registration_redirect', 'custom_redirection_after_registration', 10, 1 );
+function custom_redirection_after_registration( $redirection_url ){
+    // Change the redirection Url
+    $redirection_url = get_field('step_2_page','option'); // Home page
+
+    return $redirection_url; // Always return something
+}
+
+/**
+ * Custom Registration Billing Fields
+ *
+ * @package ainsys
+ */
+
+add_filter( 'woocommerce_billing_fields ', 'ainsys_add_field' );
+
+function ainsys_add_field( $fields ) {
+
+    $fields['billing_client_role']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'founder' => __( 'Founder / Executive Director','ainsys' ),
+            'freelancer' => __( 'Freelancer / Consultant' ,'ainsys'),
+            'development' => __( 'Development / Engineering','ainsys' ),
+            'sales' => __( 'Sales / Business Development' ,'ainsys'),
+            'management' => __( 'Product / project manager','ainsys' ),
+            'student' => __( 'Student/Professor','ainsys' ),
+            'other' => __( 'Other' )
+        ),
+        'label'        => __('Choose your role','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_size']   = array(
+        'type'         => 'select',
+        'options' => array(
+            '1' => __( 'Only me' ,'ainsys'),
+            '2-50' => __( '2-50' ),
+            '51-200' => __( '51-200' ),
+            '201-500' => __( '201-500'),
+            '500+' => __( '500+' ),
+
+        ),
+        'label'        => __('What is the size of your organization?','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_industry']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'ecommerce' => __( 'Electronic commerce' ,'ainsys'),
+            'saas' => __( 'Saas' ,'ainsys'),
+            'agency' => __( 'Agency / Consulting' ,'ainsys'),
+            'education' => __( 'Education' ,'ainsys'),
+            'non-profit' => __( 'Non-profit organization' ,'ainsys'),
+            'personal-performance' => __( 'Personal performance' ,'ainsys'),
+            'other' => __( 'Other' ,'ainsys'),
+        ),
+        'label'        => __('What industry do you work in?','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+    $fields['billing_client_experience']   = array(
+        'type'         => 'select',
+        'options' => array(
+            'no-experience' => __( 'No experience with automation' ,'ainsys'),
+            'other-platforms' => __( 'I have used other integration platforms' ,'ainsys'),
+            'custom' => __( 'I built custom integrations myself' ,'ainsys'),
+
+        ),
+        'label'        => __('Choose your experience in automation','ainsys'),
+        'required'     => true,
+        'class'        => array( 'form-row-wide' ),
+        'priority'     => 20,
+
+    );
+
+    return $fields;
+
+}
+add_filter( 'woocommerce_customer_meta_fields', 'ainsys_admin_address_field' );
+
+function ainsys_admin_address_field( $admin_fields ) {
+
+    $admin_fields['billing']['fields']['billing_client_role'] = array(
+        'label' => 'Роль в организации',
+        'description' => 'Роль в организации',
+    );
+    $admin_fields['billing']['fields']['billing_client_size'] = array(
+        'label' => 'Размер организации',
+        'description' => 'Размер организации',
+    );
+    $admin_fields['billing']['fields']['billing_client_industry'] = array(
+        'label' => 'Отрасль',
+        'description' => 'Отрасль',
+    );
+    $admin_fields['billing']['fields']['billing_client_experience'] = array(
+        'label' => 'Опыт в автоматизации',
+        'description' => 'Опыт в автоматизации',
+    );
+
+
+    return $admin_fields;
+
+}
 // Remove "order by" field on catalog page.
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
