@@ -358,12 +358,14 @@ if ( loadBlock ) {
 
 // fixed header
 let header = document.querySelector(".header");
-window.addEventListener("scroll", () => {
-	if(pageYOffset > 100) {
-		header.classList.add("fixed-menu");
-	}else {
-		header.classList.remove("fixed-menu");
-	}
-})
+if(typeof(header) != 'undefined' && header != null) {
+	window.addEventListener("scroll", () => {
+		if (pageYOffset > 100) {
+			header.classList.add("fixed-menu");
+		} else {
+			header.classList.remove("fixed-menu");
+		}
+	})
+}
 
 } )( jQuery );

@@ -59,6 +59,8 @@ function ainsys_after_setup_theme() {
 		)
 	);
 
+    add_image_size( 'slider-thumb', 280, 240, [ 'center', 'center' ] );
+
 }
 
 add_action( 'after_setup_theme', 'ainsys_after_setup_theme' );

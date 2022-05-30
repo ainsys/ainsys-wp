@@ -666,6 +666,25 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+    acf_register_block_type(
+        array(
+            'name'            => 'Post Slider',
+            'title'           => __( 'Post Slider' ),
+            'description'     => __( 'Post Slider' ),
+            'render_template' => 'partials/blocks/theme-specific/post-slider.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'post, slider, post-slider' ),
+            'icon'            => 'images-alt',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
 }
 
 // Check if function exists and hook into setup.
