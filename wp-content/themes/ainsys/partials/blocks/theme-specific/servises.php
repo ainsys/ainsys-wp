@@ -97,15 +97,10 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					<?php the_field( 'bottom_subtitle' ); ?>
 				<?php } ?>
 			</p>
-			<?php if ( get_field( 'button' ) ) { ?>
-				<?php
-				$button        = get_field( 'button' );
-				$button_url    = $button['url'] ? $button['url'] : '#';
-				$button_title  = $button['title'] ? $button['title'] : '';
-				$button_target = $button['target'] ? $button['target'] : '_self';
-				?>
-				<a class="btn btn-primary" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="gtag( 'event', 'button_2', {   'event_category' : 'ain',   'event_label' : 't' });ym(86987238,'reachGoal','button_2'); return true;"><?php echo esc_html( $button_title ); ?></a>
-			<?php } ?>
+			<div class="form_demonstration">
+		    	<?php echo do_shortcode(get_field('form')); ?>
+			</div>
+			
 		</div>
 	</div>
-</section>  
+</section>

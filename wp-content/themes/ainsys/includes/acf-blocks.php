@@ -609,6 +609,63 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+	acf_register_block_type(
+		array(
+			'name'            => 'Landing newsletter',
+			'title'           => __( 'Landing newsletter' ),
+			'description'     => __( 'Landing newsletter' ),
+			'render_template' => 'partials/blocks/theme-specific/land_newsletter.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'land_newsletter' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Landing slider',
+			'title'           => __( 'Landing slider' ),
+			'description'     => __( 'Landing slider' ),
+			'render_template' => 'partials/blocks/theme-specific/land_slider.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'land_slider' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Promo',
+			'title'           => __( 'Promo' ),
+			'description'     => __( 'Promo' ),
+			'render_template' => 'partials/blocks/theme-specific/promo.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'promo' ),
+			'icon'            => 'bell',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.

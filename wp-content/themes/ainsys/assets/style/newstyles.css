@@ -1830,7 +1830,7 @@ header .header__content .socials__links .numbers__phone-disabled .disabled__bloc
   padding: 16px 0;
   background: #2E0033;
   z-index: 100000;
-  position: relative;
+  position: absolute;
 }
 .counrty_content {
   display: flex;
