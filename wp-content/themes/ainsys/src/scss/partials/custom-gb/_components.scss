@@ -66,7 +66,7 @@ h6 {
         color: $switch_dis;
     }
     .label_active {
-        color: $color_active;
+        color: $accent;
     }
     .form-switch {
         margin: 0 15px;
@@ -81,7 +81,7 @@ h6 {
             cursor: pointer;
         }
         .form-check-input:checked  {
-            background-color: $color_active;
+            background-color: $accent;
         }
     }
 }

@@ -1,7 +1,7 @@
 .footer {
 	padding: rem( 3 ) 0;
 	background-color: $dark;
-	color: $white_color;
+	color: $white;
 
 	&__content {
 		@include media-breakpoint-up( $bp ) {
