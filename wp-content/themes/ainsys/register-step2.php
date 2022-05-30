@@ -147,14 +147,6 @@ $user_id = $user->ID;
 
 
 
-/*function true_save_field( $user_id ){
-
-    if( ! empty( $_POST[ 'billing_client_role' ] ) ) {
-        update_post_meta( $user_id, 'billing_client_role', sanitize_text_field( $_POST[ 'billing_client_role' ] ) );
-    }
-
-}*/
-
 function ainsys_save_usermeta($user_id)  {
     $metas = array();
     if( ! empty( $_POST[ 'billing_client_role' ] ) ) {
@@ -176,6 +168,7 @@ function ainsys_save_usermeta($user_id)  {
 }
 if (isset($_POST['billing_client_role']) || isset($_POST['billing_client_size']) || isset($_POST['billing_client_industry']) || isset($_POST['billing_client_experience'])) {
     ainsys_save_usermeta($user_id);
+    wp_redirect( '/my-account/' );
 }
 
 

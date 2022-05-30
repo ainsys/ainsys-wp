@@ -24,7 +24,7 @@ $handle = 'wc-country-select';
 
             <div class="woocommerce">
                 <form method="post" class="woocommerce-form woocommerce-form-register register ">
-                    <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/arrow-left.svg">Вернуться назад</a>
+                    <a href="#" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg"><?php _e('Back','ainsys'); ?></a>
                     <h2 class="registration__title"><?php the_title(); ?></h2>
                     <?php do_action( 'woocommerce_register_form_start' ); ?>
                     <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
