@@ -145,4 +145,22 @@
     text-align: center;
     margin-top: 42px;
   }
+  #billing_country_field {
+    .select2-selection.select2-selection--single {
+      height: 41px;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, .05);
+      border-radius: 8px !important;
+      border: 1px solid #C4C5C4 !important;
+     /* margin-bottom: 15px;*/
+      #select2-billing_country-container {
+        padding: 6px 15px;
+      }
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      top:8px;
+    }
+  }
+  .phone_billing_wrapper {
+    margin-top: 24px!important;
+  }
 }

@@ -556,3 +556,166 @@ function ainsys_admin_address_field( $admin_fields ) {
 }
 // Remove "order by" field on catalog page.
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+/**
+ * For Registration with CF7
+ *
+ * @package ainsys
+ *
+ */
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+    $user_attr = 'user_id';
+    $form_attr = 'form_id';
+    if ( isset( $atts[$user_attr] ) ) {
+        $out[$user_attr] = $atts[$user_attr];
+    }
+    if ( isset( $atts[$form_attr] ) ) {
+        $out[$form_attr] = $atts[$form_attr];
+    }
+
+    return $out;
+}
+
+/**
+ *
+ *
+ *
+ */
+
+//add_action( 'wpcf7_before_send_mail', 'ainsys_save_usermeta', 10, 3 );
+
+/**
+ * Function for `wpcf7_before_send_mail` action-hook.
+ *
+ * @param  $contact_form
+ * @param  &$abort
+ * @param  $that
+ *
+ * @return void
+ */
+/*function wp_kama_wpcf7_before_send_mail_action( $contact_form, &$abort, $that ){
+
+    // action...
+}*/
+/*
+function ainsys_save_usermeta($user_id, $contact_form)  {
+    $metas = array();
+    $user_id = $_POST[ 'user_id' ];
+    $form_id = $contact_form->posted_data['_wpcf7'];
+
+    if( ! empty( $_POST[ 'billing_client_role' ] ) ) {
+        $metas['billing_client_role'] = $_POST[ 'billing_client_role' ];
+    }
+    if( ! empty( $_POST[ 'billing_client_size' ] ) ) {
+        $metas['billing_client_size'] = $_POST[ 'billing_client_size' ];
+    }
+    if( ! empty( $_POST[ 'billing_client_industry' ] ) ) {
+        $metas['billing_client_industry'] = $_POST[ 'billing_client_industry' ];
+    }
+    if( ! empty( $_POST[ 'billing_client_experience' ] ) ) {
+        $metas['billing_client_experience'] = $_POST[ 'billing_client_experience' ];
+    }
+    if ($form_id == 9741):
+    foreach($metas as $key => $value) {
+        update_user_meta( $user_id, $key, $value );
+    }
+    endif;
+}
+*/
+/**
+ * Reset Password Pages
+ */
+
+function ainsys_lostpassword_url() {
+    return site_url( '/password-recovery' );
+}
+//add_filter( 'lostpassword_url', 'ainsys_lostpassword_url', 10, 0 );
+
+function woocommerce_new_pass_redirect( $user ) {
+    wc_add_notice( __( 'Your password has been changed successfully! Please login to continue.', 'woocommerce' ), 'success' );
+    wp_redirect( home_url() . "/auth/?new-password-created=true" );
+    exit;
+}
+//add_action( 'woocommerce_customer_reset_password', 'woocommerce_new_pass_redirect' );
+
+//Create shortcode for lost password form [lost_password_form]
+function wc_custom_lost_password_form( $atts ) {
+    if ( !empty( $_COOKIE[ "csx-reset-link-set" ] ) && isset( $_COOKIE[ "csx-reset-link-set" ] ) && $_COOKIE[ "csx-reset-link-set" ] === "true" ) { // WPCS: input var ok, CSRF ok.
+        return wc_get_template( 'myaccount/lost-password-confirmation.php' );
+    } elseif ( !empty( $_SESSION[ "csx-show-reset-form" ] ) && isset( $_SESSION[ "csx-show-reset-form" ] ) && $_SESSION[ "csx-show-reset-form" ] === "true" ) {
+        $rp_id = $_SESSION[ "csx-id" ];
+        $rp_key = $_SESSION[ "csx-key" ];
+        if ( isset( $_COOKIE[ 'wp-resetpass-' . COOKIEHASH ] ) && 0 < strpos( $_COOKIE[ 'wp-resetpass-' . COOKIEHASH ], ':' ) ) { // @codingStandardsIgnoreLine
+            list( $rp_id, $rp_key ) = array_map( 'wc_clean', explode( ':', wp_unslash( $_COOKIE[ 'wp-resetpass-' . COOKIEHASH ] ), 2 ) ); // @codingStandardsIgnoreLine
+            $userdata = get_userdata( absint( $rp_id ) );
+            $rp_login = $userdata ? $userdata->user_login : '';
+            $user = WC_Shortcode_My_Account::check_password_reset_key( $rp_key, $rp_login );
+
+            // Reset key / login is correct, display reset password form with hidden key / login values.
+            if ( is_object( $user ) ) {
+                return wc_get_template(
+                    'myaccount/form-reset-password.php',
+                    array(
+                        'key' => $rp_key,
+                        'login' => $rp_login,
+                    )
+                );
+            }
+        }
+    }
+
+    // Show lost password form by default.
+    return wc_get_template(
+        'myaccount/form-lost-password.php',
+        array(
+            'form' => 'lost_password',
+        )
+    );
+}
+//add_shortcode( 'lost_password_form', 'wc_custom_lost_password_form' );
+
+//Handling query
+function csx_process_query() {
+
+    if ( isset( $_GET[ 'reset-link-sent' ] ) && $_GET[ 'reset-link-sent' ] === "true" ) {
+        setcookie( 'csx-reset-link-set', "true", time() + ( 300 * 1 ), "/" ); //Allow to submit email for reset after 5 minutes only.
+        unset( $_SESSION[ "csx-show-reset-form" ] );
+    }
+
+    if ( isset( $_GET[ 'show-reset-form' ] ) && $_GET[ 'show-reset-form' ] === "true" ||
+        isset( $_GET[ 'key' ] ) && isset( $_GET[ 'id' ] ) ) {
+        $_SESSION[ "csx-show-reset-form" ] = "true";
+        setcookie( 'csx-reset-link-set', "", time() - 3600, "/" );
+    }
+
+    //Set session and cookie if key and id are existed
+    if ( isset( $_GET[ 'key' ] ) && isset( $_GET[ 'id' ] ) ) {
+        $_SESSION[ "csx-key" ] = $_GET[ 'key' ];
+        $_SESSION[ "csx-id" ] = $_GET[ 'id' ];
+
+        $value = sprintf( "%s:%s", wp_unslash( $_GET[ 'id' ] ), wp_unslash( $_GET[ 'key' ] ) );
+        WC_Shortcode_My_Account::set_reset_password_cookie( $value );
+    }
+
+    //Unset session and cookie after successfully changed the password.
+    if ( isset( $_GET[ 'new-password-created' ] ) && $_GET[ 'new-password-created' ] === "true" ) {
+        setcookie( 'wp-resetpass-' . COOKIEHASH, "", time() - 3600 );
+        unset( $_SESSION[ "csx-show-reset-form" ] );
+        unset( $_SESSION[ "csx-reset-link-set" ] );
+        unset( $_SESSION[ "csx-id" ] );
+        unset( $_SESSION[ "csx-key" ] );
+    }
+}
+//add_action( 'init', 'csx_process_query' );
+
+//Redirect to custom lost password on request
+function csx_redirections() {
+    if ( isset( $_GET[ 'reset-link-sent' ] ) || isset( $_GET[ 'show-reset-form' ] ) ||
+        isset( $_GET[ 'key' ] ) && isset( $_GET[ 'id' ] ) ) {
+        wp_redirect( home_url() . '/password-recovery' );
+        exit;
+    }
+}
+//add_action( 'template_redirect', 'csx_redirections' );
