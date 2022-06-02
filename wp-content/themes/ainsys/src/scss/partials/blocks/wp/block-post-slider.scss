@@ -15,6 +15,10 @@
     margin: auto 8px;
     opacity: 0.3;
     box-sizing: border-box;
+    @include media-breakpoint-down( $bp-menu ) {
+      width: 343px;
+
+    }
     &.slick-current {
       opacity: 1;
     }
@@ -90,6 +94,7 @@
   }
   &.slick-slider-posts {
     .slick-slider {
+
       &__item {
         display: flex;
         flex-direction: row;
@@ -97,6 +102,10 @@
         max-width: 100%;
         border-radius: 12px;
         padding: 24px;
+        @include media-breakpoint-down( $bp-menu ) {
+          flex-direction: column;
+          width: 343px;
+        }
         &__title {
           font-weight: 600;
           font-size: 18px;

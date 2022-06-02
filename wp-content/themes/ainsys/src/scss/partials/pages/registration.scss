@@ -2,17 +2,47 @@
   display: flex;
   padding-top: 0;
   min-height: 100vh;
+  &.registration--step2 {
+    @media(max-width: 600px) {
+      flex-direction: column-reverse;
+    }
+  }
+  .auth__title {
+    @include media-breakpoint-down( $bp-menu ) {
+      font-size: 38px!important;
+
+    }
+  }
   &__form {
     z-index: 1;
     background: #fff;
     width: 50%;
+    @include media-breakpoint-down( $bp-small-down ) {
+     width: 100%;
+
+    }
+    .address-field {
+      .woocommerce-input-wrapper {
+        position: relative;
+      }
+    }
     &.auth {
       margin: 0;
       padding-top: 40px;
       max-width: unset;
+
     }
     .registration--step2 & {
       width: calc(100% - 465px);
+      @include media-breakpoint-down( $bp-menu ) {
+        width: calc(100% - 378px);
+      }
+      @include media-breakpoint-down( $bp-small-down ) {
+        width: 50%;
+      }
+      @media(max-width: 600px) {
+        width: 100%;
+      }
     }
   }
   &__content {
@@ -21,6 +51,9 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 50%;
+    @include media-breakpoint-down( $bp-small-down ) {
+      display: none;
+    }
   }
   &__title {
     text-align: left;
@@ -55,9 +88,24 @@
     width: 465px;
     background: linear-gradient(100.5deg, #790E8B 2.75%, #AB6FB5 102.28%);
     padding: 72px 48px;
+    @include media-breakpoint-down( $bp-menu ) {
+      width: 378px;
+
+    }
+    @include media-breakpoint-down( $bp-small-down ) {
+      width: 50%;
+
+    }
+    @media(max-width: 600px) {
+      width: 100%;
+      background: #fff;
+    }
   }
   &__logo {
     margin-bottom: 36px;
+    @media(max-width: 600px) {
+      display: none;
+    }
   }
   &__steps {
     list-style: none;
@@ -66,6 +114,9 @@
       position: relative;
       color: #fff;
       margin-bottom: 36px;
+      @media(max-width: 600px) {
+        color: $switch_dis;
+      }
       &:before {
         content: "";
         display: block;
@@ -75,15 +126,31 @@
         width: 32px;
         height: 32px;
         background-image: url( ../images/components/icon-step.svg );
-
+        background-size: cover;
+        @media(max-width: 600px) {
+          background-image: url( ../images/components/icon-step-purple.svg );
+        }
 
       }
       &.finished:before {
         background-image: url( ../images/components/icon-step-complete.svg );
+        @media(max-width: 600px) {
+          background-image: url( ../images/components/icon-step-complete-purple.svg );
+        }
       }
-      &.active:before {
-        background-image: url( ../images/components/icon-step-active.svg );
+      &.active{
+        @media(max-width: 600px) {
+          color: $accent;
+        }
+        &:before {
+          background-image: url( ../images/components/icon-step-active.svg );
+          @media(max-width: 600px) {
+            background-image: url( ../images/components/icon-step-purple.svg );
+          }
+        }
+
       }
+
       &:after {
         content: "";
         display: block;
@@ -102,6 +169,11 @@
         font-weight: 400;
         &:first-child {
           font-weight: 500;
+        }
+        @include media-breakpoint-down( $bp-small-down ) {
+          font-size: 14px;
+          line-height: 20px;
+
         }
       }
       &:last-child {
