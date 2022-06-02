@@ -1,0 +1,105 @@
+#coockie {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    max-width: 35%;
+    min-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-radius: 12px;
+    z-index: 11;
+
+    @include media-breakpoint-down( md ) {
+        padding: 20px;
+        max-width: 50%;
+        min-width: 300px;
+    }
+    @include media-breakpoint-down( sm ) {
+        padding: 5px;
+        max-width: 95%;
+    }
+
+    .coockie_content {
+        display: flex;
+        flex-direction: column;
+
+        .coockie_text {
+            margin-bottom: 15px !important;
+            text-align: center;
+            color: $black_title_color;
+
+            a {
+                color: $accent;
+            }
+        }
+        .coockie_buttons {
+            display: flex;
+            justify-content: center;
+
+            @include media-breakpoint-down( md ) {
+                flex-direction: column;
+            }
+
+            .coockie_button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                background: $accent;
+                border-radius: 8px;
+                color: $white;
+
+                @include media-breakpoint-down( md ) {
+                    margin-bottom: 10px;
+                }
+            }
+            .coockie_button::before {
+                display: block;
+                content: '';
+                position: relative;
+                width: 20px;
+                height: 20px;
+                margin: 0 8px 0 0;
+                background: url(../images/components/coockie_arrow.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+            }
+            .coockie_button-disagree {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .coockie_button-disagree::before {
+                display: block;
+                content: '';
+                position: relative;
+                width: 20px;
+                height: 20px;
+                margin: 0 8px 0 0;
+                background: url(../images/components/coockie_close.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+            }
+            .coockie_button-grey {
+                margin: 0 0 0 28px;
+                padding: 5px;
+                border: 1px solid $grey_rate;
+                border-radius: 8px;
+                color: $grey_rate;
+
+                @include media-breakpoint-down( md ) {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+.coockie-disabled {
+    display: none !important;
+}

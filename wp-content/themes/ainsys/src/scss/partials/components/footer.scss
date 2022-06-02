@@ -3,10 +3,63 @@
 	background-color: $dark;
 	color: $white;
 
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 40px;
+		margin-bottom: 10px;
+		border-bottom: 0.5px solid $white;
+
+		@include media-breakpoint-down( sm ) {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.footer__logo {
+			display: block;
+			width: 140px;
+			height: 70px;
+			margin-right: rem( 1 );
+			background: no-repeat url( ../images/components/logo_active.svg ) center/ 100%;
+			filter: brightness( 10 );
+			position: relative;
+			z-index: 2;
+
+			@include media-breakpoint-up( sm ) {
+				width: 250px;
+			}
+			@include media-breakpoint-up( $bp ) {
+				width: 307px;
+			}
+		}
+		.footer__logo:hover,
+		.footer__logo:focus {
+		    filter: none;
+		    transition: 0.45s;
+		}
+		.footer__address {
+			text-align: right;
+
+			@include media-breakpoint-down( sm ) {
+				text-align: center;
+			}
+		}
+		.footer__link-active {
+			a {
+				color: $accent !important;
+			}
+		}
+	}
+
 	&__content {
 		@include media-breakpoint-up( $bp ) {
 			display: flex;
 			justify-content: space-between;
+		}
+		@include media-breakpoint-down( md ) {
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 
@@ -20,6 +73,12 @@
 		@include media-breakpoint-up( $bp ) {
 			justify-content: flex-start;
 			margin: 0;
+		}
+		@include media-breakpoint-down( lg ) {
+			max-width: 50%;
+		}
+		@include media-breakpoint-down( md ) {
+			max-width: 100%;
 		}
 
 		li {

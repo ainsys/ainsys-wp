@@ -1809,7 +1809,6 @@ header .header-landing__content .socials__links .numbers__phone-disabled .disabl
   line-height: 20px;
   color: #FFFFFF;
 }
-/*
 .country_select {
   display: flex;
   width: 200px;
@@ -1837,8 +1836,6 @@ header .header-landing__content .socials__links .numbers__phone-disabled .disabl
   height: 18px;
   margin-left: 155px;
 }
-*/
-
 .counrty_btn {
   width: 130px;
   height: 40px;

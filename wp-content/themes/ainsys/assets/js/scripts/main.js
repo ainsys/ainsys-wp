@@ -64,10 +64,10 @@
 		$('.rate_fourth')
 		.addClass('rate-disabled');
 	});
-	/*$('.country_select').click(function() {
+	$('.country_select').click(function() {
 		$( this )
 		.toggleClass('country-active');
-	});*/
+	});
 
 	const final_val_initial = parseInt($('#final_val').text()); 
 	const users_val_number = parseInt($('#users_val').text()); 
@@ -368,7 +368,7 @@ if(typeof(header) != 'undefined' && header != null) {
 	})
 }
 
-//contacf form reg 
+//contacf form reg
 	let wooForm = document.getElementById('cf7_woo_reg')
 	let wooFormBtn = $(wooForm).find('.wpcf7-submit')
 	let defaultWooForm = document.getElementById('default_woo_form')

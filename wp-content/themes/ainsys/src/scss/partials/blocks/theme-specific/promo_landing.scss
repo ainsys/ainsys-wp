@@ -1,0 +1,102 @@
+.promo {
+    padding-bottom: 70px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 48px;
+        max-width: 1200px;
+        background: linear-gradient(113.52deg, rgba(38, 41, 76, 0.8) 0%, rgba(16, 17, 37, 0.8) 100%);
+        border-radius: 12px;
+        color: $white;
+
+        @include media-breakpoint-down( md ) {
+			padding: 24px;
+		}
+
+        .promo__info {
+            width: 100%;
+
+            .promo__title {
+                margin-bottom: 18px;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 145%;
+            }
+            .promo__items {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 15px;  
+
+                .promo__item {
+                    list-style: none;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                    width: calc(50% - 2.5px);
+                    margin: 0 5px 5px 0;
+                    padding: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @include media-breakpoint-down( md ) {
+                        width: 100%;
+                        margin: 0 0 4px;
+                    }
+
+                    p {
+                        font-size: 26px;
+                        line-height: 145%;
+
+                        @include media-breakpoint-down( md ) {
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                    img {
+                        margin-bottom: auto;
+                    }
+                }
+                .promo__item:nth-child(2n) {
+                    margin: 0 0 5px;
+                }
+            }
+            .promo__info {
+                margin: 0;
+                padding: 0;
+
+                @include media-breakpoint-down( md ) {
+                    display: none;
+                }
+                .promo__title {
+                    font-size: 24px;
+                }
+                .promo__podtext {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 28px;
+
+                    @include media-breakpoint-down( md ) {
+                        font-size: 14px;
+                        line-height: 125%;
+                    }
+                }
+            }
+        }
+        .promo__img {
+            margin: -10% -20% -10% -5%;
+
+            @include media-breakpoint-down( lg ) {
+                display: none;
+                margin: 0;
+            }
+
+            img {
+                margin: 0;
+                position: relative;
+            }
+        }
+    }
+}
