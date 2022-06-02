@@ -384,14 +384,14 @@
     display: none;
 }
 .rate_year {
-    display: none;
+    display: block;
 }
 .rate_mounth {
-    display: block;
-}
-.rate_page__list.active .rate_mounth {
     display: none;
 }
-.rate_page__list.active .rate_year {
+.rate_page__list.active .rate_mounth {
     display: block;
+}
+.rate_page__list.active .rate_year {
+    display: none;
 }
