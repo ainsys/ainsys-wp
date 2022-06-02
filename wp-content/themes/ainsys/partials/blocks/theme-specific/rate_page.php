@@ -46,7 +46,7 @@ if ( ! empty( $block['align'] ) ) {
 				while ( have_rows( 'rate_page' ) ) :
 					the_row();
 					?>
-					<div class="col-md-6 col-lg-3">
+					<div class="col col-12 col-md-6 col-lg-3">
 						<div class="rate_page__item">
                             <div class="rate_page__item__header">
                                 <?php if ( get_sub_field( 'name' ) ) { ?>
@@ -82,7 +82,7 @@ if ( ! empty( $block['align'] ) ) {
 									   <span class="rate_year"><?php the_sub_field( 'payment_for_year' ); ?></span>
 									 <?php } ?>  
 								</div>
-                            <div class="rate_page__statistics">
+                            <div class="rate_page__item__statistics">
                                 <?php if ( get_sub_field( 'users' ) ) { ?>
                                     <div class="rate_page__item__users">
                                         <?php the_sub_field( 'users' ); ?>
@@ -153,53 +153,52 @@ if ( ! empty( $block['align'] ) ) {
 			</div>
 			<div class="table__reset"><?= get_field('table__reset');?></div>
 		</div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th class="col_horizontal" scope="col">
-					<?php if ( have_rows( 'rate_page_table_head' ) ) : ?>
-							<?php
-							$i = 1;
-							while ( have_rows( 'rate_page_table_head' ) ) :
-								the_row()
-								?>
-								<th class="col_horizontal item-<?php echo $i; ?> scope="col">
-								    <div class="col_content">
-										<div class="col_head">
-										<?php if ( get_sub_field( 'rate_page_name' ) ) { ?>
-											<?php
-											$name_bg = get_sub_field( 'rate_page_name_background' ) ? get_sub_field( 'rate_page_name_background' ) : 'light';
-											?>
-											<div class="rate_page__item__name"><?php the_sub_field( 'rate_page_name' ); ?></div>
-										<?php } ?>
-											<div class="rate_delete rate_delete_first"></div>
-										</div>
-										<?php if ( get_sub_field( 'rate_page_price' ) ) { ?>
-											<div class="rate_page__item__price">
-												<?php the_sub_field( 'rate_page_price' ); ?>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="col_horizontal" scope="col">
+						<?php if ( have_rows( 'rate_page_table_head' ) ) : ?>
+								<?php
+								$i = 1;
+								while ( have_rows( 'rate_page_table_head' ) ) :
+									the_row()
+									?>
+									<th class="col_horizontal rate-<?php echo $i; ?> scope="col">
+										<div class="col_content">
+											<div class="col_head">
+											<?php if ( get_sub_field( 'rate_page_name' ) ) { ?>
+												<?php
+												$name_bg = get_sub_field( 'rate_page_name_background' ) ? get_sub_field( 'rate_page_name_background' ) : 'light';
+												?>
+												<div class="rate_page__item__name"><?php the_sub_field( 'rate_page_name' ); ?></div>
+											<?php } ?>
+												<div class="rate_delete rate_delete_first"></div>
 											</div>
-										<?php } ?>
-										<div class="rate_page__statistics">
-											<?php if ( get_sub_field( 'rate_page_users' ) ) { ?>
-												<div class="rate_page__item__users">
-													<?php the_sub_field( 'rate_page_users' ); ?>
+											<?php if ( get_sub_field( 'rate_page_price' ) ) { ?>
+												<div class="rate_page__item__price">
+													<?php the_sub_field( 'rate_page_price' ); ?>
 												</div>
 											<?php } ?>
-											<?php if ( get_sub_field( 'rate_page_operations' ) ) { ?>
-												<div class="rate_page__item__operations">
-												<?php the_sub_field( 'rate_page_operations' ); ?>
-												</div>
-											<?php } ?>
-									</div>
-								</th>	
-							<?php
-							$i++;
-						 endwhile; ?>
-					<?php endif; ?>
-				</tr>
-			</thead>
-
-
+											<div class="rate_page__statistics">
+												<?php if ( get_sub_field( 'rate_page_users' ) ) { ?>
+													<div class="rate_page__item__users">
+														<?php the_sub_field( 'rate_page_users' ); ?>
+													</div>
+												<?php } ?>
+												<?php if ( get_sub_field( 'rate_page_operations' ) ) { ?>
+													<div class="rate_page__item__operations">
+													<?php the_sub_field( 'rate_page_operations' ); ?>
+													</div>
+												<?php } ?>
+										</div>
+									</th>	
+								<?php
+								$i++;
+							endwhile; ?>
+						<?php endif; ?>
+					</tr>
+				</thead>
 
 
 			<?php if ( have_rows( 'rate_page_table' ) ) : ?>
@@ -274,6 +273,7 @@ if ( ! empty( $block['align'] ) ) {
 	    <?php endif; ?>
 
 		</table>
+		</div>	
 
 
 

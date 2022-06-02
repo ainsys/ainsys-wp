@@ -1,0 +1,268 @@
+.table {
+    .table__reset {
+        color: $accent;
+    }
+
+    thead {
+        tr {
+            .col_horizontal {
+                border: none;
+
+                .col_content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    min-width: 175px;
+
+                    .col_head {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+
+                        .rate_page__item__name {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .rate_page__item__price {
+
+                        span {
+                            @include media-breakpoint-down( lg ) {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    .rate_page__item__users {
+                        span {
+                            @include media-breakpoint-down( lg ) {
+                                font-size: 1rem;
+                            } 
+                        }
+                    }
+                    .rate_page__item__operations {
+                        span {
+                            @include media-breakpoint-down( lg ) {
+                                font-size: 1rem;
+                            } 
+                        }
+                    }
+                    .rate_delete {
+                        display: none;
+                        width: 20px;
+                        height: 20px;
+                        margin-left: auto;
+                        background: url(../images/components/rate_delete.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        cursor: pointer;
+                    }
+                    .rate_page__statistics {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .rate_page__item__users {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        tr:nth-child(1) {
+            th {
+                background: #fff;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+        }
+    }
+
+    .tbody_list {
+        .tr_main {
+            .row_main {
+                display: flex;
+                justify-content: space-between;
+                width: 390px;
+                padding: 16px 20px 16px 0 !important;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 145%;
+                color: $pink_dark;
+                border: none;
+                cursor: pointer;
+
+                @include media-breakpoint-down( xl ) {
+                    width: 300px
+                }
+                @include media-breakpoint-down( sm ) {
+                    width: 100%;
+                    font-size: 16px;
+                }
+            }
+            .row_main::after {
+                display: block;
+                content: '';
+                position: relative;
+                width: 24px;
+                min-width: 24px;
+                height: 24px;
+                background: url(../images/components/arrow_table.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: rotate(0deg);
+              }
+        }
+        .tr_dop {
+            display: table-row;
+
+            .row_dop {
+                display: flex;
+                justify-content: space-between;
+                width: 390px;
+                padding: 26px 20px 26px 0 !important;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 145%;
+                color: $black_title_color;
+                border: none;
+
+                @include media-breakpoint-down( xl ) {
+                    width: 300px
+                }
+                @include media-breakpoint-down( sm ) {
+                    width: 100%;
+                    padding: 10px 10px 10px 0 !important;
+                    font-size: 12px;
+                }
+
+                .tooltips__item:hover,
+                .tooltips__item:focus {
+                    opacity: 1;
+                }
+              }
+              .row_dop .tooltips__item {
+                display: block;
+                position: relative;
+                width: 24px;
+                min-width: 24px;
+                height: 24px;
+                margin-left: 5px;
+                background: url(../images/components/quest_table.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.5;
+                transition: .3s;
+
+                @include media-breakpoint-down( sm ) {
+                    width: 20px;
+                    min-width: 20px;
+                    height: 20px;
+                }
+              }
+        }
+
+        td {
+            width: 215px;
+            padding: 26px 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 145%;
+            color: $black_title_color;
+            text-align: center;
+            border: none;
+
+            @include media-breakpoint-down( sm ) {
+                padding: 10px 0;
+            }
+        }
+        .table_inf {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            background: url(../images/components/infinity.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .table_plus {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            background: url(../images/components/table_plus.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .table_minus {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            background: url(../images/components/table_minus.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .table_arrow {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            background: url(../images/components/table_arrow.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+    }
+
+    .tbody_list-disabled {
+        .row_main::after {
+            transform: rotate(180deg) !important;
+        }
+        .tr_dop {
+            display: none;
+        }
+    }
+    .tbody_list-1 {
+        .tr_dop {
+            display: none;
+        }
+        .tr_main {
+            .row_main::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .tbody_list-disabled.tbody_list-1 {
+        .tr_dop {
+            display: table-row;
+        }
+        .tr_main {
+            .row_main::after {
+                transform: rotate(0deg) !important;
+            }
+        }
+    }
+    .rate_first, .rate-1, 
+    .rate_third, .rate-3 {
+      background-color: $rate_bg !important;
+    }
+    .rate-1, 
+    .rate-3 {
+        border-radius: 16px 16px 0 0;
+    }
+    .span_t_active {
+        font-weight: 700;
+        color: $accent;
+    }
+
+
+}
+.rate-disabled {
+    display: none;
+}
+.table-responsive {
+    height: 100vh;
+    overflow: scroll;
+}
