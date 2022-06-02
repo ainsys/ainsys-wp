@@ -13,7 +13,6 @@ get_header('clear');
 $user = wp_get_current_user();
 $user_id = $user->ID;
 //$user_role = $user->roles[0];
-$form_rand_id = $user_id.rand(0,100000);
 
 /*if ( in_array( 'author', (array) $user->roles ) ) {
     //The user has the "author" role
@@ -44,13 +43,9 @@ $form_rand_id = $user_id.rand(0,100000);
             <h2 class="auth__title"><?php the_title(); ?></h2>
             <?php wc_print_notices(); ?>
             <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
-            <script>
 
-            </script>
             <div class="woocommerce">
-                <?php echo do_shortcode('[contact-form-7 id="9741" title="Форма  - регистрация шаг 2" html_id="cf7_woo_reg" html_class=" woocommerce-form woocommerce-form-register register" user_id = "'.$user_id.'" form_id ="'.$form_rand_id.'"]'); ?>
-                
-                <form method="post"  id="default_woo_form" class="woocommerce-form woocommerce-form-register register " style="display: none">
+                <form method="post" class="woocommerce-form woocommerce-form-register register ">
 
 
 
@@ -59,7 +54,7 @@ $form_rand_id = $user_id.rand(0,100000);
 
 
                 $field_role = [
-                    'type'         => 'hidden',
+                    'type'         => 'select',
                     'options' => array(
                         'founder' => __( 'Founder / Executive Director','ainsys' ),
                         'freelancer' => __( 'Freelancer / Consultant' ,'ainsys'),
@@ -74,7 +69,7 @@ $form_rand_id = $user_id.rand(0,100000);
                     'class'        => array( 'form-row-wide' ),
                 ];
                 $field_size = [
-                    'type'         => 'hidden',
+                    'type'         => 'select',
                     'options' => array(
                         '1' => __( 'Only me' ,'ainsys'),
                         '2-50' => __( '2-50' ),
@@ -88,7 +83,7 @@ $form_rand_id = $user_id.rand(0,100000);
                     'class'        => array( 'form-row-wide' ),
                 ];
                 $field_industry = [
-                    'type'         => 'hidden',
+                    'type'         => 'select',
                     'options' => array(
                         'ecommerce' => __( 'Electronic commerce' ,'ainsys'),
                         'saas' => __( 'Saas' ,'ainsys'),
@@ -103,7 +98,7 @@ $form_rand_id = $user_id.rand(0,100000);
                     'class'        => array( 'form-row-wide' ),
                 ];
                 $field_experience = [
-                    'type'         => 'hidden',
+                    'type'         => 'select',
                     'options' => array(
                         'no-experience' => __( 'No experience with automation' ,'ainsys'),
                         'other-platforms' => __( 'I have used other integration platforms' ,'ainsys'),
@@ -143,6 +138,13 @@ $form_rand_id = $user_id.rand(0,100000);
     </section>
 
  <?php
+
+/**
+ *
+ *
+ * @package ainsys
+ */
+
 
 
 function ainsys_save_usermeta($user_id)  {
