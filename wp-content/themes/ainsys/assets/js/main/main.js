@@ -1075,6 +1075,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+})(jQuery);
+"use strict";
+
+(function ($) {
+  "use strict";
+
+  if (window['objectFitImages']) {
+    $(document).ready(function () {
+      window.objectFitImages(null, {
+        watchMQ: true
+      });
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1217,25 +1236,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  document.body.classList.remove('no-js');
-  document.body.classList.add('js');
-})(jQuery);
-"use strict";
-
-(function ($) {
-  "use strict";
-
-  if (window['objectFitImages']) {
-    $(document).ready(function () {
-      window.objectFitImages(null, {
-        watchMQ: true
-      });
-    });
-  }
-})(jQuery);
-"use strict";
-
-(function ($) {
   if ($('.accordion__list').length > 0) {
     $('.accordion__item__title').on('click', function () {
       $(this).parent().toggleClass('accordion-open');
@@ -1342,6 +1342,42 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(window).resize(function () {
       fixBottomPadding();
       pagenavScroll();
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
+  //contacf form reg
+  var wooForm = document.getElementById('cf7_woo_reg');
+  var wooFormBtn = $(wooForm).find('.wpcf7-submit');
+  var defaultWooForm = document.getElementById('default_woo_form');
+
+  if (typeof wooForm != 'undefined' && wooForm != null) {
+    var billingClientRole = $("#billing_client_role");
+    var billingClientSize = $("#billing_client_size");
+    var billingClientIndustry = $("#billing_client_industry");
+    var billingClientExperience = $("#billing_client_experience");
+    $("#cf_billing_client_role").on('change', function (e) {
+      $(billingClientRole).val($(this).val());
+      console.log($(billingClientRole).val());
+    });
+    $("#cf_billing_client_size").on('change', function (e) {
+      $(billingClientSize).val($(this).val());
+    });
+    $("#cf_billing_client_industry").on('change', function (e) {
+      $(billingClientIndustry).val($(this).val());
+    });
+    $("#cf_billing_client_experience").on('change', function (e) {
+      $(billingClientExperience).val($(this).val());
+    });
+    $(wooFormBtn).on('click', function (e) {
+      //e.preventDefault()
+      if (billingClientRole.val() != '' && billingClientSize.val() != '' && billingClientIndustry.val() != '' && billingClientExperience.val() !== '') {
+        console.log(billingClientRole.val()); //alert ('test')
+
+        $(defaultWooForm).find('button').click(); //$(wooForm).submit()
+      }
     });
   }
 })(jQuery);
