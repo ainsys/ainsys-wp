@@ -10,17 +10,11 @@ if ( is_user_logged_in() ) {
 }
 
 get_header('clear');
-
-
-
 //global $woocommerce;
 /*$countries_obj   = new WC_Countries();
 $countries   = $countries_obj->__get('countries');*/
 $handle = 'wc-country-select';
-wp_enqueue_script ('select2');
-wp_enqueue_style ('select2');
-wp_enqueue_script($handle, get_site_url().'/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js', array('jquery'), true);
-
+//wp_enqueue_script($handle, get_site_url().'/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js', array('jquery'), true);
 ?>
     <section class="registration">
         <div class="registration__form js-auth-tab auth">
@@ -49,20 +43,16 @@ wp_enqueue_script($handle, get_site_url().'/wp-content/plugins/woocommerce/asset
                     </p>
 
                         <?php
-                        //wp_enqueue_script('wc-country-select');
                         $field = [
                             'type' => 'country',
-                            'label' => __('Country'),
+                            'label' => 'Country',
                             'required' => 1,
-                            'clear' => true,
-                            'class' => ['address-field','chzn-drop']
+                            'class' => ['address-field']
                         ];
                         woocommerce_form_field( 'billing_country', $field, '' );
 
-
-
                         ?>
-                    <p class="form-row form-row-wide phone_billing_wrapper">
+                    <p class="form-row form-row-wide">
                         <label for="reg_billing_phone"><?php _e( 'Phone', 'woocommerce' ); ?> <span class="required">*</span></label>
                         <input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
                     </p>
@@ -163,11 +153,7 @@ function wooc_save_extra_register_fields( $customer_id ) {
         }
     }
 }
-?>
-    <script>
-        jQuery(document).ready(function($) {
-            $('#billing_country').select2();
-        });
-    </script>
-<?php
+
+
+
 get_footer('clear');
