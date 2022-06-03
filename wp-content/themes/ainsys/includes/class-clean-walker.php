@@ -126,7 +126,7 @@ class Clean_Walker extends Walker_Nav_Menu {
 		$class_names = str_replace( 'menu-item', 'menu__item', $class_names );
 		$class_names = str_replace( 'menu-item-has-children', 'menu__item--has-children', $class_names );
 
-		if(user_can())
+		
 
 		$output .= $n . $indent . '<li' . $class_names . '>';
 
