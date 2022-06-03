@@ -47,9 +47,12 @@ function ainsys_after_setup_theme() {
 
 	register_nav_menus(
 		array(
-			'primary'   => 'Header Menu',
-			'secondary' => 'Footer Menu',
-		)
+			'en'   => 'Header Menu-en',
+            'ru'   => 'Header Menu-ru',
+            'es'   => 'Header Menu-es',
+            'ua'   => 'Header Menu-ua',
+            'secondary' => 'Footer Menu',
+            )
 	);
 
 	add_editor_style(
