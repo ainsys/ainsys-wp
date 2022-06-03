@@ -126,7 +126,7 @@
 										<?php
 										wp_nav_menu(
 											array(
-												'theme_location' => 'primary',
+												'theme_location' => 'en',
 												'container' => '',
 												'menu_class' => '',
 												'menu_id' => '',
@@ -210,7 +210,7 @@
 											<?php
 											wp_nav_menu(
 												array(
-													'theme_location' => 'primary',
+													'theme_location' => 'en',
 													'container'      => '',
 													'menu_class'     => '',
 													'menu_id'        => '',
