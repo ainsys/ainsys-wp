@@ -1284,6 +1284,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $('.coockie_close').click(function () {
+    $('#coockie').addClass('coockie-disabled');
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.numbers__phone-disabled').click(function () {
+    $(this).removeClass('numbers__phone-disabled').find('.soc_href').removeClass('disabled');
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
   if ($('.wp-block-gallery').length > 0) {
     var i = 0;
     $('.wp-block-gallery').each(function () {
@@ -1344,6 +1358,307 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       pagenavScroll();
     });
   }
+})(jQuery);
+"use strict";
+
+(function ($) {
+  //contacf form reg
+  var wooForm = document.getElementById('cf7_woo_reg');
+  var wooFormBtn = $(wooForm).find('.wpcf7-submit');
+  var defaultWooForm = document.getElementById('default_woo_form');
+
+  if (typeof wooForm != 'undefined' && wooForm != null) {
+    var billingClientRole = $("#billing_client_role");
+    var billingClientSize = $("#billing_client_size");
+    var billingClientIndustry = $("#billing_client_industry");
+    var billingClientExperience = $("#billing_client_experience");
+    $("#cf_billing_client_role").on('change', function (e) {
+      $(billingClientRole).val($(this).val());
+      console.log($(billingClientRole).val());
+    });
+    $("#cf_billing_client_size").on('change', function (e) {
+      $(billingClientSize).val($(this).val());
+    });
+    $("#cf_billing_client_industry").on('change', function (e) {
+      $(billingClientIndustry).val($(this).val());
+    });
+    $("#cf_billing_client_experience").on('change', function (e) {
+      $(billingClientExperience).val($(this).val());
+    });
+    $(wooFormBtn).on('click', function (e) {
+      //e.preventDefault()
+      if (billingClientRole.val() != '' && billingClientSize.val() != '' && billingClientIndustry.val() != '' && billingClientExperience.val() !== '') {
+        console.log(billingClientRole.val()); //alert ('test')
+
+        $(defaultWooForm).find('button').click(); //$(wooForm).submit()
+      }
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $('#preloader').addClass('preloader-noactive');
+    }, 1000);
+  });
+})(jQuery);
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+(function ($) {
+  var final_val_initial = parseInt($('#final_val').text());
+  var users_val_number = parseInt($('#users_val').text());
+  var operations_val_number = parseInt($('#operations_val').text());
+  var final_val_initial2 = parseInt($('#final_val_two').text());
+  var users_val_number2 = parseInt($('#users_val2').text());
+  var operations_val_number2 = parseInt($('#operations_val2').text());
+  var var_first = parseInt($('.var_first').text());
+  var var_second = parseInt($('.var_second').text());
+  $('#range1').on('change', function () {
+    var range_users_val = +$(this).val();
+    var range_operations_val = +$('#range2').val();
+
+    if (range_users_val >= users_val_number) {
+      var users_val_number_new = range_users_val;
+      $('#users_val').text(users_val_number_new);
+      $('#user_val').text(users_val_number_new);
+      var operations_val_range_din = +$('#range2').val();
+      var final_val_new = final_val_initial + (range_users_val - users_val_number) * var_first + operations_val_range_din / 1000 * var_first;
+      $('#final_val').text(final_val_new);
+      $('#rate_val').text(final_val_new);
+    }
+
+    if (range_users_val < users_val_number) {
+      $('#users_val').text(users_val_number);
+      $('#user_val').text(users_val_number);
+
+      var _operations_val_range_din = +$('#range2').val();
+
+      var _final_val_new = final_val_initial + _operations_val_range_din / 1000 * var_first;
+
+      $('#final_val').text(_final_val_new);
+      $('#rate_val').text(_final_val_new);
+    }
+
+    if (range_users_val >= users_val_number2) {
+      var users_val_number_new2 = range_users_val;
+      $('#users_val2').text(users_val_number_new2);
+      $('#user_val2').text(users_val_number_new2);
+
+      var _operations_val_range_din2 = +$('#range2').val();
+
+      var final_val_new2 = final_val_initial2 + (range_users_val - users_val_number2) * var_second + _operations_val_range_din2 / 1000 * var_second;
+      $('#final_val_two').text(final_val_new2);
+      $('#rate_val2').text(final_val_new2);
+    }
+
+    if (range_users_val < users_val_number2) {
+      $('#users_val2').text(users_val_number2);
+      $('#user_val2').text(users_val_number2);
+
+      var _operations_val_range_din3 = +$('#range2').val();
+
+      var _final_val_new2 = final_val_initial2 + _operations_val_range_din3 / 1000 * var_second;
+
+      $('#final_val_two').text(_final_val_new2);
+      $('#rate_val2').text(_final_val_new2);
+    }
+  });
+  $('#range2').on('change', function () {
+    var range_operations_val = +$(this).val();
+    var range_users_val = +$('#range1').val();
+
+    if (range_operations_val >= operations_val_number) {
+      var operations_val_number_new = range_operations_val;
+      $('#operations_val').text(operations_val_number_new);
+      $('#operation_val').text(operations_val_number_new);
+      var users_val_range_din = +$('#range1').val();
+      var final_val_new_two = final_val_initial + (range_operations_val - operations_val_number) / 1000 * var_first + users_val_range_din * var_first;
+      $('#final_val').text(final_val_new_two);
+      $('#rate_val').text(final_val_new_two);
+    }
+
+    if (range_operations_val < operations_val_number) {
+      var _operations_val_number_new = operations_val_number;
+      $('#operations_val').text(_operations_val_number_new);
+      $('#operation_val').text(_operations_val_number_new);
+
+      var _users_val_range_din = +$('#range1').val();
+
+      var users_val_low = _users_val_range_din * var_first;
+
+      var _final_val_new_two = final_val_initial + users_val_low;
+
+      $('#final_val').text(_final_val_new_two);
+      $('#rate_val').text(_final_val_new_two);
+    }
+
+    if (range_operations_val >= operations_val_number2) {
+      var operations_val_number_new2 = range_operations_val;
+      $('#operations_val2').text(operations_val_number_new2);
+      $('#operation_val2').text(operations_val_number_new2);
+
+      var _users_val_range_din2 = +$('#range1').val();
+
+      var final_val_new_two2 = final_val_initial2 + (range_operations_val - operations_val_number2) / 1000 * var_second + _users_val_range_din2 * var_second;
+      $('#final_val_two').text(final_val_new_two2);
+      $('#rate_val2').text(final_val_new_two2);
+    }
+
+    if (range_operations_val < operations_val_number2) {
+      var _operations_val_number_new2 = operations_val_number2;
+      $('#operations_val2').text(_operations_val_number_new2);
+      $('#operation_val2').text(_operations_val_number_new2);
+
+      var _users_val_range_din3 = +$('#range1').val();
+
+      var users_val_low2 = _users_val_range_din3 * var_second;
+
+      var _final_val_new_two2 = final_val_initial2 + users_val_low2;
+
+      $('#final_val_two').text(_final_val_new_two2);
+      $('#rate_val2').text(_final_val_new_two2);
+    }
+  });
+  $('.form-check-input-rate_page').on('click', function () {
+    $('.rate_page__list').toggleClass('active');
+    var final_val_din = parseInt($('#final_val').text());
+    var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din_two);
+
+    if ($('.rate_page__list').hasClass('active')) {
+      var final_val_sale = Math.floor(final_val_din / 0.85);
+      $('#final_val').text(final_val_sale);
+      $('#rate_val').text(final_val_sale);
+      var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      $('#final_val_two').text(final_val_sale_two);
+      $('#rate_val2').text(final_val_sale_two);
+    } else {
+      var _final_val_sale = Math.floor(final_val_din * 0.85);
+
+      $('#final_val').text(_final_val_sale);
+      $('#rate_val').text(_final_val_sale);
+
+      var _final_val_sale_two = Math.floor(final_val_din_two * 0.85);
+
+      console.log(_final_val_sale_two);
+      $('#final_val_two').text(_final_val_sale_two);
+      $('#rate_val2').text(_final_val_sale_two);
+    }
+  }); // Range script
+
+  window.addEventListener("DOMContentLoaded", function () {
+    var range1 = new rSlider({
+      element: "#range1",
+      tick: 50
+    }),
+        range2 = new rSlider({
+      element: "#range2",
+      tick: 50000
+    });
+  });
+
+  var rSlider = /*#__PURE__*/function () {
+    function rSlider(args) {
+      var _this = this;
+
+      _classCallCheck(this, rSlider);
+
+      this.el = document.querySelector(args.element);
+      this.min = this.el ? +this.el.min : 0;
+      this.max = this.el ? +this.el.max : 100;
+      this.step = this.el ? +this.el.step : 1;
+      this.tick = args.tick || this.step;
+
+      if (this.el) {
+        this.addTicks();
+        this.dataRange = document.createElement("div");
+        this.dataRange.className = "data-range";
+        this.el.parentElement.appendChild(this.dataRange, this.el);
+        this.dataValue = document.createElement("div");
+        this.dataValue.className = "data-value";
+        this.el.parentElement.appendChild(this.dataValue, this.el);
+        this.updatePos();
+        this.el.addEventListener("input", function () {
+          _this.updatePos();
+        });
+      }
+    }
+
+    _createClass(rSlider, [{
+      key: "addTicks",
+      value: function addTicks() {
+        if (this.el) {
+          var wrap = document.createElement("div");
+          wrap.className = "range";
+          this.el.parentElement.insertBefore(wrap, this.el);
+          wrap.appendChild(this.el);
+          var ticks = document.createElement("div");
+          ticks.className = "range-ticks";
+          wrap.appendChild(ticks);
+
+          for (var t = this.min; t <= this.max; t += this.tick) {
+            var tick = document.createElement("span");
+            tick.className = "range-tick";
+            ticks.appendChild(tick);
+            var tickText = document.createElement("span");
+            tickText.className = "range-tick-text";
+            tick.appendChild(tickText);
+            tickText.textContent = t;
+          }
+        }
+      }
+    }, {
+      key: "getRangePercent",
+      value: function getRangePercent() {
+        var max = this.el.max,
+            min = this.el.min,
+            relativeValue = this.el.value - min,
+            ticks = max - min,
+            percent = relativeValue / ticks;
+        return percent;
+      }
+    }, {
+      key: "updatePos",
+      value: function updatePos() {
+        var percent = this.getRangePercent(),
+            left = percent * 100,
+            emAdjust = percent * 3;
+        this.dataRange.style.left = "calc(".concat(left, "% - ").concat(emAdjust, "em)");
+        this.dataValue.innerHTML = this.el.value;
+        this.dataValue.style.left = "calc(".concat(left, "% - ").concat(emAdjust, "em)");
+      }
+    }]);
+
+    return rSlider;
+  }();
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.tbody_list').click(function () {
+    $('.tbody_list').addClass('tbody_list-disabled');
+    $('.tbody_list-1').removeClass('tbody_list-disabled');
+    $(this).toggleClass('tbody_list-disabled');
+  });
+  $('.rate_delete_first').click(function () {
+    $('.rate_first').addClass('rate-disabled');
+  });
+  $('.rate_delete_second').click(function () {
+    $('.rate_second').addClass('rate-disabled');
+  });
+  $('.rate_delete_third').click(function () {
+    $('.rate_third').addClass('rate-disabled');
+  });
+  $('.rate_delete_fourth').click(function () {
+    $('.rate_fourth').addClass('rate-disabled');
+  });
 })(jQuery);
 "use strict";
 
