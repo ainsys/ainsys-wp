@@ -100,3 +100,113 @@ array(
 
 )
 );
+
+
+// ЗАКРЫТЫЕ СТРАНИЦЫ РОЛЕЙ
+
+//Если ты не Авторизирован
+if(!is_user_logged_in()){
+	add_action( 'template_redirect', function() {
+		if(is_page('support-clients')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('partners-integrators')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('developers-2')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('ainsys-rest-api')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('connector-sdk')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('support-dev')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('partners-qa')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('support-partners')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('new-partner')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('%d1%81ustomer-orders')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}elseif(is_page('%d1%81ustomer-orders')){
+			wp_redirect('https://ainsys.com/auth/', 301);
+			exit;
+		}
+	} );
+}
+//Если ты Пользователь
+if(current_user_can('bbp_participant')){
+	add_action( 'template_redirect', function() {
+		if( is_page('%d1%81ustomer-orders') ){
+			wp_redirect( 'https://ainsys.com/only-partners', 301 );
+			exit;
+		}elseif(is_page('support-partners')){
+			wp_redirect('https://ainsys.com/support-clients', 301);
+			exit;
+		}elseif(is_page('support-dev')){
+			wp_redirect('https://ainsys.com/support-dev', 301);
+			exit;
+		}elseif(is_page('partners-qa')){
+			wp_redirect('https://ainsys.com/only-partners', 301);
+			exit;
+		}elseif(is_page('connector-sdk')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}elseif(is_page('ainsys-rest-api')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}elseif(is_page('sdk-qa')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}
+	} );
+}
+//Если ты Разработчик
+if(current_user_can('developer')){
+	add_action( 'template_redirect', function() {
+		if( is_page('partners-qa') ){
+			wp_redirect( 'https://ainsys.com/only-partners', 301 );
+			exit;
+		}elseif(is_page('support-partners')){
+			wp_redirect('https://ainsys.com/only-partners', 301);
+			exit;
+		}elseif(is_page('support-clients')){
+			wp_redirect('https://ainsys.com/support-dev', 301);
+			exit;
+		}elseif(is_page('%d1%81ustomer-orders')){
+			wp_redirect('https://ainsys.com/only-partners', 301);
+			exit;
+		}
+	} );
+}
+
+//Если ты Партнер
+if(current_user_can('partner')){
+	add_action( 'template_redirect', function() {
+		if( is_page('support-clients') ){
+			wp_redirect( 'https://ainsys.com/support-partners', 301 );
+			exit;
+		}elseif(is_page('sdk-qa')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}elseif(is_page('ainsys-rest-api')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}elseif(is_page('connector-sdk')){
+			wp_redirect('https://ainsys.com/only-dev', 301);
+			exit;
+		}elseif(is_page('support-dev')){
+			wp_redirect('https://ainsys.com/support-partners', 301);
+			exit;
+		}
+	} );
+}
