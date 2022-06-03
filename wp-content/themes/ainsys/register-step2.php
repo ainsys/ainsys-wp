@@ -5,19 +5,13 @@
  * @package ainsys
  */
 
-/*if ( is_user_logged_in() ) {
-	wp_redirect( '/my-account/' );
-}*/
-//acf_form_head();
+
 get_header('clear');
 $user = wp_get_current_user();
 $user_id = $user->ID;
 //$user_role = $user->roles[0];
 $form_rand_id = $user_id.rand(0,100000);
 
-/*if ( in_array( 'author', (array) $user->roles ) ) {
-    //The user has the "author" role
-}*/
 
 ?>
     <section class="registration registration--step2">
@@ -46,7 +40,7 @@ $form_rand_id = $user_id.rand(0,100000);
             <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
             <div class="woocommerce">
-                <?php echo do_shortcode('[contact-form-7 id="9741" title="Форма  - регистрация шаг 2" html_id="cf7_woo_reg" html_class=" woocommerce-form woocommerce-form-register register" user_id = "'.$user_id.'" form_id ="'.$form_rand_id.'"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="'.get_field('form_id').'" title="Форма  - регистрация шаг 2" html_id="cf7_woo_reg" html_class=" woocommerce-form woocommerce-form-register register" user_id = "'.$user_id.'" form_id ="'.$form_rand_id.'"]'); ?>
                 
                 <form method="post"  id="default_woo_form" class="woocommerce-form woocommerce-form-register register " style="display: none">
 
