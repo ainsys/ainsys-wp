@@ -91,6 +91,7 @@
 										<li>
 											<a href="/ua-ru/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" class="lang__img" alt="">Русский</a>
 										</li>
+                                        
 										<li>
 											<a href="/en-us/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" class="lang__img" alt="">English</a>
 										</li>
@@ -164,7 +165,7 @@
 									<a href="#" class="header__lang__current">RU</a>
 
 									<ul class="header__lang__submenu">
-										<li>
+										<!--<li>
 											<a href="/ua/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Українська</a>
 										</li>
 										<li>
@@ -173,6 +174,7 @@
 										<li>
 											<a href="/ru-ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
 										</li>
+                                        -->
 										<li>
 											<a href="/en-us/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
 										</li>
