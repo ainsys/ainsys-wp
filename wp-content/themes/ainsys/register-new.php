@@ -10,10 +10,17 @@ if ( is_user_logged_in() ) {
 }
 
 get_header('clear');
-//global $woocommerce;
-/*$countries_obj   = new WC_Countries();
-$countries   = $countries_obj->__get('countries');*/
-$handle = 'wc-country-select';
+
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $prev_page =  $_SERVER['HTTP_REFERER'];
+}
+if (isset($prev_page)) {
+    $backlink = $prev_page;
+} else {
+    $backlink = get_home_url();
+}
+//var_dump($prev_page);
+//$handle = 'wc-country-select';
 //wp_enqueue_script($handle, get_site_url().'/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js', array('jquery'), true);
 ?>
     <section class="registration">
@@ -24,7 +31,7 @@ $handle = 'wc-country-select';
 
             <div class="woocommerce">
                 <form method="post" class="woocommerce-form woocommerce-form-register register ">
-                    <a href="#" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg"><?php _e('Back','ainsys'); ?></a>
+                    <a href="<?= $backlink; ?>" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg"><?php _e('Back','ainsys'); ?></a>
                     <h2 class="registration__title"><?php the_title(); ?></h2>
                     <?php do_action( 'woocommerce_register_form_start' ); ?>
                     <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>

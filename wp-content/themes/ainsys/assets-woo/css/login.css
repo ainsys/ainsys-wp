@@ -52,7 +52,7 @@
 }
 
 
-.auth .form-row-first, .auth .form-row-last, .auth .form-row-first, .auth .form-row-last {
+.auth .form-row-first, .auth .form-row-last, .woocommerce-lost-password .form-row-first, .woocommerce-lost-password .form-row-last {
 	width: 100% !important
 }
 
@@ -68,7 +68,7 @@
 	align-items: center;
 }
 
-.auth .woocommerce-form-row {
+.auth .woocommerce-form-row, .woocommerce-lost-password .woocommerce-form-row {
 	margin: 0 !important;
 }
 
@@ -92,14 +92,48 @@
 
 }
 
-.auth form {
+.auth form, .woocommerce-lost-password form {
 	height: 100% !important;
 	padding: 0 !important;
 	margin: 0 !important;
 	color: #000 !important;
 }
-
-.auth form.woocommerce-ResetPassword.lost_reset_password {
+.woocommerce-lost-password form,.woocommerce-lost-password .custom_lost_password__link-send p {
+	max-width: calc(100% - 30px);
+	width: 360px;
+	height: calc(100vh)!important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.woocommerce-lost-password form:before {
+	content: "";
+	display: block;
+	width: 56px;
+	height: 56px;
+	background-image: url(../../assets/images/components/icon-lost-pass.svg);
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 24px;
+}
+.woocommerce-lost-password .custom_lost_password__link-send p:before {
+	content: "";
+	display: block;
+	width: 56px;
+	height: 56px;
+	background-image: url(../../assets/images/components/icon-lost-email.svg);
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 24px;
+}
+.woocommerce-lost-password header, .woocommerce-lost-password footer {
+	display: none;
+}
+.auth form.woocommerce-ResetPassword.lost_reset_password, .woocommerce-lost-password form.woocommerce-ResetPassword.lost_reset_password {
 	max-width: 767px !important;
 	margin: 0 auto !important;
 }
@@ -115,7 +149,7 @@
 	width: 48% !important;
 }
 
-.auth form label {
+.auth form label, .woocommerce-lost-password  form label{
 	font-size: 14px !important;
 	line-height: 20px !important;
 	color: #000 !important;
@@ -145,7 +179,7 @@
 	color: #790E8B;
 }
 
-.auth form input:not([type="checkbox"]), .auth form select, .form-reg form input:not([type="checkbox"]), .form-reg form select {
+.auth form input:not([type="checkbox"]), .auth form select, .form-reg form input:not([type="checkbox"]), .form-reg form select, .woocommerce-lost-password form input:not([type="checkbox"]) {
 	background: #FAFAFA !important;
 	padding: 11px 20px !important;
 	cursor: pointer !important;
@@ -183,7 +217,7 @@
 	margin-bottom: 24px;
 }
 
-.auth form input[type="submit"], .auth form button, .form-reg form input[type="submit"] {
+.auth form input[type="submit"], .auth form button, .form-reg form input[type="submit"], .woocommerce-lost-password form button{
 	padding: 16px !important;
 	background-color: #790E8B !important;
 	font-size: 14px !important;
