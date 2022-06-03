@@ -74,3 +74,29 @@ function remove_admin_menu() {
 }
 add_action( 'admin_menu', 'remove_admin_menu', 999 );
 
+$result = add_role( 'partner', __(
+'Partner' ),
+array(
+
+    'read' => true, //просмотр сайта 
+
+)
+);
+
+$result = add_role( 'developer', __(
+'Developer' ),
+array(
+
+    'read' => true, //просмотр сайта 
+
+)
+);
+
+$result = add_role( 'client', __(
+'Client' ),
+array(
+
+    'read' => true, //просмотр сайта 
+
+)
+);
