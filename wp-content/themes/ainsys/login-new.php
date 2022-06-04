@@ -8,6 +8,14 @@
 if ( is_user_logged_in() ) {
     wp_redirect( '/my-account/' );
 }
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $prev_page =  $_SERVER['HTTP_REFERER'];
+}
+if (isset($prev_page)) {
+    $backlink = $prev_page;
+} else {
+    $backlink = get_home_url();
+}
 
 get_header('clear');
 
@@ -20,7 +28,7 @@ get_header('clear');
 
             <div class="woocommerce">
                 <form method="post" class="woocommerce-form-register">
-                    <a href="#" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg" alt="back"><?php _e('Back','ainsys'); ?></a>
+                    <a href="<?= $backlink; ?>" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg" alt="back"><?php _e('Back','ainsys'); ?></a>
                     <div class="registration__image-wrapper">
                         <img class="registration__login-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/login-image.png" alt = "login image">
                     </div>
