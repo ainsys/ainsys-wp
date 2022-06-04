@@ -101,6 +101,10 @@ class Clean_Walker extends Walker_Nav_Menu {
 			$classes[] = 'current';
 		}
 
+
+
+
+
 		$has_children = ( false !== array_search( 'menu-item-has-children', $classes, true ) || false !== array_search( 'menu__item--has-children', $classes, true ) );
 
 		// remove unnecessary classes.
@@ -108,12 +112,15 @@ class Clean_Walker extends Walker_Nav_Menu {
 			$classes,
 			function( $class_name ) {
 
-				if ( 'menu__item' === $class_name || 'disabled' === $class_name || 'current' === $class_name || 'menu__item--has-children' === $class_name ) {
+
+
+				if ( 'menu__item' === $class_name || 'disabled' === $class_name || 'customer' === $class_name || 'administrator' === $class_name || 'client'===$class_name || 'current' === $class_name || 'menu__item--has-children' === $class_name ) {
 					return true;
 				} else {
 
 					return false;
 				}
+
 
 			}
 		);

@@ -75,7 +75,7 @@ if (isset($prev_page)) {
                 </form>
             </div>
 
-            <?php the_content(); ?>
+
 
             <nav class="auth-nav">
                 <span>Уже есть аккаунт?</span><a href="/auth/">Авторизироваться</a>
@@ -92,56 +92,7 @@ if (isset($prev_page)) {
                 </div>
 
             </div>
-            <div  class="slick-slider__wrapper slider">
-                <div class="slick-slider-register">
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3 class="slick-slider__item__title">Клиентам</h3>
-                        <p >После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3  class="slick-slider__item__title">Партнерам</h3>
-                        <p>После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3  class="slick-slider__item__title">Сотрудникам</h3>
-                        <p>После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="slick-controls">
-                    <div class="slick-prev"></div>
-                    <div class="slick-next"></div>
-                </div>
-            </div>
+            <?php the_content(); ?>
         </div>
     </section>
 
