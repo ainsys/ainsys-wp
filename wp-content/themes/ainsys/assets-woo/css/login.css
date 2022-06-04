@@ -189,6 +189,9 @@
 	border: 1px solid #C4C5C4 !important;
 	width: 100% !important
 }
+.woocommerce-lost-password form input:not([type="checkbox"]) {
+	margin-bottom: 24px!important;
+}
 
 .wppb-user-forms ul li {
 	padding: 0 !important;
