@@ -78,20 +78,23 @@ if (isset($prev_page)) {
 
 
             <nav class="auth-nav">
-                <span>Уже есть аккаунт?</span><a href="/auth/">Авторизироваться</a>
+                <span><?php esc_html_e('Already have an account?','ainsys'); ?></span><a href="/auth/"><?php esc_html_e('Log in','ainsys'); ?></a>
             </nav>
         </div>
         <div class="registration__content">
-            <div class="registration__notice">
-                <div class="registration__notice__icon">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-alert.svg">
-                </div>
-                <div class="registration__notice__content">
-                    <p class="registration__notice__title">Сервис находится в Beta-тестировании</p>
-                    <p>Обращаем ваше внимание, что система находится на этапе Бета-тестирования. Получить доступ к продукту вы сможете, подав заявку на участие в личном кабинете после регистрации. </p>
-                </div>
+            <?php if(get_field('beta-version_notice_title','option') || get_field('beta-version_notice_text','option')): ?>
+                <div class="registration__notice">
+                    <div class="registration__notice__icon">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-alert.svg">
+                    </div>
+                    <div class="registration__notice__content">
+                        <p class="registration__notice__title"><?= get_field('beta-version_notice_title','option');?></p>
+                        <p><?= get_field('beta-version_notice_text','option');?></p>
+                    </div>
 
-            </div>
+                </div>
+            <?php endif; ?>
+
             <?php the_content(); ?>
         </div>
     </section>
