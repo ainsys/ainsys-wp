@@ -158,7 +158,7 @@
 									?>
 									<a href="/my-account/" class="header__account"><span class="header__account__shadow"></span><span class="header__account__img"><img src="<?php echo esc_url( $url ); ?>" alt="" /></span></a>
 								<?php } else { ?>
-										<a href="/auth/" class="header__login"><span>Войти</span></a>
+										<a href="/auth/" class="header__login"><span>Acceso</span></a>
 								<?php } ?>
 
 								<div class="header__lang">
