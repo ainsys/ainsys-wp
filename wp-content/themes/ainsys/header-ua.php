@@ -126,7 +126,7 @@
 										<?php
 										wp_nav_menu(
 											array(
-												'theme_location' => 'primary',
+												'theme_location' => 'ua',
 												'container' => '',
 												'menu_class' => '',
 												'menu_id' => '',
@@ -158,7 +158,7 @@
 									?>
 									<a href="/my-account/" class="header__account"><span class="header__account__shadow"></span><span class="header__account__img"><img src="<?php echo esc_url( $url ); ?>" alt="" /></span></a>
 								<?php } else { ?>
-										<a href="/auth/" class="header__login"><span>Войти</span></a>
+										<a href="/auth/" class="header__login"><span>Увійти</span></a>
 								<?php } ?>
 
 								<div class="header__lang">
@@ -210,7 +210,7 @@
 											<?php
 											wp_nav_menu(
 												array(
-													'theme_location' => 'primary',
+													'theme_location' => 'ua',
 													'container'      => '',
 													'menu_class'     => '',
 													'menu_id'        => '',

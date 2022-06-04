@@ -47,9 +47,12 @@ function ainsys_after_setup_theme() {
 
 	register_nav_menus(
 		array(
-			'primary'   => 'Header Menu',
-			'secondary' => 'Footer Menu',
-		)
+			'en'   => 'Header Menu-en',
+            'ru'   => 'Header Menu-ru',
+            'es'   => 'Header Menu-es',
+            'ua'   => 'Header Menu-ua',
+            'secondary' => 'Footer Menu',
+            )
 	);
 
 	add_editor_style(
@@ -210,3 +213,37 @@ if(current_user_can('partner')){
 		}
 	} );
 }
+
+/**
+ * remove disabled class depending on the current user role
+ *
+ * @package ainsys
+ */
+
+add_filter('nav_menu_css_class', 'ainsys_enable_menu_items', 10, 2 );
+
+function ainsys_enable_menu_items($classes) {
+
+    if(current_user_can('customer')) {
+
+        if ( false !== array_search( 'client', $classes, true ) ) {
+
+            $classes = array_filter($classes, static function ($element) {
+
+                return $element !== "disabled";
+
+            });
+        }
+
+    } elseif (current_user_can('administrator') || current_user_can('developer') || current_user_can('partner')) {
+
+        $classes = array_filter($classes, static function ($element) {
+
+            return $element !== "disabled";
+
+        });
+    }
+
+    return $classes;
+}
+

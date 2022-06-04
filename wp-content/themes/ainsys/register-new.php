@@ -10,10 +10,17 @@ if ( is_user_logged_in() ) {
 }
 
 get_header('clear');
-//global $woocommerce;
-/*$countries_obj   = new WC_Countries();
-$countries   = $countries_obj->__get('countries');*/
-$handle = 'wc-country-select';
+
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $prev_page =  $_SERVER['HTTP_REFERER'];
+}
+if (isset($prev_page)) {
+    $backlink = $prev_page;
+} else {
+    $backlink = get_home_url();
+}
+//var_dump($prev_page);
+//$handle = 'wc-country-select';
 //wp_enqueue_script($handle, get_site_url().'/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js', array('jquery'), true);
 ?>
     <section class="registration">
@@ -24,7 +31,7 @@ $handle = 'wc-country-select';
 
             <div class="woocommerce">
                 <form method="post" class="woocommerce-form woocommerce-form-register register ">
-                    <a href="#" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg"><?php _e('Back','ainsys'); ?></a>
+                    <a href="<?= $backlink; ?>" class="registration__backlink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/arrow-back.svg"><?php _e('Back','ainsys'); ?></a>
                     <h2 class="registration__title"><?php the_title(); ?></h2>
                     <?php do_action( 'woocommerce_register_form_start' ); ?>
                     <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
@@ -68,7 +75,7 @@ $handle = 'wc-country-select';
                 </form>
             </div>
 
-            <?php the_content(); ?>
+
 
             <nav class="auth-nav">
                 <span>Уже есть аккаунт?</span><a href="/auth/">Авторизироваться</a>
@@ -85,56 +92,7 @@ $handle = 'wc-country-select';
                 </div>
 
             </div>
-            <div  class="slick-slider__wrapper slider">
-                <div class="slick-slider-register">
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3 class="slick-slider__item__title">Клиентам</h3>
-                        <p >После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3  class="slick-slider__item__title">Партнерам</h3>
-                        <p>После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                    <div class="slick-slider__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-light.svg">
-                        <p class="slick-slider__item__subtitle">
-                            Преимущества регистрации
-                        </p>
-                        <h3  class="slick-slider__item__title">Сотрудникам</h3>
-                        <p>После регистрации вам станут доступны:</p>
-                        <ul>
-                            <li>Доступ к публичной Бета-версии продукта</li>
-                            <li>Возможность подключать коннекторы для оценки времени и стоимости одной интеграции</li>
-                            <li>Доступ к дополнительной документации</li>
-                            <li>Доступ к базе программистов, специализирующихся в создании коннекторов</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="slick-controls">
-                    <div class="slick-prev"></div>
-                    <div class="slick-next"></div>
-                </div>
-            </div>
+            <?php the_content(); ?>
         </div>
     </section>
 
