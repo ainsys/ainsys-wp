@@ -33,7 +33,7 @@ get_header('clear');
                         <img class="registration__login-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/login-image.png" alt = "login image">
                     </div>
                     <h2 class="registration__title"><?php the_title(); ?></h2>
-                    <p class="registration__subtitle"><?php _e('Please enter your details.','ainsys'); ?></p>
+                    <p class="registration__subtitle test"><?php _e('Please enter your details.','ainsys'); ?></p>
                     <p class="form-row form-row-wide">
                         <label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
                         <input type="text" class="input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( $_POST['username'] ) : ''; ?>" /><?php //@codingStandardsIgnoreLine ?>
@@ -53,7 +53,7 @@ get_header('clear');
 
 
             <nav class="auth-nav">
-                <span><?php esc_html_e("Don't have an account?'", 'ainsys');  ?></span><a href="/register/"><?php esc_html_e("Register", 'ainsys');  ?></a>
+                <span><?php _e("Don't have an account?'", 'ainsys');  ?></span><a href="/register/"><?php esc_html_e("Register", 'ainsys');  ?></a>
             </nav>
         </div>
         <div class="registration__content">
