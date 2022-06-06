@@ -23,8 +23,8 @@
         },
         {
             "key": "field_628d0a0c907f0",
-            "label": "Ttitle",
-            "name": "newsletter_title",
+            "label": "Title",
+            "name": "newsletter__title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -118,5 +118,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653475046
+    "modified": 1654077767
 }

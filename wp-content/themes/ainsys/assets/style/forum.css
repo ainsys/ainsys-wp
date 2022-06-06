@@ -494,14 +494,3 @@ body.tag .page-content .post p {
 	transform: translate(0, 0);
 } */
 
-/* temprorary header style */
-.header {
-	transition: .1s all linear;
-}
-.fixed-menu {
-}
-.fixed-menu .btn-primary {
-}
-.fixed-menu .header__logo {
-}
-

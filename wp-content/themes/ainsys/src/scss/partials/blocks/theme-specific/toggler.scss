@@ -72,7 +72,7 @@
 			color: $switch_dis;
 
 			&.active {
-				color: $color_active;
+				color: $accent;
 			}
 		}
 		.form-switch {
@@ -88,7 +88,7 @@
 				cursor: pointer;
 			}
 			.form-check-input:checked {
-				background-color: $color_active;
+				background-color: $accent;
 			}
 		}
 	}
@@ -97,7 +97,7 @@
 		padding: rem( 7 ) 0 0;
 
 		@include media-breakpoint-up( $bp ) {
-			margin: rem( 6 ) 0 0;
+			margin: rem( -3 ) 0 0;
 			padding: 0;
 		}
 
@@ -137,9 +137,15 @@
 				padding: 0 !important;
 			}
 
+			
+
 			img {
 				display: block;
 				height: auto;
+
+				@include media-breakpoint-down( md ) {
+					margin: 0 auto;
+				}
 			}
 		}
 
@@ -148,6 +154,14 @@
 			width: 100%;
 			order: 1;
 			margin: 0 0 rem( 2 );
+
+			p {
+				strong {
+					font-weight: 600;
+					font-size: 36px;
+					line-height: 42px;
+				}
+			}
 
 			@include media-breakpoint-up( $bp ) {
 				flex: 0 0 50%;
@@ -164,6 +178,9 @@
 				li {
 					margin: 0 0 rem( 1.5 );
 					padding: 0;
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 145%;
 
 					&:last-child {
 						margin: 0;
@@ -171,5 +188,55 @@
 				}
 			}
 		}
+	}
+}
+
+#toggler-block_6262e530818b1 {
+	@include media-breakpoint-up( xl ) {
+		height: 835px;
+	}
+	@include media-breakpoint-down( lg ) {
+		height: 780px;
+	}
+	@include media-breakpoint-down( md ) {
+		height: auto;
+	}
+}
+#toggler-block_6262f896818b2 {
+	@include media-breakpoint-up( xl ) {
+		height: 725px;
+	}
+	@include media-breakpoint-down( lg ) {
+		height: 650px;
+	}
+	@include media-breakpoint-down( md ) {
+		height: auto;
+	}
+}
+#toggler-block_6266a69166316 {
+	@include media-breakpoint-up( xl ) {
+		height: 700px;
+	}
+	@include media-breakpoint-down( md ) {
+		height: auto;
+	}
+}
+#toggler-block_6266a7b966317 {
+	@include media-breakpoint-up( xl ) {
+		height: 615px;
+	}
+	@include media-breakpoint-down( md ) {
+		height: auto;
+	}
+}
+  
+.bg-color-dark .toggler__screen__txt {
+	@include media-breakpoint-up( $bp ) {
+		padding-right: 5% !important;
+	}
+}
+.bg-color-white .toggler__screen__txt {
+	@include media-breakpoint-up( $bp ) {
+		padding-left: 5%;
 	}
 }

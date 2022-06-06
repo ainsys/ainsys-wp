@@ -169,6 +169,8 @@
 
 		&.disabled {
 			a {
+				pointer-events: none;
+				cursor: default;
 				opacity: 0.35;
 
 				&:hover,
@@ -220,8 +222,9 @@
 			flex: 1 0 rem( 25 );
 			min-width: rem( 25 );
 			max-height: 0;
+			margin: rem( 1.2 ) 0 0;
 			padding: 0;
-			background: $bg_color;
+			background: $accent-dark;
 			border-radius: 0 0 rem( 1.2 ) rem( 1.2 );
 			transform: translateX( -50% );
 		}

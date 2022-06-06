@@ -33,11 +33,11 @@
 			background: $low_rates;
 			border-radius: rem( 1.6 );
 			text-align: center;
-			color: $color_active;
+			color: $accent;
 
 			&--dark {
 				background: $btn_grad;
-				color: $white_color;
+				color: $white;
 			}
 		}
 
@@ -51,8 +51,8 @@
 			span {
 				position: relative;
 				font-weight: 600;
-				font-size: 38px;
-				line-height: 56px;
+				font-size: rem( 2.8 );
+				line-height: 2;
 				color: $black_title_color;
 			}
 
@@ -99,7 +99,7 @@
 			height: rem( 5 );
 			padding: rem( 1.6 );
 			border-top: 1px solid $border_color;
-			background: $btn_color;
+			background: $color_green;
 			border-radius: 0 0 0.75rem 0.75rem;
 			width: 100%;
 
@@ -128,7 +128,7 @@
 			width: rem( 33 );
 			max-width: 90%;
 			height: 2px;
-			background: $color_active;
+			background: $accent;
 			transform: translate( -50% );
 		}
 	}

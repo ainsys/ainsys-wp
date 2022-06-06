@@ -3,7 +3,7 @@
 	padding: 0;
 
 	&__info {
-		color: $page_color;
+		color: $dark;
 		text-align: center;
 		@include media-breakpoint-up( $bp ) {
 			position: absolute;
@@ -30,7 +30,7 @@
 
 			span {
 				font-size: rem( 4 );
-				color: $color_active;
+				color: $accent;
 			}
 		}
 	}
@@ -56,14 +56,24 @@
 	}
 
 	&__video {
+
+		&__wrapper {
+			max-width: rem( 120 );
+			margin: rem( -1 ) auto 0;
+
+			@include media-breakpoint-up( xl ) {
+				max-width: 100%;
+			}
+		}
 		video {
+			max-width: 100%;
 			width: 100%;
+			margin: 0 auto;
 
 			@include media-breakpoint-up( xl ) {
 				display: block;
 				width: auto;
 				height: calc( 100vh - #{rem( 10.2 )} );
-				margin: 0 auto;
 			}
 		}
 	}
