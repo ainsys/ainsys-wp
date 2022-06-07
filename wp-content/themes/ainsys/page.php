@@ -8,6 +8,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 $lang = get_bloginfo("language");
+//var_dump($lang);
 if($lang = 'ru-RU') {
     get_header();
 } elseif ($lang = 'es_ES') {

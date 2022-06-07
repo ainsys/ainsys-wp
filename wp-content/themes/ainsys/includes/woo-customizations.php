@@ -52,28 +52,28 @@ function woo_change_account_order() {
 
 	if ( ! current_user_can( 'patnerdevelopers' ) && ! current_user_can( 'developer' ) && ! current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'woocommerce' ),
-			'reg-dev'         => __( 'Become a Developer AINSYS', 'woocommerce' ),
-			'reg-part'        => __( 'Become a Partner AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Log Out', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	} elseif ( current_user_can( 'patnerdevelopers' ) || current_user_can( 'developer' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'woocommerce' ),
-			'reg-part'        => __( 'Become a Partner AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Log Out', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	} elseif ( current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'woocommerce' ),
-			'reg-dev'         => __( 'Become a Developer AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Log Out', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	}
 
