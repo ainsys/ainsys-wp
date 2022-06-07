@@ -263,6 +263,46 @@
 				}
 			}
 
+			&.warning {
+				@include media-breakpoint-up( $bp-menu ) {
+					position: relative;
+					padding-right: rem( 3.2 );
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: rem( 2 );
+						width: 12px;
+						height: 16px;
+						margin: -8px 0 0;
+						background: url( ../images/components/warning.svg ) no-repeat center;
+						opacity: 0.35;
+					}
+				}
+			}
+
+			&.beta {
+				@include media-breakpoint-up( $bp-menu ) {
+					position: relative;
+					padding-right: rem( 3.2 );
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: rem( 2 );
+						width: 12px;
+						height: 16px;
+						margin: -8px 0 0;
+						background: url( ../images/components/beta.svg ) no-repeat center;
+						opacity: 0.35;
+					}
+				}
+			}
+
 			a {
 				font-size: rem( 1.4 );
 				color: $dark;
