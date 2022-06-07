@@ -214,6 +214,7 @@
 		transition: all 0.3s;
 
 		@include media-breakpoint-up( $bp-menu ) {
+
 			position: absolute;
 			top: 100%;
 			left: calc( 50% - #{rem( 2.6 )} );
@@ -254,7 +255,7 @@
 						position: absolute;
 						top: 50%;
 						right: rem( 2 );
-						width: 12px;
+						width: 16px;
 						height: 16px;
 						margin: -8px 0 0;
 						background: url( ../images/components/lock.svg ) no-repeat center;
@@ -274,7 +275,7 @@
 						position: absolute;
 						top: 50%;
 						right: rem( 2 );
-						width: 12px;
+						width: 16px;
 						height: 16px;
 						margin: -8px 0 0;
 						background: url( ../images/components/warning.svg ) no-repeat center;
@@ -294,7 +295,7 @@
 						position: absolute;
 						top: 50%;
 						right: rem( 2 );
-						width: 12px;
+						width: 16px;
 						height: 16px;
 						margin: -8px 0 0;
 						background: url( ../images/components/beta.svg) no-repeat center;
@@ -324,6 +325,19 @@
 	}
 
 	> li:hover,
+	.open {
+		.menu__submenu {
+			@include media-breakpoint-up( $bp-menu ) {
+				max-height: rem( 70 );
+			}
+		}
+		.menu__submenu-toggler {
+			@include media-breakpoint-up( $bp-menu ) {
+				// transform: rotateX( 180deg );
+			}
+		}
+	}
+	> .header__account:hover,
 	.open {
 		.menu__submenu {
 			@include media-breakpoint-up( $bp-menu ) {
