@@ -9,16 +9,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 $lang = get_locale();
 //var_dump($lang);
-if($lang = 'en-US') {
+if($lang == 'en_US') {
     get_header('us');
-} elseif ($lang = 'es_ES') {
+} elseif ($lang == 'es_ES') {
     get_header('es');
-} elseif ($lang = 'uk') {
+} elseif ($lang == 'uk') {
     get_header('ua');
-} elseif($lang = 'ru_RU') {
+} elseif($lang == 'ru_RU') {
     get_header();
 } else {
-    get_header('us');
+    get_header();
 }
 
 
