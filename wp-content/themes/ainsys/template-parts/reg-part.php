@@ -16,7 +16,7 @@ if ( ! current_user_can( 'integrator' ) ) {
 	function ainsys_add_menu_items_partner( $menu_links ) {
 
 		$menu_links = array_slice( $menu_links, 0, 15, true )
-		+ array( 'reg-part' => 'Стать партнёром AINSYS' )
+		+ array( 'reg-part' => __('Become a Partner AINSYS','ainsys') )
 		+ array_slice( $menu_links, 15, null, true );
 
 		return $menu_links;

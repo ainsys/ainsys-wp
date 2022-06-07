@@ -247,3 +247,8 @@ function ainsys_enable_menu_items($classes) {
     return $classes;
 }
 
+
+add_action( 'after_setup_theme', 'my_theme_setup');
+function my_theme_setup(){
+    load_theme_textdomain( 'ainsys', get_template_directory() . '/languages' );
+}

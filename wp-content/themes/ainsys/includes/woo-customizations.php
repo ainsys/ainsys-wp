@@ -52,28 +52,28 @@ function woo_change_account_order() {
 
 	if ( ! current_user_can( 'patnerdevelopers' ) && ! current_user_can( 'developer' ) && ! current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
-			'reg-dev'         => __( 'Стать разработчиком AINSYS', 'woocommerce' ),
-			'reg-part'        => __( 'Стать партнёром AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Выйти', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	} elseif ( current_user_can( 'patnerdevelopers' ) || current_user_can( 'developer' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
-			'reg-part'        => __( 'Стать партнёром AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Выйти', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	} elseif ( current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'Мой профиль', 'woocommerce' ),
+			'edit-account'  => __( 'My profile', 'ainsys' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Ваши заказы', 'woocommerce' ),
-			'reg-dev'         => __( 'Стать разработчиком AINSYS', 'woocommerce' ),
-			'customer-logout' => __( 'Выйти', 'woocommerce' ),
+			'orders'          => __( 'Your orders', 'ainsys' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
+			'customer-logout' => __( 'Log Out', 'ainsys' ),
 		);
 	}
 
@@ -81,11 +81,32 @@ function woo_change_account_order() {
 }
 add_filter( 'woocommerce_account_menu_items', 'woo_change_account_order' );
 
+/****
+ * My Account add description of items
+ *
+ * @package Ainsys
+ */
+add_action( 'woocommerce_account_menu_items', 'ainsys_filter_account_items' );
+function ainsys_filter_account_items($items) {
+   //var_dump($items);
+   $content_orders = __('Track the status of your orders or edit the current one','ainsys');
+   $content_profile = __('View and edit your personal information','ainsys');
+   $content_developer = __('Get access to orders from customers, complete them and earn money with AINSYS','ainsys');
+   $content_partner = __('Become an AINSYS partner and get the opportunity to place requests for integration on our platform','ainsys');
+   $content_logout = __('Sign out of account','ainsys');
+   $items['orders'] = $items['orders'].'<br><span>'.$content_orders.'</span>';
+   $items['edit-account'] = $items['edit-account'].'<br><span>'.$content_profile.'</span>';
+   $items['reg-dev'] = $items['reg-dev'].'<br><span>'.$content_developer.'</span>';
+   $items['reg-part'] = $items['reg-part'].'<br><span>'.$content_partner.'</span>';
+   $items['customer-logout'] = $items['customer-logout'].'<br><span>'.$content_logout.'</span>';
+   return $items;
+}
+
 
 
 
 // Кастомные поля для ЛК.
-require( 'inc/carbon-fields.php' );
+//require( 'inc/carbon-fields.php' );
 
 // Размер миниатюр в корзине.
 if ( function_exists( 'add_image_size' ) ) {
@@ -556,3 +577,13 @@ function ainsys_admin_address_field( $admin_fields ) {
 }
 // Remove "order by" field on catalog page.
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+/**
+ * email о регистрации пользователя
+ *
+ * @package Ainsys
+ */
+function woocommerce_created_customer_admin_notification( $customer_id ) {
+    wp_send_new_user_notifications( $customer_id, 'admin' );
+}
+add_action( 'woocommerce_created_customer', 'woocommerce_created_customer_admin_notification' );
