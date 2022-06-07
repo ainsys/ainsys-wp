@@ -166,7 +166,7 @@
 
 									<ul class="header__lang__submenu">
 
-                                        <li>
+                                        <li class="test">
 
 
 											<a href="https://ua.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Українська</a>
