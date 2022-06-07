@@ -9,12 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 $lang = get_bloginfo("language");
 //var_dump($lang);
-if($lang = 'ru-RU') {
-    get_header();
+if($lang = 'en-US') {
+    get_header('us');
 } elseif ($lang = 'es_ES') {
     get_header('es');
 } elseif ($lang = 'uk') {
     get_header('ua');
+} elseif($lang = 'ru_RU') {
+    get_header();
 } else {
     get_header('us');
 }
