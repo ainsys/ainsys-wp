@@ -625,7 +625,9 @@
     border: 6px solid #F0F8FF;
 }
 
-.acc-nav__item .acc-nav__link::after {
+.acc-nav__item .acc-nav__link::after,
+.acc-nav__item .acc-nav__link > span
+{
     font-size: 14px;
     line-height: 20px;
     margin: 15px 0 0;
@@ -654,25 +656,25 @@
     content: 'Сохраняйте и редактируйте адреса, чтобы покупать снова ';
 }
 
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-part.acc-nav__item .acc-nav__link::after {
+/*.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-part.acc-nav__item .acc-nav__link::after {
     content: 'Станьте партнером AINSYS и получите возможность размещать заявки на интеграцию на нашей платформе';
-}
+}*/
 
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-dev.acc-nav__item .acc-nav__link::after {
+/*.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--reg-dev.acc-nav__item .acc-nav__link::after {
     content: 'Получите доступ к заказам от клиентов, выполняйте их и зарабатывайте вместе с AINSYS';
-}
+}*/
 
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link:after {
+/*.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders.acc-nav__item .acc-nav__link:after {
     content: 'Отслеживайте статус ваших заказов или отредактируйте действующий';
-}
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-account.acc-nav__item .acc-nav__link:after,
+}*/
+
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--login-security.acc-nav__item .acc-nav__link:after {
     content: 'Смотрите и редактируйте свою личную информацию';
 }
 
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--customer-logout.acc-nav__item .acc-nav__link:after {
+/*.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--customer-logout.acc-nav__item .acc-nav__link:after {
     content: 'Выйти из аккаунта';
-}
+}*/
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-account.acc-nav__item .acc-nav__link::before,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--login-security.acc-nav__item .acc-nav__link::before,
