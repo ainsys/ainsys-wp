@@ -7,7 +7,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
-$lang = get_bloginfo("language");
+$lang = get_locale();
 //var_dump($lang);
 if($lang = 'en-US') {
     get_header('us');
