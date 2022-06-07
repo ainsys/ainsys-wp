@@ -214,7 +214,7 @@
 		transition: all 0.3s;
 
 		@include media-breakpoint-up( $bp-menu ) {
-			
+
 			position: absolute;
 			top: 100%;
 			left: calc( 50% - #{rem( 2.6 )} );
@@ -290,7 +290,6 @@
 					padding-right: rem( 3.2 );
 
 					&:after {
-						
 						content: '';
 						display: block;
 						position: absolute;
@@ -326,6 +325,19 @@
 	}
 
 	> li:hover,
+	.open {
+		.menu__submenu {
+			@include media-breakpoint-up( $bp-menu ) {
+				max-height: rem( 70 );
+			}
+		}
+		.menu__submenu-toggler {
+			@include media-breakpoint-up( $bp-menu ) {
+				// transform: rotateX( 180deg );
+			}
+		}
+	}
+	> .header__account:hover,
 	.open {
 		.menu__submenu {
 			@include media-breakpoint-up( $bp-menu ) {
