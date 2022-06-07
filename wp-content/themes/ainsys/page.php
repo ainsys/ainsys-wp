@@ -8,9 +8,21 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 
-get_header();
+$lang = get_locale();
+//var_dump($lang);
+if($lang == 'en_US') {
+    get_header('us');
+} elseif ($lang == 'es_ES') {
+    get_header('es');
+} elseif ($lang == 'uk') {
+    get_header('ua');
+} elseif($lang == 'ru_RU') {
+    get_header();
+} else {
+    get_header('us');
+}
 
-the_post();
+
 ?>
 
 <div class="content">
@@ -35,7 +47,7 @@ if($lang == 'en_US') {
     get_footer();
 } else {
 
-    get_footer();
+    get_footer('us');
 }
 
 
