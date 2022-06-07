@@ -33,7 +33,7 @@ get_header();
 			</form>
 			<?php the_content(); ?>
 			<nav class="auth-nav">
-				<span>Нет учетной записи?</span><a href="/register/">Зарегистрироваться</a>
+				<span><?php esc_html_e("Don't have an account?'", 'ainsys');  ?></span><a href="/register/"><?php esc_html_e("Register", 'ainsys');  ?></a>
 			</nav>
 		</div>
 	</div>

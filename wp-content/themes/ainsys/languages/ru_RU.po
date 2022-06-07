@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ainsys\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-06 13:18+0000\n"
+"PO-Revision-Date: 2022-06-06 17:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0\n"
+"X-Domain: ainsys"
+
+#: register-step2.php:83 includes/woo-customizations.php:502
+msgid "Agency / Consulting"
+msgstr ""
+
+#. Name of the theme
+msgid "ainsys"
+msgstr ""
+
+#: register-new.php:81
+msgid "Already have an account?"
+msgstr ""
+
+#: register-step2.php:28
+msgid "Answer the questions"
+msgstr ""
+
+#: login-new.php:31 register-new.php:34
+msgid "Back"
+msgstr ""
+
+#. Name of the template
+msgid "Cart"
+msgstr ""
+
+#: register-step2.php:101 includes/woo-customizations.php:522
+msgid "Choose your experience in automation"
+msgstr ""
+
+#: register-step2.php:60 includes/woo-customizations.php:475
+msgid "Choose your role"
+msgstr ""
+
+#. Name of the template
+msgid "cookies - англ"
+msgstr ""
+
+#. Name of the template
+msgid "cookies - ру"
+msgstr ""
+
+#: includes/acf-enhancements.php:71
+msgid "Custom GB"
+msgstr ""
+
+#: register-step2.php:54 includes/woo-customizations.php:469
+msgid "Development / Engineering"
+msgstr ""
+
+#: login-new.php:56 login.php:36
+msgid "Don't have an account?'"
+msgstr "Еще нет аккаунта, правда?"
+
+#: register-step2.php:84 includes/woo-customizations.php:503
+msgid "Education"
+msgstr ""
+
+#: register-step2.php:81 includes/woo-customizations.php:500
+msgid "Electronic commerce"
+msgstr ""
+
+#: register-step2.php:52 includes/woo-customizations.php:467
+msgid "Founder / Executive Director"
+msgstr ""
+
+#: register-step2.php:53 includes/woo-customizations.php:468
+msgid "Freelancer / Consultant"
+msgstr ""
+
+#. Name of the template
+msgid "Full-width Page"
+msgstr ""
+
+#. Name of the template
+msgid "Home: English"
+msgstr ""
+
+#. Name of the template
+msgid "Home: Spain"
+msgstr ""
+
+#. Name of the template
+msgid "Home: Ukrainian"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://ainsys.com/"
+msgstr ""
+
+#: register-step2.php:98 includes/woo-customizations.php:519
+msgid "I built custom integrations myself"
+msgstr ""
+
+#: register-step2.php:97 includes/woo-customizations.php:518
+msgid "I have used other integration platforms"
+msgstr ""
+
+#. Name of the template
+msgid "Landing ru"
+msgstr ""
+
+#: register-new.php:81
+msgid "Log in"
+msgstr ""
+
+#: register-step2.php:33
+msgid "Login to your personal account"
+msgstr ""
+
+#: register-step2.php:96 includes/woo-customizations.php:517
+msgid "No experience with automation"
+msgstr ""
+
+#: register-step2.php:85 includes/woo-customizations.php:504
+msgid "Non-profit organization"
+msgstr ""
+
+#: register-step2.php:67 includes/woo-customizations.php:484
+msgid "Only me"
+msgstr ""
+
+#: register-step2.php:87 includes/woo-customizations.php:506
+msgid "Other"
+msgstr ""
+
+#: register-step2.php:86 includes/woo-customizations.php:505
+msgid "Personal performance"
+msgstr ""
+
+#: register-step2.php:25
+msgid "Please enter your basic details"
+msgstr ""
+
+#: login-new.php:36
+msgid "Please enter your details."
+msgstr "Пожалуйста, введите свои данные."
+
+#. Name of the template
+msgid "policy - англ"
+msgstr ""
+
+#. Name of the template
+msgid "policy - ру"
+msgstr ""
+
+#. Author of the theme
+msgid "Press Foundry"
+msgstr ""
+
+#: register-step2.php:56 includes/woo-customizations.php:471
+msgid "Product / project manager"
+msgstr ""
+
+#: login-new.php:56 login.php:36
+msgid "Register"
+msgstr ""
+
+#: register-step2.php:82 includes/woo-customizations.php:501
+msgid "Saas"
+msgstr ""
+
+#: register-step2.php:55 includes/woo-customizations.php:470
+msgid "Sales / Business Development"
+msgstr ""
+
+#: register-step2.php:57 includes/woo-customizations.php:472
+msgid "Student/Professor"
+msgstr ""
+
+#: register-step2.php:29
+msgid ""
+"This will help to get to know you and offer favorable conditions for you."
+msgstr ""
+
+#: register-step2.php:89 includes/woo-customizations.php:508
+msgid "What industry do you work in?"
+msgstr ""
+
+#: register-step2.php:74 includes/woo-customizations.php:491
+msgid "What is the size of your organization?"
+msgstr ""
+
+#: register-step2.php:24
+msgid "Your data"
+msgstr ""
+
+#. Name of the template
+msgid "Авторизация"
+msgstr ""
+
+#. Name of the template
+msgid "Авторизация v2"
+msgstr ""
+
+#. Name of the template
+msgid "Регистрация"
+msgstr ""
+
+#. Name of the template
+msgid "Регистрация v2"
+msgstr ""
+
+#. Name of the template
+msgid "Регистрация шаг 2"
+msgstr ""
+
+#. Name of the template
+msgid "Тарифы - англ"
+msgstr ""
+
+#. Name of the template
+msgid "Тарифы - ру"
+msgstr ""
+
+#. Name of the template
+msgid "Тарифы - укр"
+msgstr ""

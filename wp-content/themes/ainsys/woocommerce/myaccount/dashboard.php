@@ -35,14 +35,14 @@ $userid = $current_user->ID;
 $name = $current_user->user_firstname;
 ?>
 
-<h1 class="acc-nav__title">Добро пожаловать, <?=$name;?></h1>
+<h1 class="acc-nav__title"><?php _e('Welcome','ainsys') ?>, <?=$name;?></h1>
 
 <!-- СПИСОК ВЫВОДИМЫХ ПУНКТОВ МЕНЮ. ПУНКТЫ ФИЛЬТРУЮТСЯ В ФАЙЛЕ FUNCTIONS.PHP -->
 <!-- Картинки и дополнительный текст через acc.css -->
 	<ul class="acc-nav">
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?> acc-nav__item">
-				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>" class="acc-nav__link"><?php echo esc_html( $label ); ?></a>
+				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>" class="acc-nav__link"><?php echo ( $label ); ?></a>
 			</li>
 		<?php endforeach; ?>
 	</ul>

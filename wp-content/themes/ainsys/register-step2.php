@@ -21,16 +21,16 @@ $form_rand_id = $user_id.rand(0,100000);
             </div>
             <ul class="registration__steps">
                 <li class="finished">
-                    <p>Ваши данные</p>
-                    <p>Пожалуйста, укажите свои основные данные</p>
+                    <p><?php esc_html_e('Your data','ainsys'); ?></p>
+                    <p><?php esc_html_e('Please enter your basic details','ainsys'); ?></p>
                 </li>
                 <li class="active">
-                    <p>Ответьте на вопросы</p>
-                    <p>Это поможет познакомиться с вами и предложить выгодные вам условия</p>
+                    <p><?php esc_html_e('Answer the questions','ainsys'); ?></p>
+                    <p><?php esc_html_e('This will help to get to know you and offer favorable conditions for you.','ainsys'); ?></p>
+
                 </li>
                 <li>
-                    <p>Вход в личный кабинет</p>
-
+                    <p><?php esc_html_e('Login to your personal account','ainsys'); ?></p>
                 </li>
             </ul>
         </div>
@@ -44,11 +44,7 @@ $form_rand_id = $user_id.rand(0,100000);
                 
                 <form method="post"  id="default_woo_form" class="woocommerce-form woocommerce-form-register register " style="display: none">
 
-
-
                 <?php
-
-
 
                 $field_role = [
                     'type'         => 'hidden',
@@ -131,7 +127,6 @@ $form_rand_id = $user_id.rand(0,100000);
                 <span></span>
             </div>
         </div>
-
     </section>
 
  <?php
