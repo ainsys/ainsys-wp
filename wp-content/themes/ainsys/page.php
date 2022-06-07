@@ -18,7 +18,7 @@ if($lang == 'en_US') {
 } elseif($lang == 'ru_RU') {
     get_header();
 } else {
-    get_header();
+    get_header('us');
 }
 
 
@@ -48,7 +48,7 @@ if($lang == 'en_US') {
     get_footer();
 } else {
 
-    get_footer();
+    get_footer('us');
 }
 
 
