@@ -114,7 +114,7 @@ class Clean_Walker extends Walker_Nav_Menu {
 
 
 
-				if ('tooltips__item' === $class_name ||  'warning' === $class_name || 'beta' === $class_name ||  'menu__item' === $class_name || 'disabled' === $class_name || 'customer' === $class_name || 'administrator' === $class_name || 'client'===$class_name || 'current' === $class_name || 'menu__item--has-children' === $class_name ) {
+				if ( 'menu__item' === $class_name || 'disabled' === $class_name || 'customer' === $class_name || 'administrator' === $class_name || 'client'===$class_name || 'current' === $class_name || 'menu__item--has-children' === $class_name ) {
 					return true;
 				} else {
 
