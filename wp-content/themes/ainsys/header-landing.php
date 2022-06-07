@@ -166,21 +166,6 @@
 										<li>
 											<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
 										</li>
-										<li>
-											<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
-										</li>
-										<li>
-											<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
-										</li>
 									</ul>
 								</div>
 							</div>
