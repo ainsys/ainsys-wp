@@ -16,7 +16,7 @@ if ( ! current_user_can( 'patnerdevelopers' ) && ! current_user_can( 'developer'
 	function ainsys_add_menu_items_dev( $menu_links ) {
 
 		$menu_links = array_slice( $menu_links, 0, 10, true )
-		+ array( 'reg-dev' => __('Become a Developer AINSYS','ainsys'))
+		+ array( 'reg-dev' => 'Стать разработчиком AINSYS' )
 		+ array_slice( $menu_links, 10, null, true );
 
 		return $menu_links;

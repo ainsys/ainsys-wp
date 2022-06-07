@@ -52,28 +52,28 @@ function woo_change_account_order() {
 
 	if ( ! current_user_can( 'patnerdevelopers' ) && ! current_user_can( 'developer' ) && ! current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'ainsys' ),
+			'edit-account'  => __( 'My profile', 'woocommerce' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'ainsys' ),
-			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
-			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
-			'customer-logout' => __( 'Log Out', 'ainsys' ),
+			'orders'          => __( 'Your orders', 'woocommerce' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'woocommerce' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'woocommerce' ),
+			'customer-logout' => __( 'Log Out', 'woocommerce' ),
 		);
 	} elseif ( current_user_can( 'patnerdevelopers' ) || current_user_can( 'developer' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'ainsys' ),
+			'edit-account'  => __( 'My profile', 'woocommerce' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'ainsys' ),
-			'reg-part'        => __( 'Become a Partner AINSYS', 'ainsys' ),
-			'customer-logout' => __( 'Log Out', 'ainsys' ),
+			'orders'          => __( 'Your orders', 'woocommerce' ),
+			'reg-part'        => __( 'Become a Partner AINSYS', 'woocommerce' ),
+			'customer-logout' => __( 'Log Out', 'woocommerce' ),
 		);
 	} elseif ( current_user_can( 'integrator' ) ) {
 		$myorder = array(
-			'edit-account'  => __( 'My profile', 'ainsys' ),
+			'edit-account'  => __( 'My profile', 'woocommerce' ),
 			// 'login-security'  => __( 'Мой профиль', 'woocommerce' ),
-			'orders'          => __( 'Your orders', 'ainsys' ),
-			'reg-dev'         => __( 'Become a Developer AINSYS', 'ainsys' ),
-			'customer-logout' => __( 'Log Out', 'ainsys' ),
+			'orders'          => __( 'Your orders', 'woocommerce' ),
+			'reg-dev'         => __( 'Become a Developer AINSYS', 'woocommerce' ),
+			'customer-logout' => __( 'Log Out', 'woocommerce' ),
 		);
 	}
 
@@ -88,7 +88,7 @@ add_filter( 'woocommerce_account_menu_items', 'woo_change_account_order' );
  */
 add_action( 'woocommerce_account_menu_items', 'ainsys_filter_account_items' );
 function ainsys_filter_account_items($items) {
-   //var_dump($items);
+
    $content_orders = __('Track the status of your orders or edit the current one','ainsys');
    $content_profile = __('View and edit your personal information','ainsys');
    $content_developer = __('Get access to orders from customers, complete them and earn money with AINSYS','ainsys');
@@ -106,7 +106,7 @@ function ainsys_filter_account_items($items) {
 
 
 // Кастомные поля для ЛК.
-//require( 'inc/carbon-fields.php' );
+require( 'inc/carbon-fields.php' );
 
 // Размер миниатюр в корзине.
 if ( function_exists( 'add_image_size' ) ) {
