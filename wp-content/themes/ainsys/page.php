@@ -23,7 +23,7 @@ if($lang == 'en_US') {
 
 
 
-the_post();
+
 ?>
 
 <div class="content">
