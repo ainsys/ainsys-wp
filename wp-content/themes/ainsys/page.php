@@ -7,6 +7,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
+
 $lang = get_locale();
 //var_dump($lang);
 if($lang == 'en_US') {
@@ -22,8 +23,6 @@ if($lang == 'en_US') {
 }
 
 
-
-the_post();
 ?>
 
 <div class="content">
