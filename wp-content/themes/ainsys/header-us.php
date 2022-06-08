@@ -156,7 +156,69 @@
 										)
 									);
 									?>
-									<a href="/my-account/" class="header__account"><span class="header__account__shadow"></span><span class="header__account__img"><img src="<?php echo esc_url( $url ); ?>" alt="" /></span></a>
+																		<div class="header__account_block">
+									<a class="header__account">
+										<span class="header__account__shadow"></span>
+										<span class="header__account__img">
+											<img src="http://1.gravatar.com/avatar/d3efc5e52da40d5267661055ec57a34d?s=58&amp;d=mm&amp;r=g" alt="">
+										</span>
+								    </a>
+									<ul class="menu__submenu_settings">
+										<li class="menu__item">
+											<div class="menu_item_content">		
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/account.svg" alt="">
+												<a class="menu__link" href="#">temirbayev.nail</a>
+											</div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/profile.svg" alt="">
+												<a class="menu__link" href="/my-account/">My profile</a>
+								            </div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/plan.svg" alt="">
+												<a class="menu__link" href="#">My plan</a>
+											</div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/projects.svg" alt="">
+												<a class="menu__link" href="#">Projects</a>
+											</div>	
+										</li>
+										<!-- <li class="menu__item header__lang">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/lang__uk.svg" alt="" />
+												<a class="header__lang__current">English</a>
+												<ul class="header__lang__submenu">
+													<li>
+														<a href="/en/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/lang__usa.svg" alt=""></span>English</a>
+													</li>
+													<li>
+														<a href="/gb-gb/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/333.svg" alt=""></span>English</a>
+													</li>
+													<li>
+														<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/222.svg" alt=""></span>English</a>
+													</li>
+													<li>
+														<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/444.svg" alt=""></span>English</a>
+													</li>
+													<li>
+														<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/sp.svg" alt=""></span>Spanish</a>
+													</li>
+												</ul>
+											</div>	
+								        </li> -->
+										<li class="menu__item">
+										    <div class="menu_item_content">	
+												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/exit.svg" alt="">
+												<a class="menu__link" href="#">Exit</a>
+											</div>	
+										</li>
+									</ul>
+								</div>
 								<?php } else { ?>
 										<a href="/auth/" class="header__login"><span>Login</span></a>
 								<?php } ?>
@@ -165,21 +227,11 @@
 									<a href="#" class="header__lang__current">EN</a>
 
 									<ul class="header__lang__submenu">
-										<!--<li>
-											<a href="/ua/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Українська</a>
-										</li>
-										<li>
-											<a href="/ua-ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Русский</a>
-										</li>
-										<li>
-											<a href="/ru-ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
-										</li>
-                    -->
 										<li>
 											<a href="/en/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
 										</li>
 										<li>
-											<a href="/gb/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/333.svg" alt=""></span>English</a>
+											<a href="/gb-gb/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/333.svg" alt=""></span>English</a>
 										</li>
 										<li>
 											<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" alt=""></span>English</a>

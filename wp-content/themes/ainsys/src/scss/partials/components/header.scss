@@ -54,6 +54,73 @@
 			color: $white;
 		}
 	}
+	&__account_block {
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+		padding: 0 3rem 0 0;
+
+		.menu__submenu_settings {
+			min-width: 190px!important;
+			position: absolute;
+			top: 100%;
+			left: calc(50% - 1.625rem);
+			overflow: hidden;
+			width: auto;
+			flex: 1 0 15.625rem;
+			max-height: 0;
+			margin: 0.75rem 0 0;
+			padding: 0;
+			background: #3d0043;
+			border-radius: 0 0 0.75rem 0.75rem;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+
+			.menu__item {
+				padding: 0.6rem 1rem!important;
+				list-style: none;
+
+				.menu_item_content {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					width: 100%;
+
+					.menu__link {
+						color: #fff;
+					}
+					.menu__link:hover {
+						color: #ab47bc;
+					}
+				}
+				&_img {
+					width: 24px;
+					height: 24px;
+					margin-right: 5px;
+				}
+			}
+			.menu__item:first-child {
+				.menu_item_content {
+					padding-bottom: 10px;
+					border-bottom: 1px solid $accent;
+				}
+			}
+			.menu__item:last-child {
+				.menu_item_content {
+					padding-top: 10px;
+					border-top: 1px solid $accent;
+				}
+			}
+		}
+	}
+
+	&__account_block:hover {
+		.menu__submenu_settings {
+			max-height: 43.75rem;
+			margin-top: 0;
+			overflow: visible;
+		}
+	}
 
 	&__account {
 		flex: 0 0 rem( 8.5 );
@@ -63,6 +130,12 @@
 		height: rem( 8.5 );
 		margin-right: rem( 4.3 );
 		border-radius: 50%;
+
+		@include media-breakpoint-down( xs ) {
+			width: rem( 3.3 );
+			height: rem( 3.3 );
+			margin-right: 0;
+		}
 
 		&__shadow {
 			display: block;
@@ -74,6 +147,10 @@
 			height: 100%;
 			background: $accent;
 			opacity: 0.2;
+
+			@include media-breakpoint-down( xs ) {
+				width: auto;
+			}
 		}
 
 		&__img {
@@ -87,6 +164,11 @@
 			border-radius: 50%;
 			border: rem( 0.4 ) solid $accent;
 			transform: translate( -50%, -50% );
+
+			@include media-breakpoint-down( xs ) {
+				width: rem( 3 );
+				height: rem( 3 );
+			}
 		}
 
 		img {
