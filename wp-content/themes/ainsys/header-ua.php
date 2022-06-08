@@ -83,29 +83,13 @@
 								Choose another country or region to see content specific to your location.
 								</p>
 								<div class="country_select">
-									<a href="/ru-ru/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" class="lang__img" alt="">Русский</a>
+								    <a href="/ua/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" class="lang__img" alt="">Українська</a>
 									<ul class="country__lang__submenu">
 										<li>
 											<a href="/ua/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" class="lang__img" alt="">Українська</a>
 										</li>
 										<li>
 											<a href="/ua-ru/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" class="lang__img" alt="">Русский</a>
-										</li>
-                                        
-										<li>
-											<a href="/en-us/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" class="lang__img" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-us/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" class="lang__img" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-gb/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/333.svg" class="lang__img" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-ca/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" class="lang__img" alt="">English</a>
-										</li>
-										<li>
-											<a href="/en-eu/" class="submenu__item"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/444.svg" class="lang__img" alt="">English</a>
 										</li>
 									</ul>
 								</div>
