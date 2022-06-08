@@ -34,7 +34,7 @@
 							<div class="header__lang">
 							    <ul class="header__lang__submenu">
 									<li>
-										<a href="/ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
+										<a href="https://ru.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
 									</li>
 								</ul>
 								<span class="header__lang__current">RU</span>
