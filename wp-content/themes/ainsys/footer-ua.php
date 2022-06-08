@@ -32,6 +32,17 @@
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__tg.svg" alt="tg" class="footer__soc__img"></a>
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__vk.svg" alt="vk" class="footer__soc__img"></a>
 							</div>
+							<div class="header__lang">
+								<ul class="header__lang__submenu">
+									<li>
+										<a href="/ua/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Українська</a>
+									</li>
+									<li>
+										<a href="/ua-ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Русский</a>
+									</li>
+								</ul>
+								<span class="header__lang__current">UA</span>
+							</div>
 						</div>
 					</div>
 				</div>
