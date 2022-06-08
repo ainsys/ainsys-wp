@@ -180,7 +180,7 @@
 
 	&__lang {
 		position: relative;
-		padding: rem( 1.75 ) 0;
+		margin-left: 20px;
 
 		&__current {
 			@include flex_center;
@@ -199,7 +199,7 @@
 
 		&__submenu {
 			position: absolute;
-			top: 100%;
+			bottom: 30px;
 			left: 50%;
 			z-index: 2000;
 			overflow: hidden;
@@ -264,7 +264,7 @@
 				color: $accent;
 
 				&:after {
-					background: no-repeat url( ../img/arrow__down__active.svg ) center/ 100%;
+					background: no-repeat url( ../images/components/arrow__down__active.svg ) center/ 100%;
 				}
 			}
 

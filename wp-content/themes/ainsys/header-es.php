@@ -223,27 +223,6 @@
 										<a href="/auth/" class="header__login"><span>Acceso</span></a>
 								<?php } ?>
 
-								<div class="header__lang">
-									<a href="#" class="header__lang__current">ES</a>
-
-									<ul class="header__lang__submenu">
-											<li>
-												<a href="/us/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
-											</li>
-											<li>
-												<a href="/gb/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/333.svg" alt=""></span>English</a>
-											</li>
-											<li>
-												<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" alt=""></span>English</a>
-											</li>
-											<li>
-												<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/444.svg" alt=""></span>English</a>
-											</li>
-											<li>
-												<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/sp.svg" alt=""></span>Spanish</a>
-											</li>
-									</ul>
-								</div>
 							</div>
 						</div>
 
