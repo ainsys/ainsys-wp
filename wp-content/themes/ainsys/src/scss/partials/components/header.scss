@@ -78,6 +78,7 @@
 			.menu__item {
 				padding: 0.6rem 1rem!important;
 				list-style: none;
+				cursor: pointer;
 
 				.menu_item_content {
 					display: flex;
@@ -180,6 +181,7 @@
 	&__lang {
 		position: relative;
 		margin-left: 20px;
+		cursor: pointer;
 
 		&__current {
 			@include flex_center;
@@ -207,7 +209,7 @@
 			margin: 0;
 			padding: 0;
 			background: $accent-dark;
-			border-radius: 0 0 rem( 1.2 ) rem( 1.2 );
+			border-radius: rem( 1.2 );
 			transition: all 0.5s ease-out;
 			transform: translateX( -50% );
 			list-style: none;
