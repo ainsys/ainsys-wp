@@ -49,7 +49,7 @@
 								</ul>
 								<div class="lang_item">
 									<img class="header__lang__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="lang">
-									span class="header__lang__current">ES</span>
+									<span class="header__lang__current">ES</span>
 								</div>	
 							</div>
 						</div>
