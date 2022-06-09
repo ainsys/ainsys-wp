@@ -72,7 +72,7 @@
         </div>
         <div class="modal__title"><?php _e('Log in to create your integration plan','ainsys');?></div>
         <div class="modal__text">
-            <?php echo do_shortcode('[contact-form-7 id="9763" title="Форма  - Заявка на добавление коннектора"]') ?>
+            <?php echo do_shortcode('[contact-form-7 id="'.get_field('catalog_contact_form_id','option').'" title="Форма  - Заявка на добавление коннектора"]'); ?>
         </div>
 
     </div>

@@ -19,6 +19,7 @@ $product_id       = $product->get_id();
 $product_cats_ids = $product->get_category_ids();
 $color_1 = '#3d0043';
 $color_2 = '#931e9f';
+//$logo = get_field('logo');
 if(!empty(get_field('color_1'))) {
     $color_1 = get_field('color_1');
 }
@@ -31,7 +32,10 @@ if(!empty(get_field('color_2'))) {
 <li class="product" style="background: linear-gradient(105.3deg, <?= $color_1; ?>  0%, <?= $color_2; ?> 97.63%)" >
 	<div class="top-row row">
 		<div class="img">
-			<?php echo $product->get_image(); ?>
+			<?// echo $product->get_image(); ?>
+
+               <?php echo '<img src="/logo/'.$product->get_slug().'.png">';?>
+
 		</div>
 		<div class="title">
 			<h3><?php echo $product->get_title(); ?></h3>

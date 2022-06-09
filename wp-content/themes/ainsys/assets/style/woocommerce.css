@@ -163,6 +163,9 @@ nav.woocommerce-pagination {
 .top-row.row > div {
 	width: auto;
 }
+.top-row.row > div.img {
+	width: 96px;
+}
 
 .product .row {
 	display: flex;
