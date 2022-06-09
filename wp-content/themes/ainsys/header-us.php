@@ -45,11 +45,11 @@
 			gtag('config', 'UA-205692206-3');
 		</script>
 		<script>
-			(function(w,d,u){
-					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-			})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
-		</script>
+	        (function(w,d,u){
+	                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+	                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+	        })(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
+	</script>
 		<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
 			if ( '7989' == event.detail.contactFormId ) {
@@ -165,40 +165,40 @@
 								    </a>
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
-											<div class="menu_item_content">		
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
 												<a class="menu__link" href="#">temirbayev.nail</a>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/profile.svg" alt="">
 												<a class="menu__link" href="/my-account/">My profile</a>
-								            </div>	
+								            </div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/plan.svg" alt="">
 												<a class="menu__link" href="#">My plan</a>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/projects.svg" alt="">
 												<a class="menu__link" href="#">Projects</a>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item menu__item_scroll">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang.svg" alt="">
 												<span class="menu__link">Change language</span>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item">
-										    <div class="menu_item_content">	
+										    <div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
 												<a class="menu__link" href="#">Exit</a>
-											</div>	
+											</div>
 										</li>
 									</ul>
 								</div>
