@@ -68,13 +68,14 @@
 		let result = confirm('You must accept cookies to continue using the site');
 			document.location.assign('/cookies/');
 		}
+
 	const acceptCookie = getCookie( 'acceptCookie' );
 	if ( acceptCookie === 'cookie accepted' ) {
 		$( '#coockie' ).addClass( 'coockie-disabled' );
 		//alert( 'Cookie accepted' );
-	} else {
+	} /*else {
 		document.addEventListener( 'DOMContentLoaded', deleteAllCookies() );
-	}
+	}*/
 
 	$( '.coockie_button-disagree' ).click( function() {
 		$( '#coockie' ).addClass( 'coockie-disabled' );
@@ -85,7 +86,5 @@
 		$( '#coockie' ).addClass( 'coockie-disabled' );
 		setCookie( 'acceptCookie', 'cookie accepted', 14 );
 	} );
-	/*window.onbeforeunload = function() {
-		deleteAllCookies();
-	};*/
+
 } )( jQuery );

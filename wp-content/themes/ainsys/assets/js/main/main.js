@@ -1065,6 +1065,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $('.country_close').click(function () {
+    $('#counrty').addClass('country-disabled');
+  });
+  $('.country_select').click(function () {
+    $(this).toggleClass('country-active');
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1226,16 +1236,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  $('.country_close').click(function () {
-    $('#counrty').addClass('country-disabled');
-  });
-  $('.country_select').click(function () {
-    $(this).toggleClass('country-active');
-  });
-})(jQuery);
-"use strict";
-
-(function ($) {
   if ($('.accordion__list').length > 0) {
     $('.accordion__item__title').on('click', function () {
       $(this).parent().toggleClass('accordion-open');
@@ -1345,9 +1345,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
   if (acceptCookie === 'cookie accepted') {
     $('#coockie').addClass('coockie-disabled'); //alert( 'Cookie accepted' );
-  } else {
-    document.addEventListener('DOMContentLoaded', deleteAllCookies());
   }
+  /*else {
+  document.addEventListener( 'DOMContentLoaded', deleteAllCookies() );
+  }*/
+
 
   $('.coockie_button-disagree').click(function () {
     $('#coockie').addClass('coockie-disabled');
@@ -1358,9 +1360,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $('#coockie').addClass('coockie-disabled');
     setCookie('acceptCookie', 'cookie accepted', 14);
   });
-  /*window.onbeforeunload = function() {
-  	deleteAllCookies();
-  };*/
 })(jQuery);
 "use strict";
 
