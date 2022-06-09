@@ -75,7 +75,7 @@
 
 					<header class="header-landing">
 
-						<div id="counrty" class="counrty">
+						<!-- <div id="counrty" class="counrty">
 							<div class="container">
 								<div class="counrty_content">
 									<p class="counrty_text">
@@ -113,7 +113,7 @@
 									<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header-landing__content">
@@ -130,13 +130,13 @@
 								<div class="socials">
 									<div class="socials__wrapper">
 										<div class="header-landing__btn">
-											<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
+											<a class="btn btn-main" href="https://ainsys.com/register/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
 										</div>
 										<ul class="socials__links">
 											<li  class="numbers__phone numbers__phone-disabled">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="ru">
-												<a href="tel: +447441426027" class="soc_href disabled">+78126027880
+												<a href="tel: +78126027880" class="soc_href disabled">+78126027880
 													<div class="disabled__block"></div>
 												</a>
 											</li>
@@ -148,7 +148,7 @@
 											</li>
 											<li class="numbers__map">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__map.svg" alt="usa">
-											<a href="" class="socials__addres">г. Москва, ул. Золоторожский Вал, д. 34</a>
+											<a href="" class="socials__addres">л. Золоторожский Вал, д. 34, стр. 6. </a>
 											</li>
 										</ul>
 									</div>
@@ -157,15 +157,9 @@
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
 									<a href="#" class="header-landing__lang__current text-decoration-none">RU</a>
 									<ul class="header-landing__lang__submenu">
-										<li>
-											<a href="/ua/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Українська</a>
-										</li>
-										<li>
-											<a href="/ua-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__urk.svg" class="lang__img me-sm-2" alt="">Русский</a>
-										</li>
-										<li>
-											<a href="/ru-ru/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" class="lang__img me-sm-2" alt="">Русский</a>
-										</li>
+									<li>
+										<a href="https://ru.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
+									</li>
 									</ul>
 								</div>
 							</div>
