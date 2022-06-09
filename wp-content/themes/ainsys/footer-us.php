@@ -49,7 +49,10 @@
 										<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/sp.svg" alt=""></span>Spanish</a>
 									</li>
 								</ul>
-								<span class="header__lang__current">EN</span>
+								<div class="lang_item">
+									<img class="header__lang__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="lang">
+									<span class="header__lang__current">EN</span>
+								</div>	
 							</div>
 						</div>
 					</div>

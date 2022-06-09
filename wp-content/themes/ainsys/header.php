@@ -188,6 +188,12 @@
 												<a class="menu__link" href="#">Проекты</a>
 											</div>	
 										</li>
+										<li class="menu__item menu__item_scroll">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang.svg" alt="">
+												<span class="menu__link">Сменить язык</span>
+											</div>	
+										</li>
 										<li class="menu__item">
 										    <div class="menu_item_content">	
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">

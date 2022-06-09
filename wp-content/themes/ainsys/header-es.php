@@ -166,54 +166,37 @@
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
 											<div class="menu_item_content">		
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/account.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
 												<a class="menu__link" href="#">temirbayev.nail</a>
 											</div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/profile.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/profile.svg" alt="">
 												<a class="menu__link" href="/my-account/">Mi perfil</a>
 								            </div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/plan.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/plan.svg" alt="">
 												<a class="menu__link" href="#">Mi plan</a>
 											</div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/projects.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/projects.svg" alt="">
 												<a class="menu__link" href="#">Proyectos</a>
 											</div>	
 										</li>
-										<!-- <li class="menu__item header__lang">
+										<li class="menu__item menu__item_scroll">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/lang__uk.svg" alt="" />
-												<a class="header__lang__current">English</a>
-												<ul class="header__lang__submenu">
-													<li>
-														<a href="/en/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/lang__usa.svg" alt=""></span>English</a>
-													</li>
-													<li>
-														<a href="/gb-gb/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/333.svg" alt=""></span>English</a>
-													</li>
-													<li>
-														<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/222.svg" alt=""></span>English</a>
-													</li>
-													<li>
-														<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/444.svg" alt=""></span>English</a>
-													</li>
-													<li>
-														<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/sp.svg" alt=""></span>Spanish</a>
-													</li>
-												</ul>
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang.svg" alt="">
+												<span class="menu__link">Cambiar de idioma</span>
 											</div>	
-								        </li> -->
+										</li>
 										<li class="menu__item">
 										    <div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/exit.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
 												<a class="menu__link" href="#">Producción</a>
 											</div>	
 										</li>
