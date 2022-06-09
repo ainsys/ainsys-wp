@@ -247,13 +247,16 @@
 			}
 		}
 
+		.lang_item {
+			display: flex;
+		}
+
 		&__img {
 			display: block;
 			overflow: hidden;
 			width: rem( 2.4 );
 			height: rem( 2.4 );
 			margin-right: rem( 0.8 );
-			border-radius: rem( 2.4 );
 		}
 
 		&:hover,
