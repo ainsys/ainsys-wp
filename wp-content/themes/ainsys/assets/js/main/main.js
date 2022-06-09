@@ -1307,6 +1307,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $(document).ready(function () {
+    closeMoodal();
+  });
+
+  function closeMoodal() {
+    $('.modal__button--close').on('click', function () {
+      $(this).closest('.modal__wrapper').removeClass('show');
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
   if ($('.page-nav').length > 0) {
     var pagenavScroll = function pagenavScroll() {
       var top = $('.announcement-bar.on').outerHeight();

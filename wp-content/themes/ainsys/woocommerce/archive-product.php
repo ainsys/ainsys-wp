@@ -31,10 +31,10 @@ get_header();
 ?>
 <div class="container">
 	<header class="woocommerce-products-header">
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		<!--<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 		<?php endif; ?>
-
+        -->
 		<?php
 		/**
 		 * Hook: woocommerce_archive_description.
@@ -42,14 +42,30 @@ get_header();
 		 * @hooked woocommerce_taxonomy_archive_description - 10
 		 * @hooked woocommerce_product_archive_description - 10
 		 */
-		do_action( 'woocommerce_archive_description' );
+		//do_action( 'woocommerce_archive_description' );
 		?>
+
 	</header>
 
-	<div class="products__container">  
+	<div class="products__container">
+        <?php if ( false === is_user_logged_in() ): ?>
+        <div class="woocommerce__header__notice">
+            <p>Log in to create your integration plan and make a preliminary calculation of the timing and budget for implementation</p>
+            <button type="button" data-target="#authModal" class="woocommerce-Button button button--notice button--auth" id="noticeAuthorize">Авторизироваться</button>
+        </div>
+    <?php else:?>
+            <div class="woocommerce__header__notice woocommerce__header__notice--authorized">
+                <p>The AINSYS Integration Plan will help you calculate the timing and budget for your automation project, as well as make it easier to find contractors among our community of competent partners and developers. In our catalog you will find any system you need.</p>
+                <a href="/cart"  class="woocommerce-Button button button--notice button--cart" >
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/components/icon-techno.svg" alt="button-icon">
+                    <?php _e('Integration plan','ainsys'); ?>
+                    <span class="button-info">10</span>
+                </a>
+            </div>
+    <?php endif; ?>
 
 		<div class="products__left">
-			<div class="products__left__title">Integrations</div>
+			<div class="products__left__title"><?php _e('Integrations','ainsys') ?></div>
 
 			<div class="products__search">
 				<input type="text" placeholder="Search" class="search-input">
@@ -57,6 +73,7 @@ get_header();
 					<path d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</div>
+
 
 			<div class="products__categories">
 
@@ -76,8 +93,15 @@ get_header();
 				<ul class="products__category-list">
 					<?php wp_list_categories( $args ); ?>
 				</ul>
+                <?php if ( is_user_logged_in() ): ?>
+                    <div class="products__addsystem">
+                        <p>If the application you need is not found, please leave a request to add a new application</p>
+                        <button id="modalAddBtn"  class="woocommerce-Button button button--notice button--add" ><?php _e('Add System','ainsys'); ?></button>
+                    </div>
+                <?php endif; ?>
 
 			</div>
+
 		</div>
 
 		<div class="products__right">

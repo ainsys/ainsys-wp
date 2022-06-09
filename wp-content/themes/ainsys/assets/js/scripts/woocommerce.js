@@ -1,4 +1,22 @@
 ( function( $ ) {
+	function showModal (modalForm) {
+		let modal = $(modalForm)
+		//let closeModal = $(modal).find('.modal__button--close');
+		$(modal).addClass('show');
+	}
+	const authBtn = document.getElementById('noticeAuthorize')
+	const addModal = document.getElementById('modalAddBtn')
+	if (authBtn) {
+		authBtn.addEventListener('click', ()=>{
+			showModal('#authModal');
+		});
+	}
+	if (addModal) {
+		addModal.addEventListener('click', ()=>{
+			showModal('#addModal');
+		});
+	}
+
 	const btns = document.querySelectorAll( '.product__qnt-buttons .btn-qnty' );
 
 	let initialValue = 0;
@@ -6,23 +24,31 @@
 	if ( btns ) {
 		btns.forEach( function( item ) {
 			item.addEventListener( 'click', function() {
-				$( '.woocommerce-notices-wrapper' ).html( '' );
+				if (item.classList.contains('not-authorized')) {
+					/*let modal = document.getElementById('authModal');
+					//let closeModal = $(modal).find('.modal__button--close');
+					$(modal).addClass('show');*/
+					showModal('#authModal');
 
-				const inputNumber = item.parentNode.querySelector( '.product__qnt' );
-				if ( inputNumber ) {
-					let inputValue = Number( inputNumber.value );
-					initialValue = inputValue;
+				} else {
+					$('.woocommerce-notices-wrapper').html('');
 
-					if ( item.classList.contains( 'plus-btn' ) ) {
-						inputValue = inputValue + 1;
-					}
-					if ( item.classList.contains( 'minus-btn' ) ) {
-						if ( inputValue > 0 ) {
-							inputValue = inputValue - 1;
+					const inputNumber = item.parentNode.querySelector('.product__qnt');
+					if (inputNumber) {
+						let inputValue = Number(inputNumber.value);
+						initialValue = inputValue;
+
+						if (item.classList.contains('plus-btn')) {
+							inputValue = inputValue + 1;
 						}
+						if (item.classList.contains('minus-btn')) {
+							if (inputValue > 0) {
+								inputValue = inputValue - 1;
+							}
+						}
+						inputNumber.value = inputValue;
+						inputNumber.dispatchEvent(new Event('change'));
 					}
-					inputNumber.value = inputValue;
-					inputNumber.dispatchEvent( new Event( 'change' ) );
 				}
 			} );
 		} );
