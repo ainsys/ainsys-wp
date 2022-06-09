@@ -58,7 +58,6 @@
 		display: flex;
 		flex-wrap: nowrap;
 		position: relative;
-		padding: 0 3rem 0 0;
 
 		.menu__submenu_settings {
 			min-width: 190px!important;
@@ -132,8 +131,8 @@
 		border-radius: 50%;
 
 		@include media-breakpoint-down( xs ) {
-			width: rem( 3.3 );
-			height: rem( 3.3 );
+			width: 4rem;
+			height: 4rem;
 			margin-right: 0;
 		}
 
@@ -166,8 +165,8 @@
 			transform: translate( -50%, -50% );
 
 			@include media-breakpoint-down( xs ) {
-				width: rem( 3 );
-				height: rem( 3 );
+				width: 3.5rem;
+				height: 3.5rem;
 			}
 		}
 

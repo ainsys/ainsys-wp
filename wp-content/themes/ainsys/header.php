@@ -166,31 +166,31 @@
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
 											<div class="menu_item_content">		
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/account.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
 												<a class="menu__link" href="#">temirbayev.nail</a>
 											</div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/profile.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/profile.svg" alt="">
 												<a class="menu__link" href="/my-account/">Мой профиль</a>
 								            </div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/plan.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/plan.svg" alt="">
 												<a class="menu__link" href="#">Мой план</a>
 											</div>	
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/projects.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/projects.svg" alt="">
 												<a class="menu__link" href="#">Проекты</a>
 											</div>	
 										</li>
 										<li class="menu__item">
 										    <div class="menu_item_content">	
-												<img class="menu__item_img" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/exit.svg" alt="">
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
 												<a class="menu__link" href="#">Выход</a>
 											</div>	
 										</li>
