@@ -1702,7 +1702,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   $(".menu__item_scroll").click(function () {
     $([document.documentElement, document.body]).animate({
       scrollTop: $(".footer").offset().top
-    }, 2000);
+    }, 1000);
   });
 })(jQuery);
 "use strict";
@@ -1996,7 +1996,5 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
     return id;
   }
-
-
 })(jQuery);
 //# sourceMappingURL=main.js.map
