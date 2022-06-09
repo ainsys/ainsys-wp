@@ -2,7 +2,7 @@
 /**
  * Landing ru
  *
- * Template Name: Landing en
+ * Template Name: Landing es
  *
  * @package ainsys
  */
