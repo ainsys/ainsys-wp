@@ -20,6 +20,10 @@
         @include media-breakpoint-down( sm ) {
             padding: 24px;
         }
+
+        &_info {
+            margin: 0 auto;
+        }
         
 
             .newsletter__important {
@@ -166,7 +170,7 @@
 #toggler-block_628d1d5f8ea5f {
     .newsletter__img {
         margin: -10% -10% 0 0%;
-        width: 20%;
+        width: 30%;
 
          img {
             width: 180px;

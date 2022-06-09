@@ -54,6 +54,73 @@
 			color: $white;
 		}
 	}
+	&__account_block {
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+
+		.menu__submenu_settings {
+			min-width: 190px!important;
+			position: absolute;
+			top: 100%;
+			left: calc(50% - 1.625rem);
+			overflow: hidden;
+			width: auto;
+			flex: 1 0 15.625rem;
+			max-height: 0;
+			margin: 0.75rem 0 0;
+			padding: 0;
+			background: #3d0043;
+			border-radius: 0 0 0.75rem 0.75rem;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+
+			.menu__item {
+				padding: 0.6rem 1rem!important;
+				list-style: none;
+				cursor: pointer;
+
+				.menu_item_content {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					width: 100%;
+
+					.menu__link {
+						color: #fff;
+					}
+					.menu__link:hover {
+						color: #ab47bc;
+					}
+				}
+				&_img {
+					width: 24px;
+					height: 24px;
+					margin-right: 5px;
+				}
+			}
+			.menu__item:first-child {
+				.menu_item_content {
+					padding-bottom: 10px;
+					border-bottom: 1px solid $accent;
+				}
+			}
+			.menu__item:last-child {
+				.menu_item_content {
+					padding-top: 10px;
+					border-top: 1px solid $accent;
+				}
+			}
+		}
+	}
+
+	&__account_block:hover {
+		.menu__submenu_settings {
+			max-height: 43.75rem;
+			margin-top: 0;
+			overflow: visible;
+		}
+	}
 
 	&__account {
 		flex: 0 0 rem( 8.5 );
@@ -63,6 +130,12 @@
 		height: rem( 8.5 );
 		margin-right: rem( 4.3 );
 		border-radius: 50%;
+
+		@include media-breakpoint-down( xs ) {
+			width: 4rem;
+			height: 4rem;
+			margin-right: 0;
+		}
 
 		&__shadow {
 			display: block;
@@ -74,6 +147,10 @@
 			height: 100%;
 			background: $accent;
 			opacity: 0.2;
+
+			@include media-breakpoint-down( xs ) {
+				width: auto;
+			}
 		}
 
 		&__img {
@@ -87,6 +164,11 @@
 			border-radius: 50%;
 			border: rem( 0.4 ) solid $accent;
 			transform: translate( -50%, -50% );
+
+			@include media-breakpoint-down( xs ) {
+				width: 3.5rem;
+				height: 3.5rem;
+			}
 		}
 
 		img {
@@ -98,7 +180,8 @@
 
 	&__lang {
 		position: relative;
-		padding: rem( 1.75 ) 0;
+		margin-left: 20px;
+		cursor: pointer;
 
 		&__current {
 			@include flex_center;
@@ -117,7 +200,7 @@
 
 		&__submenu {
 			position: absolute;
-			top: 100%;
+			bottom: 30px;
 			left: 50%;
 			z-index: 2000;
 			overflow: hidden;
@@ -126,7 +209,7 @@
 			margin: 0;
 			padding: 0;
 			background: $accent-dark;
-			border-radius: 0 0 rem( 1.2 ) rem( 1.2 );
+			border-radius: rem( 1.2 );
 			transition: all 0.5s ease-out;
 			transform: translateX( -50% );
 			list-style: none;
@@ -166,13 +249,16 @@
 			}
 		}
 
+		.lang_item {
+			display: flex;
+		}
+
 		&__img {
 			display: block;
 			overflow: hidden;
 			width: rem( 2.4 );
 			height: rem( 2.4 );
 			margin-right: rem( 0.8 );
-			border-radius: rem( 2.4 );
 		}
 
 		&:hover,
@@ -182,7 +268,7 @@
 				color: $accent;
 
 				&:after {
-					background: no-repeat url( ../img/arrow__down__active.svg ) center/ 100%;
+					background: no-repeat url( ../images/components/arrow__down__active.svg ) center/ 100%;
 				}
 			}
 
