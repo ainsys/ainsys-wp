@@ -137,7 +137,7 @@
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="uk">
 												<a href="tel: +447441426027" class="soc_href disabled">+447441426027
-													<div class="disabled__block"></div>
+													<div class="disabled__block"> </div>
 												</a>
 											</li>
 											<li  class="numbers__phone numbers__email numbers__phone-disabled">
