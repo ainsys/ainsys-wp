@@ -96,18 +96,18 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 							    </p>
 							<?php } ?>
 							<?php if ( get_sub_field( 'tooltip' ) ) { ?>
-							<div class="tooltips">
-							<ul>
-							    <li>
-							    	<?= get_sub_field('tooltip');?>
-								</li>
-							</ul>
-						  </div>
-						  <?php } ?>
-						  </li>
-						  <?php endwhile; ?>
-						<?php endif; ?>
-                  </ul>
-              </div>
-          </div>
-      </section>
+								<div class="tooltips">
+									<ul>
+										<li>
+											<?= get_sub_field('tooltip');?>
+										</li>
+									</ul>
+								</div>
+						    <?php } ?>
+					</li>
+					<?php endwhile; ?>
+				<?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </section>
