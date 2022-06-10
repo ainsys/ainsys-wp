@@ -135,7 +135,7 @@
 										<ul class="socials__links">
 											<li  class="numbers__phone numbers__phone-disabled">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ru.svg" alt="ru">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__ua.svg" alt="ru">
 												<a href="tel: +380914818038" class="soc_href disabled">+380914818038
 													<div class="disabled__block"></div>
 												</a>

@@ -116,7 +116,7 @@
 						</div> -->
 
 						<div class="container">
-							
+
 							<div class="header-landing__content">
 								<a href="/" class="header-landing__logo"></a>
 
@@ -157,11 +157,6 @@
 								<div class="header-landing__lang text-end">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
 									<a href="#" class="header-landing__lang__current text-decoration-none">RU</a>
-									<ul class="header-landing__lang__submenu">
-									<li>
-										<a href="https://ru.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
-									</li>
-									</ul>
 								</div>
 							</div>
 						</div>
