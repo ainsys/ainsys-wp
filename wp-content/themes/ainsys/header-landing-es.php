@@ -130,11 +130,7 @@
 								<div class="socials">
 									<div class="socials__wrapper">
 										<div class="header-landing__btn">
-<<<<<<< HEAD
-											<a class="btn btn-main" href="https://ainsys.com/register/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Solicitud de baja</a>
-=======
 											<a class="btn btn-main" href="https://es.ainsys.com/my-account/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Solicitud de baja</a>
->>>>>>> 84051f7490cb7aa4e35d8b1484b1dd16ec2ea341
 										</div>
 										<ul class="socials__links">
 											<li  class="numbers__phone numbers__phone-disabled">
