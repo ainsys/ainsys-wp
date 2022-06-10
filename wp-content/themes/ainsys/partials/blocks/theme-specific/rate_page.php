@@ -230,9 +230,9 @@ if ( ! empty( $block['align'] ) ) {
 
 
 							<th class="row_dop" scope="row">
-								<?php the_sub_field( 'table_dop_name' ); ?>
+                                 <?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
 									<?= the_sub_field( 'table_dop_name' ); ?>
-								<?php ?>
+								<?php } ?>
 								<span class="tooltips__item"><span> 
 								<?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
 									<div class="tooltips">
