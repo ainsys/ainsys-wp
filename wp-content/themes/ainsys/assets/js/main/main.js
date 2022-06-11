@@ -1075,6 +1075,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+})(jQuery);
+"use strict";
+
+(function ($) {
+  "use strict";
+
+  if (window['objectFitImages']) {
+    $(document).ready(function () {
+      window.objectFitImages(null, {
+        watchMQ: true
+      });
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1213,25 +1232,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
     */
   });
-})(jQuery);
-"use strict";
-
-(function ($) {
-  document.body.classList.remove('no-js');
-  document.body.classList.add('js');
-})(jQuery);
-"use strict";
-
-(function ($) {
-  "use strict";
-
-  if (window['objectFitImages']) {
-    $(document).ready(function () {
-      window.objectFitImages(null, {
-        watchMQ: true
-      });
-    });
-  }
 })(jQuery);
 "use strict";
 
@@ -1583,19 +1583,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din_two);
 
     if ($('.rate_page__list').hasClass('active')) {
-      var final_val_sale = Math.floor(final_val_din / 0.85);
+      var final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
       $('#final_val').text(final_val_sale);
       $('#rate_val').text(final_val_sale);
-      var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      var final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din * 0.15));
       $('#final_val_two').text(final_val_sale_two);
       $('#rate_val2').text(final_val_sale_two);
     } else {
-      var _final_val_sale = Math.floor(final_val_din * 0.85);
+      var _final_val_sale = Math.floor(final_val_din + Math.floor(final_val_din * 0.15));
 
       $('#final_val').text(_final_val_sale);
       $('#rate_val').text(_final_val_sale);
 
-      var _final_val_sale_two = Math.floor(final_val_din_two * 0.85);
+      var _final_val_sale_two = Math.floor(final_val_din_two + Math.floor(final_val_din * 0.15));
 
       console.log(_final_val_sale_two);
       $('#final_val_two').text(_final_val_sale_two);
