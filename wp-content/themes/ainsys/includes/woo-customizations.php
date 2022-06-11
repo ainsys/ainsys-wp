@@ -605,6 +605,9 @@ function cart_count_fragments( $fragments ) {
 add_action('wp_ajax_nopriv_taxonomyFilter', 'taxonomyFilter');
 add_action('wp_ajax_taxonomyFilter', 'taxonomyFilter');
 
+add_action('wp_ajax_nopriv_infiniteScroll', 'taxonomyFilter');
+add_action('wp_ajax_infiniteScroll', 'taxonomyFilter');
+//global $wp_query;
 function taxonomyFilter($args = []) {
 
     /**
@@ -615,22 +618,26 @@ function taxonomyFilter($args = []) {
      *
      */
     if( wp_doing_ajax() ) :
-        //var_dump($_POST);
+        //$default_posts_per_page = $wp_query->query_vars['posts_per_page'];
+        //_e('<pre>' . var_dump($default_posts_per_page). '</pre>');
         /**
          * Type
          */
-        //$type = sanitize_text_field($_POST['type']);
-        //$paged =  get_query_var('paged')  ? get_query_var('paged') : 1;
-        //$current_paged =
 
+        $term_id = (int)$_POST['category'];
         $defaults = [
-            'posts_per_page' => 50,
-            //'orderby'        => 'meta_value',
-            //'meta_key'         => 'biography_surname',
-            'order'          => 'ASC',
+            'posts_per_page' => 10,
+            //'order'          => 'ASC',
             'post_status'    => 'publish',
             'post_type'      => 'product',
-            //'paged' => $_POST['paged']
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id,
+                )
+            ),
+            'paged' => $_POST['paged']
         ];
 
         $args = wp_parse_args( $args, $defaults );
@@ -644,9 +651,22 @@ function taxonomyFilter($args = []) {
              $args['s'] = $_POST['search'];
 
         endif;
+
+        if (isset( $_POST['filter-category'] )&& !empty($_POST['filter-category'])):
+
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'product_tag',
+                    'field'    => 'slug',
+                    'terms'    => $_POST['filter-category'],
+                ]
+            ];
+
+        endif;
+
         $query = new WP_Query($args);
 
-        //_e('<pre>' . var_dump($args). '</pre>');
+
         if( $query->have_posts() ) :
             $max_num_pages = $query->max_num_pages;
             echo '<div id="max-pages" data-maxpages="'.$max_num_pages.'" style="display: none"></div>';
