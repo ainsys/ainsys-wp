@@ -17,7 +17,20 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header();
+$lang = get_locale();
+global $wp_query;
+
+if($lang == 'en_US') {
+    get_header('us');
+} elseif ($lang == 'es_ES') {
+    get_header('es');
+} elseif ($lang == 'uk') {
+    get_header('ua');
+} elseif($lang == 'ru_RU') {
+    get_header();
+} else {
+    get_header('us');
+}
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -66,13 +79,15 @@ get_header();
     <?php endif; ?>
 
 		<div class="products__left">
-			<div class="products__left__title"><?php _e('Integrations','ainsys') ?></div>
+			<div class="products__left__title"><?php _e('Integrations','ainsys'); ?></div>
 
 
 			<div class="products__search">
                 <form action="<?php echo admin_url( 'admin-ajax.php' ) ?>" method="POST" id="filter">
                     <input type="text" name="search" placeholder="Search" class="search-input">
                     <input type="hidden" name="action" value="taxonomyFilter">
+                    <input type="hidden" name="filter-category" id="categoryFilter">
+                    <input type="hidden" name = "category" value="<?= $wp_query->get_queried_object()->term_id; ?>">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -86,17 +101,29 @@ get_header();
 				$exclude = get_field( 'exclude_categories', 'option' ) ? implode( ',', get_field( 'exclude_categories', 'option' ) ) : '';
 
 				$args = array(
-					'taxonomy'     => 'product_cat',
+					'taxonomy'     => 'product_tag',
 					'orderby'      => 'name',
 					'order'        => 'ASC',
-					'heirarchical' => true,
+					//'heirarchical' => true,
 					'hide_empty'   => true,
-					'title_li'     => '',
+					//'title_li'     => '',
 					'exclude'      => $exclude,
 				);
+                $tags = get_tags( $args );
+                $html='';
 				?>
 				<ul class="products__category-list">
-					<?php wp_list_categories( $args ); ?>
+
+					<?php
+                    //wp_list_categories( $args );
+                    foreach ( $tags as $tag ) {
+                        $tag_link = get_tag_link( $tag->term_id );
+
+                        $html .= "<li title='{$tag->name}' class='{$tag->slug} cat-item  current-cat-parent current-cat-ancestor ' data-filter = '{$tag->slug}'>  ";
+                        $html .= "<span>{$tag->name}</span></li>";
+                    }
+                    echo $html;
+                    ?>
 				</ul>
                 <?php if ( is_user_logged_in() ): ?>
                     <div class="products__addsystem">
@@ -153,6 +180,12 @@ get_header();
 				 */
 				do_action( 'woocommerce_no_products_found' );
 			}
+			?>
+            <div class="" id="loadedElements">
+                <button class="catalogList__loadmore__btn btn" id="loadmore_btn">Load More</button>
+                <div class="loader loadmore-loader" style="display: none">   </div>
+            </div>
+            <?php
 
 			/**
 			 * Hook: woocommerce_after_main_content.
@@ -162,8 +195,23 @@ get_header();
 			do_action( 'woocommerce_after_main_content' );
 
 			?>
-		</div>
+
 	</div>
 </div>
 <?php
-get_footer();
+if($lang == 'en_US') {
+
+    get_footer('us');
+} elseif ($lang == 'es_ES') {
+
+    get_footer('es');
+} elseif ($lang == 'uk') {
+
+    get_footer('ua');
+} elseif($lang == 'ru_RU') {
+
+    get_footer();
+} else {
+
+    get_footer('us');
+}
