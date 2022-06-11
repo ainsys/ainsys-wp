@@ -619,7 +619,7 @@ function taxonomyFilter($args = []) {
      */
     if( wp_doing_ajax() ) :
         //$default_posts_per_page = $wp_query->query_vars['posts_per_page'];
-        //_e('<pre>' . var_dump($default_posts_per_page). '</pre>');
+       // _e('<pre>' . var_dump($_POST). '</pre>');
         /**
          * Type
          */
@@ -630,13 +630,13 @@ function taxonomyFilter($args = []) {
             //'order'          => 'ASC',
             'post_status'    => 'publish',
             'post_type'      => 'product',
-            'tax_query' => array(
+            /*'tax_query' => array(
                 array(
                     'taxonomy' => 'product_cat',
                     'field'    => 'term_id',
                     'terms'    => $term_id,
                 )
-            ),
+            ),*/
             'paged' => $_POST['paged']
         ];
 
@@ -652,13 +652,21 @@ function taxonomyFilter($args = []) {
 
         endif;
 
-        if (isset( $_POST['filter-category'] )&& !empty($_POST['filter-category'])):
+        if (isset( $_POST['filter-category'] )&& !empty($_POST['filter-category']) && $_POST['filter-category'] != 'clear'):
 
             $args['tax_query'] = [
                 [
                     'taxonomy' => 'product_tag',
                     'field'    => 'slug',
                     'terms'    => $_POST['filter-category'],
+                ]
+            ];
+        else:
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id,
                 ]
             ];
 

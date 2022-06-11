@@ -32,6 +32,7 @@ if($lang == 'en_US') {
     get_header('us');
 }
 
+$current_category = $wp_query->get_queried_object()->term_id;
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -87,7 +88,7 @@ if($lang == 'en_US') {
                     <input type="text" name="search" placeholder="Search" class="search-input">
                     <input type="hidden" name="action" value="taxonomyFilter">
                     <input type="hidden" name="filter-category" id="categoryFilter">
-                    <input type="hidden" name = "category" value="<?= $wp_query->get_queried_object()->term_id; ?>">
+                    <input type="hidden" name = "category" value="<?= $current_category; ?>">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -101,27 +102,29 @@ if($lang == 'en_US') {
 				$exclude = get_field( 'exclude_categories', 'option' ) ? implode( ',', get_field( 'exclude_categories', 'option' ) ) : '';
 
 				$args = array(
-					'taxonomy'     => 'product_tag',
+					'taxonomy'     => 'product_cat',
 					'orderby'      => 'name',
 					'order'        => 'ASC',
+					'child_of'     => (int)$current_category,
 					//'heirarchical' => true,
 					'hide_empty'   => true,
-					//'title_li'     => '',
+					'title_li'     => '',
 					'exclude'      => $exclude,
 				);
-                $tags = get_tags( $args );
+				$categories = get_categories( $args );
                 $html='';
 				?>
 				<ul class="products__category-list">
 
 					<?php
                     //wp_list_categories( $args );
-                    foreach ( $tags as $tag ) {
-                        $tag_link = get_tag_link( $tag->term_id );
+                    foreach ( $categories as $category ) {
+                        $tag_link = get_tag_link( $category->term_id );
 
-                        $html .= "<li title='{$tag->name}' class='{$tag->slug} cat-item  current-cat-parent current-cat-ancestor ' data-filter = '{$tag->slug}'>  ";
-                        $html .= "<span>{$tag->name}</span></li>";
+                        $html .= "<li title='{$category->name}' class='{$category->slug} cat-item  current-cat-parent current-cat-ancestor ' data-filter = '{$category->slug}'>  ";
+                        $html .= "<span>{$category->name}</span></li>";
                     }
+                    $html .= '<li class="cat-item reset-filter" data-filter="clear">  <span>'.__("Reset Filters", 'ainsys').'</span></li>';
                     echo $html;
                     ?>
 				</ul>
