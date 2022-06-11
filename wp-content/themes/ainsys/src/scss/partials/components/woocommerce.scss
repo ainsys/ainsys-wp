@@ -110,6 +110,9 @@
       color: #667085;
     }
   }
+   nav.woocommerce-pagination {
+     display: none;
+   }
 }
 .products__right {
   &.loader {
