@@ -95,15 +95,15 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 									<?php the_sub_field( 'text' ); ?>
 							    </p>
 							<?php } ?>
+							<?php if ( get_sub_field( 'tooltip' ) ) { ?>
 							<div class="tooltips">
 							<ul>
-							<?php if ( get_sub_field( 'tooltip' ) ) { ?>
 							    <li>
 							    	<?= get_sub_field('tooltip');?>
 								</li>
-							<?php } ?>
 							</ul>
 						  </div>
+						  <?php } ?>
 						  </li>
 						  <?php endwhile; ?>
 						<?php endif; ?>

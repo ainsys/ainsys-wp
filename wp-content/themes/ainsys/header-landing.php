@@ -116,6 +116,7 @@
 						</div> -->
 
 						<div class="container">
+
 							<div class="header-landing__content">
 								<a href="/" class="header-landing__logo"></a>
 
@@ -130,7 +131,7 @@
 								<div class="socials">
 									<div class="socials__wrapper">
 										<div class="header-landing__btn">
-											<a class="btn btn-main" href="https://ainsys.com/register/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
+											<a class="btn btn-main" href="https://ru.ainsys.com/my-account/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Оставить заявку</a>
 										</div>
 										<ul class="socials__links">
 											<li  class="numbers__phone numbers__phone-disabled">
@@ -156,11 +157,6 @@
 								<div class="header-landing__lang text-end">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="usa">
 									<a href="#" class="header-landing__lang__current text-decoration-none">RU</a>
-									<ul class="header-landing__lang__submenu">
-									<li>
-										<a href="https://ru.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
-									</li>
-									</ul>
 								</div>
 							</div>
 						</div>

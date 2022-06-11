@@ -229,18 +229,17 @@ if ( ! empty( $block['align'] ) ) {
 
 
 
-								<?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
-								<th class="row_dop" scope="row">
-									<?php the_sub_field( 'table_dop_name' ); ?>
-									<span class="tooltips__item"><span> 
-                                    <?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
+							<th class="row_dop" scope="row">
+                                 <?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
+									<?= the_sub_field( 'table_dop_name' ); ?>
+								<?php } ?>
+								<span class="tooltips__item"><span> 
+								<?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
 									<div class="tooltips">
-										<?= get_field( 'table_dop_tooltip' ); ?>
-										Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+										<?= the_sub_field( 'table_dop_tooltip' ); ?>
 									</div> 
-									<?php } ?>
-								</th>
-							<?php } ?>
+								<?php } ?>
+							</th>
 							<?php if ( get_sub_field( 'table_val_fisrt' ) ) { ?>
 								<td class="rate_first">
 									<?php the_sub_field( 'table_val_fisrt' ); ?>

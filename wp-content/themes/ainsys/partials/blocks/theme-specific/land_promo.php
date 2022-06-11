@@ -64,7 +64,6 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                       </ul>
                       <p class="promo__podtext">
                       <?= get_field('text_under');?>
-                        И вообще для всех, кто любит автоматизировать рутину
                       </p>
                   </div>
                   <div class="promo__img">

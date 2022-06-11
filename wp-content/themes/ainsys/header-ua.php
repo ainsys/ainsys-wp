@@ -76,7 +76,8 @@
 				<div id="content" class="site-content">
 
 					<header class="header">
-						<div id="counrty" class="counrty" style="display: none;">
+
+						<!-- <div id="counrty" class="counrty" style="display: none;">
 							<div class="container">
 								<div class="counrty_content">
 								<p class="counrty_text">
@@ -99,7 +100,7 @@
 								<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header__content">
