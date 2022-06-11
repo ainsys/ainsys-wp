@@ -157,19 +157,20 @@
 											'default' => 'mystery',
 										)
 									);
+									$current_user = wp_get_current_user();
 									?>
 									<div class="header__account_block">
 									<a class="header__account">
 										<span class="header__account__shadow"></span>
 										<span class="header__account__img">
-											<img src="http://1.gravatar.com/avatar/d3efc5e52da40d5267661055ec57a34d?s=58&amp;d=mm&amp;r=g" alt="">
+											<img src="<?php echo $url?> " alt="<?=$current_user->user_login?>">
 										</span>
 								    </a>
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
 											<div class="menu_item_content">		
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
-												<a class="menu__link" href="#">temirbayev.nail</a>
+												<a class="menu__link" href="/my-account/"><?=  !empty($current_user->display_name )?  $current_user->display_name : $current_user->user_login;  ?></a>
 											</div>	
 										</li>
 										<li class="menu__item">
@@ -199,7 +200,7 @@
 										<li class="menu__item">
 										    <div class="menu_item_content">	
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
-												<a class="menu__link" href="#">Выход</a>
+												<a class="menu__link" href="<? echo wp_logout_url() ?>">Выход</a>
 											</div>	
 										</li>
 									</ul>
