@@ -341,7 +341,6 @@
 	> .header__account:hover,
 	.open {
 		.menu__submenu {
-			overflow: visible;
 			@include media-breakpoint-up( $bp-menu ) {
 				max-height: rem( 70 );
 			}
