@@ -19,7 +19,7 @@ $product_id       = $product->get_id();
 $product_cats_ids = $product->get_category_ids();
 $color_1 = '#3d0043';
 $color_2 = '#931e9f';
-//$logo = get_field('logo');
+$logo = get_field('logo');
 if(!empty(get_field('color_1'))) {
     $color_1 = get_field('color_1');
 }
@@ -34,7 +34,7 @@ if(!empty(get_field('color_2'))) {
 		<div class="img">
 			<?// echo $product->get_image(); ?>
 
-               <?php echo '<img src="/wp-content/uploads/logo/'.$product->get_slug().'.png">';?>
+               <?php echo '<img src="/wp-content/uploads/logo/'.$logo.'">';?>
 
 		</div>
 		<div class="title">
