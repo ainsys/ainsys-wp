@@ -129,13 +129,28 @@ class Clean_Walker extends Walker_Nav_Menu {
 
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 
+        $tooltip_text = get_field('tooltip_text', $item);
+        if($tooltip_text != "") {
+            $class_names = $class_names.' tooltips__item';
+        }
+
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 		$class_names = str_replace( 'menu-item', 'menu__item', $class_names );
 		$class_names = str_replace( 'menu-item-has-children', 'menu__item--has-children', $class_names );
 
+
 		
 
 		$output .= $n . $indent . '<li' . $class_names . '>';
+
+
+		//var_dump($tooltip_text);
+
+		if($tooltip_text != "") {
+            $output .= '<div class="tooltips tooltips__header">'.$tooltip_text.'</div>';
+        }
+
+		//$output .= '<div class="tooltips tooltips__header">Test tooltip</div>';
 
 		$atts           = array();
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';

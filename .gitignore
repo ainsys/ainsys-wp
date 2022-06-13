@@ -49,7 +49,7 @@ app.js
 
 ### Development Themes ###
 /wp-content/themes/ainsys/node_modules/
-/wp-content/themes/ainsys/logo/
+/wp-content/themes/ainsys/assets/images/logo/
 /wp-content/themes/ainsys/assets/images/logo/
 
 /wp-content/themes/ainsys/index.php
