@@ -656,7 +656,7 @@ function taxonomyFilter($args = []) {
 
             $args['tax_query'] = [
                 [
-                    'taxonomy' => 'product_tag',
+                    'taxonomy' => 'product_cat',
                     'field'    => 'slug',
                     'terms'    => $_POST['filter-category'],
                 ]
