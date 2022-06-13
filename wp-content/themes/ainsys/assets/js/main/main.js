@@ -1580,24 +1580,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   $('.form-check-input-rate_page').on('click', function () {
     $('.rate_page__list').toggleClass('active');
     var final_val_din = parseInt($('#final_val').text());
-    var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din_two);
+    var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din);
 
     if ($('.rate_page__list').hasClass('active')) {
-      var final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
+      var final_val_sale = Math.floor(final_val_din / 0.85);
       $('#final_val').text(final_val_sale);
       $('#rate_val').text(final_val_sale);
-      var final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din * 0.15));
+      var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      console.log(final_val_sale_two);
       $('#final_val_two').text(final_val_sale_two);
       $('#rate_val2').text(final_val_sale_two);
     } else {
-      var _final_val_sale = Math.floor(final_val_din + Math.floor(final_val_din * 0.15));
+      var _final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
 
       $('#final_val').text(_final_val_sale);
       $('#rate_val').text(_final_val_sale);
 
-      var _final_val_sale_two = Math.floor(final_val_din_two + Math.floor(final_val_din * 0.15));
+      var _final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din_two * 0.15));
 
-      console.log(_final_val_sale_two);
       $('#final_val_two').text(_final_val_sale_two);
       $('#rate_val2').text(_final_val_sale_two);
     }
