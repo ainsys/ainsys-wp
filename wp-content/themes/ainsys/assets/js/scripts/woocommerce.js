@@ -130,19 +130,23 @@
 				contentBox.removeClass( 'loader' );
 			},
 			success( data ) {
-				console.log('SEARCH');
+				console.log( 'SEARCH' );
 				stopFlag();
-				const LoadmoreBtn =
+				/*const LoadmoreBtn =
 					'<div class="products-list__loadmore container grid-container ">\n' +
 					'         <button class="products-list__loadmore__btn btn" id="loadmore_btn">Load More</button> <div class="loader loadmore-loader" style="display: none">\n' +
-					'       </div>';
+					'       </div>';*/
+				const LoadmoreBtn = document.getElementById('loadedElements')
 				$( '#catalogList' ).html( data ); // insert data
 				addToCard();
 				const $maxPages = $( '#max-pages' ).data( 'maxpages' );
 				console.log( 'MAXPAGE:' + $maxPages );
 				console.log( 'CURRENT:' + scrollPage );
 				if ( scrollPage < $maxPages ) {
-					$( '#catalogList' ).append( LoadmoreBtn );
+					//$( '#catalogList' ).append( LoadmoreBtn );
+					$( LoadmoreBtn ).show();
+				} else {
+					$( LoadmoreBtn ).hide();
 				}
 
 				$( '#catalogList' ).removeClass( 'fade-deactive' );
@@ -173,74 +177,64 @@
 	 *
 	 */
 
+	//stopFlag();
+	let scrollPage = 2,
+		//canBeLoaded = true,
+		filter = $( '#filter' );
 
-		//stopFlag();
-		let scrollPage = 2,
-			//canBeLoaded = true,
-			filter = $('#filter');
+	$( document ).on( 'click', '#loadmore_btn', function() {
+		let flag = stopFlag();
+		//$content = $('body');
+		if ( flag < 1 ) {
+			$.ajax( {
+				url: filter.attr( 'action' ),
+				data: filter.serialize() + '&paged=' + scrollPage,
+				type: 'POST',
+				beforeSend() {
+					//$content.addClass('loader');
+					$( '#loadmore_btn' ).hide();
+					//$('.loadmore-loader').show();
+					flag = 1;
+				},
+				complete() {
+					//$('.loadmore-loader').hide();
+					//$content.removeClass('loader');
+				},
+				success( data ) {
+					if ( data ) {
+						$( data ).appendTo( '#catalogList' );
 
+						console.log( 'LOADMORE' );
+						const $maxPages = $( '#max-pages' ).data( 'maxpages' );
+						setTimeout( function() {}, 150 );
 
-		$(document).on('click', '#loadmore_btn', function () {
-			let flag = stopFlag();
-			//$content = $('body');
-			if (flag < 1) {
-				$.ajax({
-					url: filter.attr('action'),
-					data: filter.serialize() + '&paged=' + scrollPage,
-					type: 'POST',
-					beforeSend: function () {
-						//$content.addClass('loader');
-						$('#loadmore_btn').hide();
-						//$('.loadmore-loader').show();
-						flag = 1;
-					},
-					complete: function(){
-						//$('.loadmore-loader').hide();
-						//$content.removeClass('loader');
-
-					},
-					success: function (data) {
-
-						if (data) {
-
-							$(data).appendTo('#catalogList');
-
-							console.log('LOADMORE');
-							let $maxPages = $('#max-pages').data('maxpages');
-							setTimeout(function () {
-
-							}, 150);
-
-							scrollPage++;
-							if (scrollPage <= $maxPages) {
-								$('#loadmore_btn').show();
-							}
-
-							$('.no-results').hide();
-							$('.no-results').css('width', '100%');
-						} else {
-							flag = 1;
-							$('.no-results').hide();
-							$('.no-results').css('width', '100%');
-							scrollPage = 2;
+						scrollPage++;
+						if ( scrollPage <= $maxPages ) {
+							$( '#loadmore_btn' ).show();
 						}
 
-					},
-				});
-			} else {
-				$('.catalogList__loadmore').hide();
-				$('.no-results').hide();
-				$('.no-results').css('width', '100%');
+						$( '.no-results' ).hide();
+						$( '.no-results' ).css( 'width', '100%' );
+					} else {
+						flag = 1;
+						$( '.no-results' ).hide();
+						$( '.no-results' ).css( 'width', '100%' );
+						scrollPage = 2;
+					}
+				},
+			} );
+		} else {
+			$( '.catalogList__loadmore' ).hide();
+			$( '.no-results' ).hide();
+			$( '.no-results' ).css( 'width', '100%' );
 
-				//scrollPage = 2;
-			}
+			//scrollPage = 2;
+		}
 
-
-			console.log('paged: '+scrollPage);
-			//console.log('max: '+$maxPages);
-			return false;
-
-		});
+		console.log( 'paged: ' + scrollPage );
+		//console.log('max: '+$maxPages);
+		return false;
+	} );
 
 	//Search filter
 
@@ -255,10 +249,9 @@
 			ajaxSubmit();
 		}
 	} );
-	$('.products__category-list li').on('click', function() {
-		let value = $(this).data('filter');
-		$('#categoryFilter').val(value);
+	$( '.products__category-list li' ).on( 'click', function() {
+		const value = $( this ).data( 'filter' );
+		$( '#categoryFilter' ).val( value );
 		ajaxSubmit();
-	})
-
+	} );
 } )( jQuery );

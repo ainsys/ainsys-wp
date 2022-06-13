@@ -184,10 +184,12 @@ $current_category = $wp_query->get_queried_object()->term_id;
 				do_action( 'woocommerce_no_products_found' );
 			}
 			?>
-            <div class="" id="loadedElements">
-                <button class="catalogList__loadmore__btn btn" id="loadmore_btn">Load More</button>
-                <div class="loader loadmore-loader" style="display: none">   </div>
-            </div>
+            <?php if($wp_query->max_num_pages > 1):  ?>
+                <div class="" id="loadedElements">
+                    <button class="catalogList__loadmore__btn btn" id="loadmore_btn">Load More</button>
+                    <div class="loader loadmore-loader" style="display: none">   </div>
+                </div>
+            <?php endif; ?>
             <?php
 
 			/**

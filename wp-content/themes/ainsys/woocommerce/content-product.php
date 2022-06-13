@@ -34,7 +34,7 @@ if(!empty(get_field('color_2'))) {
 		<div class="img">
 			<?// echo $product->get_image(); ?>
 
-               <?php echo '<img src="/wp-content/uploads/logo/'.$logo.'">';?>
+               <?php echo '<img src="'.get_stylesheet_directory_uri().'/logo/'.strtolower($logo).'">';?>
 
 		</div>
 		<div class="title">
