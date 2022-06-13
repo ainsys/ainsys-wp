@@ -65,7 +65,7 @@ $current_category = $wp_query->get_queried_object()->term_id;
         <?php if ( false === is_user_logged_in() ): ?>
         <div class="woocommerce__header__notice">
             <p>Log in to create your integration plan and make a preliminary calculation of the timing and budget for implementation</p>
-            <button type="button" data-target="#authModal" class="woocommerce-Button button button--notice button--auth" id="noticeAuthorize">Авторизироваться</button>
+            <button type="button" data-target="#authModal" class="woocommerce-Button button button--notice button--auth" id="noticeAuthorize"><?php _e('Login','ainsys') ?></button>
         </div>
     <?php else:?>
             <div class="woocommerce__header__notice woocommerce__header__notice--authorized">
