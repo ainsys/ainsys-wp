@@ -143,7 +143,7 @@ if ( ! empty( $block['align'] ) ) {
 			</div>
 			<div class="range-slider">
 			    <div class="label-range"><?= get_field('label-range-second');?></div>
-                <input id="range2" type="range" name="range2" min="0" max="50000" step="500" value="0" />
+                <input id="range2" type="range" name="range2" min="0" max="100000" step="2000" value="0" />
 			</div>
 		</div>
 
