@@ -218,6 +218,7 @@
 			position: absolute;
 			top: 100%;
 			left: calc( 50% - #{rem( 2.6 )} );
+			overflow: hidden;
 			width: auto;
 			flex: 1 0 rem( 25 );
 			min-width: rem( 25 );
