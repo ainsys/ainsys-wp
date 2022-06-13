@@ -77,7 +77,7 @@ if ( ! empty( $block['align'] ) ) {
 								$button_target = $button['target'] ? $button['target'] : '_self';
 								?>
 								<div class="rates__item__link">
-									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="gtag( 'event', 't_1', {   'event_category' : 'ain',   'event_label' : 'p' });ym(86987238,'reachGoal','t_1'); return true;"><?php echo esc_html( $button_title ); ?></a>
+									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="<?php the_sub_field( 'link_onclick' ); ?>"><?php echo esc_html( $button_title ); ?></a>
 								</div>
 							<?php } ?>
 						</div>
