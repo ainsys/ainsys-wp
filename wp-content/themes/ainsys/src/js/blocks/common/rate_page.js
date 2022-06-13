@@ -121,24 +121,24 @@
         const final_val_din = parseInt($('#final_val').text()); 
     
         const final_val_din_two = parseInt($('#final_val_two').text()); 
-        // console.log(final_val_din_two);
+        // console.log(final_val_din);
     
         if($('.rate_page__list').hasClass('active')){
-            let final_val_sale = Math.floor(final_val_din - Math.floor( final_val_din * 0.15 ) );
+            let final_val_sale = Math.floor(final_val_din / 0.85 );
             $('#final_val').text(final_val_sale);
             $('#rate_val').text(final_val_sale);
     
-            let final_val_sale_two = Math.floor(final_val_din_two - Math.floor( final_val_din * 0.15 ));
+            let final_val_sale_two = Math.floor(final_val_din_two / 0.85 );
+            console.log(final_val_sale_two);
             $('#final_val_two').text(final_val_sale_two);
             $('#rate_val2').text(final_val_sale_two);
         }
         else {
-            let final_val_sale = Math.floor(final_val_din + Math.floor( final_val_din * 0.15 ) );
+            let final_val_sale = Math.floor(final_val_din - Math.floor( final_val_din * 0.15 ) );
             $('#final_val').text(final_val_sale);
             $('#rate_val').text(final_val_sale);
     
-            let final_val_sale_two = Math.floor(final_val_din_two + Math.floor( final_val_din * 0.15 ) );
-            console.log(final_val_sale_two);
+            let final_val_sale_two = Math.floor(final_val_din_two - Math.floor( final_val_din_two * 0.15 ));
             $('#final_val_two').text(final_val_sale_two);
             $('#rate_val2').text(final_val_sale_two);
         }
