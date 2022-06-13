@@ -129,7 +129,7 @@ nav.woocommerce-pagination {
 }
 .top-row.row > div.title {
 	max-width: 160px;
-	max-height: 90px;
+	/*max-height: 90px;*/
 	overflow: hidden;
 }
 .products__right h2.woocommerce-loop-product__title {
