@@ -1075,25 +1075,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  document.body.classList.remove('no-js');
-  document.body.classList.add('js');
-})(jQuery);
-"use strict";
-
-(function ($) {
-  "use strict";
-
-  if (window['objectFitImages']) {
-    $(document).ready(function () {
-      window.objectFitImages(null, {
-        watchMQ: true
-      });
-    });
-  }
-})(jQuery);
-"use strict";
-
-(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1232,6 +1213,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
     */
   });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+})(jQuery);
+"use strict";
+
+(function ($) {
+  "use strict";
+
+  if (window['objectFitImages']) {
+    $(document).ready(function () {
+      window.objectFitImages(null, {
+        watchMQ: true
+      });
+    });
+  }
 })(jQuery);
 "use strict";
 
@@ -1390,6 +1390,40 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $('.wp-block-gallery a').fancybox({// Options will go here
     });
   }
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".integration_head_correct").click(function () {
+    $(".integration_head_input").prop("disabled", false);
+  });
+  $(".integration_head_switch").click(function () {
+    $(".switch_popup").toggleClass('disabl');
+  });
+  $(".connector_requirements").click(function () {
+    $(this).find('.connector_requirements_preview').addClass('disabl');
+    $(this).find('.connector_requirements_main').removeClass('disabl');
+  });
+  $(".settings_correct").click(function () {
+    $(this).closest('.connector').find('.main_content').prop("disabled", false);
+    $(this).parent().addClass('preview');
+  });
+  $(".settings_accept").click(function () {
+    $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
+    $(this).parent().removeClass('preview');
+  });
+  $(".settings_cancel").click(function () {
+    $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
+    $(this).parent().removeClass('preview');
+  });
+  $(".connector_delete_btn").click(function () {
+    $(this).parent().closest('.connector').find('.connector_content').addClass('disabl');
+  });
+  $(".term_item_toggler").click(function () {
+    $(this).parent().closest('.term_item').find('.term_item_content').toggleClass('disabl');
+    $(this).find('.term_item_toggler_more').toggleClass('disabl');
+    $(this).find('.term_item_toggler_less').toggleClass('disabl');
+  });
 })(jQuery);
 "use strict";
 
