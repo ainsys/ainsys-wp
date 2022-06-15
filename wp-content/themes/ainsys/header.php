@@ -44,6 +44,15 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-205692206-3');
 		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics --> 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RBQY76Q2F"></script> 
+		<script> 
+		window.dataLayer = window.dataLayer || []; 
+		function gtag(){dataLayer.push(arguments);} 
+		gtag('js', new Date()); 
+		
+		gtag('config', 'G-9RBQY76Q2F'); 
+		</script>
 		<script>
 				(function(w,d,u){
 						var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
@@ -69,6 +78,8 @@
 				var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
 			})(window, document, 'script', 'cloud.roistat.com', '687af597c04143baddf7137bcaa63754');
 		</script>
+
+		
 
 
 		<div id="page" class="site">
