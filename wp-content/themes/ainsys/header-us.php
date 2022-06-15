@@ -44,6 +44,16 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-205692206-3');
 		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics --> 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RBQY76Q2F"></script> 
+		<script> 
+		window.dataLayer = window.dataLayer || []; 
+		function gtag(){dataLayer.push(arguments);} 
+		gtag('js', new Date()); 
+		
+		gtag('config', 'G-9RBQY76Q2F'); 
+		</script>
 		<script>
 				(function(w,d,u){
 						var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
