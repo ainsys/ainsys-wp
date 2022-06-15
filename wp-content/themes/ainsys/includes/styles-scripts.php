@@ -151,6 +151,7 @@ function ainsys_enqueue_scripts() {
 		true
 	);
 
+
 }
 
 add_action( 'wp_enqueue_scripts', 'ainsys_enqueue_scripts' );

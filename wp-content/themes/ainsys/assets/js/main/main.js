@@ -1395,7 +1395,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
 (function ($) {
   $(".integration_head_correct").click(function () {
-    $(".integration_head_input").prop("disabled", false);
+    if ($(".integration_head_input").is(":disabled")) {
+      $(".integration_head_input").prop("disabled", false);
+    } else {
+      $(".integration_head_input").prop("disabled", true);
+    }
   });
   $(".integration_head_switch").click(function () {
     $(".switch_popup").toggleClass('disabl');
@@ -1423,6 +1427,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(this).parent().closest('.term_item').find('.term_item_content').toggleClass('disabl');
     $(this).find('.term_item_toggler_more').toggleClass('disabl');
     $(this).find('.term_item_toggler_less').toggleClass('disabl');
+  });
+  $(".options_settings_correct").click(function () {
+    if ($(".integration_form_options_textarea").is(":disabled")) {
+      $('.integration_form_options_textarea').prop("disabled", false);
+    } else {
+      $('.integration_form_options_textarea').prop("disabled", true);
+    }
   });
 })(jQuery);
 "use strict";

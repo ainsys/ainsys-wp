@@ -245,28 +245,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <div class="integration_form">
                     <div class="integration_form_budget">
-                        <div class="integration_form_budget_field">
+                        <div class="integration_form_budget_field col-md-6 col-12">
                             <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_text">
+                                <p class="integration_form_budget_field_head_text">
                                     Бюджет на интеграцию
                                 </p>
                                 <span class="tooltips__item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
                                     <div class="tooltips">
                                         test
                                     </div> 
                                 </span>
                             </div>
-                            <input class="integration_form_budget_field_inpit" type="text" placeholder="Введите бюджет">
+                            <input class="integration_form_budget_field_input" type="text" placeholder="Введите бюджет">
                         </div>
 
-                        <div class="integration_form_budget_field">
+                        <div class="integration_form_budget_field col-md-6 col-12">
                             <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_text">
+                                <p class="integration_form_budget_field_head_text">
                                     Валюта
                                 </p>
                                 <span class="tooltips__item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
                                     <div class="tooltips">
                                         test
                                     </div> 
@@ -274,17 +274,69 @@ if ( ! defined( 'ABSPATH' ) ) {
                             </div>
                             <div class="select">
                                 <input class="select__input" type="hidden" name="">
-                                <div class="select__head">Выберите</div>
+                                <div class="select__head">Выберите валюту</div>
                                 <ul class="select__list" style="display: none;">
-                                    <li class="select__item">Стилизация select CSS</li>
-                                    <li class="select__item">Стилизация select JavaScript</li>
-                                    <li class="select__item">Стилизация select, используя input</li>
+                                    <li class="select__item">Российский рубль</li>
+                                    <li class="select__item">$</li>
+                                    <li class="select__item">Гривна</li>
                                 </ul>
                             </div>
                         </div>
 
+                        <div class="integration_form_budget_field col-md-6 col-12">
+                            <div class="integration_form_budget_field_head">
+                                <p class="integration_form_budget_field_head_text">
+                                    Дата начала
+                                </p>
+                                <span class="tooltips__item">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
+                                    <div class="tooltips">
+                                        test
+                                    </div> 
+                                </span>
+                            </div>
+                            <input type='date' class="integration_form_budget_field_date data_input" />
+                        </div>
+
+                        <div class="integration_form_budget_field col-md-6 col-12">
+                            <div class="integration_form_budget_field_head">
+                                <p class="integration_form_budget_field_head_text">
+                                    Дата окончания
+                                </p>
+                                <span class="tooltips__item">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
+                                    <div class="tooltips">
+                                        test
+                                    </div> 
+                                </span>
+                            </div>
+                            <input type='date' class="integration_form_budget_field_date data_input" />
+                        </div>
                     </div>
+                    <div class="integration_form_options">
+                        <div class="integration_form_options_head">
+                            <h6 class="integration_form_options_head_title">
+                                Дополнительные данные проекта
+                            </h6>
+                            <span class="tooltips__item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
+                                <div class="tooltips">
+                                    test
+                                </div> 
+                            </span>
+                            <button class="integration_form_options_head_download">Подгрузить множественные файлы ТЗ</button>
+                        </div>
+                        <textarea class="integration_form_options_textarea" disabled="">ТЗ по проекту в свободной форме</textarea>
+                        <div class="integration_form_options_settings">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/panel.png" alt="panel">
+                            <div class="integration_form_options_settings_correct options_settings_correct">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/correct.svg" alt="correct">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
 
             <div class="integration_block col-12 col-lg-3">
