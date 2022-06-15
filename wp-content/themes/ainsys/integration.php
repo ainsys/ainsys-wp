@@ -242,6 +242,49 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
 
                 </div>
+
+                <div class="integration_form">
+                    <div class="integration_form_budget">
+                        <div class="integration_form_budget_field">
+                            <div class="integration_form_budget_field_head">
+                                <p class="integration_form_budget_field_text">
+                                    Бюджет на интеграцию
+                                </p>
+                                <span class="tooltips__item">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
+                                    <div class="tooltips">
+                                        test
+                                    </div> 
+                                </span>
+                            </div>
+                            <input class="integration_form_budget_field_inpit" type="text" placeholder="Введите бюджет">
+                        </div>
+
+                        <div class="integration_form_budget_field">
+                            <div class="integration_form_budget_field_head">
+                                <p class="integration_form_budget_field_text">
+                                    Валюта
+                                </p>
+                                <span class="tooltips__item">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
+                                    <div class="tooltips">
+                                        test
+                                    </div> 
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select__input" type="hidden" name="">
+                                <div class="select__head">Выберите</div>
+                                <ul class="select__list" style="display: none;">
+                                    <li class="select__item">Стилизация select CSS</li>
+                                    <li class="select__item">Стилизация select JavaScript</li>
+                                    <li class="select__item">Стилизация select, используя input</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
             <div class="integration_block col-12 col-lg-3">
