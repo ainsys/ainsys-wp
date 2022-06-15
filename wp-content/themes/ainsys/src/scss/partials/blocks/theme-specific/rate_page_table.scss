@@ -269,5 +269,16 @@
 }
 .table-responsive {
     height: 100vh;
-    overflow: scroll;
+    min-height: 1100px;
+
+    @include media-breakpoint-down( lg ) {
+        overflow: scroll;
+    }
 }
+.table-responsive::-webkit-scrollbar {
+    display: none;
+}
+.table-responsive {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
