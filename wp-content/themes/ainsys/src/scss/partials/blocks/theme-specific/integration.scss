@@ -183,6 +183,7 @@
                 .col-lg-1 {
                     @include media-breakpoint-down( md ) {
                         width: 100%;
+                        order: -1;
                     }  
                 }
             }
@@ -194,6 +195,10 @@
                 display: flex;
                 opacity: 0;
                 transition: .5s;
+
+                @include media-breakpoint-down( md ) {
+                    opacity: 1;
+                }
                 
 
                 img {
@@ -525,6 +530,11 @@
                     display: none;
                     margin-bottom: 0;
                 }
+                .integration_form_field_remove {
+                    @include media-breakpoint-down( md ) {
+                        width: 100%;
+                    }
+                }
                 .integration_form_remove {
                     width: 24px;
                     height: 24px;
@@ -536,6 +546,14 @@
                     margin: 0 30px 0 -30px;
                     opacity: 0;
                     transition: .5s;
+
+                    @include media-breakpoint-down( md ) {
+                        opacity: 1;
+                    }  
+                    
+                    @include media-breakpoint-down( sm ) {
+                        margin: 0;
+                    }  
                 }
             }
 
@@ -887,6 +905,7 @@
 
     @include media-breakpoint-down( xs ) {
         max-width: 250px;
+        width: 250px;
     }
 
     .select__head {
