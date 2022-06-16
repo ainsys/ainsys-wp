@@ -42,7 +42,7 @@ if ( get_field( 'bg' ) ) {
 			<div class="toggler__switch">
 				<div class="toggler__switch__label active"><?php the_field( 'label_with' ); ?></div>
 				<div class="form-check form-switch">
-					<input class="form-check-input form-check-input-content" type="checkbox">
+					<input class="form-check-input form-check-input-content" type="checkbox" onclick="gtag( 'event', 'tumb', {   'event_category' : 'ain',   'event_label' : 'video' });">
 				</div>
 				<div class="toggler__switch__label"><?php the_field( 'label_without' ); ?></div>
 			</div>

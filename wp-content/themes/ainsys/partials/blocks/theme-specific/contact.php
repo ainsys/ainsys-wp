@@ -76,8 +76,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 							<p class="contacts__title">
 							    <?= get_field('office__title');?>
 							</p>
-							<a class="contacts__button btn-primary" href="<?= get_field('url_button');?>" onclick="ym(86987238,'reachGoal','button_4'); return true;"
-> <?= get_field('button');?> </a>
+							<a class="contacts__button btn-primary" href="<?= get_field('url_button');?>" onclick="gtag( 'event', 'consult', {   'event_category' : 'ain',   'event_label' : 'c_1' });"> <?= get_field('button');?> </a>
 							<div class="numbers__map">
 								<img src="<?= get_field('office__icon');?>" alt="usa">
 								<a href="" class="socails__addres"><?= get_field('office_contact');?></a>
@@ -95,12 +94,12 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 							<p class="contacts__text">
 								<?= get_field('phone__text');?>
 							</p>
-					<div class="numbers__phone numbers__phone-disabled">
-						<img src="<?= get_field('img');?>" alt="ru">
-						<a href="tel: +78126027880" class="soc_href disabled"><?= get_field('phone');?>
-						<div class="disabled__block"></div>
-						</a>
-					</div> 
+							<div class="numbers__phone numbers__phone-disabled">
+								<img src="<?= get_field('img');?>" alt="ru">
+								<a href="tel: <?= get_field('phone');?>" class="soc_href disabled" onclick="gtag( 'event', 'number', {   'event_category' : 'ain',   'event_label' : 'n_1' });"><?= get_field('phone');?>
+								<div class="disabled__block"></div>
+								</a>
+							</div> 
 					
 						</div>
 					</li>
