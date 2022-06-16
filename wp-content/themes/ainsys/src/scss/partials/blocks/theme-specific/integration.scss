@@ -192,6 +192,8 @@
 
             &_delete {
                 display: flex;
+                opacity: 0;
+                transition: .5s;
                 
 
                 img {
@@ -381,6 +383,11 @@
                 }
             }
         }
+        .connector:hover {
+            .connector_delete {
+                opacity: 1;
+            }    
+        }
 
         .connectors_footer {
             display: flex;
@@ -498,16 +505,37 @@
                 .integration_form_field_add {
                     display: flex;
                     align-items: end;
+                    min-width: auto !important;
+                    margin-bottom: 25px;
 
                     @include media-breakpoint-down( xs ) {
                         width: 100%;
                     }
                     .integration_form_add {
+                        cursor: pointer;
+                        padding-bottom: 10px;
+
                         @include media-breakpoint-down( xs ) {
                             margin-left: auto;
                             display: block;
                         }
                     }
+                }
+                .integration_form_field_add.disabl {
+                    display: none;
+                    margin-bottom: 0;
+                }
+                .integration_form_remove {
+                    width: 24px;
+                    height: 24px;
+                    background: url(../images/components/remove.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    cursor: pointer;
+                    margin: 0 30px 0 -30px;
+                    opacity: 0;
+                    transition: .5s;
                 }
             }
 
@@ -596,6 +624,7 @@
 
             .integration_form_field  {
                 margin-bottom: 0;
+                min-width: 250px;
 
                 @include media-breakpoint-down( xs ) {
                     width: 100%;
@@ -616,17 +645,27 @@
                 }
             }
           }
+          &_inputs:hover {
+            .integration_form_remove {
+                opacity: 1;
+            }
+          }
+          &_inputs_start {
+            margin-bottom: 0;
+          }
         }
 
-        &_data {
-           
-        }
         &_fields {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             max-width: 700px;
             margin-bottom: 50px;
+        }
+        &_field_role {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         &_field {
            margin-bottom: 25px;
@@ -844,7 +883,7 @@
     position: relative;
     display: block;
     width: 100%;
-    max-width: 220px;
+    width: 220px;
 
     @include media-breakpoint-down( xs ) {
         max-width: 250px;

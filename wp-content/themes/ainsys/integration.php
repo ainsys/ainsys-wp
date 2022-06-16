@@ -49,7 +49,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <div class="connectors">
                     <div class="connectors_head">
-                        <div class="col-md-1"></div>
                         <div class="col-md-5 col-12">
                         <p class="connectors_head_text">
                             Выбор коннектора
@@ -60,14 +59,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 Опишите ваши требования по интеграции системы
                             </p>
                         </div>
+                        <div class="col-md-1"></div>
                     </div>
                     <div class="connector">
-                        <div class="connector_content">
-                            <div class="col-lg-1">
-                                <div class="connector_delete">
-                                    <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
-                                </div>
-                            </div>    
+                        <div class="connector_content"> 
                             <div class="col-lg-5 col-12">
                                 <div class="connector_item connector_blue">
                                     <div class="connector_item_logo">
@@ -116,16 +111,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-1">
+                                <div class="connector_delete">
+                                    <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
+                                </div>
+                            </div>   
                         </div>
                     </div>
 
                     <div class="connector">
                         <div class="connector_content">
-                            <div class="col-lg-1">
-                                <div class="connector_delete">
-                                    <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
-                                </div>
-                            </div>    
                             <div class="col-lg-5 col-12">
                                 <div class="connector_item connector_blue">
                                     <div class="connector_item_logo">
@@ -174,16 +169,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="connector">
-                        <div class="connector_content">
                             <div class="col-lg-1">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
                             </div>    
+                        </div>
+                    </div>
+
+                    <div class="connector">
+                        <div class="connector_content">
                             <div class="col-lg-5 col-12">
                                 <div class="connector_item connector_yellow">
                                     <div class="connector_item_logo">
@@ -229,18 +224,23 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-1">
+                                <div class="connector_delete">
+                                    <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
+                                </div>
+                            </div>    
                         </div>
                     </div>
 
                     <div class="connectors_footer">
-                        <div class="col-lg-1">
-                        </div>
                         <div class="col-lg-5 col-12">
                             <div class="connectors_search">
                               <input type="search" class="connectors_search_input" placeholder="Введите название системы">
                             </div>
                         </div>
                         <div class="col-lg-6 col-12"></div>
+                        <div class="col-lg-1">
+                        </div>
                     </div>
                 </div>
 
@@ -346,7 +346,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </div>
                         <div class="integration_form_options_fl">
                             <div class="integration_form_options_rows">
-                                <div class="integration_form_options_inputs integration_form_options_inputs_start">
+
+                            <div class="integration_form_options_inputs integration_form_options_inputs_start">
                                     <div class="integration_form_field">
                                         <div class="integration_form_budget_field_head">
                                             <p class="integration_form_budget_field_head_text">
@@ -358,7 +359,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                 </div> 
                                             </span>
                                         </div>
-                                        <input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">
                                     </div>
 
                                     <div class="integration_form_field">
@@ -372,6 +372,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                 </div> 
                                             </span>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="integration_form_options_inputs">
+                                    <div class="integration_form_field">
+                                        <input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">
+                                    </div>
+
+                                    <div class="integration_form_field">
                                         <div class="select">
                                             <input class="select__input" type="hidden" name="">
                                             <div class="select__head">Web site</div>
@@ -386,9 +395,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                                             </ul>
                                         </div>
                                     </div>
+                                    <div class="integration_form_field_remove">
+                                        <div class="integration_form_remove settings_remove">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>    
-                            <div class="integration_form_field integration_form_field_add col-2">
+
+
+                            <div class="integration_form_field_add col-2">
                                 <div class="integration_form_add settings_add">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/add.svg" alt="add">
                                 </div>
@@ -425,16 +440,38 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 </div>
                                 <div class="form_radio_btns">
                                     <div class="form_radio_btn">
-                                        <input id="radio-1" type="radio" name="radio" value="Физическое лицо" checked>
-                                        <label for="radio-1">Физическое лицо</label>
+                                        <input id="radio-fiz" type="radio" name="radio" value="Физическое лицо">
+                                        <label for="radio-fiz">Физическое лицо</label>
                                     </div>
                                     
                                     <div class="form_radio_btn">
-                                        <input id="radio-2" type="radio" name="radio" value="Юридическое лицо">
-                                        <label for="radio-2">Юридическое лицо</label>
+                                        <input id="radio-ur" type="radio" name="radio" value="Юридическое лицо" checked>
+                                        <label for="radio-ur">Юридическое лицо</label>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="integration_form_field_role integration_form_field_fiz disabl">
+
+                            
+                            <div class="integration_form_field col-md-12 col-12">
+                                <div class="integration_form_budget_field_head">
+                                    <p class="integration_form_budget_field_head_text">
+                                        Имя
+                                    </p>
+                                    <span class="tooltips__item">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="help">
+                                        <div class="tooltips">
+                                            test
+                                        </div> 
+                                    </span>
+                                </div>
+                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите имя">
+                            </div>
+
+                            </div>
+
+                            <div class="integration_form_field_role integration_form_field_ur">
 
                             <div class="integration_form_field col-md-12 col-12">
                                 <div class="integration_form_budget_field_head">
@@ -542,6 +579,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <input class="integration_form_budget_field_input input_full" type="text" placeholder="Поиск на Google Картах">
                                 </div>    
                             </div>
+
+
+                            </div>
+
+                            
                         </div>
 
                     </div>

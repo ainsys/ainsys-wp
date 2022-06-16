@@ -1450,7 +1450,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     });
   });
   $(".settings_add").click(function () {
-    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<div class="integration_form_budget_field_head">' + '<p class="integration_form_budget_field_head_text">Альтернативные способы связи</p>' + '<span class="tooltips__item">' + '<div class="tooltips">test</div>' + '</span>' + '</div>' + '<input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<div class="integration_form_budget_field_head">' + '<p class="integration_form_budget_field_head_text">Выберите тип данных</p>' + '<span class="tooltips__item">' + '<div class="tooltips">test</div>' + '</span>' + '</div>' + '<div class="select">' + '<input class="select__input" type="hidden" name="">' + '<div class="select__head">Web site</div>' + '<ul class="select__list" style="display: none;">' + '<li class="select__item">Web site</li>' + '<li class="select__item">Whatsapp</li>' + '<li class="select__item">Facebook</li>' + '<li class="select__item">Instagram</li>' + '<li class="select__item">Telegram</li>' + '<li class="select__item">Linkedin</li>' + '<li class="select__item">Другое</li>' + '</ul>' + '</div>' + '</div>' + '</div>'));
+    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<div class="select">' + '<input class="select__input" type="hidden" name="">' + '<div class="select__head">Web site</div>' + '<ul class="select__list" style="display: none;">' + '<li class="select__item">Web site</li>' + '<li class="select__item">Whatsapp</li>' + '<li class="select__item">Facebook</li>' + '<li class="select__item">Instagram</li>' + '<li class="select__item">Telegram</li>' + '<li class="select__item">Linkedin</li>' + '<li class="select__item">Другое</li>' + '</ul>' + '</div>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
+  });
+  var container = document.querySelector('.integration_form_options_rows');
+  $(container).on('mouseover', function () {
+    $(".integration_form_field_remove").click(function () {
+      $(this).parent().addClass('disabl');
+    });
+  });
+  $("#radio-fiz").click(function () {
+    $('.integration_form_field_role').addClass('disabl');
+    $('.integration_form_field_fiz').removeClass('disabl');
+  });
+  $("#radio-ur").click(function () {
+    $('.integration_form_field_role').addClass('disabl');
+    $('.integration_form_field_ur').removeClass('disabl');
   });
 })(jQuery);
 "use strict";
