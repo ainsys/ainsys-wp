@@ -1,0 +1,181 @@
+.integration_dev {
+    .connector {
+        .connector_item_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .connector_content {
+            .connectors_input {
+                .select {
+                    max-width: 150px;
+                    margin: 0 auto;
+
+                    @include media-breakpoint-down( md ) {
+                        margin: 0 auto 0 0;
+                    }
+                }
+            }
+            .integration_form_field_input_connector  {
+                margin: 0 auto;
+            }
+        }
+    }
+    .experience {
+
+        &_block {
+          display: flex;
+
+          @include media-breakpoint-down( xs ) {
+            flex-direction: column;
+          }
+        }
+        &_block.disabl {
+            display: none;
+        }
+
+        &_wrapper {
+            width: 100%;
+            margin-bottom: 24px;
+            padding: 18px;
+            border: 1px solid $border_color;
+            border-radius: 12px;
+        }
+
+        &_head {
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid $border_color;
+
+            &_date {
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+
+                &_text {
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                    color: $switch_dis;
+                    border: none;
+                    display: block;
+                    pointer-events: none;
+                    text-decoration: none;
+                }
+                span {
+                    color: $switch_dis;
+                    margin: 0 5px;
+                }
+            }
+            &_company {
+                font-weight: 600;
+                font-size: 1.1rem;
+                line-height: 20px;
+                color: $switch_dis;
+                margin-bottom: 8px;
+                border: none;
+                display: block;
+                pointer-events: none;
+                text-decoration: none;
+            }
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+
+            &_profession {
+                margin-bottom: 8px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                line-height: 20px;
+                color: $black_title_color;
+                border: none;
+                display: block;
+                pointer-events: none;
+                text-decoration: none;
+            }
+            &_description {
+                font-size: 0.9rem;
+                color: $black_title_color;
+                resize: none;
+                border: none;
+                display: block;
+                pointer-events: none;
+                text-decoration: none;
+            }
+        }
+        &_settings {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+
+            @include media-breakpoint-down( xs ) {
+                flex-direction: revert;
+            }
+
+            &_btn {
+                width: 100%;
+                max-width: 230px;
+                padding: 14px;
+                border: 1px solid $accent;
+                color: $accent;
+                border-radius: 12px;
+                background: transparent;
+            }
+            &_correct {
+                position: relative;
+                width: 28px;
+                height: 28px;
+                margin: 0 16px 15px auto;
+                cursor: pointer;
+                background: url(../images/components/correct.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                z-index: 10;
+            }
+            &_cancel {
+                position: relative;
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                background: url(../images/components/cancel_purple.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                z-index: 10;
+            }
+        }
+
+
+
+        .change {
+
+            .experience_wrapper {
+                .experience_head {
+                    &_date {
+                        &_text {
+                            pointer-events: all;
+                            text-decoration: underline;
+                        }
+                    }
+                    &_company {
+                        pointer-events: all;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .experience_info {
+                &_profession {
+                    pointer-events: all;
+                    text-decoration: underline;
+                }
+                &_description {
+                    pointer-events: all;
+                    border: 1px solid $border_color;
+                }
+            }
+        }
+    }
+}

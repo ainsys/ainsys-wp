@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -169,7 +169,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -224,7 +224,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -248,8 +248,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="integration_form_budget">
 
                         <div class="integration_form_budget_field col-lg-6 col-12">
-                            <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_head_text">
+                            <div class="integration_form_field_head">
+                                <p class="integration_form_field_head_text">
                                     Бюджет на интеграцию
                                 </p>
                                 <span class="tooltips__item">
@@ -259,12 +259,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div> 
                                 </span>
                             </div>
-                            <input class="integration_form_budget_field_input" type="text" placeholder="Введите бюджет">
+                            <input class="integration_form_field_input" type="text" placeholder="Введите бюджет">
                         </div>
 
                         <div class="integration_form_budget_field col-lg-6 col-12">
-                            <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_head_text">
+                            <div class="integration_form_field_head">
+                                <p class="integration_form_field_head_text">
                                     Валюта
                                 </p>
                                 <span class="tooltips__item">
@@ -286,8 +286,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </div>
 
                         <div class="integration_form_budget_field col-lg-6 col-12">
-                            <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_head_text">
+                            <div class="integration_form_field_head">
+                                <p class="integration_form_field_head_text">
                                     Дата начала
                                 </p>
                                 <span class="tooltips__item">
@@ -301,8 +301,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </div>
 
                         <div class="integration_form_budget_field col-lg-6 col-12">
-                            <div class="integration_form_budget_field_head">
-                                <p class="integration_form_budget_field_head_text">
+                            <div class="integration_form_field_head">
+                                <p class="integration_form_field_head_text">
                                     Дата окончания
                                 </p>
                                 <span class="tooltips__item">
@@ -332,7 +332,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <div class="field__wrapper disabl">
                                 <input name="file" type="file" name="file" id="field__file-2" class="field field__file" multiple> 
                                 <label class="field__file-wrapper" for="field__file-2">
-                                    <div class="field__file-fake">Файл не вбран</div>
+                                    <div class="field__file-fake">Файл не выбран</div>
                                     <div class="field__file-button">Выбрать</div>
                                 </label>
                             </div>
@@ -349,8 +349,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                             <div class="integration_form_options_inputs integration_form_options_inputs_start">
                                     <div class="integration_form_field">
-                                        <div class="integration_form_budget_field_head">
-                                            <p class="integration_form_budget_field_head_text">
+                                        <div class="integration_form_field_head">
+                                            <p class="integration_form_field_head_text">
                                                 Альтернативные способы связи
                                             </p>
                                             <span class="tooltips__item">
@@ -361,9 +361,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div>
                                     </div>
 
-                                    <div class="integration_form_field">
-                                        <div class="integration_form_budget_field_head">
-                                            <p class="integration_form_budget_field_head_text">
+                                    <div class="integration_form_field integration_form_field_desk">
+                                        <div class="integration_form_field_head">
+                                            <p class="integration_form_field_head_text">
                                                 Выберите тип данных
                                             </p>
                                             <span class="tooltips__item">
@@ -377,7 +377,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                                 <div class="integration_form_options_inputs">
                                     <div class="integration_form_field">
-                                        <input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">
+                                        <input class="integration_form_field_input" type="text" placeholder="www.google.ru">
                                     </div>
 
                                     <div class="integration_form_field">
@@ -427,8 +427,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="integration_form_fields">
 
                             <div class="integration_form_field col-md-12 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Выберите кем Вы являетесь, чтобы продолжить
                                     </p>
                                     <span class="tooltips__item">
@@ -455,8 +455,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                             
                             <div class="integration_form_field col-md-12 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Имя
                                     </p>
                                     <span class="tooltips__item">
@@ -466,7 +466,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите имя">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите имя">
                             </div>
 
                             </div>
@@ -474,8 +474,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <div class="integration_form_field_role integration_form_field_ur">
 
                             <div class="integration_form_field col-md-12 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Название организации
                                     </p>
                                     <span class="tooltips__item">
@@ -485,12 +485,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите название организации ">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите название организации ">
                             </div>
 
                             <div class="integration_form_field col-md-6 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Название банка
                                     </p>
                                     <span class="tooltips__item">
@@ -500,12 +500,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите название банка">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите название банка">
                             </div>
 
                             <div class="integration_form_field col-md-6 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         БИК
                                     </p>
                                     <span class="tooltips__item">
@@ -515,12 +515,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите БИК">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите БИК">
                             </div>
 
                             <div class="integration_form_field col-md-6 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         ИИН
                                     </p>
                                     <span class="tooltips__item">
@@ -530,12 +530,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите ИИН">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите ИИН">
                             </div>
 
                             <div class="integration_form_field col-md-6 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         КПП
                                     </p>
                                     <span class="tooltips__item">
@@ -545,12 +545,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_long" type="text" placeholder="Введите КПП">
+                                <input class="integration_form_field_input input_long" type="text" placeholder="Введите КПП">
                             </div>
 
                             <div class="integration_form_field col-md-12 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Номер счета (IBAN)
                                     </p>
                                     <span class="tooltips__item">
@@ -560,12 +560,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div> 
                                     </span>
                                 </div>
-                                <input class="integration_form_budget_field_input input_full" type="text" placeholder="Введите номер счета">
+                                <input class="integration_form_field_input input_full" type="text" placeholder="Введите номер счета">
                             </div>
 
                             <div class="integration_form_field col-md-12 col-12">
-                                <div class="integration_form_budget_field_head">
-                                    <p class="integration_form_budget_field_head_text">
+                                <div class="integration_form_field_head">
+                                    <p class="integration_form_field_head_text">
                                         Адрес
                                     </p>
                                     <span class="tooltips__item">
@@ -576,7 +576,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </span>
                                 </div>
                                 <div class="integration_form_input_psevdo">
-                                    <input class="integration_form_budget_field_input input_full" type="text" placeholder="Поиск на Google Картах">
+                                    <input class="integration_form_field_input input_full" type="text" placeholder="Поиск на Google Картах">
                                 </div>    
                             </div>
 

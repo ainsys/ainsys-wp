@@ -76,6 +76,14 @@
         .toggleClass('disabl');     
     });
 
+    $(".system_more").click(function() {
+        $( this )
+        .parent()
+        .closest( '.term_item' )
+        .find( '.term_item_content_systems' )
+        .toggleClass('disabl');
+    });
+
     $(".options_settings_correct").click(function() {
         if ( $( ".integration_form_options_textarea" ).is( ":disabled" ) ) {
             $( '.integration_form_options_textarea' )
@@ -94,6 +102,15 @@
         $( '.field__wrapper' )
         .removeClass('disabl');
     });
+
+    $(".integration_file").click(function() {
+        $( this )
+        .addClass('disabl');   
+
+        $( '.field__wrapper' )
+        .removeClass('disabl');
+    });
+
 
 
 
@@ -121,7 +138,7 @@
         $('.integration_form_options_inputs_start').after(
             $('<div class="integration_form_options_inputs">' +
             '<div class="integration_form_field">' +
-            '<input class="integration_form_budget_field_input" type="text" placeholder="www.google.ru">' +
+            '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' +
             '</div>' +
             '<div class="integration_form_field">' +
             '<div class="select">' +
@@ -176,6 +193,71 @@
         .removeClass('disabl');  
     });
 
+
+
+
+
+
+
+
+
+
+
+    // Reg dev
+
+
+
+
+
+
+
+    $(".experience_settings_btn").click(function() {
+        $('.experience_item_start').after(
+            $('<div class="experience_item">' +
+            '<div class="experience_block change">' +
+            '<div class="experience_wrapper">' +
+            '<div class="experience_head">' +
+            '<div class="experience_head_date">' +
+            '<input class="experience_head_date_text" type="date" value="01.05.2021">' +
+            '<span>-</span>' +
+            '<input class="experience_head_date_text" type="date" value="01.08.2021">' +
+            '</div>' +
+            '<input type="text" class="experience_head_company" value="Company">' +
+            '</div>' +
+            '<div class="experience_info">' +
+            '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' +
+            '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' +
+            '</div>' +
+            '</div>' +
+            '<div class="experience_settings">' +
+            '<div class="experience_settings_correct"></div>' +
+            '<div class="experience_settings_cancel"></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' 
+            )
+          );
+    });
+
+    const containerTwo = document.querySelector('.experience');
+
+    $( containerTwo ).on('mouseover', function() {
+        $(".experience_settings_correct").click(function() {
+            $( this )
+            .parent()
+            .closest( '.experience_item' )
+            .find( '.experience_block' )
+            .toggleClass('change');   
+        });
+    
+        $(".experience_settings_cancel").click(function() {
+            $( this )
+            .parent()
+            .closest( '.experience_item' )
+            .find( '.experience_block' )
+            .toggleClass('disabl');
+        });
+    });
 
 
 

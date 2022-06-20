@@ -183,6 +183,12 @@
 		margin-left: 20px;
 		cursor: pointer;
 
+		@include media-breakpoint-down( xs ) {
+			display: flex;
+			justify-content: end;
+			margin-top: 15px;
+		}
+
 		&__current {
 			@include flex_center;
 			text-decoration: none;
