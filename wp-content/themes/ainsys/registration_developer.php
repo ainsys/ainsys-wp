@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <p class="switch_popup_text">Выберите из списка проект, на который вы хотите переключиться</p>
                             <ul class="switch_popup_list">
                                 <li class="switch_popup_list_link">
-                                    Новый проект
+                                Новый проект
                                 </li>
                                 <li class="switch_popup_list_link">
                                     Проект №1
@@ -50,8 +50,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="connectors">
                     <div class="connectors_head">
                         <div class="col-md-5 col-12">
-                            <p class="connectors_head_text">
-                                Выбор коннектора
+                        <p class="connectors_head_text">
+                            Выбор коннектора
                             </p>
                         </div>
                         <div class="col-md-6 col-12">
