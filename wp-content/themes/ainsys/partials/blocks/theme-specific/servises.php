@@ -61,7 +61,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 						the_row();
 						$i++;
 						?>
-						<div class="accordion-item col-lg-4 col-md-6 col-sm-12">
+						<a href="<?= the_sub_field('accardion_href');?>" class="accordion-item col-lg-4 col-md-6 col-sm-12">
 							<div class="accordion-header">
 								<div class="accordion-info">
 									<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'thumbnail', false, array( 'class' => '' ) ); ?>
@@ -78,7 +78,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 									<?php the_sub_field( 'details' ); ?>
 								</div>
 							</div>
-						</div>
+						</a>
 					<?php endwhile; ?>
 				</div>
 			<?php endif; ?>

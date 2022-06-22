@@ -704,6 +704,25 @@ function ainsys_register_acf_block_types() {
         )
     );
 
+	acf_register_block_type(
+        array(
+            'name'            => 'Error',
+            'title'           => __( 'Error' ),
+            'description'     => __( 'Error' ),
+            'render_template' => 'partials/blocks/theme-specific/error.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'error' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
 }
 
 // Check if function exists and hook into setup.
