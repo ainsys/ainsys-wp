@@ -27,10 +27,17 @@
 				margin-bottom: rem( 1 );
 				font-size: rem( 3.2 );
 			}
+			@include media-breakpoint-down( sm ) {
+				font-size: rem( 3 );
+			}
 
 			span {
 				font-size: rem( 4 );
 				color: $accent;
+
+				@include media-breakpoint-down( sm ) {
+					font-size: rem( 3 );
+				}
 			}
 		}
 	}
@@ -41,6 +48,9 @@
 		margin-bottom: rem( 1.2 );
 		@include media-breakpoint-up( $bp ) {
 			font-size: rem( 1.6 );
+		}
+		@include media-breakpoint-down( sm ) {
+			font-size: rem( 1.5 );
 		}
 	}
 	.toggler__switch {

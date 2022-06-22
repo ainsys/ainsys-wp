@@ -161,11 +161,10 @@
             '</div>' +
             '</div>' 
             )
-          );
+        );
     });
 
     const container = document.querySelector('.integration_form_options_rows');
-
     $( container ).on('mouseover', function() {
         $(".integration_form_field_remove").click(function() {
             $( this )
@@ -212,50 +211,51 @@
 
 
     $(".experience_settings_btn").click(function() {
-        $('.experience_item_start').after(
+        $('.experience_item_start').before(
             $('<div class="experience_item">' +
-            '<div class="experience_block change">' +
-            '<div class="experience_wrapper">' +
-            '<div class="experience_head">' +
-            '<div class="experience_head_date">' +
-            '<input class="experience_head_date_text" type="date" value="01.05.2021">' +
-            '<span>-</span>' +
-            '<input class="experience_head_date_text" type="date" value="01.08.2021">' +
-            '</div>' +
-            '<input type="text" class="experience_head_company" value="Company">' +
-            '</div>' +
-            '<div class="experience_info">' +
-            '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' +
-            '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' +
-            '</div>' +
-            '</div>' +
-            '<div class="experience_settings">' +
-            '<div class="experience_settings_correct"></div>' +
-            '<div class="experience_settings_cancel"></div>' +
-            '</div>' +
-            '</div>' +
+                '<div class="experience_block change">' +
+                    '<div class="experience_wrapper">' +
+                        '<div class="experience_head">' +
+                            '<div class="experience_head_date">' +
+                                '<input class="experience_head_date_text" type="date" value="01.05.2021">' +
+                                '<span>-</span>' +
+                                '<input class="experience_head_date_text" type="date" value="01.08.2021">' +
+                            '</div>' +
+                            '<input type="text" class="experience_head_company" value="Company">' +
+                        '</div>' +
+                        '<div class="experience_info">' +
+                            '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' +
+                            '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="experience_settings">' +
+                        '<div class="experience_settings_correct">' +
+                        '</div>' +
+                        '<div class="experience_settings_cancel">' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
             '</div>' 
             )
-          );
+        );
     });
 
-    const containerTwo = document.querySelector('.experience');
+    const containerTwo = document.querySelector('.site');
 
     $( containerTwo ).on('mouseover', function() {
         $(".experience_settings_correct").click(function() {
-            $( this )
-            .parent()
-            .closest( '.experience_item' )
-            .find( '.experience_block' )
-            .toggleClass('change');   
+                $( this )
+                .parent()
+                .closest( '.experience_item' )
+                .find( '.experience_block' )
+                .toggleClass('change');   
         });
-    
         $(".experience_settings_cancel").click(function() {
-            $( this )
-            .parent()
-            .closest( '.experience_item' )
-            .find( '.experience_block' )
-            .toggleClass('disabl');
+                $( this )
+                .parent()
+                .closest( '.experience_item' )
+                .find( '.experience_block' )
+                .addClass('disabl');
         });
     });
 

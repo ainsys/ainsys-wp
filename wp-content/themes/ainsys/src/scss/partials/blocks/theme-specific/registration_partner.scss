@@ -23,6 +23,12 @@
                         display: block;
                     }
                 }
+                .connector_delete_block {
+                    @include media-breakpoint-down( md ) {
+                        width: 100%;
+                        order: -1;
+                    }  
+                }
                 .connectors_input {
                     display: flex;
                     

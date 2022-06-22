@@ -660,29 +660,32 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </span>
                     </div>
                     <div class="experience">
-                        <div class="experience_item">
-                            <div class="experience_block">
-                                <div class="experience_wrapper">
-                                    <div class="experience_head">
-                                        <div class="experience_head_date">
-                                            <input class="experience_head_date_text" type="date" value="01.05.2021">
-                                            <span>-</span>
-                                            <input class="experience_head_date_text" type="date" value="01.08.2021">
+                        <div class="experience_rows">
+                            <div class="experience_item">
+                                <div class="experience_block">
+                                    <div class="experience_wrapper">
+                                        <div class="experience_head">
+                                            <div class="experience_head_date">
+                                                <input class="experience_head_date_text" type="date" value="01.05.2021">
+                                                <span>-</span>
+                                                <input class="experience_head_date_text" type="date" value="01.08.2021">
+                                            </div>
+                                            <input type="text" class="experience_head_company" value="Cyber Game Studio">
                                         </div>
-                                        <input type="text" class="experience_head_company" value="Cyber Game Studio">
+                                        <div class="experience_info">
+                                            <input type="text"  class="experience_info_profession" value="Разработчик приложения">
+                                            <textarea name="description" wrap="" class="experience_info_description">Создавал интерфейсы игрового пространства для игр, внедрял новые фишки для ускорения, создавал програмный код</textarea>
+                                        </div>
                                     </div>
-                                    <div class="experience_info">
-                                        <input type="text"  class="experience_info_profession" value="Разработчик приложения">
-                                        <textarea name="description" wrap="" class="experience_info_description">Создавал интерфейсы игрового пространства для игр, внедрял новые фишки для ускорения, создавал програмный код</textarea>
+                                    <div class="experience_settings">
+                                        <div class="experience_settings_correct"></div>
+                                        <div class="experience_settings_accept"></div>
+                                        <div class="experience_settings_cancel"></div>
                                     </div>
-                                </div>
-                                <div class="experience_settings">
-                                    <div class="experience_settings_correct"></div>
-                                    <div class="experience_settings_cancel"></div>
                                 </div>
                             </div>
+                            <div class="experience_item_start"></div>
                         </div>
-                        <div class="experience_item_start"></div>
                     </div>
 
                     <button class="experience_settings_btn">Добавить место работы</button>
