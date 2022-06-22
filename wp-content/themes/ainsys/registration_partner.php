@@ -1,6 +1,6 @@
 <?php
 /**
- * Landing ru
+ * Registration partner
  *
  * Template Name: Registration partner
  *

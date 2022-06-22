@@ -1,6 +1,6 @@
 <?php
 /**
- * Landing ru
+ * Registration developer
  *
  * Template Name: Registration developer
  *
