@@ -234,7 +234,7 @@
 			transform: translateX( -50% );
 		}
 		li {
-			position: relative;
+			position: relative !important;
 			align-items: center;
 			position: static;
 			padding: rem( 1 ) 0;
