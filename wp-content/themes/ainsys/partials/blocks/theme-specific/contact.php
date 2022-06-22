@@ -105,12 +105,10 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					</li>
 				</ul>
 			</div>	
-			
 			<div class="map">
-			<div class="contacts__map">
-                            <?= get_field('map');?>
-			
-			</div>
+				<div class="contacts__map">
+					<?= get_field('map');?>
+				</div>
 			</div>
 
 		</div>

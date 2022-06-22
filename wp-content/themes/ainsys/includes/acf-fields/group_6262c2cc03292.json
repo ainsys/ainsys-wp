@@ -76,6 +76,25 @@
             "button_label": "Add",
             "sub_fields": [
                 {
+                    "key": "field_62b322fb07b69",
+                    "label": "accardion href",
+                    "name": "accardion_href",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_6262c485894ec",
                     "label": "Image",
                     "name": "image",
@@ -250,5 +269,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653462024
+    "modified": 1655907084
 }
