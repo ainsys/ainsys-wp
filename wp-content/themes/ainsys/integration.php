@@ -1,6 +1,6 @@
 <?php
 /**
- * Landing ru
+ * Integration
  *
  * Template Name: Integration
  *
