@@ -131,7 +131,6 @@
 						<div class="container">
 							<div class="header__content">
 								<a href="/" class="header__logo"></a>
-
 								<div class="header__menu">
 									<ul class="header__menu__ul menu">
 										<?php
