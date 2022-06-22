@@ -59,11 +59,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 Опишите ваши требования по интеграции системы
                             </p>
                         </div>
-                        <div class="col-md-1"></div>
+                        <div class="col-1"></div>
                     </div>
                     <div class="connector">
                         <div class="connector_content"> 
-                            <div class="col-lg-5 col-12">
+                            <div class="col-md-5 col-12">
                                 <div class="connector_item connector_blue">
                                     <div class="connector_item_logo">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/con_logo1.svg" alt="con_logo1">
@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-12">
+                            <div class="col-md-6 col-12">
                                 <div class="connector_requirements">
                                     <div class="connector_requirements_preview">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/correct.svg" alt="correct">
@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1 connector_delete_block">
+                            <div class="col-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -121,7 +121,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="connector">
                         <div class="connector_content">
-                            <div class="col-lg-5 col-12">
+                            <div class="col-md-5 col-12">
                                 <div class="connector_item connector_blue">
                                     <div class="connector_item_logo">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/con_logo1.svg" alt="con_logo1">
@@ -145,7 +145,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-12">
+                            <div class="col-md-6 col-12">
                                 <div class="connector_requirements">
                                     <div class="connector_requirements_preview">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/correct.svg" alt="correct">
@@ -169,7 +169,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1 connector_delete_block">
+                            <div class="col-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -179,7 +179,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="connector">
                         <div class="connector_content">
-                            <div class="col-lg-5 col-12">
+                            <div class="col-md-5 col-12">
                                 <div class="connector_item connector_yellow">
                                     <div class="connector_item_logo">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/con_logo2.svg" alt="con_logo2">
@@ -200,7 +200,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-12">
+                            <div class="col-md-6 col-12">
                                 <div class="connector_requirements">
                                     <div class="connector_requirements_preview">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/correct.svg" alt="correct">
@@ -224,7 +224,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1 connector_delete_block">
+                            <div class="col-md-1 connector_delete_block">
                                 <div class="connector_delete">
                                     <img class="connector_delete_btn" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/delete_con.svg" alt="delete">
                                 </div>
@@ -233,13 +233,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
 
                     <div class="connectors_footer">
-                        <div class="col-lg-5 col-12">
+                        <div class="col-md-5 col-12">
                             <div class="connectors_search">
                               <input type="search" class="connectors_search_input" placeholder="Введите название системы">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12"></div>
-                        <div class="col-lg-1">
+                        <div class="col-md-6 col-12"></div>
+                        <div class="col-1">
                         </div>
                     </div>
                 </div>

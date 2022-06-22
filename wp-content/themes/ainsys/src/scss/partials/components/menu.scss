@@ -21,6 +21,10 @@
 		@include media-breakpoint-up( $bp-menu ) {
 			display: none;
 		}
+		@include media-breakpoint-down( md ) {
+			margin-left: auto;
+			margin-right: rem( 1 );
+		}
 
 		.bar {
 			display: block;
@@ -127,7 +131,7 @@
 		}
 
 		a {
-			font-size: rem( 1.4 );
+			font-size: rem( 1.6 );
 			font-weight: 400;
 			color: $dark;
 			transition: all 0.3s ease-out;

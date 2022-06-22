@@ -22,6 +22,17 @@
         }
     }
     .experience {
+        position: relative;
+        height: auto;
+        z-index: 1;
+
+        &_rows {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 10;
+        }
 
         &_block {
           display: flex;
@@ -60,7 +71,8 @@
                     border: none;
                     display: block;
                     pointer-events: none;
-                    text-decoration: none;
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
                 }
                 span {
                     color: $switch_dis;
@@ -76,7 +88,8 @@
                 border: none;
                 display: block;
                 pointer-events: none;
-                text-decoration: none;
+                text-decoration: underline;
+                text-decoration-color: transparent;
             }
         }
         &_info {
@@ -92,7 +105,8 @@
                 border: none;
                 display: block;
                 pointer-events: none;
-                text-decoration: none;
+                text-decoration: underline;
+                text-decoration-color: transparent;
             }
             &_description {
                 font-size: 0.9rem;
@@ -101,7 +115,7 @@
                 border: none;
                 display: block;
                 pointer-events: none;
-                text-decoration: none;
+                border: 1px solid transparent;
             }
         }
         &_settings {
@@ -123,6 +137,7 @@
                 background: transparent;
             }
             &_correct {
+                display: block;
                 position: relative;
                 width: 28px;
                 height: 28px;
@@ -135,11 +150,24 @@
                 z-index: 10;
             }
             &_cancel {
+                display: block;
                 position: relative;
                 width: 28px;
                 height: 28px;
                 cursor: pointer;
                 background: url(../images/components/cancel_purple.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                z-index: 10;
+            }
+            &_accept {
+                display: block;
+                position: relative;
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                background: url(../images/components/accept.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100%;
@@ -156,12 +184,12 @@
                     &_date {
                         &_text {
                             pointer-events: all;
-                            text-decoration: underline;
+                            text-decoration-color: black;
                         }
                     }
                     &_company {
                         pointer-events: all;
-                        text-decoration: underline;
+                        text-decoration-color: black
                     }
                 }
             }
@@ -169,7 +197,7 @@
             .experience_info {
                 &_profession {
                     pointer-events: all;
-                    text-decoration: underline;
+                    text-decoration-color: black
                 }
                 &_description {
                     pointer-events: all;
