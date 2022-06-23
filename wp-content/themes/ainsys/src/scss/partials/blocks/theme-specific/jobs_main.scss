@@ -1,0 +1,94 @@
+.jobs {
+    &_wrapper {
+        display: flex;
+
+        @include media-breakpoint-down( sm ) {
+            flex-direction: column;
+        }
+
+        &_content {
+
+            @include media-breakpoint-down( md ) {
+                margin-bottom: 25px;
+            }
+
+            &_title {
+                margin-bottom: 12px;
+
+                h1 {
+                    font-size: rem( 6 );
+                    font-weight: 500;
+                    line-height: 1.2;
+                    text-align: left;
+                    margin-bottom: rem( 1 );
+
+                    @include media-breakpoint-down( lg ) {
+                        font-size: rem( 4 );
+                    }
+
+                    @include media-breakpoint-down( xs ) {
+                        font-size: rem( 3 );
+                    }
+        
+                    span {
+                        font-size: rem( 6 );
+                        color: $accent;
+
+                        @include media-breakpoint-down( lg ) {
+                            font-size: rem( 4 );
+                        }
+        
+                        @include media-breakpoint-down( xs ) {
+                            font-size: rem( 3 );
+                        }
+                    }
+                }
+            }
+            &_text {
+                font-size: rem( 2.5 );
+                line-height: 1.6;
+                margin-bottom: rem( 3 ) !important;
+
+                @include media-breakpoint-down( lg ) {
+                    font-size: rem( 2 );
+                }
+
+                @include media-breakpoint-down( xs ) {
+                    font-size: rem( 1.5 );
+                }
+            }
+            &_btn {
+                display: flex !important;
+                align-items: center;
+            }
+            &_btn::after {
+                display: block;
+                content: '';
+                position: relative;
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+                background: url(../images/components/arrow_white.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transform: rotate(270deg);
+            }
+
+        }
+        &_bg {
+            max-width: 50%;
+
+            @include media-breakpoint-down( md ) {
+                display: flex;
+                max-width: 100%;
+            }
+
+            &_img {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
