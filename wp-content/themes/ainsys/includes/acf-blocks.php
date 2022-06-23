@@ -706,13 +706,13 @@ function ainsys_register_acf_block_types() {
 
 	acf_register_block_type(
         array(
-            'name'            => 'Error',
-            'title'           => __( 'Error' ),
-            'description'     => __( 'Error' ),
+            'name'            => 'Error block',
+            'title'           => __( 'Error block' ),
+            'description'     => __( 'Error block' ),
             'render_template' => 'partials/blocks/theme-specific/error.php',
             'mode'            => 'edit',
             'category'        => 'customgb',
-            'keywords'        => array( 'error' ),
+            'keywords'        => array( 'error, block' ),
             'icon'            => 'images',
             'supports'        => array(
                 'align'           => false,
