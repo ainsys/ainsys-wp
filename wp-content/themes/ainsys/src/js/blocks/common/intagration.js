@@ -231,6 +231,8 @@
                     '<div class="experience_settings">' +
                         '<div class="experience_settings_correct">' +
                         '</div>' +
+                        '<div class="experience_settings_accept disabl">' +
+                        '</div>' +
                         '<div class="experience_settings_cancel">' +
                         '</div>' +
                     '</div>' +
@@ -244,12 +246,38 @@
 
     $( containerTwo ).on('mouseover', function() {
         $(".experience_settings_correct").click(function() {
+            $( this )
+            .addClass('disabl');   
+
+            $( this )
+            .parent()
+            .closest( '.experience_item' )
+            .find( '.experience_settings_accept' )
+            .removeClass('disabl');   
+
                 $( this )
                 .parent()
                 .closest( '.experience_item' )
                 .find( '.experience_block' )
-                .toggleClass('change');   
+                .addClass('change');   
+
         });
+        $(".experience_settings_accept").click(function() {
+            $( this )
+            .parent()
+            .closest( '.experience_item' )
+            .find( '.experience_block' )
+            .removeClass('change');
+
+            $( this )
+            .addClass('disabl');  
+            
+            $( this )
+            .parent()
+            .closest( '.experience_item' )
+            .find( '.experience_settings_correct' )
+            .removeClass('disabl');   
+    });
         $(".experience_settings_cancel").click(function() {
                 $( this )
                 .parent()
@@ -258,6 +286,7 @@
                 .addClass('disabl');
         });
     });
+
 
 
 
