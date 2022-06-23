@@ -10,10 +10,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 
-get_header();
+get_header( 'es' );
 
 the_post();
 
 the_content();
 
-get_footer();
+get_footer( 'es' );
