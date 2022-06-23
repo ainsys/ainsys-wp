@@ -51,7 +51,13 @@
                 }
 
                 a {
-                    color: $accent;
+                    color: $accent !important;
+                    font-weight: 400 !important;
+                }
+                a:hover,
+                a:focus,
+                a:active {
+                    background: none !important;
                 }
             }
             &_btns {
