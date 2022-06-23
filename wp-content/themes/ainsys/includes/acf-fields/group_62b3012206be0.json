@@ -208,7 +208,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/error"
+                "value": "acf\/error-block"
             }
         ]
     ],
@@ -221,5 +221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655975981
+    "modified": 1655979713
 }
