@@ -21,7 +21,8 @@
         font-size: 12px;
         line-height: 18px;
         color: $text_tooltips;
-        transition: .3s;
+        transition: .5s;
+        transition-delay: .5s;
       }
       .tooltips::after {
         content: ''; 

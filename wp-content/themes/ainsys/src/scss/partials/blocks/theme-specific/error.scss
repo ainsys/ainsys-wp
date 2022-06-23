@@ -15,6 +15,10 @@
         &_info {
             padding-right: 15%;
 
+            @include media-breakpoint-down( lg ) {
+                padding-right: 0;
+            }
+
             @include media-breakpoint-down( md ) {
                 margin-bottom: 50px;
                 padding-right: 0;
@@ -28,6 +32,7 @@
             &_title {
                 font-size: rem( 4.5 );
                 margin-bottom: 15px;
+                margin-top: 0 !important;
                 font-weight: 500;
                 color: $black_title_color;
 
@@ -46,7 +51,52 @@
                 }
 
                 a {
+                    color: $accent !important;
+                    font-weight: 400 !important;
+                }
+                a:hover,
+                a:focus,
+                a:active {
+                    background: none !important;
+                }
+            }
+            &_btns {
+                display: flex;
+                margin-top: 40px;
+
+                @include media-breakpoint-down( sm ) {
+                    flex-direction: column;
+                }
+                
+                &_href {
+                    max-width: 320px;
+                    margin-right: 30px;
+
+                    @include media-breakpoint-down( sm ) {
+                        margin: 0 0 20px;
+                    }
+                }
+                &_href_main {
+                    max-width: 200px;
+                    display: flex !important;
+                    align-items: center !important;
+                    border: 1px solid $accent !important;
+                    border-radius: 10px !important;
+                }
+                &_href_main:hover {
                     color: $accent;
+                }
+                &_href_main::before {
+                    display: block;
+                    content: '';
+                    position: relative;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+                    background: url(../images/components/arrow_pink.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
                 }
             }
 
@@ -55,8 +105,9 @@
           min-width: 450px;
 
           @include media-breakpoint-down( sm ) {
-            min-width: 300px;
+            min-width: 100%;
           }
+          
         }
 
     }

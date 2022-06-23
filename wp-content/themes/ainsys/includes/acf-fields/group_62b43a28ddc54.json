@@ -1,9 +1,9 @@
 {
-    "key": "group_62b3012206be0",
+    "key": "group_62b43a28ddc54",
     "title": "Error",
     "fields": [
         {
-            "key": "field_62b301258dd89",
+            "key": "field_62b43a312fd07",
             "label": "Error image",
             "name": "error_image",
             "type": "image",
@@ -27,7 +27,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_62b303e08dd8a",
+            "key": "field_62b43a412fd08",
             "label": "Info title",
             "name": "info_title",
             "type": "text",
@@ -46,7 +46,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_62b303ef8dd8b",
+            "key": "field_62b43a4f2fd09",
             "label": "Info text",
             "name": "info_text",
             "type": "text",
@@ -65,8 +65,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_62b308b6f99be",
-            "label": "info href",
+            "key": "field_62b43a5a2fd0a",
+            "label": "Info href",
             "name": "info_href",
             "type": "text",
             "instructions": "",
@@ -84,8 +84,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_62b3090042414",
-            "label": "info_href_text",
+            "key": "field_62b43a6a2fd0b",
+            "label": "Info href text",
             "name": "info_href_text",
             "type": "text",
             "instructions": "",
@@ -103,8 +103,84 @@
             "maxlength": ""
         },
         {
-            "key": "field_62b303fc8dd8c",
-            "label": "Error bg",
+            "key": "field_62b43a752fd0c",
+            "label": "btns href reg",
+            "name": "btns_href_reg",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b43a7c2fd0d",
+            "label": "btns href text",
+            "name": "btns_href_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b43a892fd0e",
+            "label": "btns href main",
+            "name": "btns_href_main",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b43a922fd0f",
+            "label": "btns href main text",
+            "name": "btns_href_main_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b43a9c2fd10",
+            "label": "error bg",
             "name": "error_bg",
             "type": "image",
             "instructions": "",
@@ -125,82 +201,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_62b42ff859d93",
-            "label": "btns_href_reg",
-            "name": "btns_href_reg",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62b4300159d94",
-            "label": "btns_href_text",
-            "name": "btns_href_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62b4301e59d95",
-            "label": "btns_href_main",
-            "name": "btns_href_main",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62b4302859d96",
-            "label": "btns_href_main_text",
-            "name": "btns_href_main_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -221,5 +221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655979713
+    "modified": 1655979843
 }

@@ -36,24 +36,23 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 ?>
 
-<section id="error" class="error 404">
+<section class="jobs">
     <div class="container">
-        <div class="error_wrapper">
-            <div class="error_wrapper_info">
-                <img class="error_wrapper_info_img" src="<?= get_field('error_image');?>" alt="error">
-                <h1 class="error_wrapper_info_title">
-                    <?= get_field('info_title');?>
-                </h1>
-                <p class="error_wrapper_info_text">
-                    <?= get_field('info_text');?> <a href="<?= get_field('info_href');?>"><?= get_field('info_href_text');?></a>
-                </p>
-                <div class="error_wrapper_info_btns">
-                    <a href="<?= get_field('btns_href_reg');?>" class="btn btn-primary error_wrapper_info_btns_href"><?= get_field('btns_href_text');?></a>
-                    <a href="<?= get_field('btns_href_main');?>" class="btn error_wrapper_info_btns_href_main"><?= get_field('btns_href_main_text');?></a>
-                </div>
+        <div class="jobs_wrapper">
+            <div class="jobs_wrapper_content col-md-6 col-12">
+
+			<div class="jobs_wrapper_content_title">
+				<h1>
+                    <?php the_field( 'jobs_title' ); ?>
+					&gt;<span id="Ticker"><?php the_field( 'jobs_title_span' ); ?></span>&lt;
+				</h1>
+			</div>
+			<p class="jobs_wrapper_content_text"><?php the_field( 'jobs_text' ); ?></p>
+            <button class="btn btn-primary jobs_wrapper_content_btn"><?php the_field( 'jobs_btn' ); ?></button>
+
             </div>
-            <div class="error_wrapper_img">
-                <img src="<?= get_field('error_bg');?>" alt="error">
+            <div class="jobs_wrapper_bg  col-md-6 col-12">
+                <img class="jobs_wrapper_bg_img" src="<?= get_field('jobs_bg');?>" alt="jobs">
             </div>
         </div>
     </div>

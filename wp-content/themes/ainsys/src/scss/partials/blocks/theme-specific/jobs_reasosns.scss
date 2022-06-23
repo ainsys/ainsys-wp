@@ -1,0 +1,14 @@
+.jobs_reasosns {
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &_item {
+        background: #FAFAFA;
+        border-radius: 12px;
+        margin: 0 30px 48px 0;
+        padding: 30px;
+    }
+}

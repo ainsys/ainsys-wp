@@ -706,13 +706,51 @@ function ainsys_register_acf_block_types() {
 
 	acf_register_block_type(
         array(
-            'name'            => 'Error',
-            'title'           => __( 'Error' ),
-            'description'     => __( 'Error' ),
+            'name'            => 'Error block',
+            'title'           => __( 'Error block' ),
+            'description'     => __( 'Error block' ),
             'render_template' => 'partials/blocks/theme-specific/error.php',
             'mode'            => 'edit',
             'category'        => 'customgb',
-            'keywords'        => array( 'error' ),
+            'keywords'        => array( 'error, block' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
+	acf_register_block_type(
+        array(
+            'name'            => 'Jobs main',
+            'title'           => __( 'Jobs main' ),
+            'description'     => __( 'Jobs main' ),
+            'render_template' => 'partials/blocks/theme-specific/jobs_main.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'jobs, main' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
+	acf_register_block_type(
+        array(
+            'name'            => 'Jobs reasosns',
+            'title'           => __( 'Jobs reasosns' ),
+            'description'     => __( 'Jobs reasosns' ),
+            'render_template' => 'partials/blocks/theme-specific/jobs_reasons.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'jobs, reasosns' ),
             'icon'            => 'images',
             'supports'        => array(
                 'align'           => false,
