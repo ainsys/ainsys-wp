@@ -8,22 +8,22 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: rem( 1 ) 0;
+		padding: rem( 1.6 ) 0;
 	}
 
 	&__logo {
 		display: block;
-		width: 140px;
+		min-width: 140px;
 		height: 70px;
 		margin-right: rem( 1 );
 		background: no-repeat url( ../images/components/logo_active.svg ) center/ 100%;
 		filter: brightness( 10 );
 
 		@include media-breakpoint-up( sm ) {
-			width: 250px;
+			min-width: 250px;
 		}
-		@include media-breakpoint-up( $bp ) {
-			width: 307px;
+		@include media-breakpoint-up( xl ) {
+			min-width: 285px;
 		}
 
 		&:hover,
@@ -38,7 +38,6 @@
 		justify-content: flex-end;
 		align-items: center;
 		height: rem( 2.8 );
-		margin-right: rem( 3.5 );
 		padding: 0 0 0 rem( 4.16 );
 		background: url( ../images/components/user.svg ) no-repeat left center;
 		background-size: auto 100%;
@@ -47,11 +46,20 @@
 		text-decoration: none;
 		color: $white;
 
+		@include media-breakpoint-down( sm ) {
+			background-position: right;
+		}
+
 		&:hover,
 		&:focus,
 		&:active {
 			text-decoration: none;
 			color: $white;
+		}
+		span {
+			@include media-breakpoint-down( sm ) {
+				font-size: 0;
+			}
 		}
 	}
 	&__account_block {
@@ -130,6 +138,7 @@
 		height: rem( 8.5 );
 		margin-right: rem( 4.3 );
 		border-radius: 50%;
+		cursor: pointer;
 
 		@include media-breakpoint-down( xs ) {
 			width: 4rem;
@@ -182,6 +191,12 @@
 		position: relative;
 		margin-left: 20px;
 		cursor: pointer;
+
+		@include media-breakpoint-down( xs ) {
+			display: flex;
+			justify-content: end;
+			margin-top: 15px;
+		}
 
 		&__current {
 			@include flex_center;

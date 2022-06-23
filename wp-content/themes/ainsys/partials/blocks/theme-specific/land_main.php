@@ -38,76 +38,76 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 
 <section id="<?php echo esc_attr( $block_id ); ?>" class="main__landing">
-          <div class="container">
-		  <?php if ( get_field( 'podtitle' ) ) { ?>
-				<p class="podtitle">
-					<?= get_field('podtitle');?>
-				</p>
-			<?php } ?>
-              <h1>
-			  <?= get_field('title');?>
-              </h1>
-              <div class="page__content">
-                  <div class="page__info">
-                      <ul class="list">
-					  <?php if ( have_rows( 'list_item' ) ) : ?>
-						<?php
-							while ( have_rows( 'list_item' ) ) :
-								the_row();?>
-						<li class="list_item">
+	<div class="container">
+	<?php if ( get_field( 'podtitle' ) ) { ?>
+		<p class="podtitle">
+			<?= get_field('podtitle');?>
+		</p>
+	<?php } ?>
+		<h1>
+		<?= get_field('title');?>
+		</h1>
+		<div class="page__content">
+			<div class="page__info">
+				<ul class="list">
+				<?php if ( have_rows( 'list_item' ) ) : ?>
+				<?php
+					while ( have_rows( 'list_item' ) ) :
+						the_row();?>
+				<li class="list_item">
 
-							<?php if ( get_sub_field( 'list_item_text' ) ) { ?>
-								<span>
-									<?php the_sub_field( 'list_item_text' ); ?>
-								</span>
-							<?php } ?>
+					<?php if ( get_sub_field( 'list_item_text' ) ) { ?>
+						<span>
+							<?php the_sub_field( 'list_item_text' ); ?>
+						</span>
+					<?php } ?>
 
-						  </li>
-						  <?php endwhile; ?>
-						<?php endif; ?>
-                      </ul>
-                  </div>
-                  <div class="page__form">
-                            <p class="form__title">
-						    <?= get_field('form__title');?>
-                          </p>
-                            <div class="form_demonstration">
-		    	<?php echo do_shortcode(get_field('form')); ?>
+					</li>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				</ul>
 			</div>
-                  </div>
-              </div>
+			<div class="page__form">
+					<p class="form__title">
+					<?= get_field('form__title');?>
+					</p>
+					<div class="form_demonstration">
+		<?php echo do_shortcode(get_field('form')); ?>
+	</div>
+			</div>
+		</div>
 
-              <div class="main__bottom">
-                <ul class="benefits">
-				<?php if ( have_rows( 'advantages' ) ) : ?>
-					<?php while ( have_rows( 'advantages' ) ) :
-						the_row();
-						?>
-					<li class="benefits__item tooltips__item">
+		<div class="main__bottom">
+		<ul class="benefits">
+		<?php if ( have_rows( 'advantages' ) ) : ?>
+			<?php while ( have_rows( 'advantages' ) ) :
+				the_row();
+				?>
+			<li class="benefits__item tooltips__item">
 
-						  <?php if ( get_sub_field( 'image' ) ) { ?>
-							    <div class="adv__img">
-								<?= the_sub_field('image');?>
-								</div>
-							<?php } ?>
-							<?php if ( get_sub_field( 'text' ) ) { ?>
-							    <p class="advantages__text">
-									<?php the_sub_field( 'text' ); ?>
-							    </p>
-							<?php } ?>
-							<div class="tooltips">
-							<ul>
-							<?php if ( get_sub_field( 'tooltip' ) ) { ?>
-							    <li>
-							    	<?= get_sub_field('tooltip');?>
-								</li>
-							<?php } ?>
-							</ul>
-						  </div>
-						  </li>
-						  <?php endwhile; ?>
-						<?php endif; ?>
-                  </ul>
-              </div>
-          </div>
-      </section>
+					<?php if ( get_sub_field( 'image' ) ) { ?>
+						<div class="adv__img">
+						<?= the_sub_field('image');?>
+						</div>
+					<?php } ?>
+					<?php if ( get_sub_field( 'text' ) ) { ?>
+						<p class="advantages__text">
+							<?php the_sub_field( 'text' ); ?>
+						</p>
+					<?php } ?>
+					<?php if ( get_sub_field( 'tooltip' ) ) { ?>
+					<div class="tooltips">
+					<ul>
+						<li>
+							<?= get_sub_field('tooltip');?>
+						</li>
+					</ul>
+					</div>
+					<?php } ?>
+					</li>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</ul>
+		</div>
+	</div>
+</section>

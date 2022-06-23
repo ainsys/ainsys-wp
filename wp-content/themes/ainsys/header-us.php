@@ -9,9 +9,28 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-205692206-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-205692206-3');
+</script>
+  
+
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MP6H58K');</script>
+<!-- End Google Tag Manager -->
+    
 
 		<?php wp_head(); ?>
 	</head>
@@ -19,6 +38,11 @@
 	<body <?php body_class(); ?>>
 
 		<?php do_action( 'body_top' ); ?>
+           <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP6H58K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+            
 
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >
@@ -44,11 +68,21 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-205692206-3');
 		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics --> 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RBQY76Q2F"></script> 
+		<script> 
+		window.dataLayer = window.dataLayer || []; 
+		function gtag(){dataLayer.push(arguments);} 
+		gtag('js', new Date()); 
+		
+		gtag('config', 'G-9RBQY76Q2F'); 
+		</script>
 		<script>
-			(function(w,d,u){
-					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-			})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
+				(function(w,d,u){
+						var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+						var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+				})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
 		</script>
 		<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -76,7 +110,8 @@
 				<div id="content" class="site-content">
 
 					<header class="header">
-						<div id="counrty" class="counrty" style="display: none;">
+
+						<!-- <div id="counrty" class="counrty" style="display: none;">
 							<div class="container">
 								<div class="counrty_content">
 								<p class="counrty_text">
@@ -115,12 +150,11 @@
 								<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header__content">
 								<a href="/" class="header__logo"></a>
-
 								<div class="header__menu">
 									<ul class="header__menu__ul menu">
 										<?php
@@ -155,50 +189,51 @@
 											'default' => 'mystery',
 										)
 									);
+                                    $current_user = wp_get_current_user();
 									?>
 																		<div class="header__account_block">
 									<a class="header__account">
 										<span class="header__account__shadow"></span>
 										<span class="header__account__img">
-											<img src="http://1.gravatar.com/avatar/d3efc5e52da40d5267661055ec57a34d?s=58&amp;d=mm&amp;r=g" alt="">
+											<img src="<?php echo $url?> " alt="<?=$current_user->user_login?>">
 										</span>
 								    </a>
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
-											<div class="menu_item_content">		
-												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
-												<a class="menu__link" href="#">temirbayev.nail</a>
-											</div>	
+                                            <div class="menu_item_content">
+                                                <img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
+                                                <a class="menu__link" href="/my-account/"><?=  !empty($current_user->display_name )?  $current_user->display_name : $current_user->user_login;  ?></a>
+                                            </div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/profile.svg" alt="">
 												<a class="menu__link" href="/my-account/">My profile</a>
-								            </div>	
+								            </div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/plan.svg" alt="">
 												<a class="menu__link" href="#">My plan</a>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/projects.svg" alt="">
 												<a class="menu__link" href="#">Projects</a>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item menu__item_scroll">
-											<div class="menu_item_content">	
+											<div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang.svg" alt="">
 												<span class="menu__link">Change language</span>
-											</div>	
+											</div>
 										</li>
 										<li class="menu__item">
-										    <div class="menu_item_content">	
+										    <div class="menu_item_content">
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
-												<a class="menu__link" href="#">Exit</a>
-											</div>	
+												<a class="menu__link" href="<? echo wp_logout_url() ?>">Exit</a>
+											</div>
 										</li>
 									</ul>
 								</div>

@@ -45,11 +45,11 @@
 			gtag('config', 'UA-205692206-3');
 		</script>
 		<script>
-			(function(w,d,u){
-					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-			})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
-		</script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_19_o59jxj.js');
+</script>
 		<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
 			if ( '7989' == event.detail.contactFormId ) {
@@ -76,7 +76,8 @@
 				<div id="content" class="site-content">
 
 					<header class="header">
-						<div id="counrty" class="counrty" style="display: none;">
+
+						<!-- <div id="counrty" class="counrty" style="display: none;">
 							<div class="container">
 								<div class="counrty_content">
 								<p class="counrty_text">
@@ -115,7 +116,7 @@
 								<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header__content">
@@ -135,6 +136,7 @@
 												'items_wrap' => '%3$s',
 											)
 										);
+                                        $current_user = wp_get_current_user();
 										?>
 									</ul>
 								</div>
@@ -155,20 +157,21 @@
 											'default' => 'mystery',
 										)
 									);
+                                    $current_user = wp_get_current_user();
 									?>
-																		<div class="header__account_block">
+									<div class="header__account_block">
 									<a class="header__account">
 										<span class="header__account__shadow"></span>
 										<span class="header__account__img">
-											<img src="http://1.gravatar.com/avatar/d3efc5e52da40d5267661055ec57a34d?s=58&amp;d=mm&amp;r=g" alt="">
+											<img src="<?php echo $url?> " alt="<?=$current_user->user_login?>">
 										</span>
 								    </a>
 									<ul class="menu__submenu_settings">
 										<li class="menu__item">
-											<div class="menu_item_content">		
-												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
-												<a class="menu__link" href="#">temirbayev.nail</a>
-											</div>	
+                                            <div class="menu_item_content">
+                                                <img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
+                                                <a class="menu__link" href="/my-account/"><?=  !empty($current_user->display_name )?  $current_user->display_name : $current_user->user_login;  ?></a>
+                                            </div>
 										</li>
 										<li class="menu__item">
 											<div class="menu_item_content">	
@@ -197,7 +200,7 @@
 										<li class="menu__item">
 										    <div class="menu_item_content">	
 												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
-												<a class="menu__link" href="#">Producción</a>
+												<a class="menu__link" href="<? echo wp_logout_url() ?>">Producción</a>
 											</div>	
 										</li>
 									</ul>

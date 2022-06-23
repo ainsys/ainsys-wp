@@ -587,3 +587,163 @@ function woocommerce_created_customer_admin_notification( $customer_id ) {
     wp_send_new_user_notifications( $customer_id, 'admin' );
 }
 add_action( 'woocommerce_created_customer', 'woocommerce_created_customer_admin_notification' );
+
+/**
+ *
+ *
+ */
+//add_filter( 'woocommerce_add_to_cart_fragments', 'cart_count_fragments', 10, 1 );
+
+function cart_count_fragments( $fragments ) {
+    $fragments['div.basket-item-count'] = '<div class="basket-item-count"><span class="cart-items-count">' . WC()->cart->get_cart_contents_count() . '</span></div>';
+    return $fragments;
+}
+
+/**
+ * Ajax search in catalog
+ */
+add_action('wp_ajax_nopriv_taxonomyFilter', 'taxonomyFilter');
+add_action('wp_ajax_taxonomyFilter', 'taxonomyFilter');
+
+add_action('wp_ajax_nopriv_infiniteScroll', 'taxonomyFilter');
+add_action('wp_ajax_infiniteScroll', 'taxonomyFilter');
+//global $wp_query;
+function taxonomyFilter($args = []) {
+
+    /**
+     * Ajax
+     *
+     * Данная секция кода выполняется при условии что это Ajax запрос
+     * в противном случае она игнорируется
+     *
+     */
+    if( wp_doing_ajax() ) :
+        //$default_posts_per_page = $wp_query->query_vars['posts_per_page'];
+       // _e('<pre>' . var_dump($_POST). '</pre>');
+        /**
+         * Type
+         */
+
+        $term_id = (int)$_POST['category'];
+        $defaults = [
+            'posts_per_page' => 10,
+            //'order'          => 'ASC',
+            'post_status'    => 'publish',
+            'post_type'      => 'product',
+            /*'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id,
+                )
+            ),*/
+            'paged' => $_POST['paged']
+        ];
+
+        $args = wp_parse_args( $args, $defaults );
+
+        /**
+         * Search Input
+         */
+
+        if (isset( $_POST['search'] )&& !empty($_POST['search'])):
+
+             $args['s'] = $_POST['search'];
+
+        endif;
+
+        if (isset( $_POST['filter-category'] )&& !empty($_POST['filter-category']) && $_POST['filter-category'] != 'clear'):
+
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'slug',
+                    'terms'    => $_POST['filter-category'],
+                ]
+            ];
+        else:
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id,
+                ]
+            ];
+
+        endif;
+
+        $query = new WP_Query($args);
+
+
+        if( $query->have_posts() ) :
+            $max_num_pages = $query->max_num_pages;
+            echo '<div id="max-pages" data-maxpages="'.$max_num_pages.'" style="display: none"></div>';
+            while( $query->have_posts() ): $query->the_post();
+                global $product;
+                $product_id       = $product->get_id();
+                $product_cats_ids = $product->get_category_ids();
+                $color_1 = '#3d0043';
+                $color_2 = '#931e9f';
+                $logo = get_field('logo');
+                //$logo = get_field('logo');
+                if(!empty(get_field('color_1'))) {
+                $color_1 = get_field('color_1');
+                }
+                if(!empty(get_field('color_2'))) {
+                $color_2 = get_field('color_2');
+                }
+
+                //$product_cat_list = wc_get_product_category_list( $product_id ); ?>
+                <li class="product" style="background: linear-gradient(105.3deg, <?= $color_1; ?>  0%, <?= $color_2; ?> 97.63%)" >
+                    <div class="top-row row">
+                        <div class="img">
+                            <?// echo $product->get_image(); ?>
+
+                            <?php echo '<img src="'.get_stylesheet_directory_uri().'/assets/images/logo/'.strtolower($logo).'">';?>
+
+                        </div>
+                        <div class="title">
+                            <h3><?php echo $product->get_title(); ?></h3>
+                            <p class="prduct-categories">
+                                <?php
+                                /*foreach ( $product_cats_ids as $product_cat ) {
+                                    echo '<span>' . get_the_category_by_ID( $product_cat ) . '</span>';
+                                }*/
+                                echo '<span>' . get_the_category_by_ID( $product_cats_ids[0] ) . '</span>';
+                                ?>
+                            </p>
+                        </div>
+
+                        <?php
+                        $quantity = 0;
+                        foreach ( WC()->cart->get_cart() as $cart_item ) {
+                            if ( $product_id === $cart_item['product_id'] ) {
+                                $quantity = intval( $cart_item['quantity'] );
+                            }
+                        }
+                        ?>
+                        <div class="product__qnt-buttons">
+                            <!--<button type="button" class="minus-btn btn-qnty">-</button>-->
+                            <input type="number" value="<?php echo $quantity; ?>" class="product__qnt" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
+                            <button type="button" class="plus-btn btn-qnty <?php if ( false === is_user_logged_in() ) {echo 'not-authorized';} ?>">+</button>
+                        </div>
+                    </div>
+                    <div class="bottom-row row">
+                        <div class="description">
+                            <?php echo $product->get_description(); ?>
+                        </div>
+                    </div>
+                </li>
+
+
+            <?php endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<div class="no-results">No posts found</div>';
+        endif;
+
+        die();
+
+    endif;
+
+}
