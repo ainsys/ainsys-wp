@@ -252,3 +252,21 @@ add_action( 'after_setup_theme', 'my_theme_setup');
 function my_theme_setup(){
     load_theme_textdomain( 'ainsys', get_template_directory() . '/languages' );
 }
+
+add_filter('wpcf7_form_hidden_fields', 'utm_func', 1, 10);
+function utm_func($fields) {
+	$fields['utm_field'] = 'value_from_cookie';
+	return $fields;
+}
+
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+ 
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+  $my_attr = 'destination-email';
+ 
+  if ( isset( $atts[$my_attr] ) ) {
+    $out[$my_attr] = $atts[$my_attr];
+  }
+ 
+  return $out;
+}
