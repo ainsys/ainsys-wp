@@ -32,6 +32,10 @@ if ( ! empty( $block['align'] ) ) {
                 <p class="error_wrapper_info_text">
                     <?= get_field('info_text');?> <a href="<?= get_field('info_href');?>"><?= get_field('info_href_text');?></a>
                 </p>
+                <div class="error_wrapper_info_btns">
+                    <a href="<?= get_field('btns_href_reg');?>" class="btn btn-primary error_wrapper_info_btns_href"><?= get_field('btns_href_text');?></a>
+                    <a href="<?= get_field('btns_href_main');?>" class="btn error_wrapper_info_btns_href_main"><?= get_field('btns_href_main_text');?></a>
+                </div>
             </div>
             <div class="error_wrapper_img">
                 <img src="<?= get_field('error_bg');?>" alt="error">
