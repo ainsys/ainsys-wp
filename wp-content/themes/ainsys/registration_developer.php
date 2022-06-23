@@ -679,7 +679,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                     <div class="experience_settings">
                                         <div class="experience_settings_correct"></div>
-                                        <div class="experience_settings_accept"></div>
+                                        <div class="experience_settings_accept disabl"></div>
                                         <div class="experience_settings_cancel"></div>
                                     </div>
                                 </div>

@@ -141,13 +141,16 @@
                 position: relative;
                 width: 28px;
                 height: 28px;
-                margin: 0 16px 15px auto;
+                margin: 0 0 15px;
                 cursor: pointer;
                 background: url(../images/components/correct.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100%;
                 z-index: 10;
+            }
+            &_correct.disabl {
+                display: none;
             }
             &_cancel {
                 display: block;
@@ -166,12 +169,16 @@
                 position: relative;
                 width: 28px;
                 height: 28px;
+                margin: 0 0 15px;
                 cursor: pointer;
                 background: url(../images/components/accept.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100%;
                 z-index: 10;
+            }
+            &_accept.disabl {
+                display: none;
             }
         }
 
