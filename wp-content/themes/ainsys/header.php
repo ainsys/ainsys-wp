@@ -45,10 +45,10 @@
 			gtag('config', 'UA-205692206-3');
 		</script>
 		<script>
-			(function(w,d,u){
-					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-			})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
+				(function(w,d,u){
+						var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+						var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+				})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_17_3mmdnq.js');
 		</script>
 		<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -70,13 +70,17 @@
 			})(window, document, 'script', 'cloud.roistat.com', '687af597c04143baddf7137bcaa63754');
 		</script>
 
+		
+
 
 		<div id="page" class="site">
 			<div class="site-content-contain">
 				<div id="content" class="site-content">
 
 					<header class="header">
-						<div id="counrty" class="counrty" style="display: none;">
+
+
+						<!-- <div id="counrty" class="counrty" style="display: none;">
 							<div class="container">
 								<div class="counrty_content">
 								<p class="counrty_text">
@@ -115,7 +119,7 @@
 								<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header__content">
@@ -155,48 +159,57 @@
 											'default' => 'mystery',
 										)
 									);
+									$current_user = wp_get_current_user();
 									?>
-									<a href="/my-account/" class="header__account"><span class="header__account__shadow"></span><span class="header__account__img"><img src="<?php echo esc_url( $url ); ?>" alt="" /></span></a>
+									<div class="header__account_block">
+									<a class="header__account">
+										<span class="header__account__shadow"></span>
+										<span class="header__account__img">
+											<img src="<?php echo $url?> " alt="<?=$current_user->user_login?>">
+										</span>
+								    </a>
+									<ul class="menu__submenu_settings">
+										<li class="menu__item">
+											<div class="menu_item_content">		
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/account.svg" alt="">
+												<a class="menu__link" href="/my-account/"><?=  !empty($current_user->display_name )?  $current_user->display_name : $current_user->user_login;  ?></a>
+											</div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/profile.svg" alt="">
+												<a class="menu__link" href="/my-account/">Мой профиль</a>
+								            </div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/plan.svg" alt="">
+												<a class="menu__link" href="#">Мой план</a>
+											</div>	
+										</li>
+										<li class="menu__item">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/projects.svg" alt="">
+												<a class="menu__link" href="#">Проекты</a>
+											</div>	
+										</li>
+										<li class="menu__item menu__item_scroll">
+											<div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang.svg" alt="">
+												<span class="menu__link">Сменить язык</span>
+											</div>	
+										</li>
+										<li class="menu__item">
+										    <div class="menu_item_content">	
+												<img class="menu__item_img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/exit.svg" alt="">
+												<a class="menu__link" href="<? echo wp_logout_url() ?>">Выход</a>
+											</div>	
+										</li>
+									</ul>
+								</div>
 								<?php } else { ?>
 										<a href="/auth/" class="header__login"><span>Войти</span></a>
 								<?php } ?>
-
-								<div class="header__lang">
-									<a href="#" class="header__lang__current">RU</a>
-
-									<ul class="header__lang__submenu">
-
-                                        <li class="test">
-
-
-											<a href="https://ua.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Українська</a>
-										</li>
-										<li>
-											<a href="https://ua.ainsys.com/ua-ru" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__urk.svg" alt=""></span>Русский</a>
-										</li>
-										<li>
-											<a href="/ru/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__ru.svg" alt=""></span>Русский</a>
-										</li>
-
-																				<!--<li>
-										<li>
-											<a href="/us/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
-										</li>
-										<li>
-											<a href="/gb/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/333.svg" alt=""></span>English</a>
-										</li>
-										<li>
-											<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" alt=""></span>English</a>
-										</li>
-										<li>
-											<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/444.svg" alt=""></span>English</a>
-										</li>
-										<li>
-											<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/sp.svg" alt=""></span>Spanish</a>
-										</li>
-										-->
-									</ul>
-								</div>
 							</div>
 						</div>
 

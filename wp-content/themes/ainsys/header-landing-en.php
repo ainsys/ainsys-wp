@@ -37,10 +37,10 @@
 			gtag('config', 'UA-205692206-3');
 		</script>
 		<script>
-			(function(w,d,u){
-					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-			})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
+				(function(w,d,u){
+						var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+						var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+				})(window,document,'https://cdn-ru.bitrix24.ru/b16591156/crm/site_button/loader_9_cjas9a.js');
 		</script>
 		<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -75,7 +75,7 @@
 
 					<header class="header-landing">
 
-						<div id="counrty" class="counrty">
+						<!-- <div id="counrty" class="counrty">
 							<div class="container">
 								<div class="counrty_content">
 									<p class="counrty_text">
@@ -113,7 +113,7 @@
 									<div class="country_close"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container">
 							<div class="header-landing__content">
@@ -130,14 +130,14 @@
 								<div class="socials">
 									<div class="socials__wrapper">
 										<div class="header-landing__btn">
-											<a class="btn btn-main" href="/order-ainsys/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Leave a request</a>
+											<a class="btn btn-main" href="https://ainsys.com/my-account/" onclick="gtag( 'event', 'buttom_1', {   'event_category' : 'ain',   'event_label' : 'b_1' }); ym(86987238,'reachGoal','button_1'); return true;">Request a demo</a>
 										</div>
 										<ul class="socials__links">
 											<li  class="numbers__phone numbers__phone-disabled">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__phones.svg" alt="phone">
 												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__uk.svg" alt="uk">
 												<a href="tel: +447441426027" class="soc_href disabled">+447441426027
-													<div class="disabled__block"></div>
+													<div class="disabled__block"> </div>
 												</a>
 											</li>
 											<li  class="numbers__phone numbers__email numbers__phone-disabled">
@@ -158,19 +158,16 @@
 									<a href="#" class="header-landing__lang__current text-decoration-none">EN</a>
 									<ul class="header-landing__lang__submenu">
 										<li>
-											<a href="/en-us/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/lang__usa.svg" class="lang__img me-sm-2" alt="">English</a>
+											<a href="/en/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
 										</li>
 										<li>
-											<a href="/en-gb/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/333.svg" class="lang__img me-sm-2" alt="">English</a>
+											<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" alt=""></span>English</a>
 										</li>
 										<li>
-											<a href="/en-ca/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/222.svg" class="lang__img me-sm-2" alt="">English</a>
+											<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/444.svg" alt=""></span>English</a>
 										</li>
 										<li>
-											<a href="/en-eu/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/444.svg" class="lang__img me-sm-2" alt="">English</a>
-										</li>
-										<li>
-											<a href="/es-es/" class="submenu__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/sp.svg" class="lang__img me-sm-2" alt="">Spanish</a>
+											<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/sp.svg" alt=""></span>Spanish</a>
 										</li>
 									</ul>
 								</div>

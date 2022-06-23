@@ -1270,8 +1270,95 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  $('.coockie_close').click(function () {
+  function setCookie(c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value = escape(value) + (exdays == null ? '' : '; expires=' + exdate.toUTCString());
+    document.cookie = c_name + '=' + c_value;
+  }
+
+  function getCookie(c_name) {
+    var i,
+        x,
+        y,
+        ARRcookies = document.cookie.split(';');
+
+    for (i = 0; i < ARRcookies.length; i++) {
+      x = ARRcookies[i].substr(0, ARRcookies[i].indexOf('='));
+      y = ARRcookies[i].substr(ARRcookies[i].indexOf('=') + 1);
+      x = x.replace(/^\s+|\s+$/g, '');
+
+      if (x == c_name) {
+        return unescape(y);
+      }
+    }
+  }
+
+  function deleteAllCookies() {
+    var cookies = document.cookie.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      var eqPos = cookie.indexOf('=');
+      var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
+  }
+  /*function deleteSpecificCookies() {
+  
+  	var cookies = document.cookie.split(";");
+  	var all_cookies = '';
+  
+  	for (var i = 0; i < cookies.length; i++) {
+  
+  		var cookie_name  = cookies[i].split("=")[0];
+  		var cookie_value = cookies[i].split("=")[1];
+  
+  		if( cookie_name.trim() != '__utmb' ) { all_cookies = all_cookies + cookies[i] + ";"; }
+  
+  
+  	}
+  
+  	if(!document.__defineGetter__) {
+  
+  		Object.defineProperty(document, 'cookie', {
+  			get: function(){return all_cookies; },
+  			set: function(){return true},
+  		});
+  
+  	} else {
+  
+  		document.__defineGetter__("cookie", function() { return all_cookies; } );
+  		document.__defineSetter__("cookie", function() { return true; } );
+  
+  	}
+  
+  }*/
+
+
+  function closethis() {
+    var result = confirm('You must accept cookies to continue using the site');
+    document.location.assign('/cookies/');
+  }
+
+  var acceptCookie = getCookie('acceptCookie');
+
+  if (acceptCookie === 'cookie accepted') {
+    $('#coockie').addClass('coockie-disabled'); //alert( 'Cookie accepted' );
+  }
+  /*else {
+  document.addEventListener( 'DOMContentLoaded', deleteAllCookies() );
+  }*/
+
+
+  $('.coockie_button-disagree').click(function () {
     $('#coockie').addClass('coockie-disabled');
+    deleteAllCookies();
+    closethis();
+  });
+  $('.coockie_close.ok').click(function () {
+    $('#coockie').addClass('coockie-disabled');
+    setCookie('acceptCookie', 'cookie accepted', 14);
   });
 })(jQuery);
 "use strict";
@@ -1301,6 +1388,122 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       $(this).siblings('a').trigger('click');
     });
     $('.wp-block-gallery a').fancybox({// Options will go here
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".integration_head_correct").click(function () {
+    if ($(".integration_head_input").is(":disabled")) {
+      $(".integration_head_input").prop("disabled", false);
+    } else {
+      $(".integration_head_input").prop("disabled", true);
+    }
+  });
+  $(".integration_head_switch").click(function () {
+    $(".switch_popup").toggleClass('disabl');
+  });
+  $(".connector_requirements").click(function () {
+    $(this).find('.connector_requirements_preview').addClass('disabl');
+    $(this).find('.connector_requirements_main').removeClass('disabl');
+  });
+  $(".settings_correct").click(function () {
+    $(this).closest('.connector').find('.main_content').prop("disabled", false);
+    $(this).parent().addClass('preview');
+  });
+  $(".settings_accept").click(function () {
+    $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
+    $(this).parent().removeClass('preview');
+  });
+  $(".settings_cancel").click(function () {
+    $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
+    $(this).parent().removeClass('preview');
+  });
+  $(".connector_delete_btn").click(function () {
+    $(this).parent().closest('.connector').find('.connector_content').addClass('disabl');
+  });
+  $(".term_item_toggler").click(function () {
+    $(this).parent().closest('.term_item').find('.term_item_content').toggleClass('disabl');
+    $(this).find('.term_item_toggler_more').toggleClass('disabl');
+    $(this).find('.term_item_toggler_less').toggleClass('disabl');
+  });
+  $(".system_more").click(function () {
+    $(this).parent().closest('.term_item').find('.term_item_content_systems').toggleClass('disabl');
+  });
+  $(".options_settings_correct").click(function () {
+    if ($(".integration_form_options_textarea").is(":disabled")) {
+      $('.integration_form_options_textarea').prop("disabled", false);
+    } else {
+      $('.integration_form_options_textarea').prop("disabled", true);
+    }
+  });
+  $(".integration_upload").click(function () {
+    $(this).addClass('disabl');
+    $('.field__wrapper').removeClass('disabl');
+  });
+  $(".integration_file").click(function () {
+    $(this).addClass('disabl');
+    $('.field__wrapper').removeClass('disabl');
+  });
+  var fields = document.querySelectorAll('.field__file');
+  Array.prototype.forEach.call(fields, function (input) {
+    var label = input.nextElementSibling,
+        labelVal = label.querySelector('.field__file-fake').innerText;
+    input.addEventListener('change', function (e) {
+      var countFiles = '';
+      if (this.files && this.files.length >= 1) countFiles = this.files.length;
+      if (countFiles) label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;else label.querySelector('.field__file-fake').innerText = labelVal;
+    });
+  });
+  $(".settings_add").click(function () {
+    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<div class="select">' + '<input class="select__input" type="hidden" name="">' + '<div class="select__head">Web site</div>' + '<ul class="select__list" style="display: none;">' + '<li class="select__item">Web site</li>' + '<li class="select__item">Whatsapp</li>' + '<li class="select__item">Facebook</li>' + '<li class="select__item">Instagram</li>' + '<li class="select__item">Telegram</li>' + '<li class="select__item">Linkedin</li>' + '<li class="select__item">Другое</li>' + '</ul>' + '</div>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
+  });
+  var container = document.querySelector('.integration_form_options_rows');
+  $(container).on('mouseover', function () {
+    $(".integration_form_field_remove").click(function () {
+      $(this).parent().addClass('disabl');
+    });
+  });
+  $("#radio-fiz").click(function () {
+    $('.integration_form_field_role').addClass('disabl');
+    $('.integration_form_field_fiz').removeClass('disabl');
+  });
+  $("#radio-ur").click(function () {
+    $('.integration_form_field_role').addClass('disabl');
+    $('.integration_form_field_ur').removeClass('disabl');
+  }); // Reg dev
+
+  $(".experience_settings_btn").click(function () {
+    $('.experience_item_start').before($('<div class="experience_item">' + '<div class="experience_block change">' + '<div class="experience_wrapper">' + '<div class="experience_head">' + '<div class="experience_head_date">' + '<input class="experience_head_date_text" type="date" value="01.05.2021">' + '<span>-</span>' + '<input class="experience_head_date_text" type="date" value="01.08.2021">' + '</div>' + '<input type="text" class="experience_head_company" value="Company">' + '</div>' + '<div class="experience_info">' + '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' + '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' + '</div>' + '</div>' + '<div class="experience_settings">' + '<div class="experience_settings_correct">' + '</div>' + '<div class="experience_settings_accept disabl">' + '</div>' + '<div class="experience_settings_cancel">' + '</div>' + '</div>' + '</div>' + '</div>'));
+  });
+  var containerTwo = document.querySelector('.site');
+  $(containerTwo).on('mouseover', function () {
+    $(".experience_settings_correct").click(function () {
+      $(this).addClass('disabl');
+      $(this).parent().closest('.experience_item').find('.experience_settings_accept').removeClass('disabl');
+      $(this).parent().closest('.experience_item').find('.experience_block').addClass('change');
+    });
+    $(".experience_settings_accept").click(function () {
+      $(this).parent().closest('.experience_item').find('.experience_block').removeClass('change');
+      $(this).addClass('disabl');
+      $(this).parent().closest('.experience_item').find('.experience_settings_correct').removeClass('disabl');
+    });
+    $(".experience_settings_cancel").click(function () {
+      $(this).parent().closest('.experience_item').find('.experience_block').addClass('disabl');
+    });
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(document).ready(function () {
+    closeMoodal();
+  });
+
+  function closeMoodal() {
+    $('.modal__button--close').on('click', function () {
+      $(this).closest('.modal__wrapper').removeClass('show');
     });
   }
 })(jQuery);
@@ -1480,24 +1683,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   $('.form-check-input-rate_page').on('click', function () {
     $('.rate_page__list').toggleClass('active');
     var final_val_din = parseInt($('#final_val').text());
-    var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din_two);
+    var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din);
 
     if ($('.rate_page__list').hasClass('active')) {
       var final_val_sale = Math.floor(final_val_din / 0.85);
       $('#final_val').text(final_val_sale);
       $('#rate_val').text(final_val_sale);
       var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      console.log(final_val_sale_two);
       $('#final_val_two').text(final_val_sale_two);
       $('#rate_val2').text(final_val_sale_two);
     } else {
-      var _final_val_sale = Math.floor(final_val_din * 0.85);
+      var _final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
 
       $('#final_val').text(_final_val_sale);
       $('#rate_val').text(_final_val_sale);
 
-      var _final_val_sale_two = Math.floor(final_val_din_two * 0.85);
+      var _final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din_two * 0.15));
 
-      console.log(_final_val_sale_two);
       $('#final_val_two').text(_final_val_sale_two);
       $('#rate_val2').text(_final_val_sale_two);
     }
@@ -1695,6 +1898,42 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }
 
   initScrollToElement();
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".menu__item_scroll").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".footer").offset().top
+    }, 1000);
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.select').on('click', '.select__head', function () {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open');
+      $(this).next().fadeOut();
+    } else {
+      $('.select__head').removeClass('open');
+      $('.select__list').fadeOut();
+      $(this).addClass('open');
+      $(this).next().fadeIn();
+    }
+  });
+  $('.select').on('click', '.select__item', function () {
+    $('.select__head').removeClass('open');
+    $(this).parent().fadeOut();
+    $(this).parent().prev().text($(this).text());
+    $(this).parent().prev().prev().val($(this).text());
+  });
+  $(document).click(function (e) {
+    if (!$(e.target).closest('.select').length) {
+      $('.select__head').removeClass('open');
+      $('.select__list').fadeOut();
+    }
+  });
 })(jQuery);
 "use strict";
 

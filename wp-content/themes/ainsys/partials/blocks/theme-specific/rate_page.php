@@ -143,7 +143,7 @@ if ( ! empty( $block['align'] ) ) {
 			</div>
 			<div class="range-slider">
 			    <div class="label-range"><?= get_field('label-range-second');?></div>
-                <input id="range2" type="range" name="range2" min="0" max="50000" step="500" value="0" />
+                <input id="range2" type="range" name="range2" min="0" max="100000" step="2000" value="0" />
 			</div>
 		</div>
 
@@ -229,18 +229,17 @@ if ( ! empty( $block['align'] ) ) {
 
 
 
-								<?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
-								<th class="row_dop" scope="row">
-									<?php the_sub_field( 'table_dop_name' ); ?>
-									<span class="tooltips__item"><span> 
-                                    <?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
+							<th class="row_dop" scope="row">
+                                 <?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
+									<?= the_sub_field( 'table_dop_name' ); ?>
+								<?php } ?>
+								<span class="tooltips__item"><span> 
+								<?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
 									<div class="tooltips">
-										<?= get_field( 'table_dop_tooltip' ); ?>
-										Добавляйте пользователей в рабочее пространство компании, чтобы они могли участвовать в работе по интеграции и автоматизации систем
+										<?= the_sub_field( 'table_dop_tooltip' ); ?>
 									</div> 
-									<?php } ?>
-								</th>
-							<?php } ?>
+								<?php } ?>
+							</th>
 							<?php if ( get_sub_field( 'table_val_fisrt' ) ) { ?>
 								<td class="rate_first">
 									<?php the_sub_field( 'table_val_fisrt' ); ?>

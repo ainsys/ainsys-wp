@@ -154,7 +154,12 @@ body {
     color: #790E8B;
 }
 
-.auth form input:not([type="checkbox"]), .auth form select, .form-reg form input:not([type="checkbox"]), .form-reg form select {
+.auth form input:not([type="checkbox"]),
+.auth form select,
+.form-reg form input:not([type="checkbox"]),
+.form-reg form select,
+.modal__body input:not([type="checkbox"]),
+.modal__body select {
     background: #FAFAFA !important;
     padding: 11px 20px !important;
     cursor: pointer !important;
@@ -170,17 +175,20 @@ body {
 }
 
 .form-reg form input:hover,
-.auth form input:hover {
+.auth form input:hover,
+.modal__body input:hover {
     border: 1px solid rgba(0, 79, 159, .5) !important;
 }
 
 .form-reg form input:focus, .form-reg form label input:active,
-.auth form input:focus, .auth form label input:active {
+.auth form input:focus, .auth form label input:active,
+.modal__body form input:focus, .modal__body form label input:active{
     border: 1px solid rgba(0, 79, 159, 1) !important;
 }
 
 .form-reg form input::placeholder,
-.auth form input::placeholder {
+.auth form input::placeholder,
+.modal__body form input::placeholder {
     color: #A0A0A0 !important;
     font-size: 14px !important;
     line-height: 130% !important;

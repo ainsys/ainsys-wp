@@ -31,6 +31,26 @@
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__tg.svg" alt="tg" class="footer__soc__img"></a>
 								<a class="" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/soc__vk.svg" alt="vk" class="footer__soc__img"></a>
 							</div>
+							<div class="header__lang">
+							    <ul class="header__lang__submenu">
+								    <li>
+										<a href="/en/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/lang__usa.svg" alt=""></span>English</a>
+									</li>
+									<li>
+										<a href="/ca/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/222.svg" alt=""></span>English</a>
+									</li>
+									<li>
+										<a href="/eu/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/444.svg" alt=""></span>English</a>
+									</li>
+									<li>
+										<a href="https://es.ainsys.com/" class="submenu__item"><span class="header__lang__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/components/sp.svg" alt=""></span>Spanish</a>
+									</li>
+								</ul>
+								<div class="lang_item">
+									<img class="header__lang__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/header__lang.svg" alt="lang">
+									<span class="header__lang__current">EN</span>
+								</div>	
+							</div>
 						</div>
 					</div>
 				</div>
@@ -41,6 +61,30 @@
 </div>
 
 <?php wp_footer(); ?>
+<div class="modal__wrapper " id="authModal">
+    <div class="modal__body modal__body--authorization">
+        <div class="modal__icon">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-warning.svg">
+        </div>
+        <div class="modal__title"><?php _e('Log in to create your integration plan','ainsys');?></div>
+        <div class="modal__text"><?php _e('You can make a preliminary calculation of the timing and budget for implementation after authorization','ainsys');?></div>
+        <div class="modal__buttons">
+            <button class=" modal__button modal__button--close" id="closeBtn"><?php _e('Close', 'ainsys'); ?></button>
+            <a href="/auth" class="modal__button" ><?php _e('Login', 'ainsys'); ?></a>
+        </div>
+    </div>
+</div>
+<div class="modal__wrapper " id="addModal">
+    <div class="modal__body modal__body--authorization">
+        <div class="modal__icon">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/components/icon-warning.svg">
+        </div>
+        <div class="modal__title"><?php _e('Log in to create your integration plan','ainsys');?></div>
+        <div class="modal__text">
+            <?php echo do_shortcode('[contact-form-7 id="9763" title="Форма  - Заявка на добавление коннектора"]') ?>
+        </div>
 
+    </div>
+</div>
 </body>
 </html>

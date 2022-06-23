@@ -129,7 +129,7 @@ nav.woocommerce-pagination {
 }
 .top-row.row > div.title {
 	max-width: 160px;
-	max-height: 90px;
+	/*max-height: 90px;*/
 	overflow: hidden;
 }
 .products__right h2.woocommerce-loop-product__title {
@@ -162,6 +162,9 @@ nav.woocommerce-pagination {
 }
 .top-row.row > div {
 	width: auto;
+}
+.top-row.row > div.img {
+	width: 96px;
 }
 
 .product .row {
@@ -202,6 +205,8 @@ nav.woocommerce-pagination {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 28px;
+	padding-bottom: 3px;
 }
 p.prduct-categories {
 	display: flex;

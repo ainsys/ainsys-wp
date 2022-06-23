@@ -73,9 +73,9 @@ if ( get_field( 'align' ) ) {
 					</div>
 					<?php } ?>
 					<?php if ( get_field( 'bentfits_btn' ) ) { ?>
-						<button class=" btn wp-block-button__link bentfits_btn">
+						<a href="=<?= get_field('bentfits_btn_url');?>" class=" btn wp-block-button__link bentfits_btn">
 						  <?= get_field('bentfits_btn');?>
-					    </button>
+					    </a>
 					<?php } ?>
                  </div>
 			<div class="page__img">
