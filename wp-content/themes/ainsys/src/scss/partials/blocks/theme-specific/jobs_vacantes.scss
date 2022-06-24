@@ -1,6 +1,12 @@
 .jobs_vacantes {
     background: $dark;
+    padding-bottom: 60px;
 
+    @include media-breakpoint-down( sm ) {
+        padding-bottom: 30px;
+    }
+
+    
     .jobs_title {
         margin-bottom: 40px;
         color: $white;

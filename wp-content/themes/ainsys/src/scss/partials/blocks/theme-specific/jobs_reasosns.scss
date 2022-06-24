@@ -1,4 +1,12 @@
 .jobs_reasosns {
+    margin-bottom: 30px;
+
+    &_title {
+
+        @include media-breakpoint-down( xs ) {
+            font-size: 1.5rem;
+        }
+    }
     &_wrapper {
       display: flex;
       align-items: center;
