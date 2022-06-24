@@ -42,8 +42,8 @@
         },
         {
             "key": "field_628d0f1026faf",
-            "label": "Vacantes slide",
-            "name": "vacantes__slide",
+            "label": "Steps slide",
+            "name": "steps__slide",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -61,9 +61,9 @@
             "sub_fields": [
                 {
                     "key": "field_628d0f2626fb0",
-                    "label": "slide_vacant",
-                    "name": "slide_vacant",
-                    "type": "text",
+                    "label": "img",
+                    "name": "steps__img",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -72,16 +72,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 },
                 {
                     "key": "field_628d0f5026fb1",
-                    "label": "slide_title",
-                    "name": "slide_title",
+                    "label": "steps__number",
+                    "name": "steps__number",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -99,8 +104,8 @@
                 },
                 {
                     "key": "field_628d0f6626fb2",
-                    "label": "slide_terms_place",
-                    "name": "slide_terms_place",
+                    "label": "steps__title",
+                    "name": "steps__title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -118,8 +123,8 @@
                 },
                 {
                     "key": "field_628d0f6e26fb3",
-                    "label": "slide_terms_city",
-                    "name": "slide_terms_city",
+                    "label": "steps__text",
+                    "name": "steps__text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -156,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655999075
+    "modified": 1656080625
 }
