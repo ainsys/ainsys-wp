@@ -233,11 +233,10 @@ p.prduct-categories span{
 	max-height: 100px;
 	overflow: hidden;
 }
-.bottom-row.row .description:hover,
-.bottom-row.row .description:focus,
-.bottom-row.row .description:active {
+.bottom-row.row .description:hover *,
+.bottom-row.row .description:focus *,
+.bottom-row.row .description:active * {
 	overflow: auto !important;
-	max-height: auto;
 }
 
 .products__right ul.products.columns-4 li.product:nth-child(10n+1){
