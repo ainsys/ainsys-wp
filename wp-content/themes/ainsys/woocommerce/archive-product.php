@@ -70,11 +70,12 @@ $current_category = $wp_query->get_queried_object()->term_id;
     <?php else:?>
             <div class="woocommerce__header__notice woocommerce__header__notice--authorized">
                 <p>The AINSYS Integration Plan will help you calculate the timing and budget for your automation project, as well as make it easier to find contractors among our community of competent partners and developers. In our catalog you will find any system you need.</p>
-                <a href="/cart"  class="woocommerce-Button button button--notice button--cart" >
+                     <a href="/ainsys-404-en"  class="woocommerce-Button button button--notice button--cart" >
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/components/icon-techno.svg" alt="button-icon">
                     <?php _e('Integration plan','ainsys'); ?>
                     <!--<span class="button-info "><?php echo WC()->cart->get_cart_contents_count(); ?></span>-->
                 </a>
+               
 
             </div>
     <?php endif; ?>

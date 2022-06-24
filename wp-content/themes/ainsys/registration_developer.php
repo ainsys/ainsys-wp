@@ -1241,5 +1241,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 get_footer( 'footer' );
 ?>
-
-

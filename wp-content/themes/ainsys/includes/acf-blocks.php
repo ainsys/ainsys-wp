@@ -798,6 +798,25 @@ function ainsys_register_acf_block_types() {
             ),
         )
     );
+		
+		acf_register_block_type(
+	        array(
+	            'name'            => 'developers',
+	            'title'           => __( 'developers' ),
+	            'description'     => __( 'developers' ),
+	            'render_template' => 'partials/blocks/theme-specific/developers.php',
+	            'mode'            => 'edit',
+	            'category'        => 'customgb',
+	            'keywords'        => array( 'beta' ),
+	            'icon'            => 'images',
+	            'supports'        => array(
+	                'align'           => false,
+	                'anchor'          => true,
+	                'customClassName' => true,
+	                'jsx'             => false,
+	            ),
+	        )
+	    );
 
 }
 
