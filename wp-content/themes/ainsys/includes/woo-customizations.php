@@ -716,8 +716,6 @@ function taxonomyFilter($args = []) {
                                 ?>
                             </p>
 
-                             <p class='anons'> <?php echo $anons; ?> </p> 
-
                         </div>
 
                         <?php
@@ -736,6 +734,7 @@ function taxonomyFilter($args = []) {
                     </div>
                     <div class="bottom-row row">
                         <div class="description">
+													<p class='anons'> <?php echo $anons; ?> </p>
                             <?php echo $product->get_description(); ?>
                         </div>
                     </div>
