@@ -761,6 +761,25 @@ function ainsys_register_acf_block_types() {
         )
     );
 
+	acf_register_block_type(
+        array(
+            'name'            => 'Jobs vacantes',
+            'title'           => __( 'Jobs vacantes' ),
+            'description'     => __( 'Jobs vacantes' ),
+            'render_template' => 'partials/blocks/theme-specific/jobs_vacantes.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'jobs, vacantes' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
 }
 
 // Check if function exists and hook into setup.
