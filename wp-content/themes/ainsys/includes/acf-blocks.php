@@ -780,6 +780,25 @@ function ainsys_register_acf_block_types() {
         )
     );
 
+	acf_register_block_type(
+        array(
+            'name'            => 'Beta',
+            'title'           => __( 'Beta' ),
+            'description'     => __( 'Beta' ),
+            'render_template' => 'partials/blocks/theme-specific/beta.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'beta' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
 }
 
 // Check if function exists and hook into setup.
