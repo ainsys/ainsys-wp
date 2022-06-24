@@ -158,7 +158,8 @@ nav.woocommerce-pagination {
 	margin-left: 15px !important;
 }
 .products__right li.product .title h3 {
-	font-size: 16px !important;
+	font-size: 15px !important;
+	padding-top: 0 !important;
 }
 .top-row.row > div {
 	width: auto;
@@ -213,14 +214,14 @@ p.prduct-categories {
 	flex-direction: column;
 }
 p.prduct-categories span{
-	margin-bottom: 7px;
+	margin-bottom: 0px;
 	color: white;
 }
 .top-row.row .title h3 {
 	color: white;
 }
 .bottom-row.row {
-	margin-top: 10px;
+	margin-top: 15px;
 	padding: 5px;
 }
 .bottom-row.row .description,
@@ -230,8 +231,9 @@ p.prduct-categories span{
 	margin: 0;
 	line-height: 19px;
 	color: white;
-	max-height: 100px;
+	max-height: 80px;
 	overflow: hidden;
+	padding: 0;
 }
 .bottom-row.row .description:hover *,
 .bottom-row.row .description:focus *,
