@@ -1497,6 +1497,35 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $('.jobs_vacantes_slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrow: true,
+    infinite: true,
+    speed: 500,
+    autoplay: false,
+    autoplaySpeed: 0,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }, {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
   $(document).ready(function () {
     closeMoodal();
   });
@@ -1686,20 +1715,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din);
 
     if ($('.rate_page__list').hasClass('active')) {
-      var final_val_sale = Math.floor(final_val_din / 0.85);
+      var final_val_sale = parseInt(final_val_din / 0.85);
       $('#final_val').text(final_val_sale);
       $('#rate_val').text(final_val_sale);
-      var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      var final_val_sale_two = parseInt(final_val_din_two / 0.85);
       console.log(final_val_sale_two);
       $('#final_val_two').text(final_val_sale_two);
       $('#rate_val2').text(final_val_sale_two);
     } else {
-      var _final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
+      var _final_val_sale = parseInt(final_val_din - parseInt(final_val_din * 0.15));
 
       $('#final_val').text(_final_val_sale);
       $('#rate_val').text(_final_val_sale);
 
-      var _final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din_two * 0.15));
+      var _final_val_sale_two = parseInt(final_val_din_two - parseInt(final_val_din_two * 0.15));
 
       $('#final_val_two').text(_final_val_sale_two);
       $('#rate_val2').text(_final_val_sale_two);
