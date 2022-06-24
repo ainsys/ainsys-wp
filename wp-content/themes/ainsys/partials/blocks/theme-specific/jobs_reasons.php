@@ -38,9 +38,9 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 <section class="jobs_reasosns">
     <div class="container">
-        <h3 class="has-text-align-center">
+        <h2 class="has-text-align-center jobs_reasosns_title">
             <strong><?php the_field( 'reasosns_title' ); ?></strong>
-        </h3>
+        </h2>
 
         <?php if ( have_rows( 'reasosns_item' ) ) : ?>
             <div class="row jobs_reasosns_wrapper">
