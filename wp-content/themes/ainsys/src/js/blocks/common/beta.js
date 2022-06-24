@@ -1,7 +1,7 @@
 ( function( $ ) {
 
-    $('.beta_close').click(function() {
-        $('.beta')
+    $('.bet_close').click(function() {
+        $('.bet')
         .addClass('disabl');
     });
     
