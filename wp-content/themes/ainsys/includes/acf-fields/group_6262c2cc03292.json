@@ -76,8 +76,8 @@
             "button_label": "Add",
             "sub_fields": [
                 {
-                    "key": "field_62b322fb07b69",
-                    "label": "accardion href",
+                    "key": "field_62b3245afcae1",
+                    "label": "Href",
                     "name": "accardion_href",
                     "type": "text",
                     "instructions": "",
@@ -269,5 +269,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655907084
+    "modified": 1655907510
 }
