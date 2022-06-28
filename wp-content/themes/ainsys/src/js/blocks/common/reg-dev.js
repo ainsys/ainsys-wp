@@ -191,6 +191,7 @@ jQuery(document).ready(function ($) {
         }
 
         let partnerTrigger = document.querySelector('.my-acc-reg-form-partner');
+
         //Закидывание данных в общий массив формы
         document.addEventListener('wpcf7beforesubmit', function (event) {
             let dopInputs = document.querySelectorAll('.con-item-integration'),
@@ -533,14 +534,13 @@ jQuery(document).ready(function ($) {
         //Видимость формы поиска у компетенций
         let btnPlus = document.querySelectorAll('.js-acc-reg-form-plus');
 
-        if (btnPlus.length > 0) {
+
             btnPlus.forEach((item, i) => {
                 item.addEventListener('click', e => {
                     e.preventDefault();
                     item.parentElement.querySelector('.acc-reg-form-plus__search').classList.add('active');
                 });
             });
-        }
         //Поиск по интеграциям
         $('.search-field-product').keypress(function (eventObject) {
             var searchTerm = $(this).val();
