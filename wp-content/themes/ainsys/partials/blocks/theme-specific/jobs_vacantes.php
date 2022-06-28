@@ -64,7 +64,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                                     <?php the_sub_field( 'slide_terms_place' ); ?>
                                 </p>
                             <?php } ?>
-                            <span>|</span>
+                            <!-- <span>|</span> -->
                             <?php if ( get_sub_field( 'slide_terms_city' ) ) { ?>
                                 <p class="vacantes_slide_terms_text">
                                     <?php the_sub_field( 'slide_terms_city' ); ?>

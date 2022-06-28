@@ -23,56 +23,41 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="integration_head">
                     <h2 class="integration_head_title">Форма для регистрации разработчика</h2>   
                 </div>
-                <div class="reg">
+                <!-- <div class="reg">
                     <div class="reg_data">
                         <div class="reg_data_item col-md-4 col-sm-6 col-12">
                             <p class="reg_data_name">
                                 Имя
-                            </p>
-                            <p class="reg_data_value">
-                                Иван
                             </p>
                         </div>
                         <div class="reg_data_item col-md-4 col-sm-6 col-12">
                             <p class="reg_data_name">
                                 Фамилия
                             </p>
-                            <p class="reg_data_value">
-                                Иванов
-                            </p>
-                        </div>
-                        <div class="reg_data_item col-md-4 col-sm-6 col-12">
-                            <p class="reg_data_name">
-                                Отчество
-                            </p>
-                            <p class="reg_data_value">
-                                Иванович
-                            </p>
                         </div>
                         <div class="reg_data_item col-md-4 col-sm-6 col-12">
                             <p class="reg_data_name">
                                 E-mail
-                            </p>
-                            <p class="reg_data_value">
-                                ivanov.i@gmail.com
                             </p>
                         </div>
                         <div class="reg_data_item col-md-4 col-sm-6 col-12">
                             <p class="reg_data_name">
                                 Номер телефона
                             </p>
-                            <p class="reg_data_value">
-                                +7 (745) 746-46-42
-                            </p>
                         </div>
                         <div class="reg_data_item col-md-4 col-sm-6 col-12">
                             <p class="reg_data_podtitle">
                                 Для изменения данных перейдите в личный кабинет
                             </p>
-                            <button class="reg_data_btn">Редактировать</button>
+                            <a href="/my-account/edit-account/" class="reg_data_btn">Редактировать</a>
                         </div>
                     </div>
+                </div> -->
+
+                <div class="integration_form">
+                    <?= do_shortcode('[contact-form-7 id="9877" title="Форма регистрации разработчика"]');?>
                 </div>
+                
 
                 <div class="integration_form_field col-md-12 col-12">
                     <div class="integration_form_field_head">
