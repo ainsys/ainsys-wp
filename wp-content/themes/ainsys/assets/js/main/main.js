@@ -1448,23 +1448,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   $(".integration_upload").click(function () {
     $(this).addClass('disabl');
     $('.field__wrapper').removeClass('disabl');
-  });
-  $(".integration_file").click(function () {
-    $(this).addClass('disabl');
-    $('.field__wrapper').removeClass('disabl');
-  });
-  var fields = document.querySelectorAll('.field__file');
-  Array.prototype.forEach.call(fields, function (input) {
-    var label = input.nextElementSibling,
-        labelVal = label.querySelector('.field__file-fake').innerText;
-    input.addEventListener('change', function (e) {
-      var countFiles = '';
-      if (this.files && this.files.length >= 1) countFiles = this.files.length;
-      if (countFiles) label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;else label.querySelector('.field__file-fake').innerText = labelVal;
-    });
-  });
+  }); // $(".integration_file").click(function() {
+  //     $( this )
+  //     .addClass('disabl');   
+  //     $( '.field__wrapper' )
+  //     .removeClass('disabl');
+  // });
+  // let fields = document.querySelectorAll('.field__file');
+  // Array.prototype.forEach.call(fields, function (input) {
+  //   let label = input.nextElementSibling,
+  //     labelVal = label.querySelector('.field__file-fake').innerText;
+  //   input.addEventListener('change', function (e) {
+  //     let countFiles = '';
+  //     if (this.files && this.files.length >= 1)
+  //       countFiles = this.files.length;
+  //     if (countFiles)
+  //       label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+  //     else
+  //       label.querySelector('.field__file-fake').innerText = labelVal;
+  //   });
+  // });
+
   $(".settings_add").click(function () {
-    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<div class="select">' + '<input class="select__input" type="hidden" name="">' + '<div class="select__head">Web site</div>' + '<ul class="select__list" style="display: none;">' + '<li class="select__item">Web site</li>' + '<li class="select__item">Whatsapp</li>' + '<li class="select__item">Facebook</li>' + '<li class="select__item">Instagram</li>' + '<li class="select__item">Telegram</li>' + '<li class="select__item">Linkedin</li>' + '<li class="select__item">Другое</li>' + '</ul>' + '</div>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
+    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<select class="select__list">' + '<option value="Website" class="select__item">Website</option>' + '<option value="Whatsapp" class="select__item">Whatsapp</option>' + '<option value="Telegram" class="select__item">Facebook</option>' + '<option value="Whatsapp" class="select__item">Instagram</option>' + '<option value="Telegram" class="select__item">Telegram</option>' + '<option value="Email" class="select__item">Email</option>' + '<option value="Viber" class="select__item">Viber</option>' + '</select>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
   });
   var container = document.querySelector('.integration_form_options_rows');
   $(container).on('mouseover', function () {
@@ -1472,17 +1478,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       $(this).parent().addClass('disabl');
     });
   });
-  $("#radio-fiz").click(function () {
+  $(".first").click(function () {
     $('.integration_form_field_role').addClass('disabl');
     $('.integration_form_field_fiz').removeClass('disabl');
   });
-  $("#radio-ur").click(function () {
+  $(".last").click(function () {
     $('.integration_form_field_role').addClass('disabl');
     $('.integration_form_field_ur').removeClass('disabl');
   }); // Reg dev
 
   $(".experience_settings_btn").click(function () {
-    $('.experience_item_start').before($('<div class="experience_item">' + '<div class="experience_block change">' + '<div class="experience_wrapper">' + '<div class="experience_head">' + '<div class="experience_head_date">' + '<input class="experience_head_date_text" type="date" value="01.05.2021">' + '<span>-</span>' + '<input class="experience_head_date_text" type="date" value="01.08.2021">' + '</div>' + '<input type="text" class="experience_head_company" value="Company">' + '</div>' + '<div class="experience_info">' + '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' + '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' + '</div>' + '</div>' + '<div class="experience_settings">' + '<div class="experience_settings_correct">' + '</div>' + '<div class="experience_settings_accept disabl">' + '</div>' + '<div class="experience_settings_cancel">' + '</div>' + '</div>' + '</div>' + '</div>'));
+    $('.experience_item_start').before($('<div class="experience_item">' + '<div class="experience_block">' + '<div class="experience_wrapper">' + '<div class="experience_head">' + '<div class="experience_head_date">' + '<input class="experience_head_date_text" type="date" value="01.05.2021">' + '<span>-</span>' + '<input class="experience_head_date_text" type="date" value="01.08.2021">' + '</div>' + '<input type="text" class="experience_head_company" value="Company">' + '</div>' + '<div class="experience_info">' + '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' + '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' + '</div>' + '</div>' + '<div class="experience_settings">' + '<div class="experience_settings_correct">' + '</div>' + '<div class="experience_settings_accept disabl">' + '</div>' + '<div class="experience_settings_cancel">' + '</div>' + '</div>' + '</div>' + '</div>'));
   });
   var containerTwo = document.querySelector('.site');
   $(containerTwo).on('mouseover', function () {
@@ -2345,16 +2351,12 @@ jQuery(document).ready(function ($) {
       console.log(inputs);
     }, false);
     var btnPlus = document.querySelectorAll('.js-acc-reg-form-plus');
-
-    if (btnPlus.length > 0) {
-      btnPlus.forEach(function (item, i) {
-        item.addEventListener('click', function (e) {
-          e.preventDefault();
-          item.parentElement.querySelector('.acc-reg-form-plus__search').classList.add('active');
-        });
+    btnPlus.forEach(function (item, i) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        item.parentElement.querySelector('.acc-reg-form-plus__search').classList.add('active');
       });
-    } //Поиск по интеграциям
-
+    }); //Поиск по интеграциям
 
     $('.search-field-product').keypress(function (eventObject) {
       var searchTerm = $(this).val(); // проверим, если в поле ввода более 2 символов, запускаем ajax
@@ -2647,33 +2649,6 @@ jQuery(document).ready(function ($) {
     $([document.documentElement, document.body]).animate({
       scrollTop: $(".footer").offset().top
     }, 1000);
-  });
-})(jQuery);
-"use strict";
-
-(function ($) {
-  $('.select').on('click', '.select__head', function () {
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open');
-      $(this).next().fadeOut();
-    } else {
-      $('.select__head').removeClass('open');
-      $('.select__list').fadeOut();
-      $(this).addClass('open');
-      $(this).next().fadeIn();
-    }
-  });
-  $('.select').on('click', '.select__item', function () {
-    $('.select__head').removeClass('open');
-    $(this).parent().fadeOut();
-    $(this).parent().prev().text($(this).text());
-    $(this).parent().prev().prev().val($(this).text());
-  });
-  $(document).click(function (e) {
-    if (!$(e.target).closest('.select').length) {
-      $('.select__head').removeClass('open');
-      $('.select__list').fadeOut();
-    }
   });
 })(jQuery);
 "use strict";

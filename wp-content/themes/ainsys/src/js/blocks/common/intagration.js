@@ -103,13 +103,13 @@
         .removeClass('disabl');
     });
 
-    $(".integration_file").click(function() {
-        $( this )
-        .addClass('disabl');   
+    // $(".integration_file").click(function() {
+    //     $( this )
+    //     .addClass('disabl');   
 
-        $( '.field__wrapper' )
-        .removeClass('disabl');
-    });
+    //     $( '.field__wrapper' )
+    //     .removeClass('disabl');
+    // });
 
 
 
@@ -117,22 +117,22 @@
     
 
 
-    let fields = document.querySelectorAll('.field__file');
-    Array.prototype.forEach.call(fields, function (input) {
-      let label = input.nextElementSibling,
-        labelVal = label.querySelector('.field__file-fake').innerText;
+    // let fields = document.querySelectorAll('.field__file');
+    // Array.prototype.forEach.call(fields, function (input) {
+    //   let label = input.nextElementSibling,
+    //     labelVal = label.querySelector('.field__file-fake').innerText;
   
-      input.addEventListener('change', function (e) {
-        let countFiles = '';
-        if (this.files && this.files.length >= 1)
-          countFiles = this.files.length;
+    //   input.addEventListener('change', function (e) {
+    //     let countFiles = '';
+    //     if (this.files && this.files.length >= 1)
+    //       countFiles = this.files.length;
   
-        if (countFiles)
-          label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
-        else
-          label.querySelector('.field__file-fake').innerText = labelVal;
-      });
-    });
+    //     if (countFiles)
+    //       label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+    //     else
+    //       label.querySelector('.field__file-fake').innerText = labelVal;
+    //   });
+    // });
 
     $(".settings_add").click(function() {
         $('.integration_form_options_inputs_start').after(
@@ -141,23 +141,19 @@
             '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' +
             '</div>' +
             '<div class="integration_form_field">' +
-            '<div class="select">' +
-            '<input class="select__input" type="hidden" name="">' +
-            '<div class="select__head">Web site</div>' +
-            '<ul class="select__list" style="display: none;">' +
-            '<li class="select__item">Web site</li>' +
-            '<li class="select__item">Whatsapp</li>' +
-            '<li class="select__item">Facebook</li>' +
-            '<li class="select__item">Instagram</li>' +
-            '<li class="select__item">Telegram</li>' +
-            '<li class="select__item">Linkedin</li>' +
-            '<li class="select__item">Другое</li>' +
-            '</ul>' +
-            '</div>' +
+                '<select class="select__list">'+
+                    '<option value="Website" class="select__item">Website</option>'+
+                    '<option value="Whatsapp" class="select__item">Whatsapp</option>'+
+                    '<option value="Telegram" class="select__item">Facebook</option>'+
+                    '<option value="Whatsapp" class="select__item">Instagram</option>'+
+                    '<option value="Telegram" class="select__item">Telegram</option>'+
+                    '<option value="Email" class="select__item">Email</option>'+
+                    '<option value="Viber" class="select__item">Viber</option>'+
+                '</select>'+
             '</div>' +
             '<div class="integration_form_field_remove">' +
-            '<div class="integration_form_remove settings_remove">' +
-            '</div>' +
+                '<div class="integration_form_remove settings_remove">' +
+                '</div>' +
             '</div>' +
             '</div>' 
             )
@@ -176,7 +172,7 @@
 
 
 
-    $("#radio-fiz").click(function() {
+    $(".first").click(function() {
         $( '.integration_form_field_role' )
         .addClass('disabl');
 
@@ -184,12 +180,23 @@
         .removeClass('disabl');  
     });
 
-    $("#radio-ur").click(function() {
+    $(".last").click(function() {
         $( '.integration_form_field_role' )
         .addClass('disabl');
 
         $( '.integration_form_field_ur' )
         .removeClass('disabl');  
+    });
+
+    $(window).load(function(){ 
+        if ($( '.integration_form_field_fiz' ).hasClass('disabl')){
+            $(".first").addClass('active');
+            $(".last").removeClass('active');
+        }
+        else {
+            $(".first").addClass('active');
+            $(".last").removeClass('active');
+        }
     });
 
 
@@ -213,7 +220,7 @@
     $(".experience_settings_btn").click(function() {
         $('.experience_item_start').before(
             $('<div class="experience_item">' +
-                '<div class="experience_block change">' +
+                '<div class="experience_block">' +
                     '<div class="experience_wrapper">' +
                         '<div class="experience_head">' +
                             '<div class="experience_head_date">' +
