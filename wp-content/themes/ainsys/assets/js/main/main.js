@@ -1504,6 +1504,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $(".jobs_wrapper_content_btn").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".jobs_vacantes").offset().top
+    }, 1000);
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
   $('.jobs_vacantes_slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
