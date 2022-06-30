@@ -1485,6 +1485,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   $(".last").click(function () {
     $('.integration_form_field_role').addClass('disabl');
     $('.integration_form_field_ur').removeClass('disabl');
+  });
+  $(window).load(function () {
+    if ($('.integration_form_field_fiz').hasClass('disabl')) {
+      $(".first").addClass('active');
+      $(".last").removeClass('active');
+    } else {
+      $(".first").addClass('active');
+      $(".last").removeClass('active');
+    }
   }); // Reg dev
 
   $(".experience_settings_btn").click(function () {
@@ -1543,6 +1552,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         slidesToScroll: 1
       }
     }]
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".first_content_video_play").click(function () {
+    $(".first_modal").addClass('active');
+  });
+  $(".first_content_video_wrapper").click(function () {
+    $(".first_modal").addClass('active');
+  });
+  $(".first_modal_close").click(function () {
+    $(".first_modal").removeClass('active');
   });
 })(jQuery);
 "use strict";
