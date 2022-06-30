@@ -119,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<?php
                                             wp_nav_menu(
                                                 array(
-                                                    'theme_location' => 'en-ca',
+                                                    'theme_location' => 'en',
                                                     'container' => '',
                                                     'menu_class' => '',
                                                     'menu_id' => '',
