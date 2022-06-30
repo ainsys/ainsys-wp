@@ -682,22 +682,17 @@ function taxonomyFilter($args = []) {
                 global $product;
                 $product_id       = $product->get_id();
                 $product_cats_ids = $product->get_category_ids();
-                $color_1 = '#3d0043';
-                $color_2 = '#931e9f';
-				$anons = get_field('prod-info-text');
+                $color_1_1 = get_post_meta ( $post->ID , 'color_1_1', true );
+                $color_2_2 = get_post_meta ( $post->ID , 'color_2_2', true );
+				
                 $logo = get_field('logo');
                 $anons = get_field('prod-info-text');
     
                 //$logo = get_field('logo');
-                if(!empty(get_field('color_1'))) {
-                $color_1 = get_field('color_1');
-                }
-                if(!empty(get_field('color_2'))) {
-                $color_2 = get_field('color_2');
-                }
+              
 
                 //$product_cat_list = wc_get_product_category_list( $product_id ); ?>
-                <li class="product" style="background: linear-gradient(105.3deg, <?= $color_1; ?>  0%, <?= $color_2; ?> 97.63%)" >
+                <li class="product" style="background: linear-gradient(105.3deg, <?= $color_1_1; ?>  0%, <?=  $color_2_2; ?> 97.63%)" >
                     <div class="top-row row">
                         <div class="img">
                             <?// echo $product->get_image(); ?>
@@ -734,7 +729,7 @@ function taxonomyFilter($args = []) {
                     </div>
                     <div class="bottom-row row">
                         <div class="description">
-													<p class='anons'> <?php echo $anons; ?> </p>
+													<p class='anons'> <?php echo get_post_meta ( $post->ID , 'info_connector', true ); ?> </p>
                             <?php echo $product->get_description(); ?>
                         </div>
                     </div>
