@@ -123,6 +123,7 @@ img {
 
 .site-content {
 	position: relative;
+	min-height: 100vh;
 
 	.announcement-bar-on & {
 		padding: $announcement-bar-height 0 0;
