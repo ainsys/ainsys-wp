@@ -1075,6 +1075,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+})(jQuery);
+"use strict";
+
+(function ($) {
+  "use strict";
+
+  if (window['objectFitImages']) {
+    $(document).ready(function () {
+      window.objectFitImages(null, {
+        watchMQ: true
+      });
+    });
+  }
+})(jQuery);
+"use strict";
+
+(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1213,25 +1232,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
     */
   });
-})(jQuery);
-"use strict";
-
-(function ($) {
-  document.body.classList.remove('no-js');
-  document.body.classList.add('js');
-})(jQuery);
-"use strict";
-
-(function ($) {
-  "use strict";
-
-  if (window['objectFitImages']) {
-    $(document).ready(function () {
-      window.objectFitImages(null, {
-        watchMQ: true
-      });
-    });
-  }
 })(jQuery);
 "use strict";
 
@@ -1884,6 +1884,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   });
   $('.rate_delete_fourth').click(function () {
     $('.rate_fourth').addClass('rate-disabled');
+  });
+  $(".row_main").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".table-responsive").offset().top
+    }, 1000);
   });
 })(jQuery);
 "use strict";

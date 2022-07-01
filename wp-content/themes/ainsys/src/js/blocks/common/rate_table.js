@@ -21,5 +21,10 @@
 		$('.rate_fourth')
 		.addClass('rate-disabled');
 	});
+	$(".row_main").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(".table-responsive").offset().top
+        }, 1000);
+    });
 
 } )( jQuery );    
