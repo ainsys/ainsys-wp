@@ -18,13 +18,13 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="woocommerce-billing-fields">
+<div class="woocommerce-billing-fields integration_flex">
 
 
 
 
 
-<div class="basket-info">
+<div class="integration_info">
 	<h3 class="basket-info__title"><?php esc_html_e( 'Контактные данные ', 'woocommerce' ); ?></h3>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
@@ -64,14 +64,14 @@ defined( 'ABSPATH' ) || exit;
            			/* translators: $1 and $2 opening and closing emphasis tags respectively */
            			printf( esc_html__( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ), '<em>', '</em>' );
            			?>
-           			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
+           			<br/><button type="submit" class="btn btn-primary alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
            		</noscript>
 
            		<?php wc_get_template( 'checkout/terms.php' ); ?>
 
            		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-           		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Оставить заявку" data-value="Оставить заявку">Оставить заявку</button>' ); // @codingStandardsIgnoreLine ?>
+           		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-primary alt" name="woocommerce_checkout_place_order" id="place_order" value="Оставить заявку" data-value="Оставить заявку">Оставить заявку</button>' ); // @codingStandardsIgnoreLine ?>
 
            		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
@@ -85,22 +85,7 @@ defined( 'ABSPATH' ) || exit;
 <!--
   </div>
 
-<div class="basket-info">
 -->
-  <h3 class="basket-info__title"><?php esc_html_e( 'Стоимость ', 'woocommerce' ); ?></h3>
-  <table class="shop_table woocommerce-checkout-review-order-table">
-
-    <tfoot>
-
-
-      <tr class="order-total">
-        <td><?php wc_cart_totals_order_total_html(); ?></td>
-      </tr>
-
-
-    </tfoot>
-
-  </table>
 <!--
   <ul class="basket-info__list">
     <li>Lörem ipsum nyss tinade  Lörem ipsum nyss tinade </li>
@@ -108,9 +93,6 @@ defined( 'ABSPATH' ) || exit;
     <li>Lörem ipsum nyss tinade </li>
   </ul>
 -->
-  <div class="basket-info__text">
-    Окончательную стоимость заказа вы сможете узнать у менеджера.
-  </div>
 </div>
 </div>
 <!-- //Регистрация
