@@ -40,7 +40,6 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<div class="col2-set check" id="customer_details"></div>
 		    <div class="integration_flex">
 				<div class="col-8">
-					<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 					<?php do_action( 'woocommerce_checkout_billing' );?>
 				</div>
 				<div class="basket__right terms">

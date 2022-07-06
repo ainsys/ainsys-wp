@@ -532,7 +532,7 @@ jQuery(document).ready(function ($) {
         }
 
         //Видимость формы поиска у компетенций
-        let btnPlus = document.querySelectorAll('.js-acc-reg-form-plus');
+        let btnPlus = document.querySelectorAll('.acc-reg-form-plus__plus');
 
 
             btnPlus.forEach((item, i) => {
