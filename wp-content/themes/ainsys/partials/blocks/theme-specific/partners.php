@@ -62,303 +62,69 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
             <div class="integration_block col-12 col-lg-3">
                 <div class="terms terms_partners">
                     <p class="terms_title">
-                        Примеры карточек партнера
+                        <?= get_field('terms_title');?>
                     </p>
-                    <div class="term_item">
-                        <div class="term_item_header">
-                            <div class="term_item_header_avatar">
-                                <span class="term_item_header_avatar_shadow"></span>
-                                <span class="term_item_header_avatar_img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/avatar.png" alt="avatar">
-                                </span>
-                            </div>
-                            <div class="term_item_header_info">
-                                <p class="term_item_header_info_name">
-                                    Борисов Моисей
-                                </p>
-                                <p class="term_item_header_info_company">
-                                    IKEA 
-                                </p>
-                                <p class="term_item_header_info_projects">
-                                    3 успешных проекта
-                                </p>
-                                <div class="term_item_header_info_rating">
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star"></div>
+                    <?php if ( have_rows( 'term_item' ) ) : ?>
+                        <?php
+                        while ( have_rows( 'term_item' ) ) :
+                            the_row();
+                            ?>
+                            <div class="term_item">
+                            <div class="term_item_header">
+                                    <div class="term_item_header_avatar">
+                                        <span class="term_item_header_avatar_shadow"></span>
+                                        <span class="term_item_header_avatar_img">
+                                            <img src="<?= the_sub_field('term_item_img');?>" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="term_item_header_info">
+                                        <p class="term_item_header_info_name">
+                                            <?= the_sub_field('term_item_name');?>
+                                        </p>
+                                        <p class="term_item_header_info_company">
+                                            <?= the_sub_field('term_item_company');?>
+                                        </p>
+                                        <p class="term_item_header_info_projects">
+                                            <?= the_sub_field('term_item_projects');?>
+                                        </p>
+                                        <?php if ( have_rows( 'term_rating_star' ) ) : ?>
+                                            <div class="term_item_header_info_rating">
+                                                <?php
+                                                    while ( have_rows( 'term_rating_star' ) ) :
+                                                        the_row();
+                                                        $class = get_sub_field( 'class' ) ? get_sub_field( 'class' ) : 'col-lg-4';
+                                                        ?>
+                                                    <div class="term_item_header_info_rating_star <?php echo ' ' . esc_attr( $class ); ?>"></div>
+                                                <?php endwhile; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="term_item_content">
+                                    <p class="term_item_content_title">
+                                        <?= the_sub_field('term_level');?>
+                                    </p>
+                                    <?php if ( have_rows( 'term_system' ) ) : ?>
+                                    <ul class="term_item_content_list">
+                                        <?php
+                                        while ( have_rows( 'term_system' ) ) :
+                                            the_row();
+                                            ?>
+                                            <li class="term_item_content_list_link">
+                                                <div class="term_item_content_list_link_system">
+                                                    <img src="<?= the_sub_field('term_item_img');?>" alt="system">
+                                                    <div class="term_item_content_list_link_system_level">
+                                                        <?= the_sub_field('term_system_text');?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                        </div>
-                        <div class="term_item_content">
-                            <p class="term_item_content_title">
-                                Уровень разработчиков по системам
-                            </p>
-                            <ul class="term_item_content_list">
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_b24.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            J
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_vk.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            J
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="term_item">
-                        <div class="term_item_header">
-                            <div class="term_item_header_avatar">
-                                <span class="term_item_header_avatar_shadow"></span>
-                                <span class="term_item_header_avatar_img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/avatar_2.svg" alt="avatar">
-                                </span>
-                            </div>
-                            <div class="term_item_header_info">
-                                <p class="term_item_header_info_name">
-                                    Архипенко Олег
-                                </p>
-                                <p class="term_item_header_info_company">
-                                    Arcellor Mitall
-                                </p>
-                                <p class="term_item_header_info_projects">
-                                    82 успешных проекта
-                                </p>
-                                <div class="term_item_header_info_rating">
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="term_item_content">
-                            <p class="term_item_content_title">
-                                Уровень разработчиков по системам
-                            </p>
-                            <ul class="term_item_content_list">
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_vk.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_tg.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <div class="term_item_content_list_link_system_more system_more">
-                                            <p>+7</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <div class="term_item_content_systems disabl">
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="term_item">
-                        <div class="term_item_header">
-                            <div class="term_item_header_avatar">
-                                <span class="term_item_header_avatar_shadow"></span>
-                                <span class="term_item_header_avatar_img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/avatar_3.svg" alt="avatar">
-                                </span>
-                            </div>
-                            <div class="term_item_header_info">
-                                <p class="term_item_header_info_name">
-                                    Семенчук Юлия
-                                </p>
-                                <p class="term_item_header_info_company">
-                                    Компания “IKEA” 
-                                </p>
-                                <p class="term_item_header_info_projects">
-                                    3 успешных проекта
-                                </p>
-                                <div class="term_item_header_info_rating">
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star term_item_header_info_rating_star-active"></div>
-                                    <div class="term_item_header_info_rating_star"></div>
-                                    <div class="term_item_header_info_rating_star"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="term_item_content">
-                            <p class="term_item_content_title">
-                                Уровень разработчиков по системам
-                            </p>
-                            <ul class="term_item_content_list">
-                            <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_vk.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_tg.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                        <div class="term_item_content_list_link_system_level">
-                                            S
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="term_item_content_list_link">
-                                    <div class="term_item_content_list_link_system">
-                                        <div class="term_item_content_list_link_system_more system_more">
-                                            <p>+5</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <div class="term_item_content_systems disabl">
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="term_item_content_list_link">
-                                        <div class="term_item_content_list_link_system">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/system_woo.svg" alt="b24">
-                                            <div class="term_item_content_list_link_system_level">
-                                                S
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-
-                            </ul>
-                        </div>
-                    </div>
-
-
-
+                        <?php endwhile; ?>
+                    <?php endif; ?>
 
                 </div>
             </div>

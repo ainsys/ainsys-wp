@@ -120,7 +120,7 @@
             position: relative;
             display: flex;
             overflow: hidden;
-            width: 60%;
+            width: 100%;
             min-width: 285px;
             padding: 14px;
             margin-bottom: 16px;
@@ -207,7 +207,7 @@
                 flex-direction: column;
                 justify-content: center;
                 color: $white;
-                margin-left: auto;
+                margin: 0 0 0 auto;
 
                 &_text {
                     font-weight: 400;
