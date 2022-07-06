@@ -296,7 +296,7 @@
             .closest( '.experience_item' )
             .find( '.experience_settings_correct' )
             .removeClass('disabl');   
-    });
+        });
         $(".experience_settings_cancel").click(function() {
                 $( this )
                 .parent()
@@ -305,6 +305,64 @@
                 .addClass('disabl');
         });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Закидывание данных в общий массив формы
+            document.addEventListener('wpcf7beforesubmit', function (event) {
+                let alternateItems = document.querySelectorAll('.alternate-item');
+                let inputs = event.detail.inputs,
+                    competencies = 
+
+                    alt = {
+                        name: "alternateConnect",
+                        value: []
+                    };
+    
+    
+                if (alternateItems.length > 0) {
+                    let hiddenInput = document.querySelector('[name="reg-dev-alternate-connect"]');
+    
+                    for (let i = 0; i < alternateItems.length; i++) {
+                        let alernateValue = alternateItems[i].querySelector('.alternate-item label:first-child input').value,
+                            alternateType = alternateItems[i].querySelector('.alternate-item label:last-child select').value;
+    
+                        let alternateItem = {
+                            alernateValue: alernateValue,
+                            alternateType: alternateType,
+                        };
+                        alt.value.push(alternateItem);
+                    }
+                    hiddenInput.value = JSON.stringify(alt);
+                    inputs[16].value = JSON.stringify(alt);
+                    console.log(inputs[16].value);
+                    console.log(hiddenInput);
+    
+                    inputs.push(alt);
+                }
+    
+                let messageSucces = document.querySelector('.reg-dev-succes');
+    
+                messageSucces.classList.add('active');
+    
+                setTimeout((e) => {
+                    messageSucces.classList.remove('active');
+                }, 5000)
+    
+    
+                console.log(inputs);
+            }, false);
 
 
 
