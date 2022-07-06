@@ -179,6 +179,52 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_62c5b4402eb85",
+                    "label": "term_rating_star",
+                    "name": "term_rating_star",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_62c5b44b2eb86",
+                            "label": "class",
+                            "name": "class",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "active": "active",
+                                "noactive": "noactive"
+                            },
+                            "default_value": "noactive",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
                     "key": "field_62c595eecf7b9",
                     "label": "term level",
                     "name": "term_level",
@@ -319,52 +365,6 @@
                             "maxlength": ""
                         }
                     ]
-                },
-                {
-                    "key": "field_62c5b4402eb85",
-                    "label": "term_rating_star",
-                    "name": "term_rating_star",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "block",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_62c5b44b2eb86",
-                            "label": "class",
-                            "name": "class",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "active": "active",
-                                "noactive": "noactive"
-                            },
-                            "default_value": "noactive",
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        }
-                    ]
                 }
             ]
         }
@@ -387,5 +387,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657123999
+    "modified": 1657125223
 }
