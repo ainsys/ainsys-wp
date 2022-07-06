@@ -210,12 +210,12 @@ if(0 == WC()->cart->get_cart_contents_count()){
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<button type="submit" class="button btn btn-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -249,6 +249,23 @@ if(0 == WC()->cart->get_cart_contents_count()){
       </div>
     </div>
   </div>
+  <div class="term_item">
+      <div class="basket-info term_item_header">
+        <div class="term_item_header_info_bottom">
+          <h3 class="term_item_header_title"><?php esc_html_e( 'Стоимость ', 'woocommerce' ); ?></h3>
+        </div>
+        <table class="shop_table woocommerce-checkout-review-order-table">
+          <tfoot>
+          <tr class="order-total">
+            <td><?php wc_cart_totals_order_total_html(); ?></td>
+          </tr>
+          </tfoot>
+        </table>
+        <div class="basket-info__text">
+          Окончательную стоимость заказа вы сможете узнать у менеджера.
+        </div>
+      </div>  
+    </div>
 
 </div><!-- //.basket__right -->
 

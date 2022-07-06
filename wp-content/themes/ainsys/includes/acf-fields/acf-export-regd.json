@@ -1,10 +1,10 @@
 [
     {
-        "key": "group_62c587bbd3ec2",
-        "title": "Reg partners",
+        "key": "group_62c5749a573ca",
+        "title": "Reg developers",
         "fields": [
             {
-                "key": "field_62c588074982f",
+                "key": "field_62c57549ec82f",
                 "label": "nav_back",
                 "name": "nav_back",
                 "type": "text",
@@ -23,7 +23,7 @@
                 "maxlength": ""
             },
             {
-                "key": "field_62c5880e49830",
+                "key": "field_62c574ccec82e",
                 "label": "Title",
                 "name": "title",
                 "type": "text",
@@ -42,7 +42,7 @@
                 "maxlength": ""
             },
             {
-                "key": "field_62c5881449831",
+                "key": "field_62c575d9ec830",
                 "label": "Form",
                 "name": "form",
                 "type": "text",
@@ -61,7 +61,7 @@
                 "maxlength": ""
             },
             {
-                "key": "field_62c5a8880936d",
+                "key": "field_62c5936ecf7b3",
                 "label": "terms_title",
                 "name": "terms_title",
                 "type": "text",
@@ -80,7 +80,7 @@
                 "maxlength": ""
             },
             {
-                "key": "field_62c5a8900936e",
+                "key": "field_62c59375cf7b4",
                 "label": "term item",
                 "name": "term_item",
                 "type": "repeater",
@@ -99,8 +99,8 @@
                 "button_label": "",
                 "sub_fields": [
                     {
-                        "key": "field_62c5a8a10936f",
-                        "label": "term_item_img",
+                        "key": "field_62c594afcf7b5",
+                        "label": "term img",
                         "name": "term_item_img",
                         "type": "image",
                         "instructions": "",
@@ -123,8 +123,8 @@
                         "mime_types": ""
                     },
                     {
-                        "key": "field_62c5a95d09370",
-                        "label": "term_item_name",
+                        "key": "field_62c594cecf7b6",
+                        "label": "term_name",
                         "name": "term_item_name",
                         "type": "text",
                         "instructions": "",
@@ -142,8 +142,8 @@
                         "maxlength": ""
                     },
                     {
-                        "key": "field_62c5a96609371",
-                        "label": "term_item_company",
+                        "key": "field_62c59510cf7b7",
+                        "label": "term company",
                         "name": "term_item_company",
                         "type": "text",
                         "instructions": "",
@@ -161,8 +161,8 @@
                         "maxlength": ""
                     },
                     {
-                        "key": "field_62c5a96d09372",
-                        "label": "term_item_projects",
+                        "key": "field_62c5952dcf7b8",
+                        "label": "term projects",
                         "name": "term_item_projects",
                         "type": "text",
                         "instructions": "",
@@ -180,8 +180,8 @@
                         "maxlength": ""
                     },
                     {
-                        "key": "field_62c5a97409373",
-                        "label": "term_level",
+                        "key": "field_62c595eecf7b9",
+                        "label": "term level",
                         "name": "term_level",
                         "type": "text",
                         "instructions": "",
@@ -199,8 +199,8 @@
                         "maxlength": ""
                     },
                     {
-                        "key": "field_62c5a97d09374",
-                        "label": "term_system",
+                        "key": "field_62c5965bcf7ba",
+                        "label": "term system",
                         "name": "term_system",
                         "type": "repeater",
                         "instructions": "",
@@ -218,8 +218,8 @@
                         "button_label": "",
                         "sub_fields": [
                             {
-                                "key": "field_62c5a98609375",
-                                "label": "term_item_img",
+                                "key": "field_62c5966bcf7bb",
+                                "label": "term item img",
                                 "name": "term_item_img",
                                 "type": "image",
                                 "instructions": "",
@@ -242,7 +242,7 @@
                                 "mime_types": ""
                             },
                             {
-                                "key": "field_62c5a99309376",
+                                "key": "field_62c596a6cf7bc",
                                 "label": "term_system_text",
                                 "name": "term_system_text",
                                 "type": "text",
@@ -261,33 +261,12 @@
                                 "maxlength": ""
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "key": "field_62c5b538f2a5b",
-                "label": "term_rating_star",
-                "name": "term_rating_star",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": 0,
-                "max": 0,
-                "layout": "block",
-                "button_label": "",
-                "sub_fields": [
+                    },
                     {
-                        "key": "field_62c5b544f2a5c",
-                        "label": "class",
-                        "name": "class",
-                        "type": "select",
+                        "key": "field_62c596c6b9691",
+                        "label": "term skills",
+                        "name": "term_skills",
+                        "type": "text",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": 0,
@@ -296,17 +275,97 @@
                             "class": "",
                             "id": ""
                         },
-                        "choices": {
-                            "active": "active",
-                            "noactive": "noactive"
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62c59717b9692",
+                        "label": "term skills item",
+                        "name": "term_skills_item",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
                         },
-                        "default_value": "noactive",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "return_format": "value",
-                        "ajax": 0,
-                        "placeholder": ""
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "block",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_62c5977db9693",
+                                "label": "term skills text",
+                                "name": "term_skills_text",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_62c5b4402eb85",
+                        "label": "term_rating_star",
+                        "name": "term_rating_star",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "block",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_62c5b44b2eb86",
+                                "label": "class",
+                                "name": "class",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "active": "active",
+                                    "noactive": "noactive"
+                                },
+                                "default_value": "noactive",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": ""
+                            }
+                        ]
                     }
                 ]
             }
@@ -316,7 +375,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/partners"
+                    "value": "acf\/developers"
                 }
             ]
         ],
