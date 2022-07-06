@@ -48,8 +48,8 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 					<?= get_field('important_text');?>
 				</div>
 				<div>
-                    <?php echo do_shortcode(get_field('form')); ?>
-                    </div>
+					<?php echo do_shortcode(get_field('form')); ?>
+				</div>
 			</div>
 			<div class="newsletter__img">
 				<img src="<?= get_field('newsletter__img');?>" alt="">
