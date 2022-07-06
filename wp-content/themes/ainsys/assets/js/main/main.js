@@ -1518,7 +1518,43 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(".experience_settings_cancel").click(function () {
       $(this).parent().closest('.experience_item').find('.experience_block').addClass('disabl');
     });
-  });
+  }); //Закидывание данных в общий массив формы
+
+  document.addEventListener('wpcf7beforesubmit', function (event) {
+    var alternateItems = document.querySelectorAll('.alternate-item');
+    var inputs = event.detail.inputs,
+        competencies = alt = {
+      name: "alternateConnect",
+      value: []
+    };
+
+    if (alternateItems.length > 0) {
+      var hiddenInput = document.querySelector('[name="reg-dev-alternate-connect"]');
+
+      for (var i = 0; i < alternateItems.length; i++) {
+        var alernateValue = alternateItems[i].querySelector('.alternate-item label:first-child input').value,
+            alternateType = alternateItems[i].querySelector('.alternate-item label:last-child select').value;
+        var alternateItem = {
+          alernateValue: alernateValue,
+          alternateType: alternateType
+        };
+        alt.value.push(alternateItem);
+      }
+
+      hiddenInput.value = JSON.stringify(alt);
+      inputs[16].value = JSON.stringify(alt);
+      console.log(inputs[16].value);
+      console.log(hiddenInput);
+      inputs.push(alt);
+    }
+
+    var messageSucces = document.querySelector('.reg-dev-succes');
+    messageSucces.classList.add('active');
+    setTimeout(function (e) {
+      messageSucces.classList.remove('active');
+    }, 5000);
+    console.log(inputs);
+  }, false);
 })(jQuery);
 "use strict";
 

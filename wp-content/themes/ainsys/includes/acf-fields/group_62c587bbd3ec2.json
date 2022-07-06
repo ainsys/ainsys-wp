@@ -1,9 +1,9 @@
 {
-    "key": "group_62c5749a573ca",
-    "title": "Reg developers",
+    "key": "group_62c587bbd3ec2",
+    "title": "Reg partners",
     "fields": [
         {
-            "key": "field_62c57549ec82f",
+            "key": "field_62c588074982f",
             "label": "nav_back",
             "name": "nav_back",
             "type": "text",
@@ -22,7 +22,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_62c574ccec82e",
+            "key": "field_62c5880e49830",
             "label": "Title",
             "name": "title",
             "type": "text",
@@ -41,28 +41,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_62c575d9ec830",
+            "key": "field_62c5881449831",
             "label": "Form",
             "name": "form",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62c580adcc26e",
-            "label": "opt1",
-            "name": "opt1",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -84,7 +65,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/developers"
+                "value": "acf\/partners"
             }
         ]
     ],
@@ -97,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657110705
+    "modified": 1657112602
 }
