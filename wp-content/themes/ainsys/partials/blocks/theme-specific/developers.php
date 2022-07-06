@@ -38,24 +38,19 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 <section class="integration integration_partners integration_dev">
     <div class="container">
-			<a href="#" class="nav_back">
-				<p class="nav_back_text">Вернуться в каталог</p>
-			</a>
+        <a href="#" class="nav_back">
+            <p class="nav_back_text"><?= get_field('nav_back');?></p>
+        </a>
 
-			<div class="integration_content">
-					<div class="integration_block col-12 col-lg-9">
-							<div class="integration_head">
-									<h2 class="integration_head_title">Форма для регистрации разработчика</h2>   
-							</div>
-							<div class="reg">
-									<div class="reg_data">
-
-										<?php echo do_shortcode('[contact-form-7 id="11039" title="Register developers"]'); ?>
-      
-
-
-
-
+        <div class="integration_content">
+            <div class="integration_block col-12 col-lg-9">
+                <div class="integration_head">
+                    <h2 class="integration_head_title"><?= get_field('title');?></h2>   
+                </div>
+                <div class="reg">
+                    <?php echo do_shortcode(get_field('form')); ?>
+                </div>
+            </div>        
             <div class="integration_block col-12 col-lg-3">
                 <div class="terms terms_partners">
                     <p class="terms_title">
