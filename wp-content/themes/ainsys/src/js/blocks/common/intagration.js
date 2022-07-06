@@ -178,6 +178,12 @@
 
         $( '.integration_form_field_fiz' )
         .removeClass('disabl');  
+
+        $( this )
+        .addClass('active');
+
+        $( '.last' )
+        .removeClass('active');
     });
 
     $(".last").click(function() {
@@ -186,6 +192,12 @@
 
         $( '.integration_form_field_ur' )
         .removeClass('disabl');  
+
+        $( this )
+        .addClass('active');
+
+        $( '.first' )
+        .removeClass('active');
     });
 
     $(window).load(function(){ 

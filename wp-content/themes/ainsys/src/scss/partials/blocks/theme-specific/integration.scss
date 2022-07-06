@@ -1,4 +1,6 @@
 .nav_back {
+    margin-bottom: 20px;
+
     &_text {
         display: flex;
         align-items: center;
@@ -42,11 +44,21 @@
     }
     &_flex {
         display: flex;
+
+        @include media-breakpoint-down( md ) {
+            flex-direction: column;
+        }
     }
 
     .connector_wrapper {
         display: flex;
         align-items: center;
+        min-height: 100px;
+
+        @include media-breakpoint-down( sm ) {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
     }
 
     .connector {
@@ -89,7 +101,7 @@
                     margin: 0 5% 0 auto;
                 }
                 @include media-breakpoint-down( sm ) {
-                    margin: 0 2.5% 0 auto;
+                    margin: 0 2.5% 20px auto;
                 }
             }
         }
@@ -108,17 +120,14 @@
             position: relative;
             display: flex;
             overflow: hidden;
-            max-width: 285px;
+            width: 60%;
+            min-width: 285px;
             padding: 14px;
             margin-bottom: 16px;
             border-radius: 12px;
             background: linear-gradient(122.61deg,#18acfe 1.95%,#0163e0 98.17%);
 
-            @include media-breakpoint-down( lg ) {
-                margin: -15px auto -5px 0;
-            }
             @include media-breakpoint-down( xs ) {
-                margin: 10px auto 0 0;
                 max-width: 100%;
             }
 
@@ -322,6 +331,10 @@
     }
     .product-remove {
         margin-left: auto;
+
+        @include media-breakpoint-down( sm ) {
+            order: -1;
+        }
     }
     
     
@@ -331,6 +344,12 @@
 
         @include media-breakpoint-down( md ) {
             flex-direction: column;
+        }
+
+        .integration_block.col-lg-9  {
+            @include media-breakpoint-up( lg ) {
+                padding-right: 5%;
+            }
         }
     }
     &_head {
@@ -756,6 +775,10 @@
             .integration_form_field  {
                 margin-bottom: 0;
                 min-width: 250px;
+
+                br {
+                    display: none;
+                }
 
                 @include media-breakpoint-down( xs ) {
                     width: 100%;
@@ -1498,4 +1521,10 @@
 }
 .methods, .woocommerce-privacy-policy-text {
     display: none !important;
+}
+
+.basket__right {
+    @include media-breakpoint-down( md ) {
+        order: -1;
+    }
 }
