@@ -24,38 +24,8 @@ if ( ! empty( $block['align'] ) ) {
 
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
-		<div class="rate_page__header">
-			<div class="rate_page__info">
-				<h2 class="rate_page__title"><?= get_field( 'rate_page_head_title' ); ?></h2>
-				<p class="rate_page__text"><?= get_field( 'rate_page_head_text' ); ?></p>
-			</div>
-			<div class="toggler__switch rate_page__toggler">
-				<div class="toggler__switch__label active"><?php the_field( 'rate_page_without' ); ?></div>
-				<div class="form-check form-switch">
-					<input class="form-check-input form-check-input-content form-check-input-rate_page" type="checkbox" onclick="gtag( 'event', 'tumb_1', {   'event_category' : 'ain',   'event_label' : 't' });ym(86987238,'reachGoal','tumb_1'); return true;">
-				</div>
-				<div class="toggler__switch__label toggler__switch__label__rate">
-					<?php the_field( 'rate_page_with' ); ?>
-					<div class="rate_page__item__percent rate_page__toggler__percent"></div>
-				</div>
-			</div>
-		</div>
-		<div class="rate_page__ranges">
-			<div class="range-slider">
-				<div class="label-range"><?= get_field('label-range-first');?>
-					<span class="tooltips__item">
-				    	<div class="tooltips"><?= get_field('tooltips-range-first');?></div>
-					</span>
-				</div>
-				<input id="range1" type="range" name="range1" min="0" max="50" step="1" value="0" />
-			</div>
-			<div class="range-slider">
-			    <div class="label-range"><?= get_field('label-range-second');?></div>
-                <input id="range2" type="range" name="range2" min="0" max="100000" step="2000" value="0" />
-			</div>
-		</div>
 
-		<div class="rate_page__header">
+	<div class="rate_page__header">
 			<div class="rate_page__info">
 		    	<h2 class="rate_page__title"><?= get_field('rate_page__title');?></h2>
 			</div>
@@ -181,6 +151,23 @@ if ( ! empty( $block['align'] ) ) {
 
 		</table>
 		</div>	
+
+		<div class="rate_page__header">
+			<div class="rate_page__info">
+				<h2 class="rate_page__title"><?= get_field( 'rate_page_head_title' ); ?></h2>
+				<p class="rate_page__text"><?= get_field( 'rate_page_head_text' ); ?></p>
+			</div>
+			<div class="toggler__switch rate_page__toggler">
+				<div class="toggler__switch__label active"><?php the_field( 'rate_page_without' ); ?></div>
+				<div class="form-check form-switch">
+					<input class="form-check-input form-check-input-content form-check-input-rate_page" type="checkbox" onclick="gtag( 'event', 'tumb_1', {   'event_category' : 'ain',   'event_label' : 't' });ym(86987238,'reachGoal','tumb_1'); return true;">
+				</div>
+				<div class="toggler__switch__label toggler__switch__label__rate">
+					<?php the_field( 'rate_page_with' ); ?>
+					<div class="rate_page__item__percent rate_page__toggler__percent"></div>
+				</div>
+			</div>
+		</div>
 		<?php if ( have_rows( 'rate_page' ) ) : ?>
 			<div class="row rate_page__list active">
 				<?php
@@ -277,6 +264,21 @@ if ( ! empty( $block['align'] ) ) {
 			</div>
 		</div>
 
+
+		<div class="rate_page__ranges">
+			<div class="range-slider">
+				<div class="label-range"><?= get_field('label-range-first');?>
+					<span class="tooltips__item">
+				    	<div class="tooltips"><?= get_field('tooltips-range-first');?></div>
+					</span>
+				</div>
+				<input id="range1" type="range" name="range1" min="0" max="50" step="1" value="0" />
+			</div>
+			<div class="range-slider">
+			    <div class="label-range"><?= get_field('label-range-second');?></div>
+                <input id="range2" type="range" name="range2" min="0" max="100000" step="2000" value="0" />
+			</div>
+		</div>
 
 	</div>
 </section>
