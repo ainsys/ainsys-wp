@@ -61,6 +61,11 @@
 				object-fit: cover;
 				font-family: 'object-fit: cover;';
 			}
+
+			@include media-breakpoint-down( xs ) {
+				width: 50%;
+				margin: 0 auto 1.5rem;
+			}
 		}
 	}
 

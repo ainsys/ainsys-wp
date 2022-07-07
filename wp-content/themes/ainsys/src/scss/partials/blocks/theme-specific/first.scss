@@ -120,6 +120,7 @@
         }
         h1 {
             margin-bottom: 1rem;
+            font-size: 2rem;
         }
 
         span {
@@ -128,9 +129,10 @@
     }
 
     &_text {
-        color: $switch_dis;
+        color: $black;
         margin-bottom: 2.5rem !important;
-        font-size: 18px;
+        font-size: 2.5rem;
+        font-weight: 500;
 
         @include media-breakpoint-down( lg ) {
             text-align: center;
@@ -145,6 +147,7 @@
         padding: 18px 34px !important;
         font-weight: 500 !important;
         font-size: 18px !important;
+        max-width: 320px;
 
         @include media-breakpoint-down( lg ) {
             margin: 0 auto;

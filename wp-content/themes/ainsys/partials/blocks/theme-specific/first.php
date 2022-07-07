@@ -42,6 +42,9 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 		<div class="container">
             <div class="first_content">
                 <div class="first_content_info col-lg-5 col-12">
+					<?php if ( get_field( 'text' ) ) { ?>
+                        <p class="first_text"><?php the_field( 'text' ); ?></p>
+                    <?php } ?>
                     <div class="first_title">
                         <h1>
                             <div class="first_title_block">
@@ -54,12 +57,9 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                                 <?php the_field( 'title_bottom' ); ?>
                             <?php } ?>
                         </h1>
-                    </div>
-                    <?php if ( get_field( 'text' ) ) { ?>
-                        <p class="first_text"><?php the_field( 'text' ); ?></p>
-                    <?php } ?> 
+                    </div> 
                     <?php if ( get_field( 'btn' ) ) { ?>
-                        <button class="first_btn btn btn-primary"><?php the_field( 'btn' ); ?></button>
+                        <a href="<?php the_field( 'btn_href' ); ?>" class="first_btn btn btn-primary"><?php the_field( 'btn' ); ?></a>
                     <?php } ?> 
                 </div>
                 <div class="first_content_video  col-lg-7 col-12">

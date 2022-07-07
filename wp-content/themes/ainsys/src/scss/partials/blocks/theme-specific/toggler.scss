@@ -146,6 +146,10 @@
 				@include media-breakpoint-down( md ) {
 					margin: 0 auto;
 				}
+				@include media-breakpoint-down( xs ) {
+					width: 50%;
+					margin: 0 auto 1rem;
+				}
 			}
 		}
 
@@ -172,7 +176,7 @@
 			}
 
 			ul {
-				margin: rem( 3 ) 0 0;
+				margin: rem( 3 ) 0 rem( 1.5 );
 				padding-left: rem( 2 );
 
 				li {
