@@ -40,98 +40,6 @@ if ( ! empty( $block['align'] ) ) {
 				</div>
 			</div>
 		</div>
-		<?php if ( have_rows( 'rate_page' ) ) : ?>
-			<div class="row rate_page__list active">
-				<?php
-				while ( have_rows( 'rate_page' ) ) :
-					the_row();
-					?>
-					<div class="col col-12 col-md-6 col-lg-3">
-						<div class="rate_page__item">
-                            <div class="rate_page__item__header">
-                                <?php if ( get_sub_field( 'name' ) ) { ?>
-                                    <?php
-                                    $name_bg = get_sub_field( 'name_bg' ) ? get_sub_field( 'name_bg' ) : 'light';
-                                    ?>
-                                    <div class="rate_page__item__name rate_page__item__name--<?php echo esc_attr( $name_bg ); ?>"><?php the_sub_field( 'name' ); ?></div>
-                                <?php } ?>
-                                <?php if ( get_sub_field( 'priority' ) ) { ?>
-                                    <div class="rate_page__item__priority">
-                                        <?php the_sub_field( 'priority' ); ?>
-                                    </div>
-                                <?php } ?>
-								<?php if ( get_sub_field( 'percent' ) ) { ?>
-                                    <div class="rate_year rate_page__item__percent">
-                                        <?php the_sub_field( 'percent' ); ?>
-                                    </div>
-                                <?php } ?>
-                            </div>
-							<?php if ( get_sub_field( 'price_mounth' ) ) { ?>
-								<div class="rate_page__item__price">
-									   <span><?php the_sub_field( 'price_mounth' ); ?></span>
-									<?php if ( get_sub_field( 'period' ) ) { ?>
-										/ <?php the_sub_field( 'period' ); ?>
-									<?php } ?>
-								</div>
-							<?php } ?>
-								<div class="rate_page__item__payment">
-								    <?php if ( get_sub_field( 'payment_for_month' ) ) { ?>
-									   <span class="rate_mounth"><?php the_sub_field( 'payment_for_month' ); ?></span>
-									 <?php } ?>   
-									 <?php if ( get_sub_field( 'payment_for_year' ) ) { ?>
-									   <span class="rate_year"><?php the_sub_field( 'payment_for_year' ); ?></span>
-									 <?php } ?>  
-								</div>
-                            <div class="rate_page__item__statistics">
-                                <?php if ( get_sub_field( 'users' ) ) { ?>
-                                    <div class="rate_page__item__users">
-                                        <?php the_sub_field( 'users' ); ?>
-                                    </div>
-                                <?php } ?>
-								
-                                <?php if ( get_sub_field( 'operations_mounth' ) ) { ?>
-                                    <div class="rate_mounth rate_page__item__operations">
-                                        <?php the_sub_field( 'operations_mounth' ); ?>
-                                    </div>
-                                <?php } ?>
-                            </div>
-							<?php if ( get_sub_field( 'title' ) ) { ?>
-								<div class="rate_page__item__title">
-									<?php the_sub_field( 'title' ); ?>
-								</div>
-							<?php } ?>
-							<?php if ( get_sub_field( 'text' ) ) { ?>
-								<div class="rate_page__item__text">
-									<?php the_sub_field( 'text' ); ?>
-								</div>
-							<?php } ?>
-							<?php if ( get_sub_field( 'link' ) ) { ?>
-								<?php
-								$button        = get_sub_field( 'link' );
-								$button_url    = $button['url'] ? $button['url'] : '#';
-								$button_title  = $button['title'] ? $button['title'] : '';
-								$button_target = $button['target'] ? $button['target'] : '_self';
-								?>
-								<div class="rate_page__item__link">
-									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="gtag( 'event', 't_1', {   'event_category' : 'ain',   'event_label' : 'p' });ym(86987238,'reachGoal','t_1'); return true;"><?php echo esc_html( $button_title ); ?></a>
-								</div>
-							<?php } ?>
-						</div>
-					</div>
-				<?php endwhile; ?>
-			</div>
-		<?php endif; ?>
-
-		<div class="rate_page_variables block-hide">
-			<div class="var_first">
-			  <?= get_field('var_first');?>
-			</div>
-			<div class="var_second">
-			  <?= get_field('var_second');?>
-			</div>
-		</div>
-
-
 		<div class="rate_page__ranges">
 			<div class="range-slider">
 				<div class="label-range"><?= get_field('label-range-first');?>
@@ -273,9 +181,102 @@ if ( ! empty( $block['align'] ) ) {
 
 		</table>
 		</div>	
+		<?php if ( have_rows( 'rate_page' ) ) : ?>
+			<div class="row rate_page__list active">
+				<?php
+				while ( have_rows( 'rate_page' ) ) :
+					the_row();
+					?>
+					<div class="col col-12 col-md-6 col-lg-3">
+						<div class="rate_page__item">
+                            <div class="rate_page__item__header">
+                                <?php if ( get_sub_field( 'name' ) ) { ?>
+                                    <?php
+                                    $name_bg = get_sub_field( 'name_bg' ) ? get_sub_field( 'name_bg' ) : 'light';
+                                    ?>
+                                    <div class="rate_page__item__name rate_page__item__name--<?php echo esc_attr( $name_bg ); ?>"><?php the_sub_field( 'name' ); ?></div>
+                                <?php } ?>
+                                <?php if ( get_sub_field( 'priority' ) ) { ?>
+                                    <div class="rate_page__item__priority">
+                                        <?php the_sub_field( 'priority' ); ?>
+                                    </div>
+                                <?php } ?>
+								<?php if ( get_sub_field( 'percent' ) ) { ?>
+                                    <div class="rate_year rate_page__item__percent">
+                                        <?php the_sub_field( 'percent' ); ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
+							<?php if ( get_sub_field( 'price_mounth' ) ) { ?>
+								<div class="rate_page__item__price">
+									   <span><?php the_sub_field( 'price_mounth' ); ?></span>
+									<?php if ( get_sub_field( 'period' ) ) { ?>
+										/ <?php the_sub_field( 'period' ); ?>
+									<?php } ?>
+								</div>
+							<?php } ?>
+								<div class="rate_page__item__payment">
+								    <?php if ( get_sub_field( 'payment_for_month' ) ) { ?>
+									   <span class="rate_mounth"><?php the_sub_field( 'payment_for_month' ); ?></span>
+									 <?php } ?>   
+									 <?php if ( get_sub_field( 'payment_for_year' ) ) { ?>
+									   <span class="rate_year"><?php the_sub_field( 'payment_for_year' ); ?></span>
+									 <?php } ?>  
+								</div>
+                            <div class="rate_page__item__statistics">
+                                <?php if ( get_sub_field( 'users' ) ) { ?>
+                                    <div class="rate_page__item__users">
+                                        <?php the_sub_field( 'users' ); ?>
+                                    </div>
+                                <?php } ?>
+								
+                                <?php if ( get_sub_field( 'operations_mounth' ) ) { ?>
+                                    <div class="rate_mounth rate_page__item__operations">
+                                        <?php the_sub_field( 'operations_mounth' ); ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
+							<?php if ( get_sub_field( 'title' ) ) { ?>
+								<div class="rate_page__item__title">
+									<?php the_sub_field( 'title' ); ?>
+								</div>
+							<?php } ?>
+							<?php if ( get_sub_field( 'text' ) ) { ?>
+								<div class="rate_page__item__text">
+									<?php the_sub_field( 'text' ); ?>
+								</div>
+							<?php } ?>
+							<?php if ( get_sub_field( 'btn' ) ) { ?>
+								<div class="rate_page__item__link_two">
+									<a href="<?php the_sub_field( 'btn_href' ); ?>"><?php the_sub_field( 'btn' ); ?></a>
+								</div>
+							<?php } ?>
+							<?php if ( get_sub_field( 'link' ) ) { ?>
+								<?php
+								$button        = get_sub_field( 'link' );
+								$button_url    = $button['url'] ? $button['url'] : '#';
+								$button_title  = $button['title'] ? $button['title'] : '';
+								$button_target = $button['target'] ? $button['target'] : '_self';
+								?>
+								<div class="rate_page__item__link">
+									<a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" onclick="gtag( 'event', 't_1', {   'event_category' : 'ain',   'event_label' : 'p' });ym(86987238,'reachGoal','t_1'); return true;"><?php echo esc_html( $button_title ); ?></a>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
 
+		<div class="rate_page_variables block-hide">
+			<div class="var_first">
+			  <?= get_field('var_first');?>
+			</div>
+			<div class="var_second">
+			  <?= get_field('var_second');?>
+			</div>
+		</div>
 
 
 	</div>
-
 </section>
