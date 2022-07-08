@@ -61,6 +61,9 @@ if ( get_field( 'align' ) ) {
 											<?php the_sub_field( 'text' ); ?>
 										</div>
 									<?php } ?>
+									<?php if ( get_field( 'btn' ) ) { ?>
+										<a href="<?php the_field( 'btn_href' ); ?>" class="btn btn-primary"><?php the_field( 'btn' ); ?></a>
+									<?php } ?> 
 								</div>
 							<?php endwhile; ?>
 						</div>

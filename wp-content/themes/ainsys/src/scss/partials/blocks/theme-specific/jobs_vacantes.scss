@@ -1,0 +1,175 @@
+.jobs_vacantes {
+    background: $dark;
+    padding-bottom: 60px;
+
+    @include media-breakpoint-down( sm ) {
+        padding-bottom: 30px;
+    }
+
+    
+    .jobs_title {
+        margin-bottom: 40px;
+        color: $white;
+        text-align: center;
+    }
+
+    &_slider {
+        width: 90%;
+        margin: 0 auto;
+
+        @include media-breakpoint-down( xl ) {
+            width: 80%;
+        }
+        @include media-breakpoint-down( sm ) {
+            width: 85%;
+        }
+
+        .vacantes_slide {
+            margin: 0 15px;
+            padding: 24px;
+            color: $white;
+            background: linear-gradient(105.98deg, #410048 0%, #2E0333 100%);
+            border: 2px solid $wrapper_border;
+            border-radius: 16px;
+
+            @include media-breakpoint-down( sm ) {
+                padding: 14px;
+            }
+
+            &_vacant {
+                width: 100%;
+                margin-bottom: 10px;
+                color: $accent;
+                font-weight: 500;
+                font-size: rem( 1 );
+                text-transform: uppercase;
+            }
+            &_title {
+                width: 100%;
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size: rem( 1.5 );
+
+                @include media-breakpoint-down( sm ) {
+                    font-size: rem( 1.2 );
+                }
+            }
+            &_terms {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                &_text {
+                    margin-bottom: 0;
+                    color: $grey_rate;
+                    font-size: rem( 1 );
+                }
+                span {
+                    margin: 0 5px;
+                    color: $grey_rate;
+                }
+            }
+            &_terms::before {
+                display: block;
+                content: '';
+                position: relative;
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+                background: url(../images/components/grey_map.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+            }
+
+        }
+        .slick-dots {
+            li {
+                button::before {
+                    background: $white;
+                }
+            }
+            .slick-active {
+                button::before {
+                    background: $accent;
+                }
+            }
+        }
+        .slick-prev {
+            position: absolute;
+            top: 22.5%;
+            left: -60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(105.98deg, #410048 0%, #2E0333 100%);
+            border-radius: 50%;
+            font-size: 0;
+            border: 1px solid $wrapper_border;
+
+            @include media-breakpoint-down( sm ) {
+                width: 35px;
+                height: 35px;
+                left: -40px;
+            }
+        }
+        .slick-prev::before {
+            display: block;
+            content: '';
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background: url(../images/components/arrow_white.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            transform: rotate(90deg);
+
+            @include media-breakpoint-down( sm ) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .slick-next {
+            position: absolute;
+            top: 22.5%;
+            right: -60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            margin-left: auto;
+            font-size: 0;
+            background: linear-gradient(105.98deg, #410048 0%, #2E0333 100%);
+            border-radius: 50%;
+            border: 1px solid $wrapper_border;
+
+            @include media-breakpoint-down( sm ) {
+                width: 35px;
+                height: 35px;
+                right: -40px;
+            }
+        }
+        .slick-next::before {
+            display: block;
+            content: '';
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/components/arrow_white.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            transform: rotate(270deg);
+
+            @include media-breakpoint-down( sm ) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+    }
+}

@@ -115,7 +115,7 @@ nav.woocommerce-pagination {
 .products__right ul.products > li {
 	flex: 0 0 100%;
 	max-width: 100%;
-	min-height: 216px;
+	height: 220px;
 	margin: 0 0 30px !important;
 	padding: 20px !important;
 	border-radius: 16px;
@@ -128,7 +128,7 @@ nav.woocommerce-pagination {
 	display: flex;
 }
 .top-row.row > div.title {
-	max-width: 160px;
+	max-width: 210px;
 	/*max-height: 90px;*/
 	overflow: hidden;
 }
@@ -158,13 +158,14 @@ nav.woocommerce-pagination {
 	margin-left: 15px !important;
 }
 .products__right li.product .title h3 {
-	font-size: 16px !important;
+	font-size: 15px !important;
+	padding-top: 0 !important;
 }
 .top-row.row > div {
 	width: auto;
 }
 .top-row.row > div.img {
-	width: 96px;
+	width: 90px;
 }
 
 .product .row {
@@ -213,15 +214,15 @@ p.prduct-categories {
 	flex-direction: column;
 }
 p.prduct-categories span{
-	margin-bottom: 7px;
+	margin-bottom: 0px;
 	color: white;
 }
 .top-row.row .title h3 {
 	color: white;
 }
 .bottom-row.row {
-	margin-top: 20px;
-	padding: 15px;
+	margin-top: 15px;
+	padding: 5px;
 }
 .bottom-row.row .description,
 .bottom-row.row .description * {
@@ -230,8 +231,14 @@ p.prduct-categories span{
 	margin: 0;
 	line-height: 19px;
 	color: white;
-	max-height: 115px;
+	max-height: 80px;
 	overflow: hidden;
+	padding: 0;
+}
+.bottom-row.row .description:hover *,
+.bottom-row.row .description:focus *,
+.bottom-row.row .description:active * {
+	overflow: auto !important;
 }
 
 .products__right ul.products.columns-4 li.product:nth-child(10n+1){

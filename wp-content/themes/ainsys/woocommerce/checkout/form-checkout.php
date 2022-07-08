@@ -37,14 +37,30 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col2-set check" id="customer_details">
-			<div class="col-1 basket__left">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
-
-			<div class="col-2 basket__right">
-				<?php do_action( 'woocommerce_checkout_billing' );?>
-
+		<div class="col2-set check" id="customer_details"></div>
+		    <div class="integration_flex">
+				<div class="col-8">
+					<?php do_action( 'woocommerce_checkout_billing' );?>
+				</div>
+				<!-- <div class="basket__right terms">
+					<div class="term_item">
+						<div class="basket-info term_item_header">
+							<div class="term_item_header_info_bottom">
+								<h3 class="term_item_header_title"><?php esc_html_e( 'Стоимость ', 'woocommerce' ); ?></h3>
+							</div>
+							<table class="shop_table woocommerce-checkout-review-order-table">
+								<tfoot>
+								<tr class="order-total">
+									<td><?php wc_cart_totals_order_total_html(); ?></td>
+								</tr>
+								</tfoot>
+							</table>
+							<div class="basket-info__text">
+								Окончательную стоимость заказа вы сможете узнать у менеджера.
+							</div>
+						</div>  
+					</div>
+				</div> -->
 			</div>
 		</div>
 

@@ -202,6 +202,17 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
 .basket__right {
     width: 35% !important;
     padding-left: 5% !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 150px;
+}
+
+@media (max-width: 992px) {
+    .basket__right {
+        position: relative;
+        padding: 0;
+    }
 }
 
 .basket-info {
@@ -218,7 +229,6 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
     color: #AB47BC !important;
     padding: 0 0 16px !important;
     margin: 0 0 16px !important;
-    border-bottom: 1px solid #E4E7EC !important;
     font-weight: 700;
 }
 
@@ -272,10 +282,6 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
 }
 
 .check {
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 100px;
-    flex-wrap: wrap;
 }
 
 .check .form-row {
@@ -343,9 +349,6 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
 }
 
 .woocommerce-cart-form {
-    padding: 0 0 42px !important;
-    border-bottom: 1px solid #E4E7EC !important;
-    margin: 0 0 42px !important;
 }
 
 .basket-info .wc_payment_methods.payment_methods.methods {
@@ -397,10 +400,17 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
 .basket-info .woocommerce-checkout-review-order-table thead, .basket-info .woocommerce-checkout-review-order-table tbody, .basket-info .woocommerce-checkout-review-order-table tfoot .cart-subtotal, .basket-info .woocommerce-checkout-review-order-table tfoot .woocommerce-shipping-totals.shipping, .basket-info .woocommerce-checkout-review-order-table tfoot .order-total th {
     display: none !important;
 }
+.order-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ab47bc !important;
+    padding-top: 18px !important;
+}
 
 .basket-info .woocommerce-checkout-review-order-table tfoot .order-total td .woocommerce-Price-amount.amount {
-    font-weight: bold !important;
-    font-size: 36px !important;
+    font-weight: 700;
+    font-size: 2rem;
     line-height: 139% !important;
     letter-spacing: -0.02em !important;
     color: #101828 !important;

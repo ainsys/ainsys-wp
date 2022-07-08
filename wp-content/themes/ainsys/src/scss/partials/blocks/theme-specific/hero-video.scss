@@ -19,35 +19,37 @@
 		margin-bottom: 12px;
 
 		h1 {
-			font-size: rem( 4 );
+			font-size: rem( 2 );
 			font-weight: 500;
 			line-height: 1.2;
 			text-align: center;
 			@include media-breakpoint-up( $bp ) {
 				margin-bottom: rem( 1 );
-				font-size: rem( 3.2 );
+				font-size: rem( 2 );
 			}
 			@include media-breakpoint-down( sm ) {
-				font-size: rem( 3 );
+				font-size: rem( 2 );
 			}
 
 			span {
-				font-size: rem( 4 );
+				font-size: rem( 2.5 );
 				color: $accent;
 
 				@include media-breakpoint-down( sm ) {
-					font-size: rem( 3 );
+					font-size: rem( 2.5 );
 				}
 			}
 		}
 	}
 
 	&__text {
-		font-size: rem( 1.8 );
+		font-size: rem( 2 );
+		font-weight: 600;
 		line-height: 1.6;
-		margin-bottom: rem( 1.2 );
+		margin-bottom: rem( 1.2 ) !important;;
 		@include media-breakpoint-up( $bp ) {
-			font-size: rem( 1.6 );
+			font-size: rem( 2.5 );
+			padding: 0 15%;
 		}
 		@include media-breakpoint-down( sm ) {
 			font-size: rem( 1.5 );

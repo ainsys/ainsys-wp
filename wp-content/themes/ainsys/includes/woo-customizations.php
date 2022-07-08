@@ -684,7 +684,10 @@ function taxonomyFilter($args = []) {
                 $product_cats_ids = $product->get_category_ids();
                 $color_1 = '#3d0043';
                 $color_2 = '#931e9f';
+				$anons = get_field('prod-info-text');
                 $logo = get_field('logo');
+                $anons = get_field('prod-info-text');
+    
                 //$logo = get_field('logo');
                 if(!empty(get_field('color_1'))) {
                 $color_1 = get_field('color_1');
@@ -712,6 +715,7 @@ function taxonomyFilter($args = []) {
                                 echo '<span>' . get_the_category_by_ID( $product_cats_ids[0] ) . '</span>';
                                 ?>
                             </p>
+
                         </div>
 
                         <?php
@@ -730,6 +734,7 @@ function taxonomyFilter($args = []) {
                     </div>
                     <div class="bottom-row row">
                         <div class="description">
+													<p class='anons'> <?php echo $anons; ?> </p>
                             <?php echo $product->get_description(); ?>
                         </div>
                     </div>

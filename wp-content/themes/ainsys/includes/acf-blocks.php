@@ -761,6 +761,101 @@ function ainsys_register_acf_block_types() {
         )
     );
 
+	acf_register_block_type(
+        array(
+            'name'            => 'Jobs vacantes',
+            'title'           => __( 'Jobs vacantes' ),
+            'description'     => __( 'Jobs vacantes' ),
+            'render_template' => 'partials/blocks/theme-specific/jobs_vacantes.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'jobs, vacantes' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+
+	acf_register_block_type(
+        array(
+            'name'            => 'Beta',
+            'title'           => __( 'Beta' ),
+            'description'     => __( 'Beta' ),
+            'render_template' => 'partials/blocks/theme-specific/beta.php',
+            'mode'            => 'edit',
+            'category'        => 'customgb',
+            'keywords'        => array( 'beta' ),
+            'icon'            => 'images',
+            'supports'        => array(
+                'align'           => false,
+                'anchor'          => true,
+                'customClassName' => true,
+                'jsx'             => false,
+            ),
+        )
+    );
+		
+	acf_register_block_type(
+		array(
+			'name'            => 'developers',
+			'title'           => __( 'developers' ),
+			'description'     => __( 'developers' ),
+			'render_template' => 'partials/blocks/theme-specific/developers.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'developers' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'partners',
+			'title'           => __( 'partners' ),
+			'description'     => __( 'partners' ),
+			'render_template' => 'partials/blocks/theme-specific/partners.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'partners' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'first',
+			'title'           => __( 'first' ),
+			'description'     => __( 'first' ),
+			'render_template' => 'partials/blocks/theme-specific/first.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'first' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.

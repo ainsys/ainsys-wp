@@ -1,0 +1,72 @@
+.bet {
+    position: fixed;
+    bottom: 6%;
+    left: 1%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 15px 24px;
+    background: linear-gradient(0deg, #FEF7FF, #FEF7FF), #FFFFFF;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+    border-radius: 16px;
+    max-width: 460px;
+
+    @include media-breakpoint-down( sm ) {
+        max-width: 200px;
+        padding: 5px;
+    }
+
+    &_img {
+        width: 48px;
+        height: 48px;
+
+        @include media-breakpoint-down( sm ) {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    &_info {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+        text-align: left;
+
+        @include media-breakpoint-down( sm ) {
+            margin: 0 5px;
+        }
+
+        &_title {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: $black_title_color;
+
+            @include media-breakpoint-down( sm ) {
+                font-size: 0.75rem;
+            }
+        }
+        &_text {
+            font-size: rem( 1 );
+            color: $grey_rate;
+        }
+    }
+    &_close {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        margin: 0 0 0 auto;
+        background: url(../images/components/beta_close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        cursor: pointer;
+
+        @include media-breakpoint-down( sm ) {
+            width: 16px;
+            height: 16px;
+            min-width: 16px;
+        }
+    }
+}
+.beta.disabl {
+    display: none;
+}

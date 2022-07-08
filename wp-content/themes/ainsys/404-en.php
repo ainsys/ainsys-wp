@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'us' );
 
+
 the_post();
 
 the_content();

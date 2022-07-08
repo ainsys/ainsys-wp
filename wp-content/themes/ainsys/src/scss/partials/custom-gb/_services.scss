@@ -14,15 +14,10 @@
     .services__main {
         position: relative;
         z-index: 10;
-        padding: 100px 0 0;
+        padding: 70px 0 0;
         margin-bottom: 30px;
 
         .services__info {
-            margin-bottom: 60px;
-
-            @include media-breakpoint-down( md ) {
-                margin-bottom: 0px;
-            }
         }
 
         .accordion {
@@ -187,6 +182,7 @@
                         list-style-image: url(../img/circle.svg);
                         font-size: 16px;
                         line-height: 145%;
+                        color: #fff;
                     }
                 }
                 p {

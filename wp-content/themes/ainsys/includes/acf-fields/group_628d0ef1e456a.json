@@ -61,7 +61,7 @@
             "sub_fields": [
                 {
                     "key": "field_628d0f2626fb0",
-                    "label": "Img",
+                    "label": "img",
                     "name": "steps__img",
                     "type": "image",
                     "instructions": "",
@@ -85,7 +85,7 @@
                 },
                 {
                     "key": "field_628d0f5026fb1",
-                    "label": "steps number",
+                    "label": "steps__number",
                     "name": "steps__number",
                     "type": "text",
                     "instructions": "",
@@ -104,7 +104,7 @@
                 },
                 {
                     "key": "field_628d0f6626fb2",
-                    "label": "steps title",
+                    "label": "steps__title",
                     "name": "steps__title",
                     "type": "text",
                     "instructions": "",
@@ -123,7 +123,7 @@
                 },
                 {
                     "key": "field_628d0f6e26fb3",
-                    "label": "steps text",
+                    "label": "steps__text",
                     "name": "steps__text",
                     "type": "text",
                     "instructions": "",
@@ -161,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653411715
+    "modified": 1656080625
 }

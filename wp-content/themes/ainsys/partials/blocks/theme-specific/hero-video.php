@@ -26,6 +26,9 @@ if ( get_field( 'bg' ) ) {
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="hero-video__info">
 		<div class="container">
+			<?php if ( get_field( 'text' ) ) { ?>
+				<p class="hero-video__text"><?php the_field( 'text' ); ?></p>
+			<?php } ?> 
 			<div class="hero-video__title">
 				<h1>
 					<?php if ( get_field( 'title_top' ) ) { ?>
@@ -36,9 +39,6 @@ if ( get_field( 'bg' ) ) {
 					<?php } ?>
 				</h1>
 			</div>
-			<?php if ( get_field( 'text' ) ) { ?>
-				<p class="hero-video__text"><?php the_field( 'text' ); ?></p>
-			<?php } ?> 
 			<div class="toggler__switch">
 				<div class="toggler__switch__label active"><?php the_field( 'label_with' ); ?></div>
 				<div class="form-check form-switch">

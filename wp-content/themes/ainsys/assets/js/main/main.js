@@ -1270,6 +1270,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
+  $('.bet_close').click(function () {
+    $('.bet').addClass('disabl');
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
   function setCookie(c_name, value, exdays) {
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + exdays);
@@ -1420,9 +1427,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
     $(this).parent().removeClass('preview');
   });
-  $(".connector_delete_btn").click(function () {
-    $(this).parent().closest('.connector').find('.connector_content').addClass('disabl');
-  });
   $(".term_item_toggler").click(function () {
     $(this).parent().closest('.term_item').find('.term_item_content').toggleClass('disabl');
     $(this).find('.term_item_toggler_more').toggleClass('disabl');
@@ -1441,23 +1445,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   $(".integration_upload").click(function () {
     $(this).addClass('disabl');
     $('.field__wrapper').removeClass('disabl');
-  });
-  $(".integration_file").click(function () {
-    $(this).addClass('disabl');
-    $('.field__wrapper').removeClass('disabl');
-  });
-  var fields = document.querySelectorAll('.field__file');
-  Array.prototype.forEach.call(fields, function (input) {
-    var label = input.nextElementSibling,
-        labelVal = label.querySelector('.field__file-fake').innerText;
-    input.addEventListener('change', function (e) {
-      var countFiles = '';
-      if (this.files && this.files.length >= 1) countFiles = this.files.length;
-      if (countFiles) label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;else label.querySelector('.field__file-fake').innerText = labelVal;
-    });
-  });
+  }); // $(".integration_file").click(function() {
+  //     $( this )
+  //     .addClass('disabl');   
+  //     $( '.field__wrapper' )
+  //     .removeClass('disabl');
+  // });
+  // let fields = document.querySelectorAll('.field__file');
+  // Array.prototype.forEach.call(fields, function (input) {
+  //   let label = input.nextElementSibling,
+  //     labelVal = label.querySelector('.field__file-fake').innerText;
+  //   input.addEventListener('change', function (e) {
+  //     let countFiles = '';
+  //     if (this.files && this.files.length >= 1)
+  //       countFiles = this.files.length;
+  //     if (countFiles)
+  //       label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+  //     else
+  //       label.querySelector('.field__file-fake').innerText = labelVal;
+  //   });
+  // });
+
   $(".settings_add").click(function () {
-    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<div class="select">' + '<input class="select__input" type="hidden" name="">' + '<div class="select__head">Web site</div>' + '<ul class="select__list" style="display: none;">' + '<li class="select__item">Web site</li>' + '<li class="select__item">Whatsapp</li>' + '<li class="select__item">Facebook</li>' + '<li class="select__item">Instagram</li>' + '<li class="select__item">Telegram</li>' + '<li class="select__item">Linkedin</li>' + '<li class="select__item">Другое</li>' + '</ul>' + '</div>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
+    $('.integration_form_options_inputs_start').after($('<div class="integration_form_options_inputs">' + '<div class="integration_form_field">' + '<input class="integration_form_field_input" type="text" placeholder="www.google.ru">' + '</div>' + '<div class="integration_form_field">' + '<select class="select__list">' + '<option value="Website" class="select__item">Website</option>' + '<option value="Whatsapp" class="select__item">Whatsapp</option>' + '<option value="Telegram" class="select__item">Facebook</option>' + '<option value="Whatsapp" class="select__item">Instagram</option>' + '<option value="Telegram" class="select__item">Telegram</option>' + '<option value="Email" class="select__item">Email</option>' + '<option value="Viber" class="select__item">Viber</option>' + '</select>' + '</div>' + '<div class="integration_form_field_remove">' + '<div class="integration_form_remove settings_remove">' + '</div>' + '</div>' + '</div>'));
   });
   var container = document.querySelector('.integration_form_options_rows');
   $(container).on('mouseover', function () {
@@ -1465,17 +1475,30 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       $(this).parent().addClass('disabl');
     });
   });
-  $("#radio-fiz").click(function () {
+  $(".first").click(function () {
     $('.integration_form_field_role').addClass('disabl');
     $('.integration_form_field_fiz').removeClass('disabl');
+    $(this).addClass('active');
+    $('.last').removeClass('active');
   });
-  $("#radio-ur").click(function () {
+  $(".last").click(function () {
     $('.integration_form_field_role').addClass('disabl');
     $('.integration_form_field_ur').removeClass('disabl');
+    $(this).addClass('active');
+    $('.first').removeClass('active');
+  });
+  $(window).load(function () {
+    if ($('.integration_form_field_fiz').hasClass('disabl')) {
+      $(".first").addClass('active');
+      $(".last").removeClass('active');
+    } else {
+      $(".first").addClass('active');
+      $(".last").removeClass('active');
+    }
   }); // Reg dev
 
   $(".experience_settings_btn").click(function () {
-    $('.experience_item_start').before($('<div class="experience_item">' + '<div class="experience_block change">' + '<div class="experience_wrapper">' + '<div class="experience_head">' + '<div class="experience_head_date">' + '<input class="experience_head_date_text" type="date" value="01.05.2021">' + '<span>-</span>' + '<input class="experience_head_date_text" type="date" value="01.08.2021">' + '</div>' + '<input type="text" class="experience_head_company" value="Company">' + '</div>' + '<div class="experience_info">' + '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' + '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' + '</div>' + '</div>' + '<div class="experience_settings">' + '<div class="experience_settings_correct">' + '</div>' + '<div class="experience_settings_accept disabl">' + '</div>' + '<div class="experience_settings_cancel">' + '</div>' + '</div>' + '</div>' + '</div>'));
+    $('.experience_item_start').before($('<div class="experience_item">' + '<div class="experience_block">' + '<div class="experience_wrapper">' + '<div class="experience_head">' + '<div class="experience_head_date">' + '<input class="experience_head_date_text" type="date" value="01.05.2021">' + '<span>-</span>' + '<input class="experience_head_date_text" type="date" value="01.08.2021">' + '</div>' + '<input type="text" class="experience_head_company" value="Company">' + '</div>' + '<div class="experience_info">' + '<input type="text"  class="experience_info_profession" value="Разработчик приложения">' + '<textarea name="description" wrap="" class="experience_info_description">Создавал</textarea>' + '</div>' + '</div>' + '<div class="experience_settings">' + '<div class="experience_settings_correct">' + '</div>' + '<div class="experience_settings_accept disabl">' + '</div>' + '<div class="experience_settings_cancel">' + '</div>' + '</div>' + '</div>' + '</div>'));
   });
   var containerTwo = document.querySelector('.site');
   $(containerTwo).on('mouseover', function () {
@@ -1492,6 +1515,93 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(".experience_settings_cancel").click(function () {
       $(this).parent().closest('.experience_item').find('.experience_block').addClass('disabl');
     });
+  }); //Закидывание данных в общий массив формы
+
+  document.addEventListener('wpcf7beforesubmit', function (event) {
+    var alternateItems = document.querySelectorAll('.alternate-item');
+    var inputs = event.detail.inputs,
+        competencies = alt = {
+      name: "alternateConnect",
+      value: []
+    };
+
+    if (alternateItems.length > 0) {
+      var hiddenInput = document.querySelector('[name="reg-dev-alternate-connect"]');
+
+      for (var i = 0; i < alternateItems.length; i++) {
+        var alernateValue = alternateItems[i].querySelector('.alternate-item label:first-child input').value,
+            alternateType = alternateItems[i].querySelector('.alternate-item label:last-child select').value;
+        var alternateItem = {
+          alernateValue: alernateValue,
+          alternateType: alternateType
+        };
+        alt.value.push(alternateItem);
+      }
+
+      hiddenInput.value = JSON.stringify(alt);
+      inputs[16].value = JSON.stringify(alt);
+      console.log(inputs[16].value);
+      console.log(hiddenInput);
+      inputs.push(alt);
+    }
+
+    var messageSucces = document.querySelector('.reg-dev-succes');
+    messageSucces.classList.add('active');
+    setTimeout(function (e) {
+      messageSucces.classList.remove('active');
+    }, 5000);
+    console.log(inputs);
+  }, false);
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".jobs_wrapper_content_btn").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".jobs_vacantes").offset().top
+    });
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.jobs_vacantes_slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrow: true,
+    infinite: true,
+    speed: 500,
+    autoplay: false,
+    autoplaySpeed: 0,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }, {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $(".first_content_video_play").click(function () {
+    $(".first_modal").addClass('active');
+  });
+  $(".first_content_video_wrapper").click(function () {
+    $(".first_modal").addClass('active');
+  });
+  $(".first_modal_close").click(function () {
+    $(".first_modal").removeClass('active');
   });
 })(jQuery);
 "use strict";
@@ -1686,20 +1796,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var final_val_din_two = parseInt($('#final_val_two').text()); // console.log(final_val_din);
 
     if ($('.rate_page__list').hasClass('active')) {
-      var final_val_sale = Math.floor(final_val_din / 0.85);
+      var final_val_sale = parseInt(final_val_din / 0.85);
       $('#final_val').text(final_val_sale);
       $('#rate_val').text(final_val_sale);
-      var final_val_sale_two = Math.floor(final_val_din_two / 0.85);
+      var final_val_sale_two = parseInt(final_val_din_two / 0.85);
       console.log(final_val_sale_two);
       $('#final_val_two').text(final_val_sale_two);
       $('#rate_val2').text(final_val_sale_two);
     } else {
-      var _final_val_sale = Math.floor(final_val_din - Math.floor(final_val_din * 0.15));
+      var _final_val_sale = parseInt(final_val_din - parseInt(final_val_din * 0.15));
 
       $('#final_val').text(_final_val_sale);
       $('#rate_val').text(_final_val_sale);
 
-      var _final_val_sale_two = Math.floor(final_val_din_two - Math.floor(final_val_din_two * 0.15));
+      var _final_val_sale_two = parseInt(final_val_din_two - parseInt(final_val_din_two * 0.15));
 
       $('#final_val_two').text(_final_val_sale_two);
       $('#rate_val2').text(_final_val_sale_two);
@@ -1812,7 +1922,704 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   $('.rate_delete_fourth').click(function () {
     $('.rate_fourth').addClass('rate-disabled');
   });
+  $(".row_main").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".table-responsive").offset().top
+    }, 1000);
+  });
 })(jQuery);
+"use strict";
+
+jQuery(document).ready(function ($) {
+  var wrapperConRegFormDevIp = document.querySelector('.js-reg-dev-form-connectors-ip'),
+      itemInSearch = document.getElementsByClassName('js-item-search-reg-form'),
+      regFormDev = document.querySelector('.my-acc-reg-form');
+
+  if (regFormDev) {
+    //!
+    var createInput = function createInput(wrapper, type) {
+      var extraClass = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'form__input-text';
+      var input = document.createElement("input"),
+          label = document.createElement("label"); //label.innerHTML = labelText;
+
+      input.type = type;
+      input.classList.add('form__input', extraClass);
+
+      if (type == 'number') {
+        input.value = 0;
+      } else {
+        input.placeholder = 'Введите данные';
+      }
+
+      label.appendChild(input);
+      wrapper.appendChild(label);
+    };
+
+    var createSelect = function createSelect(array, wrapper) {
+      var selectList = document.createElement("select"),
+          label = document.createElement("label"); //label.innerHTML = labelText;
+
+      selectList.classList.add('form__input', 'form__select');
+      wrapper.appendChild(label);
+      label.appendChild(selectList);
+
+      for (var i = 0; i < array.length; i++) {
+        var option = document.createElement("option");
+        option.value = array[i];
+        option.text = array[i];
+        selectList.appendChild(option);
+      }
+    };
+
+    //Добавление компетенций по интеграциям
+    var checkItemOnConRegForm = function checkItemOnConRegForm() {
+      var _loop = function _loop(i) {
+        itemInSearch[i].addEventListener('click', function (e) {
+          e.preventDefault();
+          var wrapper = document.createElement('div'),
+              name = document.createElement('div'),
+              img = itemInSearch[i].querySelector('img'),
+              a = itemInSearch[i].querySelector('a'),
+              span = a.querySelector('span');
+          var deleteElement = document.createElement('div');
+          deleteElement.classList.add('con-item__delete');
+          deleteElement.innerHTML = "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                                                <path d=\"M2.5 5.00001H4.16667M4.16667 5.00001H17.5M4.16667 5.00001V16.6667C4.16667 17.1087 4.34226 17.5326 4.65482 17.8452C4.96738 18.1577 5.39131 18.3333 5.83333 18.3333H14.1667C14.6087 18.3333 15.0326 18.1577 15.3452 17.8452C15.6577 17.5326 15.8333 17.1087 15.8333 16.6667V5.00001H4.16667ZM6.66667 5.00001V3.33334C6.66667 2.89131 6.84226 2.46739 7.15482 2.15483C7.46738 1.84227 7.89131 1.66667 8.33333 1.66667H11.6667C12.1087 1.66667 12.5326 1.84227 12.8452 2.15483C13.1577 2.46739 13.3333 2.89131 13.3333 3.33334V5.00001M8.33333 9.16667V14.1667M11.6667 9.16667V14.1667\" stroke=\"#667085\" stroke-width=\"1.66667\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                                                </svg>\n                                                ";
+          wrapper.append(deleteElement);
+          span.remove();
+          name.classList.add('con-item__name');
+          wrapper.classList.add('con-item', 'con-item-integration');
+          wrapper.append(name);
+          name.append(img);
+          name.innerHTML = name.innerHTML + '<span class="js-reg-name">' + a.innerHTML + '</span>';
+
+          if (partnerTrigger) {
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+          } else {
+            createSelect(['Junior', 'Middle', 'Middle+', 'Senior'], wrapper);
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'number');
+            createInput(wrapper, 'date');
+          }
+
+          wrapperConRegFormDevIp.append(wrapper);
+          deleteElement.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.parentElement.remove();
+          });
+          itemInSearch[i].parentElement.parentElement.parentElement.classList.remove('active');
+          itemInSearch[i].parentElement.parentElement.parentElement.querySelector('input').value = '';
+          $('.codyshop-ajax-search').fadeOut().html(result);
+        });
+      };
+
+      for (var i = 0; i < itemInSearch.length; i++) {
+        _loop(i);
+      }
+
+      function createInput(wrapper, type) {
+        var extraClass = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'form__input-text';
+        var input = document.createElement("input"),
+            label = document.createElement("label"); //label.innerHTML = labelText;
+
+        input.type = type;
+        input.classList.add('form__input', extraClass);
+
+        if (type == 'number') {
+          input.value = 0;
+        } else {
+          input.placeholder = 'Введите данные';
+        }
+
+        wrapper.appendChild(label);
+        label.appendChild(input);
+      }
+
+      function createSelect(array, wrapper) {
+        var selectList = document.createElement("select"),
+            label = document.createElement("label"); //label.innerHTML = labelText;
+
+        selectList.classList.add('form__input', 'form__select');
+        wrapper.appendChild(label);
+        label.appendChild(selectList);
+
+        for (var _i5 = 0; _i5 < array.length; _i5++) {
+          var option = document.createElement("option");
+          option.value = array[_i5];
+          option.text = array[_i5];
+          selectList.appendChild(option);
+        }
+      }
+    }; //Добавление Компетенций
+
+
+    var checkItemOnCompRegForm = function checkItemOnCompRegForm() {
+      var itemInSearch = document.getElementsByClassName('js-item-search-reg-form-comp');
+
+      var _loop2 = function _loop2(i) {
+        itemInSearch[i].addEventListener('click', function (e) {
+          e.preventDefault();
+          var wrapper = document.createElement('div'),
+              name = document.createElement('div'),
+              img = itemInSearch[i].querySelector('.comp'),
+              a = itemInSearch[i].querySelector('a'),
+              span = a.querySelector('span');
+          var deleteElement = document.createElement('div');
+          deleteElement.classList.add('con-item__delete');
+          deleteElement.innerHTML = "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                                                <path d=\"M2.5 5.00001H4.16667M4.16667 5.00001H17.5M4.16667 5.00001V16.6667C4.16667 17.1087 4.34226 17.5326 4.65482 17.8452C4.96738 18.1577 5.39131 18.3333 5.83333 18.3333H14.1667C14.6087 18.3333 15.0326 18.1577 15.3452 17.8452C15.6577 17.5326 15.8333 17.1087 15.8333 16.6667V5.00001H4.16667ZM6.66667 5.00001V3.33334C6.66667 2.89131 6.84226 2.46739 7.15482 2.15483C7.46738 1.84227 7.89131 1.66667 8.33333 1.66667H11.6667C12.1087 1.66667 12.5326 1.84227 12.8452 2.15483C13.1577 2.46739 13.3333 2.89131 13.3333 3.33334V5.00001M8.33333 9.16667V14.1667M11.6667 9.16667V14.1667\" stroke=\"#667085\" stroke-width=\"1.66667\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                                                </svg>\n                                                ";
+          wrapper.append(deleteElement);
+          span.remove();
+          name.classList.add('con-item__name');
+          wrapper.classList.add('con-item', 'con-item-comp');
+          wrapper.append(name);
+          name.append(img);
+          name.innerHTML = name.innerHTML + '<span class="js-reg-name">' + a.innerHTML + '</span>';
+          createSelect(['Junior', 'Middle', 'Middle+', 'Senior'], wrapper);
+          createSelect(['Меньше года', '1-3 года', '3-5 лет', 'Больше 5 лет'], wrapper);
+          createInput(wrapper, 'date');
+          document.querySelector('.reg-dev-form-competetion').append(wrapper);
+          deleteElement.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.parentElement.remove();
+          });
+          itemInSearch[i].parentElement.parentElement.parentElement.classList.remove('active');
+          itemInSearch[i].parentElement.parentElement.parentElement.querySelector('input').value = '';
+          $('.codyshop-ajax-search').fadeOut().html(result);
+        });
+      };
+
+      for (var i = 0; i < itemInSearch.length; i++) {
+        _loop2(i);
+      }
+
+      function createInput(wrapper, type) {
+        var extraClass = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'form__input-text';
+        var input = document.createElement("input"),
+            label = document.createElement("label"); //label.innerHTML = labelText;
+
+        input.type = type;
+        input.classList.add('form__input', extraClass);
+
+        if (type == 'number') {
+          input.value = 0;
+        } else {
+          input.placeholder = 'Введите данные';
+        }
+
+        wrapper.appendChild(label);
+        label.appendChild(input);
+      }
+
+      function createSelect(array, wrapper) {
+        var selectList = document.createElement("select"),
+            label = document.createElement("label"); //label.innerHTML = labelText;
+
+        selectList.classList.add('form__input', 'form__select');
+        wrapper.appendChild(label);
+        label.appendChild(selectList);
+
+        for (var _i6 = 0; _i6 < array.length; _i6++) {
+          var option = document.createElement("option");
+          option.value = array[_i6];
+          option.text = array[_i6];
+          selectList.appendChild(option);
+        }
+      }
+    }; //Видимость формы поиска у компетенций
+
+
+    var indDevBtn = regFormDev.querySelector('.wpcf7-list-item.first label');
+    var btnOpenModalAddWork = document.querySelector('.js-reg-dev-add-work'),
+        modalAddWork = document.querySelector('.modal-add-work'),
+        sidebarAddWork = document.querySelector('.modal-sidebar-work'),
+        body = document.querySelector('html'),
+        btnAddAltConnect = document.querySelector('.js-acc-reg-form-plus-alternate'); //Добавление альтернативных способов связи
+
+    if (btnAddAltConnect) {
+      var wrapper = document.querySelector('.reg-dev-form-alternate');
+      btnAddAltConnect.addEventListener('click', function (e) {
+        var item = document.createElement('div');
+        item.classList.add('alternate-item');
+        createInput(item, 'text');
+        createSelect(['Website', 'Whatsapp', 'Telegram', 'Email', 'Viber', 'Дополнительный номер', 'Почтовый адрес', 'Ссылка на социальную сеть', 'Другое...'], item);
+        wrapper.append(item);
+      });
+    } //Добавление опыта работы
+
+
+    if (btnOpenModalAddWork && modalAddWork && sidebarAddWork) {
+      var closeModal = function closeModal(e) {
+        e.preventDefault();
+        modalAddWork.classList.remove('active');
+        sidebarAddWork.classList.remove('active');
+        body.style.overflowY = 'scroll';
+      };
+
+      btnOpenModalAddWork.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalAddWork.classList.add('active');
+        sidebarAddWork.classList.add('active');
+        body.style.overflowY = 'hidden';
+      });
+
+      var btnSaveWork = document.querySelector('.js-add-work-item'),
+          _wrapper = document.querySelector('.js-wrapper-works-dev'),
+          btnExit = document.querySelector('.modal-add-work__exit');
+
+      btnExit.addEventListener('click', function (e) {
+        closeModal(e);
+      });
+      btnSaveWork.addEventListener('click', function (e) {
+        var _this = this;
+
+        var workItem = document.createElement('div'),
+            nowDate = document.querySelector('[name="now-date-work"]'),
+            lastDate = document.querySelector('[name="last-date-work"]'),
+            name = document.querySelector('[name="name-work-item"]'),
+            dol = document.querySelector('[name="name-work-dol"]'),
+            text = document.querySelector('[name="text-work-item"]'),
+            check = document.querySelector('[name="now-date-check"]');
+
+        if (check.checked === true) {
+          lastDate = 'по настоящее время';
+        } else {
+          lastDate = document.querySelector('[name="last-date-work"]').value;
+        }
+
+        if (nowDate.value === '' || dol.value === '' || name.value === '' || text.value === '') {
+          e.preventDefault();
+          this.innerHTML = 'Заполните все поля!';
+          setTimeout(function (e) {
+            _this.innerHTML = 'Сохранить';
+          }, 3000);
+        } else {
+          var deleteElement = document.createElement('div'),
+              editElement = document.createElement('div');
+          deleteElement.classList.add('con-item__delete');
+          editElement.classList.add('con-item__edit');
+          deleteElement.innerHTML = "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.5 5.00001H4.16667M4.16667 5.00001H17.5M4.16667 5.00001V16.6667C4.16667 17.1087 4.34226 17.5326 4.65482 17.8452C4.96738 18.1577 5.39131 18.3333 5.83333 18.3333H14.1667C14.6087 18.3333 15.0326 18.1577 15.3452 17.8452C15.6577 17.5326 15.8333 17.1087 15.8333 16.6667V5.00001H4.16667ZM6.66667 5.00001V3.33334C6.66667 2.89131 6.84226 2.46739 7.15482 2.15483C7.46738 1.84227 7.89131 1.66667 8.33333 1.66667H11.6667C12.1087 1.66667 12.5326 1.84227 12.8452 2.15483C13.1577 2.46739 13.3333 2.89131 13.3333 3.33334V5.00001M8.33333 9.16667V14.1667M11.6667 9.16667V14.1667\" stroke=\"#667085\" stroke-width=\"1.66667\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>";
+          editElement.innerHTML = "<svg width=\"14\" height=\"17\" viewBox=\"0 0 14 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10.0779 1.61229C10.2368 1.41817 10.4255 1.26419 10.6332 1.15913C10.8409 1.05407 11.0635 1 11.2883 1C11.513 1 11.7356 1.05407 11.9433 1.15913C12.151 1.26419 12.3397 1.41817 12.4986 1.61229C12.6576 1.80642 12.7837 2.03687 12.8697 2.2905C12.9557 2.54413 13 2.81597 13 3.0905C13 3.36503 12.9557 3.63687 12.8697 3.8905C12.7837 4.14413 12.6576 4.37459 12.4986 4.56871L4.32855 14.5466L1 15.6553L1.90779 11.5902L10.0779 1.61229Z\" stroke=\"white\" stroke-width=\"1.66667\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>";
+          workItem.classList.add('reg-dev-work-item');
+          workItem.innerHTML = "\n                        <div class=\"reg-dev-work-item__header\">\n                            <span class=\"reg-dev-work-item__date\"><span class=\"reg-dev-work-item__date-now\">".concat(nowDate.value, "</span> - <span class=\"reg-dev-work-item__date-last\">").concat(lastDate, "</span></span>\n                            <span class=\"reg-dev-work-item__name\">").concat(name.value, "</span>\n                        </div>\n                        <div class=\"reg-dev-work-item__content\">\n                            <span class=\"reg-dev-work-item__dol\">").concat(dol.value, "</span>\n                            <div class=\"reg-dev-work-item__text\">").concat(text.value, "</div>\n                        </div>\n                        ");
+          nowDate.value = '';
+          lastDate.value = '';
+          name.value = '';
+          dol.value = '';
+          text.value = '';
+          check.checked = false;
+          workItem.append(deleteElement);
+          workItem.append(editElement);
+
+          _wrapper.appendChild(workItem);
+
+          closeModal(e);
+          deleteElement.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.parentElement.remove();
+          });
+          editElement.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalAddWork.classList.add('active');
+            sidebarAddWork.classList.add('active');
+            body.style.overflowY = 'hidden';
+            btnSaveWork.innerHTML = 'Редактировать';
+            var parent = this.parentElement,
+                nowDateVal = document.querySelector('.reg-dev-work-item__date'),
+                lastDate = document.querySelector('[name="last-date-work"]'),
+                nameVal = parent.querySelector('.reg-dev-work-item__name').innerHTML,
+                dolVal = parent.querySelector('.reg-dev-work-item__dol').innerHTML,
+                textVal = parent.querySelector('.reg-dev-work-item__text').innerHTML;
+            name.value = nameVal;
+            dol.value = dolVal;
+            text.value = textVal;
+            nowDate.value = nowDateVal;
+            lastDate.value = '';
+            btnExit.addEventListener('click', function (e) {
+              nowDate.value = '';
+              lastDate.value = '';
+              name.value = '';
+              dol.value = '';
+              text.value = '';
+              check.checked = false;
+              btnSaveWork.innerHTML = 'Сохранить';
+            });
+            btnSaveWork.addEventListener('click', function (e) {
+              nameVal = name.value;
+              dolVal = dol.value;
+              textVal = text.value;
+              btnSaveWork.innerHTML = 'Сохранить';
+              parent.remove();
+              closeModal(e);
+            });
+          });
+        }
+      });
+    }
+
+    var partnerTrigger = document.querySelector('.my-acc-reg-form-partner'); //Закидывание данных в общий массив формы
+
+    document.addEventListener('wpcf7beforesubmit', function (event) {
+      var dopInputs = document.querySelectorAll('.con-item-integration'),
+          dopComp = document.querySelectorAll('.con-item-comp'),
+          worksItems = document.querySelectorAll('.reg-dev-work-item'),
+          alternateItems = document.querySelectorAll('.alternate-item');
+      var inputs = event.detail.inputs,
+          competencies = {
+        name: 'competencies',
+        value: []
+      },
+          connectors = {
+        name: "connectors",
+        value: []
+      },
+          works = {
+        name: "works",
+        value: []
+      },
+          alt = {
+        name: "alternateConnect",
+        value: []
+      };
+
+      if (dopInputs.length > 0) {
+        if (partnerTrigger) {
+          for (var i = 0; i < dopInputs.length; i++) {
+            var name = dopInputs[i].querySelector('.js-reg-name').innerHTML,
+                juniorVal = dopInputs[i].querySelector('label:nth-of-type(1) input').value,
+                middleVal = dopInputs[i].querySelector('label:nth-of-type(2) input').value,
+                middlePlusVal = dopInputs[i].querySelector('label:nth-of-type(3) input').value,
+                seniorVal = dopInputs[i].querySelector('label:nth-of-type(4) input').value,
+                successProjectVal = dopInputs[i].querySelector('label:nth-of-type(5) input').value,
+                projectYearVal = dopInputs[i].querySelector('label:nth-of-type(6) input').value;
+            var connector = {
+              name: name,
+              junior: juniorVal,
+              middle: middleVal,
+              middlePlus: middlePlusVal,
+              senior: seniorVal,
+              successProject: successProjectVal,
+              projectYear: projectYearVal
+            };
+            connectors.value.push(connector);
+          }
+        } else {
+          for (var _i = 0; _i < dopInputs.length; _i++) {
+            var _name = dopInputs[_i].querySelector('.js-reg-name').innerHTML,
+                competenceVal = dopInputs[_i].querySelector('label:nth-of-type(1) select').value,
+                _successProjectVal = dopInputs[_i].querySelector('label:nth-of-type(2) input').value,
+                _projectYearVal = dopInputs[_i].querySelector('label:nth-of-type(3) input').value,
+                comExpVal = dopInputs[_i].querySelector('label:nth-of-type(4) input').value,
+                lastExpVal = dopInputs[_i].querySelector('label:nth-of-type(5) input').value;
+
+            var _connector = {
+              name: _name,
+              competence: competenceVal,
+              successProject: _successProjectVal,
+              projectYear: _projectYearVal,
+              comExp: comExpVal,
+              lastExp: lastExpVal
+            };
+            connectors.value.push(_connector);
+          }
+        }
+
+        var hiddenInput = document.querySelector('[name="reg-dev-comp-integr"]');
+        hiddenInput.value = JSON.stringify(connectors);
+        inputs[18].value = JSON.stringify(connectors);
+        console.log(inputs[18].value);
+        inputs.push(connectors);
+      }
+
+      if (dopComp.length > 0) {
+        var _hiddenInput = document.querySelector('[name="reg-dev-comp-dev"]');
+
+        for (var _i2 = 0; _i2 < dopComp.length; _i2++) {
+          var _name2 = dopComp[_i2].querySelector('.js-reg-name').innerHTML,
+              _competenceVal = dopComp[_i2].querySelector('label:nth-of-type(1) select').value,
+              _comExpVal = dopComp[_i2].querySelector('label:nth-of-type(2) select').value,
+              _lastExpVal = dopComp[_i2].querySelector('label:nth-of-type(3) input').value;
+
+          var comp = {
+            name: _name2,
+            competence: _competenceVal,
+            comExp: _comExpVal,
+            lastExp: _lastExpVal
+          };
+          competencies.value.push(comp);
+        }
+
+        _hiddenInput.value = JSON.stringify(competencies);
+        inputs[17].value = JSON.stringify(competencies);
+        console.log(_hiddenInput);
+        inputs.push(competencies);
+      }
+
+      if (worksItems.length > 0) {
+        var _hiddenInput2 = document.querySelector('[name="reg-dev-exp-work"]');
+
+        for (var _i3 = 0; _i3 < worksItems.length; _i3++) {
+          var dateStart = worksItems[_i3].querySelector('.reg-dev-work-item__date-now').innerHTML,
+              dateEnd = worksItems[_i3].querySelector('.reg-dev-work-item__date-last').innerHTML,
+              nameOrganization = worksItems[_i3].querySelector('.reg-dev-work-item__name').innerHTML,
+              position = worksItems[_i3].querySelector('.reg-dev-work-item__dol').innerHTML,
+              description = worksItems[_i3].querySelector('.reg-dev-work-item__text').innerHTML;
+
+          var work = {
+            dateStart: dateStart,
+            dateEnd: dateEnd,
+            nameOrganization: nameOrganization,
+            position: position,
+            description: description
+          };
+          works.value.push(work);
+        }
+
+        _hiddenInput2.value = JSON.stringify(works);
+        inputs[19].value = JSON.stringify(works);
+        console.log(inputs[19].value);
+        console.log(_hiddenInput2);
+        inputs.push(works);
+      }
+
+      if (alternateItems.length > 0) {
+        var _hiddenInput3 = document.querySelector('[name="reg-dev-alternate-connect"]');
+
+        for (var _i4 = 0; _i4 < alternateItems.length; _i4++) {
+          var alernateValue = alternateItems[_i4].querySelector('.alternate-item label:first-child input').value,
+              alternateType = alternateItems[_i4].querySelector('.alternate-item label:last-child select').value;
+
+          var alternateItem = {
+            alernateValue: alernateValue,
+            alternateType: alternateType
+          };
+          alt.value.push(alternateItem);
+        }
+
+        _hiddenInput3.value = JSON.stringify(alt);
+        inputs[16].value = JSON.stringify(alt);
+        console.log(inputs[16].value);
+        console.log(_hiddenInput3);
+        inputs.push(alt);
+      }
+
+      var messageSucces = document.querySelector('.reg-dev-succes');
+      messageSucces.classList.add('active');
+      setTimeout(function (e) {
+        messageSucces.classList.remove('active');
+      }, 5000);
+      console.log(inputs);
+    }, false);
+    var btnPlus = document.querySelectorAll('.acc-reg-form-plus__plus');
+    btnPlus.forEach(function (item, i) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        item.parentElement.querySelector('.acc-reg-form-plus__search').classList.add('active');
+      });
+    }); //Поиск по интеграциям
+
+    $('.search-field-product').keypress(function (eventObject) {
+      var searchTerm = $(this).val(); // проверим, если в поле ввода более 2 символов, запускаем ajax
+
+      if (searchTerm.length > 1) {
+        $.ajax({
+          url: '/wp-admin/admin-ajax.php',
+          type: 'POST',
+          data: {
+            'action': 'codyshop_ajax_search',
+            'term': searchTerm
+          },
+          success: function success(result) {
+            $('.codyshop-ajax-search-prod').fadeIn().html(result);
+            checkItemOnConRegForm();
+            searchTerm = '';
+          }
+        });
+      } else {
+        $('.codyshop-ajax-search-prod').fadeOut();
+      }
+    }); //Поиск по компетенциям
+
+    $('.search-field-comp').keypress(function (eventObject) {
+      var searchTerm = $(this).val(); // проверим, если в поле ввода более 2 символов, запускаем ajax
+
+      if (searchTerm.length > 1) {
+        $.ajax({
+          url: '/wp-admin/admin-ajax.php',
+          type: 'POST',
+          data: {
+            'action': 'codyshop_ajax_search_comp',
+            'term': searchTerm
+          },
+          success: function success(result) {
+            $('.codyshop-ajax-search-comp').fadeIn().html(result);
+            checkItemOnCompRegForm();
+            searchTerm = '';
+          }
+        });
+      } else {
+        $('.codyshop-ajax-search-comp').fadeOut();
+      }
+    }); //Поиск по компетенциям
+  }
+
+  $('.search-field-tarifscomp').keypress(function (eventObject) {
+    var searchTerm = $(this).val(); // проверим, если в поле ввода более 2 символов, запускаем ajax
+
+    if (searchTerm.length > 1) {
+      $.ajax({
+        url: '/wp-admin/admin-ajax.php',
+        type: 'POST',
+        data: {
+          'action': 'codyshop_ajax_search_tarifsconc',
+          'term': searchTerm
+        },
+        success: function success(result) {
+          $('.codyshop-ajax-search-tarifscomp').fadeIn().html(result);
+          addConcurent();
+          searchTerm = '';
+        }
+      });
+    } else {
+      $('.codyshop-ajax-search-tarifscomp').fadeOut();
+    }
+  });
+  var wrapperDopTariffs = document.querySelector('.js-tariffs-conc');
+
+  function addConcurent() {
+    var itemInSearch = document.getElementsByClassName('js-item-search-tarifsconc');
+    var arrDataFront = wrapperDopTariffs.querySelectorAll('.landing-table-product-info-item .landing-table-prod__value'),
+        name = wrapperDopTariffs.querySelector('.landing-table-product__name'),
+        lastName = wrapperDopTariffs.querySelector('.landing-table__slogan'),
+        price = wrapperDopTariffs.querySelector('.landing-table__price-bold'),
+        header = wrapperDopTariffs.querySelector('.landing-table__header'),
+        resetBtn = document.querySelector('.js-tarifs-item-reset'),
+        inputSearch = wrapperDopTariffs.querySelector('.acc-reg-form-plus__search');
+
+    var _loop3 = function _loop3(i) {
+      itemInSearch[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        var arrDataBack = itemInSearch[i].querySelectorAll('.js-item-search-tarifsconc__attr'),
+            priceSearch = itemInSearch[i].querySelector('.js-item-search_tarifsconc__price'),
+            nameSearch = itemInSearch[i].querySelector('.js-item-search_tarifsconc__name');
+        inputSearch.classList.remove('active');
+        header.classList.remove('disabled');
+        name.innerHTML = nameSearch.innerHTML;
+        lastName.innerHTML = nameSearch.innerHTML;
+        price.innerHTML = priceSearch.innerHTML;
+        resetBtn.classList.add('active');
+        wrapperDopTariffs.querySelector('.landing-table-product').classList.remove('disabled');
+
+        for (var _i8 = 0; arrDataBack.length; _i8++) {
+          if (arrDataBack[_i8].innerHTML) {
+            arrDataFront[_i8].innerHTML = arrDataBack[_i8].innerHTML;
+          } else {
+            arrDataFront[_i8].innerHTML = 'Нет данных';
+          }
+        }
+
+        $('.codyshop-ajax-search-tarifscomp').fadeOut().html(result);
+      });
+    };
+
+    for (var i = 0; i < itemInSearch.length; i++) {
+      _loop3(i);
+    }
+
+    function createInput(wrapper, type) {
+      var extraClass = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'form__input-text';
+      var input = document.createElement("input"),
+          label = document.createElement("label"); //label.innerHTML = labelText;
+
+      input.type = type;
+      input.classList.add('form__input', extraClass);
+
+      if (type == 'number') {
+        input.value = 0;
+      } else {
+        input.placeholder = 'Введите данные';
+      }
+
+      wrapper.appendChild(label);
+      label.appendChild(input);
+    }
+
+    function createSelect(array, wrapper) {
+      var selectList = document.createElement("select"),
+          label = document.createElement("label"); //label.innerHTML = labelText;
+
+      selectList.classList.add('form__input', 'form__select');
+      wrapper.appendChild(label);
+      label.appendChild(selectList);
+
+      for (var _i7 = 0; _i7 < array.length; _i7++) {
+        var option = document.createElement("option");
+        option.value = array[_i7];
+        option.text = array[_i7];
+        selectList.appendChild(option);
+      }
+    }
+  }
+
+  $("input[type=\"tel\"]").mask("9(999)999-99-99");
+  $('body').on('click', 'button.plus, button.minus', function () {
+    var qty = $(this).parent().find('input'),
+        val = parseInt(qty.val()),
+        min = parseInt(qty.attr('min')),
+        max = parseInt(qty.attr('max')),
+        step = parseInt(qty.attr('step')); // дальше меняем значение количества в зависимости от нажатия кнопки
+
+    if ($(this).is('.plus')) {
+      if (max && max <= val) {
+        qty.val(max).change();
+        $('[name="update_cart"]').trigger('click');
+      } else {
+        qty.val(val + step).change();
+        $('[name="update_cart"]').trigger('click');
+      }
+    } else {
+      if (min && min >= val) {
+        qty.val(min).change();
+      } else if (val > 1) {
+        qty.val(val - step).change();
+      }
+
+      $('[name="update_cart"]').trigger('click');
+    }
+  });
+  var token = "c19bd1e4befd64fd8ca789c3078dcec314798be9";
+  $('#shipping_address_1').suggestions({
+    token: token,
+    type: "ADDRESS",
+    constraints: {
+      locations: {
+        country: "*"
+      }
+    }
+  });
+  $('#billing_address_1').suggestions({
+    token: token,
+    type: "ADDRESS",
+    constraints: {
+      locations: {
+        country: "*"
+      }
+    }
+  });
+  $('#js-address').suggestions({
+    token: token,
+    type: "ADDRESS",
+    constraints: {
+      locations: {
+        country: "*"
+      }
+    }
+  });
+});
 "use strict";
 
 (function ($) {
@@ -1907,32 +2714,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       scrollTop: $(".footer").offset().top
     }, 1000);
   });
-})(jQuery);
-"use strict";
-
-(function ($) {
-  $('.select').on('click', '.select__head', function () {
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open');
-      $(this).next().fadeOut();
-    } else {
-      $('.select__head').removeClass('open');
-      $('.select__list').fadeOut();
-      $(this).addClass('open');
-      $(this).next().fadeIn();
-    }
-  });
-  $('.select').on('click', '.select__item', function () {
-    $('.select__head').removeClass('open');
-    $(this).parent().fadeOut();
-    $(this).parent().prev().text($(this).text());
-    $(this).parent().prev().prev().val($(this).text());
-  });
-  $(document).click(function (e) {
-    if (!$(e.target).closest('.select').length) {
-      $('.select__head').removeClass('open');
-      $('.select__list').fadeOut();
-    }
+  $(".first_btn ").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".rate_page").offset().top
+    }, 500);
   });
 })(jQuery);
 "use strict";

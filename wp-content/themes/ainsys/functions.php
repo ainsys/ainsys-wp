@@ -270,3 +270,88 @@ function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
  
   return $out;
 }
+
+
+add_action( 'woocommerce_product_options_general_product_data', 'art_woo_add_custom_fields' );
+function art_woo_add_custom_fields() {
+	global $product, $post;
+	echo '<div class="options_group">';// Группировка полей 
+	 woocommerce_wp_text_input( array(
+   'id'                => 'info_connector',
+   'label'             => __( 'Информация о коннекторе', 'woocommerce' ),
+   'placeholder'       => 'Информация о коннекторе',
+   'desc_tip'          => 'true',
+   'custom_attributes' => array( 'required' => 'required' ),
+   'description'       => __( 'Введите здесь значение поля', 'woocommerce' ),
+) );
+    woocommerce_wp_text_input( array(
+   'id'                => 'color_1_1',
+   'label'             => __( 'Цвет 1', 'woocommerce' ),
+   'placeholder'       => 'Цвет 1',
+   'desc_tip'          => 'true',
+   'custom_attributes' => array( 'required' => 'required' ),
+   'description'       => __( 'Введите здесь значение поля', 'woocommerce' ),
+) );
+    woocommerce_wp_text_input( array(
+   'id'                => 'color_2_2',
+   'label'             => __( 'Цвет 2', 'woocommerce' ),
+   'placeholder'       => 'Цвет 2',
+   'desc_tip'          => 'true',
+   'custom_attributes' => array( 'required' => 'required' ),
+   'description'       => __( 'Введите здесь значение поля', 'woocommerce' ),
+) );
+        woocommerce_wp_text_input( array(
+   'id'                => 'name_file',
+   'label'             => __( 'Имя файла', 'woocommerce' ),
+   'placeholder'       => 'Имя файла',
+   'desc_tip'          => 'true',
+   'custom_attributes' => array( 'required' => 'required' ),
+   'description'       => __( 'Введите здесь значение поля', 'woocommerce' ),
+) );
+	echo '</div>';
+}
+
+
+function art_woo_custom_fields_save( $post_id ) {
+
+	// Сохранение текстового поля.
+	$woocommerce_text_field = $_POST['info_connector'];
+	if ( ! empty( $woocommerce_text_field ) ) {
+		update_post_meta( $post_id, 'info_connector', esc_attr( $woocommerce_text_field ) );
+}
+}
+
+function art_woo_custom_fields_save1( $post_id ) {
+
+	// Сохранение текстового поля.
+	$woocommerce_text_field1 = $_POST['color_1_1'];
+	if ( ! empty( $woocommerce_text_field1 ) ) {
+		update_post_meta( $post_id, 'color_1_1', esc_attr( $woocommerce_text_field1 ) );
+}
+}
+
+function art_woo_custom_fields_save2( $post_id ) {
+
+	// Сохранение текстового поля.
+	$woocommerce_text_field2 = $_POST['color_2_2'];
+	if ( ! empty( $woocommerce_text_field2 ) ) {
+		update_post_meta( $post_id, 'color_2_2', esc_attr( $woocommerce_text_field2 ) );
+}
+}
+
+function art_woo_custom_fields_save3( $post_id ) {
+
+	// Сохранение текстового поля.
+	$woocommerce_text_field3 = $_POST['name_file'];
+	if ( ! empty( $woocommerce_text_field3 ) ) {
+		update_post_meta( $post_id, 'name_file', esc_attr( $woocommerce_text_field3 ) );
+}
+}
+    
+add_action( 'woocommerce_process_product_meta', 'art_woo_custom_fields_save', 10 );
+
+add_action( 'woocommerce_process_product_meta', 'art_woo_custom_fields_save1', 10 );
+
+add_action( 'woocommerce_process_product_meta', 'art_woo_custom_fields_save2', 10 );
+
+add_action( 'woocommerce_process_product_meta', 'art_woo_custom_fields_save3', 10 );

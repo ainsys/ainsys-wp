@@ -123,6 +123,7 @@ img {
 
 .site-content {
 	position: relative;
+	min-height: 100vh;
 
 	.announcement-bar-on & {
 		padding: $announcement-bar-height 0 0;
@@ -136,4 +137,5 @@ img {
 }
 .content {
 	padding-top: 1px; // to separate header-top margin and lead block margin
+	min-height: 100vh;
 }

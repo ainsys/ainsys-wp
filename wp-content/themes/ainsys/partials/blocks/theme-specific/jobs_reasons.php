@@ -38,44 +38,34 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 
 <section class="jobs_reasosns">
     <div class="container">
-        <h2 class="has-text-align-center">
+        <h2 class="has-text-align-center jobs_reasosns_title">
             <strong><?php the_field( 'reasosns_title' ); ?></strong>
         </h2>
 
         <?php if ( have_rows( 'reasosns_item' ) ) : ?>
-            <div class="jobs_reasosns_wrapper">
+            <div class="row jobs_reasosns_wrapper">
                 <?php
                 $i = 0;
                 while ( have_rows( 'reasosns_item' ) ) :
                     the_row();
                     $i++;
                     ?>
-                    <div class="jobs_reasosns_item col-md-6 col-12">
-                        <div class="jobs_reasosns_item_head">
-                            <img class="jobs_reasosns_item_head_img" src="<?= the_sub_field('item_img');?>" alt="jobs">
-                            <p class="jobs_reasosns_item_head_title">
-                                <?= the_sub_field('item_title');?>
+                    <div class="jobs_reasosns_item_block col-sm-6 col-12">
+                        <div class="jobs_reasosns_item">
+                            <div class="jobs_reasosns_item_head">
+                                <img class="jobs_reasosns_item_head_img" src="<?= the_sub_field('item_img');?>" alt="jobs">
+                                <p class="jobs_reasosns_item_head_title">
+                                    <?= the_sub_field('item_title');?>
+                                </p>
+                            </div>
+                            <p class="jobs_reasosns_item_text">
+                                <?= the_sub_field('item_text');?>
                             </p>
                         </div>
-                        <p class="jobs_reasosns_item_text">
-                            <?= the_sub_field('item_text');?>
-                        </p>
                     </div>
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>
-
-            <!-- <div class="jobs_reasosns_item">
-                <div class="jobs_reasosns_item_head">
-                    <img class="jobs_reasosns_item_head_img" src="<?= get_field('jobs_bg');?>" alt="jobs">
-                    <p class="jobs_reasosns_item_head_title">
-                        <?= get_field('item_title');?>
-                    </p>
-                </div>
-                <p class="jobs_reasosns_item_text">
-                    <?= get_field('item_text');?>
-                </p>
-            </div> -->
     </div>
 </section>
 
