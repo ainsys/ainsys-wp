@@ -128,9 +128,7 @@ if(0 == WC()->cart->get_cart_contents_count()){
                   echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     'woocommerce_cart_item_remove_link',
                     sprintf(
-                      '<div class="connector_delete">
-                          <img class="connector_delete_btn" src="http://ainsyswp/wp-content/themes/ainsys/assets/images/components/delete_con.svg" alt="delete">
-                      </div>',
+                      '<a href="%s" class="connector_delete" aria-label="%s" data-product_id="%s" data-product_sku="%s"></a>',
                       esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
                       esc_html__( 'Remove this item', 'woocommerce' ),
                       esc_attr( $product_id ),

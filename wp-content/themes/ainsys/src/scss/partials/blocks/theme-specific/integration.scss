@@ -60,6 +60,9 @@
             margin-bottom: 30px;
         }
     }
+    .connector_wrapper.disabl {
+        display: none !important;
+    }
 
     .connector {
         margin-bottom: 16px;
@@ -85,8 +88,16 @@
 
         &_delete {
             display: flex;
+            width: 12px;
+            height: 12px;
+            margin: 0 auto;
             opacity: 0;
             transition: .5s;
+            background: url(../images/components/delete_con.svg) !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% !important;
+            cursor: pointer;
 
             @include media-breakpoint-down( md ) {
                 opacity: 1;

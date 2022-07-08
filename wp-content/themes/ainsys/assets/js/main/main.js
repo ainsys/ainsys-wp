@@ -1427,9 +1427,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     $(this).parent().closest('.connector').find('.main_content').prop("disabled", true);
     $(this).parent().removeClass('preview');
   });
-  $(".connector_delete_btn").click(function () {
-    $(this).parent().closest('.connector').find('.connector_content').addClass('disabl');
-  });
   $(".term_item_toggler").click(function () {
     $(this).parent().closest('.term_item').find('.term_item_content').toggleClass('disabl');
     $(this).find('.term_item_toggler_more').toggleClass('disabl');

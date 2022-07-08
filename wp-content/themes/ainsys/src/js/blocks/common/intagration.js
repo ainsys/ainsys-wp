@@ -52,14 +52,6 @@
         .parent()
         .removeClass('preview');
     });
-    $(".connector_delete_btn").click(function() {
-        $( this )
-        .parent()
-        .closest( '.connector' )
-        .find( '.connector_content' )
-        .addClass('disabl');
-    });
-
     $(".term_item_toggler").click(function() {
         $( this )
         .parent()
