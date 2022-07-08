@@ -119,25 +119,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_62c6d23ab4de2",
-            "label": "btn href",
-            "name": "btn_href",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_62bdb3207c36a",
             "label": "video_bg",
             "name": "video_bg",
@@ -313,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657197164
+    "modified": 1657277293
 }
