@@ -227,11 +227,11 @@
             height: 3.125rem;
             padding: 1rem;
             border-top: 1px solid $border_color;
-            background: linear-gradient(0deg, rgba(156, 71, 171, 0.12), rgba(156, 71, 171, 0.12)), #FFFFFF;
+            background: $accent;
             border-radius: 0;
 
             a {
-                color: $accent !important;
+                color: $white !important;
             }
             a:hover {
                 background: none !important;

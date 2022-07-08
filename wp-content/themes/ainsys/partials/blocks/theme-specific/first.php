@@ -59,7 +59,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                         </h1>
                     </div> 
                     <?php if ( get_field( 'btn' ) ) { ?>
-                        <a href="<?php the_field( 'btn_href' ); ?>" class="first_btn btn btn-primary"><?php the_field( 'btn' ); ?></a>
+                        <button class="first_btn btn btn-primary"><?php the_field( 'btn' ); ?></button>
                     <?php } ?> 
                 </div>
                 <div class="first_content_video  col-lg-7 col-12">

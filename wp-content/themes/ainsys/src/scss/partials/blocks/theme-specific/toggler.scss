@@ -176,7 +176,7 @@
 			}
 
 			ul {
-				margin: rem( 3 ) 0 rem( 1.5 );
+				margin: rem( 3 ) 0 rem( 3 );
 				padding-left: rem( 2 );
 
 				li {
@@ -243,4 +243,7 @@
 	@include media-breakpoint-up( $bp ) {
 		padding-left: 5%;
 	}
+}
+.btn_toggler {
+	min-width: 280px;
 }
