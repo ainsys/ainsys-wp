@@ -1065,16 +1065,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  $('.country_close').click(function () {
-    $('#counrty').addClass('country-disabled');
-  });
-  $('.country_select').click(function () {
-    $(this).toggleClass('country-active');
-  });
-})(jQuery);
-"use strict";
-
-(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1212,6 +1202,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     	$( '.menu-item-has-children', $menu ).removeClass( 'open' );
     }
     */
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.country_close').click(function () {
+    $('#counrty').addClass('country-disabled');
+  });
+  $('.country_select').click(function () {
+    $(this).toggleClass('country-active');
   });
 })(jQuery);
 "use strict";
@@ -2719,6 +2719,49 @@ jQuery(document).ready(function ($) {
       scrollTop: $(".rate_page").offset().top
     }, 500);
   });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  (function () {
+    function scrollHorizontally(e) {
+      e = window.event || e;
+      var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+      document.getElementById('scrollserv_wrapper').scrollLeft -= delta * 40; // Multiplied by 40
+
+      e.preventDefault();
+    }
+
+    if (document.getElementById('scrollserv_wrapper').addEventListener) {
+      // IE9, Chrome, Safari, Opera
+      document.getElementById('scrollserv_wrapper').addEventListener("mousewheel", scrollHorizontally, false); // Firefox
+
+      document.getElementById('scrollserv_wrapper').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+      // IE 6/7/8
+      document.getElementById('scrollserv_wrapper').attachEvent("onmousewheel", scrollHorizontally);
+    }
+  })();
+
+  (function () {
+    function scrollHorizontally(e) {
+      e = window.event || e;
+      var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+      document.getElementById('bundles_wrapper').scrollLeft -= delta * 40; // Multiplied by 40
+
+      e.preventDefault();
+    }
+
+    if (document.getElementById('bundles_wrapper').addEventListener) {
+      // IE9, Chrome, Safari, Opera
+      document.getElementById('bundles_wrapper').addEventListener("mousewheel", scrollHorizontally, false); // Firefox
+
+      document.getElementById('bundles_wrapper').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+      // IE 6/7/8
+      document.getElementById('bundles_wrapper').attachEvent("onmousewheel", scrollHorizontally);
+    }
+  })();
 })(jQuery);
 "use strict";
 
