@@ -1,0 +1,351 @@
+[
+    {
+        "key": "group_62cc4355b8750",
+        "title": "Reviews",
+        "fields": [
+            {
+                "key": "field_62cc436b87aba",
+                "label": "title",
+                "name": "title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_62cc438d87abb",
+                "label": "reviews_item",
+                "name": "reviews_item",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_62cc439d87abc",
+                        "label": "reviews_avatar",
+                        "name": "reviews_avatar",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_62cc43a987abd",
+                        "label": "reviews_name",
+                        "name": "reviews_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc43af87abe",
+                        "label": "reviews_data",
+                        "name": "reviews_data",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc43b887abf",
+                        "label": "reviews_massage",
+                        "name": "reviews_massage",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_62cc493d9ed57",
+                "label": "reviews_item_two",
+                "name": "reviews_item_two",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_62cc494d9ed58",
+                        "label": "reviews_avatar",
+                        "name": "reviews_avatar",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_62cc49599ed59",
+                        "label": "reviews_name",
+                        "name": "reviews_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc495f9ed5a",
+                        "label": "reviews_data",
+                        "name": "reviews_data",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc49649ed5b",
+                        "label": "reviews_massage",
+                        "name": "reviews_massage",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_62cc496f9ed5c",
+                "label": "reviews_item_three",
+                "name": "reviews_item_three",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_62cc497a9ed5d",
+                        "label": "reviews_avatar",
+                        "name": "reviews_avatar",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_62cc49859ed5e",
+                        "label": "reviews_name",
+                        "name": "reviews_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc498a9ed5f",
+                        "label": "reviews_data",
+                        "name": "reviews_data",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_62cc49919ed60",
+                        "label": "reviews_massage",
+                        "name": "reviews_massage",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/reviews"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

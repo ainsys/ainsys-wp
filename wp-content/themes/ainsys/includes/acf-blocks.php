@@ -894,6 +894,25 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+	acf_register_block_type(
+		array(
+			'name'            => 'Reviews',
+			'title'           => __( 'Reviews' ),
+			'description'     => __( 'Reviews' ),
+			'render_template' => 'partials/blocks/theme-specific/reviews.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'reviews' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.

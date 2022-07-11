@@ -1,6 +1,6 @@
 <?php
 /**
- * Scroll services block.
+ * Scroll bundles block.
  *
  * @package ainsys
  */
@@ -50,33 +50,38 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
             <?php if ( have_rows( 'bundles_item' ) ) : ?>
                 <?php while ( have_rows( 'bundles_item' ) ) :
                 the_row();?>
-                    <div class="bundles_item">
-                        <div class="bundles_item_imgs">
-                            <?php if ( get_sub_field( 'systemfirst' ) ) { ?>
-                                <img src="<?= the_sub_field('systemfirst');?>" class="bundles_item_img" alt="">
+                    <div class="bundles_item_wrapper col-lg-4 col-md-6 col-12">
+                        <div class="bundles_item">
+                            <div class="bundles_item_imgs">
+                                <?php if ( get_sub_field( 'systemfirst' ) ) { ?>
+                                    <img src="<?= the_sub_field('systemfirst');?>" class="bundles_item_img" alt="">
+                                <?php } ?>
+                                <?php if ( get_sub_field( 'systemsecond' ) ) { ?>
+                                    <img src="<?= the_sub_field('systemsecond');?>" class="bundles_item_img" alt="">
+                                <?php } ?>
+                            </div>
+                            <?php if ( get_sub_field( 'title' ) ) { ?>
+                                <p class="bundles_item_title">
+                                    <?php the_sub_field( 'title' ); ?>
+                                </p>
                             <?php } ?>
-                            <?php if ( get_sub_field( 'systemsecond' ) ) { ?>
-                                <img src="<?= the_sub_field('systemsecond');?>" class="bundles_item_img" alt="">
+                            <?php if ( get_sub_field( 'text' ) ) { ?>
+                                <p class="bundles_item_text">
+                                    <?php the_sub_field( 'text' ); ?>
+                                </p>
                             <?php } ?>
-                        </div>
-                        <?php if ( get_sub_field( 'title' ) ) { ?>
-                            <p class="bundles_item_title">
-                                <?php the_sub_field( 'title' ); ?>
-                            </p>
-                        <?php } ?>
-                        <?php if ( get_sub_field( 'text' ) ) { ?>
-                            <p class="bundles_item_text">
-                                <?php the_sub_field( 'text' ); ?>
-                            </p>
-                        <?php } ?>
-                        <?php if ( get_sub_field( 'btn' ) ) { ?>
-                            <a href="<?php the_sub_field( 'btn_href' ); ?>" class="btn btn-primary bundles_item_btn">
-                                <?php the_sub_field( 'btn' ); ?>
-                            </a>
-                        <?php } ?>
-                    </div>    
+                            <?php if ( get_sub_field( 'btn' ) ) { ?>
+                                <a href="<?php the_sub_field( 'btn_href' ); ?>" class="btn btn-primary bundles_item_btn">
+                                    <?php the_sub_field( 'btn' ); ?>
+                                </a>
+                            <?php } ?>
+                        </div> 
+                    </div>       
                 <?php endwhile; ?>
             <?php endif; ?>
+        </div>
+        <div class="scroll_more">
+            <?= get_field('scroll_more');?>
         </div>
     </div>
 </section>
