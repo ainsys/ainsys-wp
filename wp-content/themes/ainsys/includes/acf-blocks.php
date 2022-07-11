@@ -856,6 +856,44 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+	acf_register_block_type(
+		array(
+			'name'            => 'Scroll services',
+			'title'           => __( 'Scroll services' ),
+			'description'     => __( 'Scroll services' ),
+			'render_template' => 'partials/blocks/theme-specific/scroll_services.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'Scroll services' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'Scroll bundles',
+			'title'           => __( 'Scroll bundles' ),
+			'description'     => __( 'Scroll bundles' ),
+			'render_template' => 'partials/blocks/theme-specific/scroll_bundles.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'Scroll bundles' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.
