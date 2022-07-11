@@ -1,8 +1,5 @@
 .accordion {
-	margin: 0;
-	padding: rem( 8 ) 0 0;
-	z-index: 1;
-	position: relative;
+	min-height: 100vh;
 
 	&__title {
 		margin: 0 0 rem( 2.5 );
