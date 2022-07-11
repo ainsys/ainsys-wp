@@ -50,23 +50,28 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
             <?php if ( have_rows( 'scrollserv_item' ) ) : ?>
                 <?php while ( have_rows( 'scrollserv_item' ) ) :
                 the_row();?>
-                    <div class="scrollserv_item">
-                        <?php if ( get_sub_field( 'image' ) ) { ?>
-                            <img src="<?= the_sub_field('image');?>" class="scrollserv_item_img" alt="">
-                        <?php } ?>
-                        <?php if ( get_sub_field( 'title' ) ) { ?>
-                            <p class="scrollserv_item_title">
-                                <?php the_sub_field( 'title' ); ?>
-                            </p>
-                        <?php } ?>
-                        <?php if ( get_sub_field( 'text' ) ) { ?>
-                            <p class="scrollserv_item_text">
-                                <?php the_sub_field( 'text' ); ?>
-                            </p>
-                        <?php } ?>
-                    </div>    
+                    <div class="scrollserv_item_wrapper col-lg-4 col-md-6 col-12">
+                        <div class="scrollserv_item">
+                            <?php if ( get_sub_field( 'image' ) ) { ?>
+                                <img src="<?= the_sub_field('image');?>" class="scrollserv_item_img" alt="">
+                            <?php } ?>
+                            <?php if ( get_sub_field( 'title' ) ) { ?>
+                                <p class="scrollserv_item_title">
+                                    <?php the_sub_field( 'title' ); ?>
+                                </p>
+                            <?php } ?>
+                            <?php if ( get_sub_field( 'text' ) ) { ?>
+                                <p class="scrollserv_item_text">
+                                    <?php the_sub_field( 'text' ); ?>
+                                </p>
+                            <?php } ?>
+                        </div>    
+                    </div>
                 <?php endwhile; ?>
             <?php endif; ?>
+        </div>
+        <div class="scroll_more">
+            <?= get_field('scroll_more');?>
         </div>
         <div class="scrollserv_banner">
             <div class="scrollserv_banner_wrapper">
