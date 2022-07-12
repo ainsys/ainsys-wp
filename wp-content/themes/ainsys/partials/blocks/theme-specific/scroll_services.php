@@ -39,9 +39,9 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 <section class="scrollserv">
     <div class="container">
         <div class="scrollserv_header">
-            <h4>
+            <h5>
                 <?= get_field('title');?>							
-            </h4>
+            </h5>
             <p class="page__text">
                 <?= get_field('text');?>
             </p>

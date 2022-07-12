@@ -1,15 +1,17 @@
 .scrollserv {
+    position: relative;
     background-color: $dark;
     color: $white;
     text-align: center;
+    padding-top: 40px;
 
     &_header {
-      margin-bottom: rem(6);
+      margin-bottom: rem(4);
     }
     &_wrapper {
       display: flex;
       position: relative;
-      margin-bottom: rem(6);
+      margin-bottom: rem(2);
       overflow-x: scroll;
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none;  /* IE 10+ */
@@ -55,7 +57,7 @@
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        padding: 100px 20px 70px;
+        padding: 40px 20px;
 
         @include media-breakpoint-down( xs ) {
             padding: 40px 0px 30px;
@@ -64,7 +66,7 @@
         &_wrapper {
             width: auto;
             margin: 0 auto;
-            padding: 50px;   
+            padding: 30px;   
             border: 2px solid $wrapper_border;
             background: $wrapper_bg;
             box-shadow: -10px -10px 20px #4A0B52, -20px -20px 50px 20px #430A49, 10px 10px 20px #1E0022, 20px 20px 50px 20px #1E0022;
@@ -85,7 +87,7 @@
     &_btn {
         display: flex !important;
         align-items: center;
-        margin: rem(5) auto 0;
+        margin: rem(3) auto 0;
         max-width: 331px;
 
         @include media-breakpoint-down( xs ) {
