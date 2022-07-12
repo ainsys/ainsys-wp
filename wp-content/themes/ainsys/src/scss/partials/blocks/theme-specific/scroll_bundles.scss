@@ -2,7 +2,7 @@
     &_header {
         text-align: center;
 
-        margin-bottom: rem(6);
+        margin-bottom: rem(2);
 
         h4 {
             span {
@@ -13,7 +13,6 @@
     &_wrapper {
         display: flex;
         position: relative;
-        margin-bottom: rem(6);
         overflow-x: scroll;
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none;  /* IE 10+ */

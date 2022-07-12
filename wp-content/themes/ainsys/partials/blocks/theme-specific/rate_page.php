@@ -25,133 +25,6 @@ if ( ! empty( $block['align'] ) ) {
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
 
-	<div class="rate_page__header">
-			<div class="rate_page__info">
-		    	<h2 class="rate_page__title"><?= get_field('rate_page__title');?></h2>
-			</div>
-			<div class="table__reset"><?= get_field('table__reset');?></div>
-		</div>
-		<div class="table-responsive">
-			<table class="table">
-				<thead>
-					<tr>
-						<th class="col_horizontal" scope="col">
-						<?php if ( have_rows( 'rate_page_table_head' ) ) : ?>
-								<?php
-								$i = 1;
-								while ( have_rows( 'rate_page_table_head' ) ) :
-									the_row()
-									?>
-									<th class="col_horizontal rate-<?php echo $i; ?> scope="col">
-										<div class="col_content">
-											<div class="col_head">
-											<?php if ( get_sub_field( 'rate_page_name' ) ) { ?>
-												<?php
-												$name_bg = get_sub_field( 'rate_page_name_background' ) ? get_sub_field( 'rate_page_name_background' ) : 'light';
-												?>
-												<div class="rate_page__item__name"><?php the_sub_field( 'rate_page_name' ); ?></div>
-											<?php } ?>
-												<div class="rate_delete rate_delete_first"></div>
-											</div>
-											<?php if ( get_sub_field( 'rate_page_price' ) ) { ?>
-												<div class="rate_page__item__price">
-													<?php the_sub_field( 'rate_page_price' ); ?>
-												</div>
-											<?php } ?>
-											<div class="rate_page__statistics">
-												<?php if ( get_sub_field( 'rate_page_users' ) ) { ?>
-													<div class="rate_page__item__users">
-														<?php the_sub_field( 'rate_page_users' ); ?>
-													</div>
-												<?php } ?>
-												<?php if ( get_sub_field( 'rate_page_operations' ) ) { ?>
-													<div class="rate_page__item__operations">
-													<?php the_sub_field( 'rate_page_operations' ); ?>
-													</div>
-												<?php } ?>
-										</div>
-									</th>	
-								<?php
-								$i++;
-							endwhile; ?>
-						<?php endif; ?>
-					</tr>
-				</thead>
-
-
-			<?php if ( have_rows( 'rate_page_table' ) ) : ?>
-							<?php
-							$i = 1;
-							while ( have_rows( 'rate_page_table' ) ) :
-								the_row();
-							?>
-				<tbody class="tbody_list tbody_list-disabled tbody_list-<?php echo $i; ?>">
-					<tr class="tr_main">
-
-					<?php if ( get_sub_field( 'table_main_name' ) ) { ?>
-						<th class="row_main" scope="row">
-						    <?php the_sub_field( 'table_main_name' ); ?>
-						</th>
-					<?php } ?>
-						<td class="rate_first"></td>
-						<td class="rate_second"></td>
-						<td class="rate_third"></td>
-						<td class="rate_fourth"></td>
-					</tr>
-					<?php if ( have_rows( 'table_dop' ) ) : ?>
-							<?php
-							while ( have_rows( 'table_dop' ) ) :
-								the_row();
-							?>
-						<tr class="tr_dop">
-
-
-
-							<th class="row_dop" scope="row">
-                                 <?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
-									<?= the_sub_field( 'table_dop_name' ); ?>
-								<?php } ?>
-								<span class="tooltips__item"><span> 
-								<?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
-									<div class="tooltips">
-										<?= the_sub_field( 'table_dop_tooltip' ); ?>
-									</div> 
-								<?php } ?>
-							</th>
-							<?php if ( get_sub_field( 'table_val_fisrt' ) ) { ?>
-								<td class="rate_first">
-									<?php the_sub_field( 'table_val_fisrt' ); ?>
-								</td>
-								<?php } ?>
-								<?php if ( get_sub_field( 'table_val_second' ) ) { ?>
-								<td class="rate_second">
-									<?php the_sub_field( 'table_val_second' ); ?>
-								</td>
-								<?php } ?>	
-								<?php if ( get_sub_field( 'table_val_third' ) ) { ?>
-								<td class="rate_third">
-									<?php the_sub_field( 'table_val_third' ); ?>
-								</td>
-								<?php } ?>
-								<?php if ( get_sub_field( 'table_val_fourth' ) ) { ?>
-								<td class="rate_fourth">
-									<?php the_sub_field( 'table_val_fourth' ); ?>
-								</td>
-								<?php } ?>
-						</tr>
-					    <?php endwhile; ?>
-					<?php endif; ?>
-
-				</div>
-			</tbody>
-			<?php
-			$i++;
-		 endwhile; ?>
-	    <?php endif; ?>
-
-		</table>
-		</div>	
-
 		<div class="rate_page__header">
 			<div class="rate_page__info">
 				<h2 class="rate_page__title"><?= get_field( 'rate_page_head_title' ); ?></h2>
@@ -279,6 +152,133 @@ if ( ! empty( $block['align'] ) ) {
                 <input id="range2" type="range" name="range2" min="0" max="100000" step="2000" value="0" />
 			</div>
 		</div>
+
+		<div class="rate_page__header" id="rate_scroll">
+			<div class="rate_page__info">
+		    	<h2 class="rate_page__title"><?= get_field('rate_page__title');?></h2>
+			</div>
+			<div class="table__reset"><?= get_field('table__reset');?></div>
+		</div>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="col_horizontal" scope="col">
+						<?php if ( have_rows( 'rate_page_table_head' ) ) : ?>
+								<?php
+								$i = 1;
+								while ( have_rows( 'rate_page_table_head' ) ) :
+									the_row()
+									?>
+									<th class="col_horizontal rate-<?php echo $i; ?> scope="col">
+										<div class="col_content">
+											<div class="col_head">
+											<?php if ( get_sub_field( 'rate_page_name' ) ) { ?>
+												<?php
+												$name_bg = get_sub_field( 'rate_page_name_background' ) ? get_sub_field( 'rate_page_name_background' ) : 'light';
+												?>
+												<div class="rate_page__item__name"><?php the_sub_field( 'rate_page_name' ); ?></div>
+											<?php } ?>
+												<div class="rate_delete rate_delete_first"></div>
+											</div>
+											<?php if ( get_sub_field( 'rate_page_price' ) ) { ?>
+												<div class="rate_page__item__price">
+													<?php the_sub_field( 'rate_page_price' ); ?>
+												</div>
+											<?php } ?>
+											<div class="rate_page__statistics">
+												<?php if ( get_sub_field( 'rate_page_users' ) ) { ?>
+													<div class="rate_page__item__users">
+														<?php the_sub_field( 'rate_page_users' ); ?>
+													</div>
+												<?php } ?>
+												<?php if ( get_sub_field( 'rate_page_operations' ) ) { ?>
+													<div class="rate_page__item__operations">
+													<?php the_sub_field( 'rate_page_operations' ); ?>
+													</div>
+												<?php } ?>
+										</div>
+									</th>	
+								<?php
+								$i++;
+							endwhile; ?>
+						<?php endif; ?>
+					</tr>
+				</thead>
+
+
+			<?php if ( have_rows( 'rate_page_table' ) ) : ?>
+							<?php
+							$i = 1;
+							while ( have_rows( 'rate_page_table' ) ) :
+								the_row();
+							?>
+				<tbody class="tbody_list tbody_list-disabled tbody_list-<?php echo $i; ?>">
+					<tr class="tr_main">
+
+					<?php if ( get_sub_field( 'table_main_name' ) ) { ?>
+						<th class="row_main" scope="row">
+						    <?php the_sub_field( 'table_main_name' ); ?>
+						</th>
+					<?php } ?>
+						<td class="rate_first"></td>
+						<td class="rate_second"></td>
+						<td class="rate_third"></td>
+						<td class="rate_fourth"></td>
+					</tr>
+					<?php if ( have_rows( 'table_dop' ) ) : ?>
+							<?php
+							while ( have_rows( 'table_dop' ) ) :
+								the_row();
+							?>
+						<tr class="tr_dop">
+
+
+
+							<th class="row_dop" scope="row">
+                                 <?php if ( get_sub_field( 'table_dop_name' ) ) { ?>
+									<?= the_sub_field( 'table_dop_name' ); ?>
+								<?php } ?>
+								<span class="tooltips__item"><span> 
+								<?php if ( get_sub_field( 'table_dop_tooltip' ) ) { ?>
+									<div class="tooltips">
+										<?= the_sub_field( 'table_dop_tooltip' ); ?>
+									</div> 
+								<?php } ?>
+							</th>
+							<?php if ( get_sub_field( 'table_val_fisrt' ) ) { ?>
+								<td class="rate_first">
+									<?php the_sub_field( 'table_val_fisrt' ); ?>
+								</td>
+								<?php } ?>
+								<?php if ( get_sub_field( 'table_val_second' ) ) { ?>
+								<td class="rate_second">
+									<?php the_sub_field( 'table_val_second' ); ?>
+								</td>
+								<?php } ?>	
+								<?php if ( get_sub_field( 'table_val_third' ) ) { ?>
+								<td class="rate_third">
+									<?php the_sub_field( 'table_val_third' ); ?>
+								</td>
+								<?php } ?>
+								<?php if ( get_sub_field( 'table_val_fourth' ) ) { ?>
+								<td class="rate_fourth">
+									<?php the_sub_field( 'table_val_fourth' ); ?>
+								</td>
+								<?php } ?>
+						</tr>
+					    <?php endwhile; ?>
+					<?php endif; ?>
+
+				</div>
+			</tbody>
+			<?php
+			$i++;
+		 endwhile; ?>
+	    <?php endif; ?>
+
+		</table>
+		</div>	
 
 	</div>
 </section>
