@@ -13,6 +13,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
+		<!-- Global site tag (gtag.js) - Google Ads: 10907343953 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10907343953"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10907343953'); </script>
+		<!-- Event snippet for Website lead conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-10907343953/YQBnCKmIk8MDENG4g9Eo'}); </script>
+
 		<?php wp_head(); ?>
 	</head>
 
