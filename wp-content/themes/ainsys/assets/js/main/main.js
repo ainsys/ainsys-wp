@@ -1065,16 +1065,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 "use strict";
 
 (function ($) {
-  $('.country_close').click(function () {
-    $('#counrty').addClass('country-disabled');
-  });
-  $('.country_select').click(function () {
-    $(this).toggleClass('country-active');
-  });
-})(jQuery);
-"use strict";
-
-(function ($) {
   var $siteHeader = $('.header__main');
   var $anouncementBar = $('.announcement-bar');
   var $menu = $('.header__menu__wrapper', $siteHeader);
@@ -1212,6 +1202,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     	$( '.menu-item-has-children', $menu ).removeClass( 'open' );
     }
     */
+  });
+})(jQuery);
+"use strict";
+
+(function ($) {
+  $('.country_close').click(function () {
+    $('#counrty').addClass('country-disabled');
+  });
+  $('.country_select').click(function () {
+    $(this).toggleClass('country-active');
   });
 })(jQuery);
 "use strict";
@@ -1409,7 +1409,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     //проверяем, есть ли в хеше какое-то значение
     $('html, body').animate({
       scrollTop: $(myHash).offset().top
-    }, 2500); //скроллим за полсекунды
+    }, 500); //скроллим за полсекунды
   }
 
   ;
