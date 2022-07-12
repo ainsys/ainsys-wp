@@ -196,22 +196,16 @@ body.page.page-id-933, body.page.page-id-934, body.page.page-id-935, body.page-t
 }
 
 .basket__left {
-    width: 65% !important;
 }
 
 .basket__right {
-    width: 35% !important;
-    padding-left: 5% !important;
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding-top: 150px;
+    height: 0;
 }
 
 @media (max-width: 992px) {
     .basket__right {
-        position: relative;
-        padding: 0;
+        height: auto;
+        order: 1;
     }
 }
 
