@@ -24,6 +24,7 @@
 .integration {
     display: block !important;
     padding-bottom: 40px;
+    width: 100%;
 
     &_title {
         margin: 0 0 32px 0 !important;
@@ -39,8 +40,10 @@
     }
     &_fl {
         display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+
+        @include media-breakpoint-down( md ) {
+            flex-direction: column;
+        }
     }
     &_flex {
         display: flex;
@@ -101,6 +104,7 @@
 
             @include media-breakpoint-down( md ) {
                 opacity: 1;
+                margin: 0 0 10px auto;
             }
             
 
@@ -988,7 +992,7 @@
             background: transparent;
             padding: 0;
             border-radius: 0;
-            margin: 0;
+            margin: 0 0 20px;
 
             &_title {
                 font-weight: 500;
@@ -1540,3 +1544,4 @@
         order: -1;
     }
 }
+

@@ -20,11 +20,11 @@ if(0 == WC()->cart->get_cart_contents_count()){
   wp_safe_redirect( '/test/' );
 }
  ?>
+<div class="integration_fl">
 <div class="basket integration">
 <a href="#" onclick="history.back();" class="btn-back nav_back_text">Вернуться назад</a>
 <h1 class="integration_title basket__title"><?php esc_html_e( 'План интеграции', 'woocommerce' ); ?></h1>
 
-<div class="integration_fl">
 <div class="basket__left">
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -227,6 +227,8 @@ if(0 == WC()->cart->get_cart_contents_count()){
 </form>
 </div><!-- //.basket__left -->
 
+</div>
+
 <div class="basket__right terms">
   <div class="term_item">
     <div class="term_item_header">
@@ -236,7 +238,7 @@ if(0 == WC()->cart->get_cart_contents_count()){
       <div class="term_item_header_info">
         <img class="term_item_header_info_img" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/time.svg" alt="cancel">
         <div class="term_item_header_info_value">
-          2 дня
+          от 15 ч 30 м
         </div>
         <span class="tooltips__item">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
@@ -246,6 +248,115 @@ if(0 == WC()->cart->get_cart_contents_count()){
         </span>
       </div>
     </div>
+    <div class="term_item_content disabl">
+      <ul class="term_item_content_list">
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  1. Freshbooks
+              </p>
+              <p class="term_item_content_list_link_value">
+                  2 ч 40 м
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  2. Asana
+              </p>
+              <p class="term_item_content_list_link_value">
+                  3 ч 50 м
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  3. Freshbooks
+              </p>
+              <p class="term_item_content_list_link_value">
+                  8 ч 10 м
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  4. Microsoft
+              </p>
+              <p class="term_item_content_list_link_value">
+                  1 ч 20 м
+              </p>
+          </li>
+
+      </ul>
+  </div>
+  <div class="term_item_toggler">
+      <p class="term_item_toggler_text term_item_toggler_more">
+          Подробнее
+      </p>
+      <p class="term_item_toggler_text term_item_toggler_less disabl">
+          Скрыть
+      </p>
+  </div>
+  </div>
+  <div class="term_item">
+    <div class="term_item_header">
+      <h3 class="term_item_header_title">
+        Сроки на внедрение по дням
+      </h3>
+      <div class="term_item_header_info">
+        <img class="term_item_header_info_img" src="<?php echo get_template_directory_uri(); ?>/assets/images/components/time.svg" alt="cancel">
+        <div class="term_item_header_info_value">
+          от 2 дней
+        </div>
+        <span class="tooltips__item">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/components/help.svg" alt="cancel">
+            <div class="tooltips">
+                test
+            </div> 
+        </span>
+      </div>
+    </div>
+    <div class="term_item_content disabl">
+      <ul class="term_item_content_list">
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  1. Freshbooks
+              </p>
+              <p class="term_item_content_list_link_value">
+                  2 дня
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  2. Asana
+              </p>
+              <p class="term_item_content_list_link_value">
+                  14 дней
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  3. Freshbooks
+              </p>
+              <p class="term_item_content_list_link_value term_item_content_list_link_rdy">
+                  Готов
+              </p>
+          </li>
+          <li class="term_item_content_list_link">
+              <p class="term_item_content_list_link_name">
+                  4. Microsoft
+              </p>
+              <p class="term_item_content_list_link_value">
+                  1 ч 20 м
+              </p>
+          </li>
+
+      </ul>
+  </div>
+  <div class="term_item_toggler">
+      <p class="term_item_toggler_text term_item_toggler_more">
+          Подробнее
+      </p>
+      <p class="term_item_toggler_text term_item_toggler_less disabl">
+          Скрыть
+      </p>
+  </div>
   </div>
   <div class="term_item">
       <div class="basket-info term_item_header">
@@ -263,12 +374,57 @@ if(0 == WC()->cart->get_cart_contents_count()){
           Окончательную стоимость заказа вы сможете узнать у менеджера.
         </div>
       </div>  
+      <div class="term_item_content disabl">
+        <ul class="term_item_content_list">
+            <li class="term_item_content_list_link">
+                <p class="term_item_content_list_link_name">
+                    1. Freshbooks
+                </p>
+                <p class="term_item_content_list_link_value term_item_content_list_link_operations">
+                    1000 операций
+                </p>
+            </li>
+            <li class="term_item_content_list_link">
+                <p class="term_item_content_list_link_name">
+                    2. Asana
+                </p>
+                <p class="term_item_content_list_link_value term_item_content_list_link_operations">
+                    2000 операций
+                </p>
+            </li>
+            <li class="term_item_content_list_link">
+                <p class="term_item_content_list_link_name">
+                    3. Freshbooks
+                </p>
+                <p class="term_item_content_list_link_value term_item_content_list_link_operations">
+                    5000 операций
+                </p>
+            </li>
+            <li class="term_item_content_list_link">
+                <p class="term_item_content_list_link_name">
+                    4. Microsoft
+                </p>
+                <p class="term_item_content_list_link_value term_item_content_list_link_operations">
+                    9000 операций
+                </p>
+            </li>
+
+        </ul>
+    </div>
+    <div class="term_item_toggler">
+        <p class="term_item_toggler_text term_item_toggler_more">
+            Подробнее
+        </p>
+        <p class="term_item_toggler_text term_item_toggler_less disabl">
+            Скрыть
+        </p>
+    </div>
     </div>
 
 </div><!-- //.basket__right -->
 
-</div>
 </div><!-- //.basket -->
+
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
