@@ -1,4 +1,4 @@
-( function( $ ) {
+
     (function() {
         function scrollHorizontally(e) {
             e = window.event || e;
@@ -34,4 +34,3 @@
             document.getElementById('bundles_wrapper').attachEvent("onmousewheel", scrollHorizontally);
         }
     })();
-} )( jQuery );
