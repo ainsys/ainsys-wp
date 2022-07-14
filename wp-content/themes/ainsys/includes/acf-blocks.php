@@ -913,6 +913,25 @@ function ainsys_register_acf_block_types() {
 		)
 	);
 
+	acf_register_block_type(
+		array(
+			'name'            => 'record consultation',
+			'title'           => __( 'record consultation' ),
+			'description'     => __( 'record consultation' ),
+			'render_template' => 'partials/blocks/theme-specific/record_consultation.php',
+			'mode'            => 'edit',
+			'category'        => 'customgb',
+			'keywords'        => array( 'record consultation' ),
+			'icon'            => 'images',
+			'supports'        => array(
+				'align'           => false,
+				'anchor'          => true,
+				'customClassName' => true,
+				'jsx'             => false,
+			),
+		)
+	);
+
 }
 
 // Check if function exists and hook into setup.
