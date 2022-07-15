@@ -1,5 +1,5 @@
 .record {
-    padding: 30px 0;
+    padding-bottom: 30px;
     min-height: 100vh;
 
     &_wrapper {
@@ -32,7 +32,7 @@
                 margin-bottom: 15px;
             }
             &_title {
-                font-size: rem( 4.5 );
+                font-size: rem( 3 );
                 margin-bottom: 15px;
                 margin-top: 0 !important;
                 font-weight: 500;
