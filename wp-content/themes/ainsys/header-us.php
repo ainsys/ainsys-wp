@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									);
                                     $current_user = wp_get_current_user();
 									?>
-																		<div class="header__account_block">
+									<div class="header__account_block">
 									<a class="header__account">
 										<span class="header__account__shadow"></span>
 										<span class="header__account__img">
