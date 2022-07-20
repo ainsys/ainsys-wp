@@ -271,6 +271,7 @@
     height: 100vh;
     min-height: 1100px;
     margin-bottom: 40px;
+    margin-top: 40px;
 
     @include media-breakpoint-down( lg ) {
         overflow: scroll;
