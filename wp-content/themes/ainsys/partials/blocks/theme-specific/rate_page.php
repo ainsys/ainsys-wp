@@ -153,7 +153,9 @@ if ( ! empty( $block['align'] ) ) {
 			</div>
 		</div>
 
-		<div class="rate_page__header" id="rate_scroll">
+
+        <div id="rate_scroll"></div>
+		<div class="rate_page__header">
 			<div class="rate_page__info">
 		    	<h2 class="rate_page__title"><?= get_field('rate_page__title');?></h2>
 			</div>
