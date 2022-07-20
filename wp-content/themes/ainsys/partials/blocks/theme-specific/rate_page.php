@@ -155,13 +155,13 @@ if ( ! empty( $block['align'] ) ) {
 
 
         <div id="rate_scroll"></div>
-		<div class="rate_page__header">
+		<div class="table-responsive">
+		<div class="rate_page_table_header">
 			<div class="rate_page__info">
 		    	<h2 class="rate_page__title"><?= get_field('rate_page__title');?></h2>
 			</div>
 			<div class="table__reset"><?= get_field('table__reset');?></div>
 		</div>
-		<div class="table-responsive">
 			<table class="table">
 				<thead>
 					<tr>

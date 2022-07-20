@@ -1,6 +1,5 @@
 .rate_page {
     padding-top: 40px;
-    margin-bottom: 80px;
     
     &__header {
         display: flex;
@@ -418,4 +417,8 @@
 }
 .rate_page__list.active .rate_year {
     display: none;
+}
+
+.rate_page_table_header {
+    margin-bottom: 35px;
 }
