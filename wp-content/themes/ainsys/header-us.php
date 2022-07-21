@@ -107,6 +107,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			})(window, document, 'script', 'cloud.roistat.com', '687af597c04143baddf7137bcaa63754');
 		</script>
 		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-WPK46P6"></script>
+		<!-- Event snippet for Отправка формы для потенциальных клиентов conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+		function gtag_report_conversion(url) {
+		var callback = function () {
+			if (typeof(url) != 'undefined') {
+			window.location = url;
+			}
+		};
+		gtag('event', 'conversion', {
+			'send_to': 'AW-10907343953/IsT7CNrk184DENG4g9Eo',
+			'event_callback': callback
+		});
+		return false;
+		}
+		</script>
 
 
 		<div id="page" class="site">

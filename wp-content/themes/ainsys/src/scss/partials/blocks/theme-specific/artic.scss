@@ -1,0 +1,297 @@
+.artic {
+    min-height: 100vh;
+    padding-bottom: 40px;
+
+    .artic_fl {
+        display: flex;
+
+        @include media-breakpoint-down( md ) {
+            flex-direction: column;
+        }
+
+        .artic_info {
+            min-width: 310px;
+
+            @include media-breakpoint-down( md ) {
+                max-width: 310px;
+                margin: 20px auto 0;
+            }
+    
+
+            &_item {
+                padding: 30px;
+                margin-bottom: 30px;
+                background: $rate_bg;
+                border-radius: 12px;
+
+                &_header {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 25px;
+                }
+                &_img {
+                    width: 40px;
+                    height: 40px;
+
+                }
+                &_author {
+                    margin-left: 10px;
+                    font-weight: 600;
+                    color: $black;
+                }
+            }
+            
+            .artic_author {
+                &_item {
+                    display: flex;
+                    margin-bottom: 20px;
+
+                    &_text {
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                    }
+                    &_val {
+                        margin-bottom: 0;
+                        font-weight: 600;
+                    }
+                }
+                &_item:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .artic_content {
+                &_title {
+                    margin-bottom: 20px;
+                    font-size: rem(2);
+                    font-weight: 600;
+                    color: $black;
+                }
+                &_hrefs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &_href {
+                    margin-bottom: 20px;
+                    color: $gray;
+                }
+                &_href-active {
+                    color: $accent;
+                }
+                &_href:hover,
+                &_href:focus {
+                    color: $accent;
+                }
+
+                &_tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                &_tag {
+                    margin: 0 5px 20px 0;
+                    padding: 10px 20px;
+                    background: $tag_bg;
+                    border-radius: 12px;
+                    font-weight: 500;
+                    color: $grey_rate;
+                    cursor: pointer;
+                }
+                &_tag:nth-child(2n) {
+                    margin-right: 0;
+                }
+                &_tag:hover,
+                &_tag:focus {
+                    background: $accent;
+                    color: $white;
+                }
+                &_tag-active {
+                    background: $accent;
+                    color: $white;
+                }
+
+            }
+            .artic_socials {
+                &_title {
+                    margin-bottom: 20px;
+                    font-size: rem(2);
+                    font-weight: 600;
+                    color: $black;
+                }
+                &_items {
+                    display: flex;
+                }
+                &_item {
+                    margin-right: 25px;
+                }
+                &_item:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+
+    .faq_article {
+        padding-right: 70px;
+
+        @include media-breakpoint-down( md ) {
+            padding-right: 0px;
+        }
+
+        &_title {
+            margin-bottom: 15px;
+
+            @include media-breakpoint-down( xs ) {
+                font-size: 1.75rem;
+            }
+        }
+        &_text {
+            font-size: 17px;
+            color: $black;
+            line-height: 145%;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-down( xs ) {
+                font-size: 14px;
+                line-height: 125%;
+            }
+        }
+        &_img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding: 1rem 0 1rem 1rem;
+
+            li {
+                font-size: 17px;
+                color: $black;
+                line-height: 145%;
+
+                @include media-breakpoint-down( xs ) {
+                    font-size: 14px;
+                    line-height: 125%;
+                }
+            }
+        }
+        &_comments {
+            margin-top: 20px;
+            max-width: 800px;
+
+            &_title {
+                margin-bottom: 30px;
+                font-weight: 600;
+                color: $black;
+            }
+            &_title::after {
+                display: block;
+                content: '';
+                position: relative;
+                width: 70px;
+                height: 3px;
+                margin-top: 10px;
+                background: $accent;
+            }
+            #comments {
+                display: none;
+            }
+            .commentlist {
+                padding: 0;
+
+                .comment  {
+                    list-style: none;
+
+                    .comment-body {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    }
+                }
+                .comment-author {
+                    margin-right: 20px;
+                    .avatar {
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                    .fn {
+                        font-style: normal;
+                        font-weight: 500;
+                        color: $black;
+                    }
+                    .says {
+                        display: none;
+                    }
+                }
+                p {
+                    padding-left: 2.5rem;
+                    font-size: 12px;
+                    line-height: 192.9%;
+                    margin-top: 10px;
+                }
+                .reply {
+                    padding-left: 2.5rem;
+                    font-size: 12px;
+                    line-height: 192.9%;
+                    margin-top: 5px;
+                    color: $accent;
+                }
+                .comment-meta {
+                    .comment-edit-link {
+                        display: none;
+                    }
+                }
+            }
+            .comment-respond {
+                .comment-reply-title {
+                    font-size: 1rem;
+                }
+                .logged-in-as {
+                    display: none;
+                    margin: 0;
+                }
+                .comment-form-comment {
+                    label {
+                        display: none;
+                    }
+                    textarea {
+                        min-width: 100%;
+                        padding: 15px 25px;
+                        border: 1px solid #C7C7C7;
+                        border-radius: 12px;
+                    }
+                }
+                .form-submit {
+                    display: flex;
+
+                    .submit {
+                        margin: 0 0 20px auto;
+                        padding: 14px 50px;
+                        background: #AB47BC;
+                        border-radius: 12px !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.nav_back {
+    display: flex;
+    align-items: center;
+    color: $switch_dis;
+}
+.nav_back::before {
+    display: block;
+    content: '';
+    position: relative;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/components/arrow_left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
