@@ -121,3 +121,10 @@ h6 {
 }
 
 
+.b24-widget-button-position-bottom-right {
+
+    @include media-breakpoint-down( sm ) {
+        right: 20px !important;
+        bottom: 20px !important;
+    }
+}

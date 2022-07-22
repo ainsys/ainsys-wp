@@ -100,7 +100,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
 			<div class="form_demonstration">
 		    	<?php echo do_shortcode(get_field('form')); ?>
 			</div>
-			
+			<a href="<?= get_field('banner_href');?>" class="btn btn-primary scrollserv_btn"><?= get_field('banner_btn');?></a>
 		</div>
 	</div>
 </section>

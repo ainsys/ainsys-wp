@@ -76,8 +76,8 @@
             "button_label": "Add",
             "sub_fields": [
                 {
-                    "key": "field_62b3245afcae1",
-                    "label": "Href",
+                    "key": "field_62b322fb07b69",
+                    "label": "accardion href",
                     "name": "accardion_href",
                     "type": "text",
                     "instructions": "",
@@ -249,6 +249,44 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_62da6d7cba53f",
+            "label": "banner_btn",
+            "name": "banner_btn",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62da6dbcba540",
+            "label": "banner_href",
+            "name": "banner_href",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -269,5 +307,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655907510
+    "modified": 1658482130
 }
