@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Template Name: Home: FAQ article
  * 
  * Template Post Type: post

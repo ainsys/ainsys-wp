@@ -1,6 +1,8 @@
 <?php
 /**
  * FAQ block.
+ * Template Name: Articles
+ * Template Post Type: page
  *
  * @package ainsys
  */
@@ -77,110 +79,127 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
             <?= get_field('faq_articles_text');?>
                 Популярные статьи за последнее время
             </p>
+            <?php
+
+            $posts = get_field('faq_article_wrapper');
+
+            if( $posts ): ?>
             <div class="faq_articles_content">
+            <?php foreach( $posts as $post ):
+
+            setup_postdata($post); ?>
                 <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
                     <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
+                        <?php if ( get_sub_field( 'faq_article_img' ) ) { ?>
+                            <img src="<?= the_sub_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <?php } ?>
+                        <?php if ( get_sub_field( 'faq_article_title' ) ) { ?>
+                            <h6 class="faq_article_title">
+                                <?= the_sub_field('faq_article_title');?>
+                            </h6>
+                        <?php } ?>
+                            <p class="faq_article_text">
+                                <?= get_field('faq_article_text');?>
+                            </p>
+                        <a href="<?php echo get_the_permalink($post_id); ?>" class="faq_article_more">
                             <?= get_field('faq_article_more');?>
-                            Читать
                         </a>
                     </div>
                 </div>
-                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
-                    <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
-                            <?= get_field('faq_article_more');?>
-                            Читать
-                        </a>
-                    </div>
-                </div>
-                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
-                    <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
-                            <?= get_field('faq_article_more');?>
-                            Читать
-                        </a>
-                    </div>
-                </div>
-                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
-                    <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
-                            <?= get_field('faq_article_more');?>
-                            Читать
-                        </a>
-                    </div>
-                </div>
-                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
-                    <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
-                            <?= get_field('faq_article_more');?>
-                            Читать
-                        </a>
-                    </div>
-                </div>
-                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
-                    <div class="faq_article">
-                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
-                        <h6 class="faq_article_title">
-                            <?= get_field('faq_article_title');?>
-                            Форумы: движки, серверы и все-все-все
-                        </h6>
-                        <p class="faq_article_text">
-                            <?= get_field('faq_article_text');?>
-                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
-                        </p>
-                        <a href="/" class="faq_article_more">
-                            <?= get_field('faq_article_more');?>
-                            Читать
-                        </a>
-                    </div>
-                </div>
+            <?php endforeach; ?>
             </div>
+            <?php
+            wp_reset_postdata(); ?>
+            <?php endif; ?>
+
+
+
+                <!-- <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
+                    <div class="faq_article">
+                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <h6 class="faq_article_title">
+                            <?= get_field('faq_article_title');?>
+                            Форумы: движки, серверы и все-все-все
+                        </h6>
+                        <p class="faq_article_text">
+                            <?= get_field('faq_article_text');?>
+                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
+                        </p>
+                        <a href="/" class="faq_article_more">
+                            <?= get_field('faq_article_more');?>
+                            Читать
+                        </a>
+                    </div>
+                </div>
+                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
+                    <div class="faq_article">
+                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <h6 class="faq_article_title">
+                            <?= get_field('faq_article_title');?>
+                            Форумы: движки, серверы и все-все-все
+                        </h6>
+                        <p class="faq_article_text">
+                            <?= get_field('faq_article_text');?>
+                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
+                        </p>
+                        <a href="/" class="faq_article_more">
+                            <?= get_field('faq_article_more');?>
+                            Читать
+                        </a>
+                    </div>
+                </div>
+                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
+                    <div class="faq_article">
+                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <h6 class="faq_article_title">
+                            <?= get_field('faq_article_title');?>
+                            Форумы: движки, серверы и все-все-все
+                        </h6>
+                        <p class="faq_article_text">
+                            <?= get_field('faq_article_text');?>
+                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
+                        </p>
+                        <a href="/" class="faq_article_more">
+                            <?= get_field('faq_article_more');?>
+                            Читать
+                        </a>
+                    </div>
+                </div>
+                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
+                    <div class="faq_article">
+                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <h6 class="faq_article_title">
+                            <?= get_field('faq_article_title');?>
+                            Форумы: движки, серверы и все-все-все
+                        </h6>
+                        <p class="faq_article_text">
+                            <?= get_field('faq_article_text');?>
+                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
+                        </p>
+                        <a href="/" class="faq_article_more">
+                            <?= get_field('faq_article_more');?>
+                            Читать
+                        </a>
+                    </div>
+                </div>
+                <div class="faq_article_wrapper col-lg-4 col-md-2 col-12">
+                    <div class="faq_article">
+                        <img src="<?= get_field('faq_article_img');?>" class="faq_article_img" alt="">
+                        <h6 class="faq_article_title">
+                            <?= get_field('faq_article_title');?>
+                            Форумы: движки, серверы и все-все-все
+                        </h6>
+                        <p class="faq_article_text">
+                            <?= get_field('faq_article_text');?>
+                            Какие движки используют успешные форумы? На каких серверах они работают? В какой кодировке хранят написанные пользователями сообщен...
+                        </p>
+                        <a href="/" class="faq_article_more">
+                            <?= get_field('faq_article_more');?>
+                            Читать
+                        </a>
+                    </div>
+                </div>
+            </div> -->
 
 
                 <div class="faq_article">

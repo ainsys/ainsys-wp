@@ -123,6 +123,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		return false;
 		}
 		</script>
+		<!-- Global site tag (gtag.js) - Google Ads: 10907343953 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10907343953"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-10907343953');
+		</script>
 
 
 		<div id="page" class="site">
