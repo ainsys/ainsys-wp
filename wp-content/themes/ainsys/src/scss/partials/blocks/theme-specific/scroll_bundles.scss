@@ -29,6 +29,11 @@
 
       &_item_wrapper {
         padding: 30px 15px;
+
+        @include media-breakpoint-down( sm ) {
+            max-width: 95%;
+            padding: 20px 5px;
+        }
       }
   
       &_item {

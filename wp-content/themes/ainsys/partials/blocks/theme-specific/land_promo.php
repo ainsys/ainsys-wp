@@ -61,7 +61,7 @@ if ( get_field( 'bg_img' ) || get_field( 'bg_alignment' ) ) {
                             <?php endwhile; ?>
                           <?php endif; ?>
                       </ul>
-                      <p class="promo__podtext">
+                      <p class="promo__title">
                         <?= get_field('text_under');?>
                       </p>
                   </div>
